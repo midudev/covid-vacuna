@@ -5,18 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "download-today-status": "node scripts/download-covid-vaccine-today-status.js"
   },
   "dependencies": {
-    "fs-extra": "^9.0.1",
+    "download": "8.0.0",
+    "fs-extra": "9.0.1",
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-table": "^7.6.3",
-    "xlsx": "^0.16.9"
+    "react-table": "7.6.3",
+    "xlsx": "0.16.9"
   },
   "devDependencies": {
-    "standard": "^16.0.3"
+    "standard": "16.0.3"
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"

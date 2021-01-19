@@ -1,14 +1,13 @@
 const XLSX = require('xlsx')
-const fs = require('fs-extra')
 
-const workbook = XLSX.readFile('./data/Informe_Comunicacion_20210118.ods')
+module.exports = async function transformOdsToJson (odsFileName) {
+  const workbook = XLSX.readFile(`./data/${odsFileName}`)
 
-const { Sheets: { Hoja3 } } = workbook
+  const { Sheets: { Hoja3 } } = workbook
 
-const json = XLSX.utils.sheet_to_json(Hoja3)
+  const json = XLSX.utils.sheet_to_json(Hoja3)
 
-;(async () => {
-  const mappedJson = json.map(element => {
+  return json.map(element => {
     const {
       __EMPTY: ccaa,
       'Dosis entregadas Pfizer (1)': dosisEntregadasPfizer,
@@ -29,7 +28,4 @@ const json = XLSX.utils.sheet_to_json(Hoja3)
       porcentajeEntregadas
     }
   })
-
-  await fs.writeJson('./data/20210118.json', mappedJson)
-  await fs.writeJson('./data/latest.json', mappedJson)
-})()
+}
