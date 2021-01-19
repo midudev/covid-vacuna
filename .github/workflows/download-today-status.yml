@@ -1,6 +1,7 @@
 name: Download latest COVID-19 Status vaccination
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: 0 */6 * * *
 
