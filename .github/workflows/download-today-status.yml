@@ -17,3 +17,9 @@ jobs:
         node-version: 14.x
     - run: npm install
     - run: npm run download-today-status
+    - run: |
+        git config user.name midudev
+        git config user.email miduga@gmail.com
+        git add .
+        git commit -m "Add report for today"
+        git push
