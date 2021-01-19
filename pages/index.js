@@ -1,63 +1,81 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Table from 'components/Table.jsx'
+import styles from 'styles/Home.module.css'
+import NumberDigits from 'components/NumberDigits'
+import data from 'data/latest.json'
+import NumberPercentage from 'components/NumberPercentage.jsx'
 
-export default function Home() {
+const totales = data.find(({ ccaa }) => ccaa === 'Totales')
+
+export default function Home () {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Estado y progreso vacunación COVID-19 España 2021</title>
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Vacunación COVID-19 en España
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <small className={styles.description}>
+          Datos actualizados a <date>15 de enero de 2021</date>
+        </small>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div className={styles.card}>
+            <div>
+              <h3>Dosis distribuidas</h3>
+              <p>
+                <NumberDigits>{totales.dosisEntregadas}</NumberDigits>
+              </p>
+            </div>
+            <div>
+              <small>
+                <img className={styles.companyLogo} src='pfizer-logo.png' />
+                <NumberDigits>
+                  {totales.dosisEntregadasPfizer}
+                </NumberDigits>
+              </small>
+              <small>
+                <img className={styles.companyLogo} src='moderna-logo.png' />{totales.dosisEntregadasModerna}
+              </small>
+            </div>
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <div className={styles.card}>
+            <div>
+              <h3>Dosis administradas</h3>
+              <p>
+                <NumberDigits>{totales.dosisAdministradas}</NumberDigits>
+              </p>
+            </div>
+            <div>
+              <h4>% sobre distribuidas</h4>
+              <p className={styles.secondary}>
+                <NumberPercentage>
+                  {totales.porcentajeEntregadas}
+                </NumberPercentage>
+              </p>
+            </div>
+          </div>
         </div>
+
+        <h1 className={styles.subtitle}>
+          Por comunidades autónomas
+        </h1>
+        <Table />
       </main>
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href='https://midu.dev'
+          target='_blank'
+          rel='noreferrer'
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Desarrollado por{' '}
+          <img src='https://midu.dev/logo.png' alt='midudev' className={styles.logo} />
         </a>
       </footer>
     </div>

@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #fff;
 }
 
 .footer img {
@@ -35,21 +36,18 @@
   align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
+  color: #011440;
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+.subtitle {
+  color: #001e63;
+  margin: 4rem 0 0;
+  line-height: 1.15;
+  font-size: 2rem;
 }
 
 .title,
@@ -58,60 +56,76 @@
 }
 
 .description {
+  color: #444;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: .8rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.description date {
+  border-bottom: 1px dashed #ccc;
 }
 
 .grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-width: 800px;
   margin-top: 3rem;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+.companyLogo {
+  margin-right: 8px;
+  max-width: 72px;
+  height: auto;
+  object-fit: contain;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  background: #ffffff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card h3 {
-  margin: 0 0 1rem 0;
+  color: #555;
   font-size: 1.5rem;
+  margin: 0;
+}
+
+.card h4 {
+  color: #888;
+  font-size: 1.3rem;
+  margin: 1rem 0 0;
 }
 
 .card p {
+  font-weight: bold;
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
+.card .secondary {
+  color: #333;
+  font-size: 1.9rem;
+}
+
+.card small {
+  align-items: center;
+  color: #555;
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .3rem 0;
+}
+
 .logo {
-  height: 1em;
+  height: 2em;
 }
 
 @media (max-width: 600px) {
