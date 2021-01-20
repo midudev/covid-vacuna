@@ -11,7 +11,7 @@ export default function Home () {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Estado y progreso vacunación COVID-19 España 2021</title>
+        <title>Estado y progreso de la vacunación COVID-19 España 2021</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
