@@ -26,3 +26,7 @@ li {
   padding-bottom: 16px;
   font-size: 1.2rem;
 }
+
+dialog::backdrop {
+  background-color: rgba(0,0,0,0.8);
+}

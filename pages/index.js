@@ -40,6 +40,11 @@ export default function Home ({ data, info }) {
 
           <div className={styles.grid}>
             <div className={styles.card}>
+              <button
+                title='Abrir diálogo con explicación sobre Dosis Distribuidas' onClick={() => {}}
+              >❔
+              </button>
+
               <header>
                 <Image
                   className={styles.cardImage}
@@ -58,14 +63,30 @@ export default function Home ({ data, info }) {
                 </div>
                 <div>
                   <small>
-                    <img className={styles.companyLogo} src='pfizer-logo.png' />
-                    <NumberDigits>
-                      {totals.dosisEntregadasPfizer}
-                    </NumberDigits>
+                    <Image
+                      alt='Pfizer Logo'
+                      className={styles.companyLogo}
+                      src='/pfizer-logo.png'
+                      height={29}
+                      width={72}
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.dosisEntregadasPfizer}
+                      </NumberDigits>
+                    </span>
                   </small>
                   <small>
-                    <img className={styles.companyLogo} src='moderna-logo.png' />
-                    <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>
+                    <Image
+                      alt='Moderna Logo'
+                      className={styles.companyLogo}
+                      src='/moderna-logo.png'
+                      height={16.5}
+                      width={72}
+                    />
+                    <span>
+                      <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>
+                    </span>
                   </small>
                 </div>
               </section>
@@ -151,8 +172,16 @@ export default function Home ({ data, info }) {
         <h2 className={styles.attibutes}>
           Changelog
         </h2>
-        <li>1.0.0: Primera versión</li>
+        <ul>
+          <li>1.0.0: Primera versión</li>
+        </ul>
       </div>
+
+      <dialog id='vacunas-distribuidas-dialog'>
+        <h2>¡ATENCIÓN!</h2>
+        <p>Se ha producido un problema en la aplicación.</p>
+      </dialog>
+
       <Footer />
     </>
   )

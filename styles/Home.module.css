@@ -58,9 +58,7 @@
 
 .companyLogo {
   margin-right: 8px;
-  max-width: 72px;
   height: auto;
-  object-fit: contain;
 }
 
 .download {
@@ -85,6 +83,35 @@
   position: relative;
   text-align: center;
   box-shadow: rgb(210, 239, 253) 14px 14px;
+}
+
+.card button {
+  background: #555;
+  border-radius: 5000px;
+  border: 0px;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  height: 24px;
+  opacity: .5;
+  place-content: center;
+  place-items: center;
+  width: 24px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  overflow: hidden;
+  display: none;
+}
+
+.card button:hover {
+  background: #222;
+}
+
+.card button:focus {
+  border-radius: 5000px;
+  box-shadow: 0 0 5px 5px #09f;
+  outline: 0;
 }
 
 .card header {
@@ -138,6 +165,10 @@
   font-weight: bold;
   justify-content: center;
   padding: .3rem 0;
+}
+
+.card small > span {
+  margin-left: 8px;
 }
 
 .logo {
