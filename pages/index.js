@@ -23,7 +23,7 @@ export default function Home ({ data, info }) {
           />
           <meta property='og:locale' content='es_ES' />
           <meta property='og:title' content='Estado y progreso vacunación COVID-19 España 2021' />
-          <meta property='og:image' content='og.png' />
+          <meta property='og:image' content='/og.png' />
           <meta property='og:description' content='Consulta el estado y progreso de la vacunación del COVID-19 de forma diaria según datos del gobierno' />
           <meta property='og:site_name' content='Estado vacunación en España' />
 
