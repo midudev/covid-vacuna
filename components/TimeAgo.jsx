@@ -32,7 +32,5 @@ export default function TimeAgo ({ timestamp }) {
     month: 'long', day: 'numeric'
   }).format(date)
 
-  console.log(formattedDate)
-
   return <time title={formattedDate} dateTime={formattedDate}>{timeago}</time>
 }

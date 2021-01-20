@@ -10,8 +10,6 @@ export default function Table ({ data }) {
 
   const tableData = useMemo(
     () => data.map(row => {
-      console.log(row)
-
       const {
         dosisAdministradas,
         dosisEntregadas,
