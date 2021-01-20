@@ -13,6 +13,7 @@ export default function Home () {
       <Head>
         <title>Estado y progreso vacunación COVID-19 España 2021</title>
         <link rel='icon' href='/favicon.ico' />
+        <script src='https://cdn.usefathom.com/script.js' data-site='MYEXKUNW' defer />
       </Head>
 
       <main className={styles.main}>
