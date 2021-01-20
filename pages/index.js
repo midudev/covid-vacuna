@@ -26,6 +26,11 @@ export default function Home ({ data, info }) {
           <meta property='og:image' content='og.png' />
           <meta property='og:description' content='Consulta el estado y progreso de la vacunación del COVID-19 de forma diaria según datos del gobierno' />
           <meta property='og:site_name' content='Estado vacunación en España' />
+
+          <meta name='twitter:card' content='summary_large_image' />
+          <meta name='twitter:creator' content='midudev' />
+          <meta name='twitter:site' content='midudev' />
+
           <link rel='icon' href='/favicon.ico' />
           <script src='https://cdn.usefathom.com/script.js' data-site='MYEXKUNW' defer />
         </Head>
