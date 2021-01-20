@@ -23,7 +23,7 @@ download(url, 'data', { filename })
     const jsonFileName = filename.replace('.ods', '.json')
 
     await fs.writeJson(`./data/${jsonFileName}`, json)
-    await fs.copyFile(`./data/${jsonFileName}`, './data/latest.json')
+    await fs.writeJson(`./data/${jsonFileName}`, { ...json, timestamp: +new Date() })
   })
   .catch(err => {
     console.error(`${url} can't be downloaded. Error:`)
