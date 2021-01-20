@@ -5,6 +5,7 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Table from 'components/Table.jsx'
+import Share from 'components/Share.jsx'
 
 import styles from 'styles/Home.module.css'
 import TimeAgo from 'components/TimeAgo.jsx'
@@ -193,6 +194,8 @@ export default function Home ({ data, info }) {
         <h2>¡ATENCIÓN!</h2>
         <p>Se ha producido un problema en la aplicación.</p>
       </dialog>
+
+      <Share />
 
       <Footer />
     </>

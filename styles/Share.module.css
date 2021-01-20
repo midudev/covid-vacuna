@@ -1,0 +1,32 @@
+.share {
+  position: fixed;
+  right: 32px;
+  top: 16px;
+}
+
+.share a {
+  align-items: center;
+  background: #fff;
+  border-radius: 50000px;
+  border: 1px solid #000;
+  box-shadow: #92d5ff 4px 4px;
+  display: flex;
+  font-size: .7rem;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 110%;
+  padding: 4px 16px;
+}
+
+.share a:hover {
+  background: rgb(210, 237, 255);
+  box-shadow: none;
+  transform: translate3d(4px, 4px, 0);
+  transition: all .1s ease;
+}
+
+.share svg {
+  height: 16px;
+  margin-left: 4px;
+  width: 16px;
+}
