@@ -1,0 +1,42 @@
+.table {
+  background: #fafafa;
+  border-radius: 8px;
+  border: 2px solid #111;
+  box-shadow: rgb(210, 239, 253) 14px 14px;
+  font-size: .8rem;
+  margin-bottom: 4rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.table th {
+  border-bottom: 2px solid #555;
+  border-right: 1px solid #ccc;
+  padding: 4px;
+}
+
+.table tr {
+  background: #fff;
+}
+
+.table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.table tbody > tr > td {
+  border-right: 1px solid #eee;
+  text-align: right;
+  padding: 4px 12px 4px;
+}
+
+.table tbody > tr > td:first-child {
+  font-weight: bold;
+}
+
+.table tbody > tr > td:last-child {
+  border-right: 0;
+}
+
+.table thead tr {
+  border-bottom: 1px solid #333;
+}

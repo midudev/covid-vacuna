@@ -9,22 +9,22 @@ const SUFFIX_URL = '.ods'
 
 const date = new Date()
 const year = date.getFullYear()
-const day = `${date.getDate()}`.padStart(2, '0')
+const day = 19
 const month = `${date.getMonth() + 1}`.padStart(2, '0')
 
 const url = `${PREFIX_URL}${year}${month}${day}${SUFFIX_URL}`
 
 const filename = `${year}${month}${day}.ods`
 
-download(url, 'data', { filename })
+download(url, 'public/data', { filename })
   .then(async () => {
     console.log(`${url} downloaded`)
     const json = await transformOdsToJson(filename)
     const jsonFileName = filename.replace('.ods', '.json')
 
-    await fs.writeJson(`./data/${jsonFileName}`, json)
-    await fs.copyFile(`./data/${jsonFileName}`, './data/latest.json')
-    await fs.writeJson('./data/info.json', { lastModified: +new Date() })
+    await fs.writeJson(`./public/data/${jsonFileName}`, json)
+    await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
+    await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
   })
   .catch(err => {
     console.error(`${url} can't be downloaded. Error:`)

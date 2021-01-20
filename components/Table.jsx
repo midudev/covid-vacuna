@@ -1,49 +1,66 @@
 /* eslint-disable react/jsx-key */
 
 import { useMemo } from 'react'
-import { useTable } from 'react-table'
-import styles from './styles.module.css'
+import { useTable, useSortBy } from 'react-table'
+import { toDigit } from './NumberDigits.jsx'
+import styles from 'styles/Table.module.css'
 
-export default function Table () {
-  const data = useMemo(
-    () => [
-      {
-        col1: 'Hello',
-        col2: 'World'
-      },
-      {
-        col1: 'react-table',
-        col2: 'rocks'
-      },
-      {
-        col1: 'whatever',
-        col2: 'you want'
+export default function Table ({ data }) {
+  const locale = 'es'
+
+  const tableData = useMemo(
+    () => data.map(row => {
+      console.log(row)
+
+      const {
+        dosisAdministradas,
+        dosisEntregadas,
+        dosisEntregadasModerna,
+        dosisEntregadasPfizer,
+        dosisPautaCompletada,
+        porcentajeEntregadas,
+        ...rest
+      } = row
+
+      const formatDigit = number => toDigit({ locale, number })
+
+      return {
+        ...rest,
+        dosisAdministradas: formatDigit(dosisAdministradas),
+        dosisEntregadas: formatDigit(dosisEntregadas),
+        dosisEntregadasModerna: formatDigit(dosisEntregadasModerna),
+        dosisEntregadasPfizer: formatDigit(dosisEntregadasPfizer),
+        dosisPautaCompletada: formatDigit(dosisPautaCompletada),
+        porcentajeEntregadas: formatDigit(porcentajeEntregadas)
       }
-    ],
-    []
+    }), []
   )
 
   const columns = useMemo(
     () => [
       {
-        Header: 'CC.AA',
+        Header: '',
         accessor: 'ccaa'
       },
       {
         Header: 'Dosis entregadas',
-        accessor: 'entregadas'
+        accessor: 'dosisEntregadas',
+        format: 'digit'
       },
       {
         Header: 'Dosis administradas',
-        accessor: 'administradas'
+        accessor: 'dosisAdministradas',
+        format: 'digit'
       },
       {
         Header: '% sobre entregadas',
-        accessor: 'porcentaje_entregadas'
+        accessor: 'porcentajeEntregadas',
+        format: 'percentatge'
       },
       {
-        Header: 'Fecha de la última vacuna registrada',
-        accessor: 'last_date'
+        Header: 'Pauta completa',
+        accessor: 'dosisPautaCompletada',
+        format: 'digit'
       }
     ],
     []
@@ -55,7 +72,7 @@ export default function Table () {
     headerGroups,
     rows,
     prepareRow
-  } = useTable({ columns, data })
+  } = useTable({ columns, data: tableData }, useSortBy)
 
   return (
     <table className={styles.table} {...getTableProps()}>
@@ -64,12 +81,16 @@ export default function Table () {
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (
               <th
-                {...column.getHeaderProps()}
-                style={{
-                  fontWeight: 'bold'
-                }}
+                {...column.getHeaderProps(column.getSortByToggleProps())}
               >
                 {column.render('Header')}
+                <span>
+                  {column.isSorted
+                    ? column.isSortedDesc
+                        ? ' ▼'
+                        : ' ▲'
+                    : ''}
+                </span>
               </th>
             ))}
           </tr>
@@ -82,13 +103,7 @@ export default function Table () {
             <tr {...row.getRowProps()}>
               {row.cells.map(cell => {
                 return (
-                  <td
-                    {...cell.getCellProps()}
-                    style={{
-                      padding: '10px',
-                      borderBottom: '1px dotted #eee'
-                    }}
-                  >
+                  <td {...cell.getCellProps()}>
                     {cell.render('Cell')}
                   </td>
                 )

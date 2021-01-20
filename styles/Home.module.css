@@ -1,19 +1,20 @@
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  padding: 0 2rem;
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  min-height: 80vh;
 }
 
 .title {
@@ -25,7 +26,7 @@
 
 .subtitle {
   color: #001e63;
-  margin: 4rem 0 0;
+  margin: 4rem 0 2rem;
   line-height: 1.15;
   font-size: 2rem;
 }
@@ -41,15 +42,17 @@
   font-size: .8rem;
 }
 
-.description date {
+.description time {
   border-bottom: 1px dashed #ccc;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-gap: 32px;
+  max-width: 1000px;
   margin-top: 3rem;
+  width: 100%;
 }
 
 .companyLogo {
@@ -59,16 +62,47 @@
   object-fit: contain;
 }
 
+.download {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px dashed #ddd;
+}
+
+.download:hover {
+  color: #555;
+  border-bottom: 1px dashed #09f;
+}
+
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
   background: #ffffff;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 8px;
+  border: 2px solid #111;
+  margin: 1rem 0 3rem;
+  padding: 64px 1.5rem 1.5rem;
+  position: relative;
+  text-align: center;
+  box-shadow: rgb(210, 239, 253) 14px 14px;
+}
+
+.card header {
+  position: absolute;
+  top: -36px;
+  border: 4px solid #fff;
+  background: #fff;
+  border-radius: 5000px;
+  width: 80px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.card section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .card h3 {
@@ -101,6 +135,7 @@
   display: flex;
   font-size: 1rem;
   font-weight: bold;
+  justify-content: center;
   padding: .3rem 0;
 }
 
