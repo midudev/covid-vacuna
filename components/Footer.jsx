@@ -17,7 +17,7 @@ export default function Footer () {
         <span>&bull;</span>
         <a href='https://midu.tube' rel='nofollow noreferrer' target='_blank'>YouTube</a>
         <span>&bull;</span>
-        <a href='https://twitch.tv' rel='nofollow noreferrer' target='_blank'>Twitch</a>
+        <a href='https://midu.live' rel='nofollow noreferrer' target='_blank'>Twitch</a>
         <span>&bull;</span>
         <a href='https://github.com/midudev/covid-vacuna/issues/new' rel='nofollow noreferrer' target='_blank'>Enviar sugerencia</a>
       </div>
