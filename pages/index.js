@@ -1,13 +1,16 @@
 import Head from 'next/head'
-import Table from 'components/Table.jsx'
-import styles from 'styles/Home.module.css'
+
+import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
-import data from 'data/latest.json'
 import NumberPercentage from 'components/NumberPercentage.jsx'
+import Table from 'components/Table.jsx'
 
-const totales = data.find(({ ccaa }) => ccaa === 'Totales')
+import styles from 'styles/Home.module.css'
+import TimestampToDate from 'components/TimestampToDate.jsx'
 
-export default function Home () {
+export default function Home ({ data, info }) {
+  const totals = data.find(({ ccaa }) => ccaa === 'Totales')
+
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +24,7 @@ export default function Home () {
           Vacunación COVID-19 en España
         </h1>
         <small className={styles.description}>
-          Datos actualizados a <date>15 de enero de 2021</date>
+          Datos actualizados a <TimestampToDate timestamp={info.lastModified} />
         </small>
 
         <div className={styles.grid}>
@@ -29,18 +32,18 @@ export default function Home () {
             <div>
               <h3>Dosis distribuidas</h3>
               <p>
-                <NumberDigits>{totales.dosisEntregadas}</NumberDigits>
+                <NumberDigits>{totals.dosisEntregadas}</NumberDigits>
               </p>
             </div>
             <div>
               <small>
                 <img className={styles.companyLogo} src='pfizer-logo.png' />
                 <NumberDigits>
-                  {totales.dosisEntregadasPfizer}
+                  {totals.dosisEntregadasPfizer}
                 </NumberDigits>
               </small>
               <small>
-                <img className={styles.companyLogo} src='moderna-logo.png' />{totales.dosisEntregadasModerna}
+                <img className={styles.companyLogo} src='moderna-logo.png' />{totals.dosisEntregadasModerna}
               </small>
             </div>
           </div>
@@ -49,14 +52,14 @@ export default function Home () {
             <div>
               <h3>Dosis administradas</h3>
               <p>
-                <NumberDigits>{totales.dosisAdministradas}</NumberDigits>
+                <NumberDigits>{totals.dosisAdministradas}</NumberDigits>
               </p>
             </div>
             <div>
               <h4>% sobre distribuidas</h4>
               <p className={styles.secondary}>
                 <NumberPercentage>
-                  {totales.porcentajeEntregadas}
+                  {totals.porcentajeEntregadas}
                 </NumberPercentage>
               </p>
             </div>
@@ -69,16 +72,19 @@ export default function Home () {
         <Table />
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href='https://midu.dev'
-          target='_blank'
-          rel='noreferrer'
-        >
-          Desarrollado por{' '}
-          <img src='https://midu.dev/logo.png' alt='midudev' className={styles.logo} />
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
+}
+
+export async function getStaticProps () {
+  const data = require('../data/latest.json')
+  const info = require('../data/info.json')
+
+  return {
+    props: {
+      data,
+      info
+    }
+  }
 }
