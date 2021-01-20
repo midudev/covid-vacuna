@@ -3,6 +3,7 @@
 import { useMemo } from 'react'
 import { useTable, useSortBy } from 'react-table'
 import { toDigit } from './NumberDigits.jsx'
+import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
 
 export default function Table ({ data }) {
@@ -21,6 +22,7 @@ export default function Table ({ data }) {
       } = row
 
       const formatDigit = number => toDigit({ locale, number })
+      const formatPercentage = number => toPercentage({ locale, number })
 
       return {
         ...rest,
@@ -29,7 +31,7 @@ export default function Table ({ data }) {
         dosisEntregadasModerna: formatDigit(dosisEntregadasModerna),
         dosisEntregadasPfizer: formatDigit(dosisEntregadasPfizer),
         dosisPautaCompletada: formatDigit(dosisPautaCompletada),
-        porcentajeEntregadas: formatDigit(porcentajeEntregadas)
+        porcentajeEntregadas: formatPercentage(porcentajeEntregadas)
       }
     }), []
   )
