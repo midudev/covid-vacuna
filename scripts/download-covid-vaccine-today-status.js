@@ -9,7 +9,7 @@ const SUFFIX_URL = '.ods'
 
 const date = new Date()
 const year = date.getFullYear()
-const day = 19
+const day = `${date.getDate()}`.padStart(2, '0')
 const month = `${date.getMonth() + 1}`.padStart(2, '0')
 
 const url = `${PREFIX_URL}${year}${month}${day}${SUFFIX_URL}`
