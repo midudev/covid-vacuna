@@ -1,3 +1,27 @@
+:root {
+  --app-background-color: #fefefe;
+  --app-background: radial-gradient(#cdd0ff 1px,transparent 0),radial-gradient(#cdd0ff 1px,#fefefe 0);
+
+  --text-base-color: #000;
+  --text-title-color: #011440;
+  --text-subtitle-color: #001e63;
+  --text-small-color: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-background: radial-gradient(#e3e5ff 1px,transparent 0),radial-gradient(#e3e5ff 1px,#fefefe 0);
+  }
+
+  html {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  html img, html span[role='img'] {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,10 +35,11 @@ body {
 }
 
 body {
-  background-color: #fefefe;
-  background-image:  radial-gradient(#cdd0ff 1px, transparent 1px), radial-gradient(#cdd0ff 1px, #fefefe 1px);
+  background-color: var(--app-background-color);
+  background-image:  var(--app-background);
   background-size: 40px 40px;
   background-position: 0 0,20px 20px;
+  color: var(--text-base-color);
 }
 
 a {

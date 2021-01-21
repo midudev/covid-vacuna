@@ -5,8 +5,8 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
-import Table from 'components/Table.jsx'
 import Share from 'components/Share.jsx'
+import Table from 'components/Table.jsx'
 
 import styles from 'styles/Home.module.css'
 import TimeAgo from 'components/TimeAgo.jsx'
@@ -185,18 +185,24 @@ export default function Home ({ data, info }) {
 
         <Table data={data} />
 
-        <h2>Fuentes de datos y enlaces de interés</h2>
+        <h2 className={styles.subtitle}>Fuentes de datos y enlaces de interés</h2>
         <ul>
           <li><a target='_blank' rel='noreferrer' href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Estrategia de Vacunación COVID-19 en España</a></li>
           <li><a target='_blank' rel='noreferrer' href='https://www.vacunacovid.gob.es'>Información oficial sobre la vacunación contra el nuevo coronavirus</a></li>
         </ul>
-        <h2 className={styles.attibutes}>
+        <h2 className={styles.subtitle}>
           Changelog
         </h2>
         <ul>
-          <li><strong>1.2.0</strong>: Añadida barra de progreso de vacunación en población 🌎</li>
-          <li><strong>1.1.0</strong>: Añadidas personas con pauta completa 💉</li>
-          <li><strong>1.0.0</strong>: Primera versión 🔥</li>
+          <li>
+            <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en población <span aria-label='Globo terrícola con vistas a América' role='img'>🌎</span>
+          </li>
+          <li>
+            <strong>1.1.0</strong>: Añadidas personas con pauta completa <span aria-label='Jeringuilla con sangre contaminada con T-Virus' role='img'>💉</span>
+          </li>
+          <li>
+            <strong>1.0.0</strong>: Primera versión <span aria-label='Fuego del olimpo que derrite corazones' role='img'>🔥</span>
+          </li>
         </ul>
       </div>
 

@@ -18,7 +18,7 @@
 }
 
 .title {
-  color: #011440;
+  color: var(--text-title-color);
   margin: 0;
   line-height: 1.15;
   font-size: 3rem;
@@ -26,7 +26,7 @@
 }
 
 .subtitle {
-  color: #001e63;
+  color: var(--text-subtitle-color);
   margin: 4rem 0 2rem;
   line-height: 1.15;
   font-size: 2rem;
@@ -38,9 +38,10 @@
 }
 
 .description {
-  color: #444;
+  color: var(--text-small-color);
   line-height: 1.5;
   font-size: .8rem;
+  padding: .3rem 0 .5rem;
 }
 
 .description time {
@@ -115,22 +116,23 @@
 }
 
 .card header {
-  position: absolute;
-  top: -36px;
-  border: 4px solid #fff;
   background: #fff;
   border-radius: 5000px;
-  width: 80px;
+  border: 4px solid #fff;
   left: 0;
-  right: 0;
   margin: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: -36px;
+  width: 80px;
 }
 
 .card section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  justify-content: space-between;
 }
 
 .card h3 {
