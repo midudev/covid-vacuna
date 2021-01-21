@@ -40,7 +40,7 @@
   content: attr(data-value);
   font-size: 1.5rem;
   right: 8px;
-  top: 10px;
+  top: 12px;
   position: absolute;
 }
 

@@ -189,13 +189,15 @@ export default function Home ({ data, info }) {
           Changelog
         </h2>
         <ul>
-          <li>1.0.0: Primera versión</li>
+          <li><strong>1.2.0</strong>: Añadida barra de progreso de vacunación en población 🌎</li>
+          <li><strong>1.1.0</strong>: Añadidas personas con pauta completa 💉</li>
+          <li><strong>1.0.0</strong>: Primera versión 🔥</li>
         </ul>
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
-        <h2>¡ATENCIÓN!</h2>
-        <p>Se ha producido un problema en la aplicación.</p>
+        <h2>Sobre las vacunas distribuidas</h2>
+        <p>Las vacunas distribuidas...</p>
       </dialog>
 
       <Share />
