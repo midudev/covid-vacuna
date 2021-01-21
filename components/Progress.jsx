@@ -37,7 +37,7 @@ export default function Progress ({ data }) {
         </div>
 
         <section data-value={toPercentage({ locale, number: value })}>
-          <progress max='100' value={value} />
+          <progress max='100' value={value * 100} />
         </section>
       </form>
     </>

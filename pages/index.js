@@ -49,7 +49,7 @@ export default function Home ({ data, info }) {
             Vacunación COVID-19 en España
           </h1>
           <small className={styles.description}>
-            Datos actualizados a <TimeAgo timestamp={info.lastModified} />. Fuente: <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Gobierno de España</a>
+            Datos actualizados <TimeAgo timestamp={info.lastModified} />. Fuente: <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Gobierno de España</a>
           </small>
 
           <div className={styles.grid}>
