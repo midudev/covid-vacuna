@@ -26,8 +26,11 @@
 }
 
 .footer img {
+  background: #fff;
+  border-radius: 50000px;
   height: 1.5rem;
   margin-left: .3rem;
+  padding: 0px 4px;
 }
 
 .footer a {
