@@ -27,11 +27,11 @@ Sólo te pido:
 
 ## ¿Qué tienes pensado añadir a la app?
 
-🔹 Seleccionar días para ver el progreso Calendario arrancable
-🔹 Modo oscuro Luna nueva con cara
-🔹 Gráfica con el progreso Gráfico con tendencia hacia arriba
-🔹 PWA Teléfono móvil
-🔹 Traducción a las lenguas oficiales del Estado Globo terráqueo con el continente americano
-🔹 Mapa
+* 🔹 Seleccionar días para ver el progreso Calendario arrancable
+* 🔹 Modo oscuro Luna nueva con cara
+* 🔹 Gráfica con el progreso Gráfico con tendencia hacia arriba
+* 🔹 PWA Teléfono móvil
+* 🔹 Traducción a las lenguas oficiales del Estado Globo terráqueo con el continente americano
+* 🔹 Mapa con info encima
 
 y más cosas. :)
