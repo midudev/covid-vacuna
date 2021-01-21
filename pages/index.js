@@ -13,11 +13,13 @@ import TimeAgo from 'components/TimeAgo.jsx'
 
 export default function Home ({ data, info }) {
   const totals = data.find(({ ccaa }) => ccaa === 'Totales')
+  const locale = 'es' // get from context later
 
   return (
     <>
       <div className={styles.container}>
         <Head>
+          <html lang={locale} />
           <title>Estado y progreso vacunación COVID-19 España 2021</title>
           <meta
             name='description'
