@@ -22,6 +22,7 @@ export default function Home ({ data, info }) {
           <html lang={locale} />
           <link rel='alternate icon' href='https://covid-vacuna.app/vacuna.png' type='image/png' />
           <title>Estado y progreso vacunación COVID-19 España 2021</title>
+          <meta name='theme-color' content='#d2effd' />
           <meta
             name='description'
             content='Consulta el estado y progreso de la vacunación del COVID-19 de forma diaria según datos del gobierno'
