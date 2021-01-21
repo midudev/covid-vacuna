@@ -3,9 +3,11 @@ const XLSX = require('xlsx')
 module.exports = async function transformOdsToJson (odsFileName) {
   const workbook = XLSX.readFile(`./public/data/${odsFileName}`)
 
-  const { Sheets: { Hoja3 } } = workbook
+  const { Sheets } = workbook
 
-  const json = XLSX.utils.sheet_to_json(Hoja3)
+  const Hoja = Sheets[Object.keys(Sheets)[0]]
+
+  const json = XLSX.utils.sheet_to_json(Hoja)
 
   return json.map(element => {
     const {
