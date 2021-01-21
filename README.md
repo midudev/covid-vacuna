@@ -3,8 +3,9 @@
 
 Aplicación web que muestra el estado y progreso de la vacunación en España 🇪🇸 contra el COVID-19.
 
-[Anuncio en Twitter con toda la información.](https://twitter.com/midudev/status/1352231403136708611)
-[Sígueme en Twitch para no perderte cuando sigamos desarrollando este y otras apps](https://www.twitch.tv/midudev)
+**Unos enlaces para entender mejor la app:**
+* [Anuncio en Twitter con toda la información.](https://twitter.com/midudev/status/1352231403136708611)
+* [Sígueme en Twitch para no perderte cuando sigamos desarrollando este y otras apps](https://www.twitch.tv/midudev)
 
 ## ¿Cómo lo ejecuto en local?
 
