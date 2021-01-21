@@ -21,6 +21,7 @@ export default function Home ({ data, info }) {
         <Head>
           <html lang={locale} />
           <link rel='alternate icon' href='https://covid-vacuna.app/vacuna.png' type='image/png' />
+          <link rel='icon' href='/favicon.ico' />
           <title>Estado y progreso vacunación COVID-19 España 2021</title>
           <meta name='theme-color' content='#d2effd' />
           <meta
@@ -44,7 +45,7 @@ export default function Home ({ data, info }) {
           <meta property='twitter:domain' content='covid-vacuna.vercel.app' />
           <meta property='twitter:url' content='https://covid-vacuna.vercel.app/' />
 
-          <link rel='icon' href='/favicon.ico' />
+          <link rel='canonical' href='https://covid-vacuna.app' />
           <script src='https://cdn.usefathom.com/script.js' data-site='MYEXKUNW' defer />
         </Head>
 
