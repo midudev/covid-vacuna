@@ -4,10 +4,10 @@ module.exports = async function transformOdsToJson (odsFileName) {
   const workbook = XLSX.readFile(`./public/data/${odsFileName}`)
 
   const { Sheets } = workbook
+  const [firstKey] = Object.keys(Sheets)
+  const sheet = Sheets[firstKey]
 
-  const Hoja = Sheets[Object.keys(Sheets)[0]]
-
-  const json = XLSX.utils.sheet_to_json(Hoja)
+  const json = XLSX.utils.sheet_to_json(sheet)
 
   return json.map(element => {
     const {
