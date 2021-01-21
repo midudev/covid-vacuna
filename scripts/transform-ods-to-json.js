@@ -1,4 +1,5 @@
 const XLSX = require('xlsx')
+const { population } = require('../public/data/bbdd.json')
 
 module.exports = async function transformOdsToJson (odsFileName) {
   const workbook = XLSX.readFile(`./public/data/${odsFileName}`)
@@ -20,14 +21,19 @@ module.exports = async function transformOdsToJson (odsFileName) {
       'Nº Personas vacunadas\n(pauta completada)': dosisPautaCompletada
     } = element
 
+    const normalizedCCAA = ccaa.trim()
+    const populationCCAA = population[normalizedCCAA]
+
     return {
-      ccaa,
+      ccaa: ccaa.trim(),
       dosisAdministradas,
       dosisEntregadas,
       dosisEntregadasModerna,
       dosisEntregadasPfizer,
       dosisPautaCompletada,
-      porcentajeEntregadas
+      porcentajeEntregadas,
+      porcentajePoblacionAdministradas: dosisAdministradas / populationCCAA,
+      porcentajePoblacionCompletas: dosisPautaCompletada / populationCCAA
     }
   })
 }

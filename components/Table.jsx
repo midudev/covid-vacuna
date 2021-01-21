@@ -18,6 +18,8 @@ export default function Table ({ data }) {
         dosisEntregadasPfizer,
         dosisPautaCompletada,
         porcentajeEntregadas,
+        porcentajePoblacionAdministradas,
+        porcentajePoblacionCompletas,
         ...rest
       } = row
 
@@ -31,7 +33,9 @@ export default function Table ({ data }) {
         dosisEntregadasModerna: formatDigit(dosisEntregadasModerna),
         dosisEntregadasPfizer: formatDigit(dosisEntregadasPfizer),
         dosisPautaCompletada: formatDigit(dosisPautaCompletada),
-        porcentajeEntregadas: formatPercentage(porcentajeEntregadas)
+        porcentajeEntregadas: formatPercentage(porcentajeEntregadas),
+        porcentajePoblacionAdministradas: formatPercentage(porcentajePoblacionAdministradas),
+        porcentajePoblacionCompletas: formatPercentage(porcentajePoblacionCompletas)
       }
     }), []
   )
@@ -44,23 +48,29 @@ export default function Table ({ data }) {
       },
       {
         Header: 'Dosis entregadas',
-        accessor: 'dosisEntregadas',
-        format: 'digit'
+        accessor: 'dosisEntregadas'
       },
       {
         Header: 'Dosis administradas',
-        accessor: 'dosisAdministradas',
-        format: 'digit'
+        accessor: 'dosisAdministradas'
       },
       {
         Header: '% sobre entregadas',
-        accessor: 'porcentajeEntregadas',
-        format: 'percentatge'
+        accessor: 'porcentajeEntregadas'
+      },
+      {
+        Header: '% población vacunada',
+        accessor: 'porcentajePoblacionAdministradas'
       },
       {
         Header: 'Pauta completa',
         accessor: 'dosisPautaCompletada',
         format: 'digit'
+      },
+      {
+        Header: '% población totalmente vacunada',
+        accessor: 'porcentajePoblacionCompletas',
+        format: 'percentatge'
       }
     ],
     []

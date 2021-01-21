@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
+import Progress from 'components/Progress.jsx'
 import Table from 'components/Table.jsx'
 import Share from 'components/Share.jsx'
 
@@ -159,6 +160,8 @@ export default function Home ({ data, info }) {
               </section>
             </div>
           </div>
+
+          <Progress data={data} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
