@@ -2,7 +2,7 @@ import styles from 'styles/Share.module.css'
 
 export default function Share () {
   const params = new URLSearchParams({
-    url: 'https://covid-vaacuna.app',
+    url: 'https://covid-vacuna.app',
     text:
       '¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n'
   })
