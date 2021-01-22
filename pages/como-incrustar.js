@@ -25,7 +25,8 @@ export default function EjemploEmbed () {
             alt='Incrustar datos en una página web'
           />
         </span>
-        <h1>¿Cómo incrustar la información en mi página?</h1>
+        <h1>¿Cómo incrustar la información de vacunación en otra página?</h1>
+        <p>Si quieres, puedes añadir los datos de vacunación actualizados en tu página web. Para ello sólo tienes que copiar el código de incrustación en tu sitio.</p>
 
         <h2>Copia este código</h2>
         <textarea
@@ -50,10 +51,17 @@ export default function EjemploEmbed () {
           color: #09f;
         }
 
+        p {
+          color: #444;
+          max-width: 800px;
+          margin-top: 4px;
+        }
+
         section {
           display: grid;
           place-content: center;
           min-height: 100vh;
+          padding: 3rem 2rem;
           text-align: center;
         }
 
@@ -78,6 +86,15 @@ export default function EjemploEmbed () {
         iframe {
           border: 1px solid #ccc;
           margin: 0 auto;
+        }
+
+        h1 {
+          margin-bottom: 4px;
+        }
+
+        h2 {
+          margin-top: 32px;
+          margin-bottom: 4px;
         }
       `}
       </style>
