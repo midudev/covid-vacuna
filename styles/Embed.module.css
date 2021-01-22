@@ -1,0 +1,88 @@
+.embedContainer {
+  margin: auto;
+  overflow: auto;
+  padding: 0 0 20px;
+  position: absolute;
+  display: grid;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 33% 33% 33%;
+}
+
+.embedWrapper {
+  position: relative;
+  padding-top: 56.25%
+}
+
+.description {
+  color: var(--text-small-color);
+  line-height: 1.5;
+  font-size: 1.5vw;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+  padding: 0;
+}
+
+.card {
+  align-items: center;
+  background: rgba(255, 255, 255, .05);
+  backdrop-filter: blur(1.5px);
+  border-radius: 8px;
+  display: flex;
+  padding: 1vw;
+  height: 100%;
+  width: 100%;
+}
+
+.card h3 {
+  color: #2c7cdc;
+  font-weight: 600;
+  font-size: 5vw;
+  padding: 0;
+  margin: 0;
+}
+
+.card p {
+  font-weight: 600;
+  font-size: 2.2vw;
+  color: #888;
+  margin: 0;
+  padding: .3vh 0 0 0;
+}
+
+.card p strong {
+  color: #444;
+  border-bottom: 1px dotted #ccc;
+}
+
+.card section {
+  padding-left: 2vw;
+}
+
+.card section div {
+  display: flex;
+  flex-direction: row;
+}
+
+.card section div p {
+  font-weight: bold;
+  font-size: 5vw;
+  color: #111;
+  margin: 0;
+  padding: 0 0 0 1vw;
+}
+
+.card img {
+  margin-left: 1vw;
+  height: 80%;
+  width: auto;
+  object-fit: cover;
+}

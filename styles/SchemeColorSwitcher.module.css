@@ -1,0 +1,28 @@
+.colorSwitch {
+  background: #fff;
+  border-radius: 5000px;
+  border: 1px solid #333;
+  height: 26px;
+  padding: 0 8px;
+  position: fixed;
+  left: 32px;
+  top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.colorSwitch input[type="radio"] {
+  display: none;
+}
+
+.colorSwitch label[data-checked="true"] {
+  opacity: 1;
+}
+
+.colorSwitch label {
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 26px;
+  padding: 0 4px;
+  opacity: .5;
+}
