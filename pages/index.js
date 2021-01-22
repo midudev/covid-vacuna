@@ -216,6 +216,7 @@ export default function Home ({ data, info }) {
         </h2>
         <ul>
           <li><a target='_blank' rel='noreferrer' href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'>Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)</a></li>
+          <li><a target='_blank' rel='noreferrer' href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'>Web para revisar el estado y progreso de la vacunación del COVID-19 en España (Menéame)</a></li>
         </ul>
       </div>
 
