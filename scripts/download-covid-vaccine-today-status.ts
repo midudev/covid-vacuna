@@ -1,10 +1,12 @@
 // https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_20210119.ods
 
-const download = require('download')
-const fs = require('fs-extra')
-const transformOdsToJson = require('./transform-ods-to-json')
+import download from 'download'
+import fs from 'fs-extra'
 
-const PREFIX_URL = 'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_'
+import transformOdsToJson from './transform-ods-to-json'
+
+const PREFIX_URL =
+  'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_'
 const SUFFIX_URL = '.ods'
 
 const date = new Date()
@@ -23,10 +25,13 @@ download(url, 'public/data', { filename })
     const jsonFileName = filename.replace('.ods', '.json')
 
     await fs.writeJson(`./public/data/${jsonFileName}`, json)
-    await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
+    await fs.copyFile(
+      `./public/data/${jsonFileName}`,
+      './public/data/latest.json'
+    )
     await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
   })
-  .catch(err => {
+  .catch((err: any) => {
     console.error(`${url} can't be downloaded. Error:`)
     console.error(err)
   })

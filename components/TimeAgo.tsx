@@ -5,8 +5,8 @@ const DATE_UNITS = {
   second: 1
 }
 
-const getSecondsDiff = timestamp => (Date.now() - timestamp) / 1000
-const getUnitAndValueDate = (secondsElapsed) => {
+const getSecondsDiff = (timestamp: number) => (Date.now() - timestamp) / 1000
+const getUnitAndValueDate = (secondsElapsed: number) => {
   for (const [unit, secondsInUnit] of Object.entries(DATE_UNITS)) {
     if (secondsElapsed >= secondsInUnit || unit === 'second') {
       const value = Math.floor(secondsElapsed / secondsInUnit) * -1
@@ -15,22 +15,29 @@ const getUnitAndValueDate = (secondsElapsed) => {
   }
 }
 
-const getTimeAgo = (timestamp, locale) => {
+const getTimeAgo = (timestamp: number, locale: string) => {
   const rtf = new Intl.RelativeTimeFormat(locale)
 
   const secondsElapsed = getSecondsDiff(timestamp)
-  const { value, unit } = getUnitAndValueDate(secondsElapsed)
+  const { value, unit } = getUnitAndValueDate(secondsElapsed) as any
   return rtf.format(value, unit)
 }
 
-export default function TimeAgo ({ timestamp }) {
+const TimeAgo: React.FC<{ timestamp: number }> = ({ timestamp }) => {
   const locale = 'es'
   const timeago = getTimeAgo(timestamp, locale)
 
   const date = new Date(timestamp)
   const formattedDate = new Intl.DateTimeFormat(locale, {
-    month: 'long', day: 'numeric'
+    month: 'long',
+    day: 'numeric'
   }).format(date)
 
-  return <time title={formattedDate} dateTime={formattedDate}>{timeago}</time>
+  return (
+    <time title={formattedDate} dateTime={formattedDate}>
+      {timeago}
+    </time>
+  )
 }
+
+export default TimeAgo;

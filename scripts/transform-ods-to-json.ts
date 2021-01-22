@@ -1,7 +1,10 @@
-const XLSX = require('xlsx')
-const { population } = require('../public/data/bbdd.json')
+import XLSX from 'xlsx'
 
-module.exports = async function transformOdsToJson (odsFileName) {
+import { population } from '../public/data/bbdd.json'
+
+import { CCAA } from './types'
+
+async function transformOdsToJson(odsFileName: string) {
   const workbook = XLSX.readFile(`./public/data/${odsFileName}`)
 
   const { Sheets } = workbook
@@ -10,7 +13,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
 
   const json = XLSX.utils.sheet_to_json(sheet)
 
-  return json.map(element => {
+  return json.map((element: any) => {
     const {
       __EMPTY: ccaa,
       'Dosis entregadas Pfizer (1)': dosisEntregadasPfizer,
@@ -21,7 +24,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
       'Nº Personas vacunadas\n(pauta completada)': dosisPautaCompletada
     } = element
 
-    const normalizedCCAA = ccaa.trim()
+    const normalizedCCAA = ccaa.trim() as CCAA
     const populationCCAA = population[normalizedCCAA]
 
     return {
@@ -37,3 +40,5 @@ module.exports = async function transformOdsToJson (odsFileName) {
     }
   })
 }
+
+export default transformOdsToJson

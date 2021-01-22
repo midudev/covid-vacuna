@@ -1,16 +1,21 @@
 import { useState } from 'react'
+
 import styles from 'styles/Progress.module.css'
-import { toPercentage } from 'components/NumberPercentage.jsx'
+
+import { toPercentage } from './NumberPercentage'
 
 const FILTERS = {
   parcial: 'porcentajePoblacionAdministradas',
   completa: 'porcentajePoblacionCompletas'
 }
 
-export default function Progress ({ data }) {
+const Progress: React.FC<any> = ({ data }) => {
   const locale = 'es' // get from context later
   const [filter, setFilter] = useState(FILTERS.parcial)
-  const value = data.find(({ ccaa }) => ccaa === 'Totales')[filter]
+
+  const value = data.find(({ ccaa }: { ccaa: string }) => ccaa === 'Totales')[
+    filter
+  ] as number
 
   return (
     <>
@@ -20,26 +25,28 @@ export default function Progress ({ data }) {
             <input
               checked={filter === FILTERS.parcial}
               onChange={() => setFilter(FILTERS.parcial)}
-              type='radio'
-              name='filter'
+              type="radio"
+              name="filter"
             />
             Ver población vacunada
           </label>
           <label>
             <input
               checked={filter === FILTERS.completa}
-              name='filter'
+              name="filter"
               onChange={() => setFilter(FILTERS.completa)}
-              type='radio'
+              type="radio"
             />
             Ver población con pauta completa
           </label>
         </div>
 
-        <section data-value={toPercentage({ locale, number: value })}>
-          <progress max='100' value={value * 100} />
+        <section data-value={toPercentage({ locale, num: value })}>
+          <progress max="100" value={value * 100} />
         </section>
       </form>
     </>
   )
 }
+
+export default Progress
