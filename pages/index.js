@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
@@ -179,6 +180,18 @@ export default function Home ({ data, info }) {
             />
             Descargar últimos datos en formato JSON
           </a>
+
+          <Link href='/como-incrustar'>
+            <a className={styles.download}>
+              <Image
+                width={32}
+                height={32}
+                src='/embed.png'
+                alt='Incrustar datos en una página web'
+              />
+              Quiero incrustar los datos de vacunación en otra página web
+            </a>
+          </Link>
         </main>
 
         <h2 className={styles.subtitle}>
@@ -198,16 +211,19 @@ export default function Home ({ data, info }) {
         </h2>
         <ul>
           <li>
+            <strong>1.4.0</strong>: Añadida la posibilidad de incrustar los datos en otra página <span aria-label='Globo del mundo con meridianos' role='img'>🌐</span>
+          </li>
+          <li>
             <strong>1.3.0</strong>: Añadido modo oscuro a la app <span aria-label='Luna' role='img'>🌚</span>
           </li>
           <li>
             <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en población <span aria-label='Globo terrícola con vistas a América' role='img'>🌎</span>
           </li>
           <li>
-            <strong>1.1.0</strong>: Añadidas personas con pauta completa <span aria-label='Jeringuilla con sangre contaminada con T-Virus' role='img'>💉</span>
+            <strong>1.1.0</strong>: Añadidas personas con pauta completa <span aria-label='Jeringuilla' role='img'>💉</span>
           </li>
           <li>
-            <strong>1.0.0</strong>: Primera versión <span aria-label='Fuego del olimpo que derrite corazones' role='img'>🔥</span>
+            <strong>1.0.0</strong>: Primera versión <span aria-label='Fuego' role='img'>🔥</span>
           </li>
         </ul>
 
