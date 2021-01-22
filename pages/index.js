@@ -47,7 +47,6 @@ export default function Home ({ data, info }) {
           <meta property='twitter:url' content='https://covid-vacuna.vercel.app/' />
 
           <link rel='canonical' href='https://covid-vacuna.app' />
-          <script src='https://cdn.usefathom.com/script.js' data-site='MYEXKUNW' defer />
         </Head>
 
         <SchemeColorSwitcher />
