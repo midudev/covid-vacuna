@@ -9,7 +9,7 @@ class _Document extends Document {
 
   render () {
     return (
-      <Html>
+      <Html lang="es">
         <Head>
           <meta httpEquiv='content-type' content='text/html' />
           <meta
