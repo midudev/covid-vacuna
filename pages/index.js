@@ -7,6 +7,7 @@ import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
+import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 
 import styles from 'styles/Home.module.css'
 import TimeAgo from 'components/TimeAgo.jsx'
@@ -48,6 +49,8 @@ export default function Home ({ data, info }) {
           <link rel='canonical' href='https://covid-vacuna.app' />
           <script src='https://cdn.usefathom.com/script.js' data-site='MYEXKUNW' defer />
         </Head>
+
+        <SchemeColorSwitcher />
 
         <main className={styles.main}>
           <h1 className={styles.title}>
