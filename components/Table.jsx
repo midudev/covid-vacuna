@@ -111,7 +111,7 @@ export default function Table ({ data }) {
           {rows.map(row => {
             prepareRow(row)
             return (
-              <tr {...row.getRowProps()}>
+              <tr {...row.getRowProps()} className={row.id === "19" ? styles.totales : ''}>
                 {row.cells.map(cell => {
                   return (
                     <td {...cell.getCellProps()}>
