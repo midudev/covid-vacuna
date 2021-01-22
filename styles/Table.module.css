@@ -46,3 +46,8 @@
 .table thead tr {
   border-bottom: 1px solid #333;
 }
+
+.table tr.totales{
+  background-color: rgb(210, 239, 253);
+}
+
