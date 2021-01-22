@@ -61,7 +61,6 @@ body {
   background-image: var(--app-background);
   background-size: 40px 40px;
   background-position: 0 0,20px 20px;
-  background-blend-mode: exclusion;
   color: var(--text-base-color);
 }
 
