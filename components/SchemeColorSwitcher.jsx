@@ -17,25 +17,28 @@ export default function SchemeColorSwitcher () {
       : html.setAttribute('scheme', scheme)
   }, [scheme])
 
-  const handleChange = e => setScheme(e.target.id)
+  const handleChange = e => {
+    e.preventDefault()
+    setScheme(e.target.value)
+  }
 
   return (
     <>
       <section className={styles.colorSwitch}>
-        <label checked={scheme === SCHEMES.LIGHT} title='Usa el tema claro' for={SCHEMES.LIGHT}>
+        <label data-checked={scheme === SCHEMES.LIGHT} title='Usa el tema claro'>
+          <input onChange={handleChange} name='switch' value={SCHEMES.LIGHT} type='radio' />
           <span aria-label='Un sol que invertido parece el malo de Doom' role='img'>🌞</span>
         </label>
-        <input checked={scheme === SCHEMES.LIGHT} onChange={handleChange} name='switch' id={SCHEMES.LIGHT} type='radio' />
 
-        <label checked={scheme === SCHEMES.SYSTEM} title='Usa el tema dependiendo tu configuración de sistema' for={SCHEMES.SYSTEM}>
+        <label data-checked={scheme === SCHEMES.SYSTEM} title='Usa el tema dependiendo tu configuración de sistema'>
+          <input onChange={handleChange} name='switch' value={SCHEMES.SYSTEM} type='radio' />
           <span aria-label='Tus preferencias molonas de tu sistema' role='img'>💻</span>
         </label>
-        <input checked={scheme === SCHEMES.SYSTEM} onChange={handleChange} name='switch' id={SCHEMES.SYSTEM} type='radio' />
 
-        <label checked={scheme === SCHEMES.DARK} title='Usa el tema oscuro' for={SCHEMES.DARK}>
+        <label data-checked={scheme === SCHEMES.DARK} title='Usa el tema oscuro'>
+          <input onChange={handleChange} name='switch' value={SCHEMES.DARK} type='radio' />
           <span aria-label='Una luna con ojos sospechosos que parece que está tramando algo jodido' role='img'>🌚</span>
         </label>
-        <input checked={scheme === SCHEMES.DARK} onChange={handleChange} name='switch' id={SCHEMES.DARK} type='radio' />
 
         <div />
       </section>

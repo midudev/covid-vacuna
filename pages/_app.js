@@ -1,6 +1,5 @@
-import useFathom from '../lib/hooks/useFathom'
-
-import '../styles/globals.css'
+import useFathom from 'hooks/useFathom'
+import 'styles/globals.css'
 
 function App ({ Component, pageProps }) {
   useFathom({ ID: 'MYEXKUNW', domains: ['covid-vacuna.app'] })
