@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "./node_modules/eslint/bin/eslint.js .",
     "lint:fix": "./node_modules/eslint/bin/eslint.js . --fix",
-    "download-today-status": "node scripts/download-covid-vaccine-today-status.js"
+    "download-today-status": "node src/scripts/download-covid-vaccine-today-status.js"
   },
   "dependencies": {
     "download": "8.0.0",

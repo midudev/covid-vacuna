@@ -1,5 +1,5 @@
 const XLSX = require('xlsx')
-const { population } = require('../public/data/bbdd.json')
+const { population } = require('../../public/data/bbdd.json')
 
 module.exports = async function transformOdsToJson (odsFileName) {
   const workbook = XLSX.readFile(`./public/data/${odsFileName}`)
