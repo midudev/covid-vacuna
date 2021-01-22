@@ -26,13 +26,13 @@ Sólo te pido:
 - Sigue el estilo y pásale el linter antes de hacer la PR.
 - No reinventes la rueda. No hace falta que añadas un nuevo framework, dependencia o cosa trending. La idea es que la app sea funcional y tenga lo mínimo necesario.
 
-## ¿Qué tienes pensado añadir a la app?
+## Próximo contenido
 
-* 🔹 Seleccionar días para ver el progreso Calendario arrancable
-* 🔹 Modo oscuro Luna nueva con cara
-* 🔹 Gráfica con el progreso Gráfico con tendencia hacia arriba
-* 🔹 PWA Teléfono móvil
-* 🔹 Traducción a las lenguas oficiales del Estado Globo terráqueo con el continente americano
-* 🔹 Mapa con info encima
+- [ ] 🔹 Seleccionar días para ver el progreso
+- [x] 🔹 Modo oscuro
+- [ ] 🔹 Gráfica con el progreso
+- [ ] 🔹 PWA
+- [ ] 🔹 Traducción a las lenguas oficiales del Estado
+- [ ] 🔹 Mapa con info encima
 
 y más cosas. :)
