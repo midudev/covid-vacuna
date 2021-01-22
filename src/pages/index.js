@@ -1,11 +1,11 @@
 
-import Image from 'next/image'
 import Header from 'layouts/Header'
 import Title from 'layouts/Title'
 import Footer from 'layouts/Footer.jsx'
 import Distribuidas from 'components/Dosis/Distribuidas'
 import Completadas from 'components/Dosis/Completadas'
 import Administradas from 'components/Dosis/Administradas'
+import Download from 'components/Download'
 import Progress from 'components/Progress.jsx'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
@@ -31,15 +31,7 @@ export default function Home ({ data, info }) {
 
           <Progress data={data} />
 
-          <a className={styles.download} download href='/data/latest.json'>
-            <Image
-              width={32}
-              height={32}
-              src='/download.png'
-              alt='Descargar datos'
-            />
-            Descargar últimos datos en formato JSON
-          </a>
+          <Download styles={styles} />
         </main>
 
         <h2 className={styles.subtitle}>
