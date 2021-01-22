@@ -8,6 +8,7 @@ import Download from 'components/Download'
 import Progress from 'components/Progress'
 import Share from 'components/Share'
 import Table from 'components/Table'
+import Changelog from 'components/Changelog'
 
 import styles from 'styles/Home.module.css'
 
@@ -44,20 +45,7 @@ export default function Home ({ data, info }) {
           <li><a target='_blank' rel='noreferrer' href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Estrategia de Vacunación COVID-19 en España</a></li>
           <li><a target='_blank' rel='noreferrer' href='https://www.vacunacovid.gob.es'>Información oficial sobre la vacunación contra el nuevo coronavirus</a></li>
         </ul>
-        <h2 className={styles.subtitle}>
-          Changelog
-        </h2>
-        <ul>
-          <li>
-            <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en población <span aria-label='Globo terrícola con vistas a América' role='img'>🌎</span>
-          </li>
-          <li>
-            <strong>1.1.0</strong>: Añadidas personas con pauta completa <span aria-label='Jeringuilla con sangre contaminada con T-Virus' role='img'>💉</span>
-          </li>
-          <li>
-            <strong>1.0.0</strong>: Primera versión <span aria-label='Fuego del olimpo que derrite corazones' role='img'>🔥</span>
-          </li>
-        </ul>
+        
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
