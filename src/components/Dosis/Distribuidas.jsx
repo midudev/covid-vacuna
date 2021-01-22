@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import NumberDigits from 'components/NumberDigits'
+import NumberDigits from 'utils/NumberDigits'
 
 export default function Distribuidas ({ styles, totals }) {
   return (

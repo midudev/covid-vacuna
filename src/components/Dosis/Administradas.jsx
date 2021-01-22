@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import NumberDigits from 'components/NumberDigits'
-import NumberPercentage from 'components/NumberPercentage.jsx'
+import NumberDigits from 'utils/NumberDigits'
+import NumberPercentage from 'utils/NumberPercentage.jsx'
 
 export default function Administradas ({styles, totals}) {
   return (
