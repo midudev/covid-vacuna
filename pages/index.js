@@ -210,14 +210,14 @@ export default function Home ({ data, info }) {
             <strong>1.0.0</strong>: Primera versión <span aria-label='Fuego del olimpo que derrite corazones' role='img'>🔥</span>
           </li>
         </ul>
-      </div>
 
-      <h2 className={styles.subtitle}>
-        En los medios
-      </h2>
-      <ul>
-        <li><a target='_blank' rel='noreferrer' href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'>Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)</a></li>
-      </ul>
+        <h2 className={styles.subtitle}>
+          En los medios
+        </h2>
+        <ul>
+          <li><a target='_blank' rel='noreferrer' href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'>Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)</a></li>
+        </ul>
+      </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
         <h2>Sobre las vacunas distribuidas</h2>
