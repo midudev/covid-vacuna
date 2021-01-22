@@ -192,10 +192,14 @@ export default function Home ({ data, info }) {
           <li><a target='_blank' rel='noreferrer' href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Estrategia de Vacunación COVID-19 en España</a></li>
           <li><a target='_blank' rel='noreferrer' href='https://www.vacunacovid.gob.es'>Información oficial sobre la vacunación contra el nuevo coronavirus</a></li>
         </ul>
+
         <h2 className={styles.subtitle}>
           Changelog
         </h2>
         <ul>
+          <li>
+            <strong>1.3.0</strong>: Añadido modo oscuro a la app <span aria-label='Luna' role='img'>🌚</span>
+          </li>
           <li>
             <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en población <span aria-label='Globo terrícola con vistas a América' role='img'>🌎</span>
           </li>
@@ -207,6 +211,13 @@ export default function Home ({ data, info }) {
           </li>
         </ul>
       </div>
+
+      <h2 className={styles.subtitle}>
+        En los medios
+      </h2>
+      <ul>
+        <li><a target='_blank' rel='noreferrer' href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'>Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)</a></li>
+      </ul>
 
       <dialog id='vacunas-distribuidas-dialog'>
         <h2>Sobre las vacunas distribuidas</h2>
