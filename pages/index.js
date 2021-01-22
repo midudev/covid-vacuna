@@ -48,8 +48,6 @@ export default function Home ({ data, info }) {
           <link rel='canonical' href='https://covid-vacuna.app' />
         </Head>
 
-        <SchemeColorSwitcher />
-
         <main className={styles.main}>
           <h1 className={styles.title}>
             Vacunación COVID-19 en España
@@ -238,6 +236,8 @@ export default function Home ({ data, info }) {
         <h2>Sobre las vacunas distribuidas</h2>
         <p>Las vacunas distribuidas...</p>
       </dialog>
+
+      <SchemeColorSwitcher />
 
       <Share />
 
