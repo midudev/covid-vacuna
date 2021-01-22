@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import styles from 'styles/Progress.module.css'
-import { toPercentage } from 'components/NumberPercentage.jsx'
+import { toPercentage } from 'utils/NumberPercentage.jsx'
 
 const FILTERS = {
   parcial: 'porcentajePoblacionAdministradas',

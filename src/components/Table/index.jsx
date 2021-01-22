@@ -2,8 +2,8 @@
 
 import { useMemo } from 'react'
 import { useTable, useSortBy } from 'react-table'
-import { toDigit } from './NumberDigits.jsx'
-import { toPercentage } from './NumberPercentage.jsx'
+import { toDigit } from 'utils/NumberDigits'
+import { toPercentage } from 'utils/NumberPercentage'
 import styles from 'styles/Table.module.css'
 
 export default function Table ({ data }) {

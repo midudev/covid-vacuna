@@ -1,4 +1,4 @@
-import TimeAgo from 'components/TimeAgo.jsx'
+import TimeAgo from 'utils/TimeAgo'
 
 export default function Footer ({styles, info}) {
   return (

@@ -1,14 +1,13 @@
-
 import Header from 'layouts/Header'
 import Title from 'layouts/Title'
-import Footer from 'layouts/Footer.jsx'
+import Footer from 'layouts/Footer'
 import Distribuidas from 'components/Dosis/Distribuidas'
 import Completadas from 'components/Dosis/Completadas'
 import Administradas from 'components/Dosis/Administradas'
 import Download from 'components/Download'
-import Progress from 'components/Progress.jsx'
-import Share from 'components/Share.jsx'
-import Table from 'components/Table.jsx'
+import Progress from 'components/Progress'
+import Share from 'components/Share'
+import Table from 'components/Table'
 
 import styles from 'styles/Home.module.css'
 
@@ -74,8 +73,8 @@ export default function Home ({ data, info }) {
 }
 
 export async function getStaticProps () {
-  const data = require('../public/data/latest.json')
-  const info = require('../public/data/info.json')
+  const data = require('../../public/data/latest.json')
+  const info = require('../../public/data/info.json')
 
   return {
     props: {
