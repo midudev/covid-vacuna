@@ -1,6 +1,7 @@
 
-const fs = require('fs-extra');
+const fs = require('fs-extra')
 const moment = require('moment')
+
 
 module.exports = function agregateJsonAsTimeSeries (jsonToAdd, filename) {
   
@@ -14,6 +15,7 @@ module.exports = function agregateJsonAsTimeSeries (jsonToAdd, filename) {
     const aggregated = existing
     const existing_date = aggregated.find(array => array[0] == unixDate)
     existing_date ? aggregated[unixDate] = jsonToAdd : aggregated.push([unixDate, jsonToAdd])
+    
     
     fs.writeJson('./public/data/aggregated.json', aggregated)
     .then(() => {
