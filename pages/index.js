@@ -70,6 +70,7 @@ export default function Home ({ data, info }) {
                   alt='Vacunas distribuidas en España'
                   width={150}
                   height={150}
+                  priority
                 />
               </header>
               <section>
@@ -87,6 +88,7 @@ export default function Home ({ data, info }) {
                       src='/pfizer-logo.png'
                       height={29}
                       width={72}
+                      priority
                     />
                     <span>
                       <NumberDigits>
@@ -101,6 +103,7 @@ export default function Home ({ data, info }) {
                       src='/moderna-logo.png'
                       height={16.5}
                       width={72}
+                      priority
                     />
                     <span>
                       <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>
@@ -117,6 +120,7 @@ export default function Home ({ data, info }) {
                   alt='Vacunas administradas en España'
                   width={150}
                   height={150}
+                  priority
                 />
               </header>
               <section>
@@ -144,6 +148,7 @@ export default function Home ({ data, info }) {
                   alt='Dosis completas subministradas'
                   width={150}
                   height={150}
+                  priority
                 />
               </header>
               <section>
