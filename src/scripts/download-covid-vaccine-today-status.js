@@ -3,13 +3,14 @@
 const download = require('download')
 const fs = require('fs-extra')
 const transformOdsToJson = require('./transform-ods-to-json')
+const aggregateJsonAsTimeSeries = require('./aggregate-json-as-time-series')
 
 const PREFIX_URL = 'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_'
 const SUFFIX_URL = '.ods'
 
 const date = new Date()
 const year = date.getFullYear()
-const day = `${date.getDate()}`.padStart(2, '0')
+const day = `${date.getDate()-18}`.padStart(2, '0')
 const month = `${date.getMonth() + 1}`.padStart(2, '0')
 
 const url = `${PREFIX_URL}${year}${month}${day}${SUFFIX_URL}`
@@ -25,6 +26,9 @@ download(url, 'public/data', { filename })
     await fs.writeJson(`./public/data/${jsonFileName}`, json)
     await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
     await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
+    aggregateJsonAsTimeSeries(json, jsonFileName)
+
+
   })
   .catch(err => {
     console.error(`${url} can't be downloaded. Error:`)

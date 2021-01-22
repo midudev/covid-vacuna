@@ -1,0 +1,2407 @@
+[
+	[
+		1611270000000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 209766,
+				"dosisEntregadas": 251420,
+				"dosisEntregadasModerna": 6800,
+				"dosisEntregadasPfizer": 244620,
+				"dosisPautaCompletada": 20846,
+				"porcentajeEntregadas": 0.8343250338079707,
+				"porcentajePoblacionAdministradas": 0.02478211419554178,
+				"porcentajePoblacionCompletas": 0.002462782112068991
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 41287,
+				"dosisEntregadas": 42465,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 41265,
+				"dosisPautaCompletada": 2165,
+				"porcentajeEntregadas": 0.9722595078299776,
+				"porcentajePoblacionAdministradas": 0.0310570780154221,
+				"porcentajePoblacionCompletas": 0.001628565260333491
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 41465,
+				"dosisEntregadas": 45395,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 44195,
+				"dosisPautaCompletada": 6851,
+				"porcentajeEntregadas": 0.9134265888313691,
+				"porcentajePoblacionAdministradas": 0.04070048214341804,
+				"porcentajePoblacionCompletas": 0.006724683544303798
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 20499,
+				"dosisEntregadas": 23190,
+				"dosisEntregadasModerna": 600,
+				"dosisEntregadasPfizer": 22590,
+				"dosisPautaCompletada": 2660,
+				"porcentajeEntregadas": 0.8839586028460543,
+				"porcentajePoblacionAdministradas": 0.017497437140591512,
+				"porcentajePoblacionCompletas": 0.00227050991726296
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 47068,
+				"dosisEntregadas": 47485,
+				"dosisEntregadasModerna": 1300,
+				"dosisEntregadasPfizer": 46185,
+				"dosisPautaCompletada": 2865,
+				"porcentajeEntregadas": 0.9912182794566705,
+				"porcentajePoblacionAdministradas": 0.02163099186011456,
+				"porcentajePoblacionCompletas": 0.0013166650734942682
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 20462,
+				"dosisEntregadas": 21125,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 20625,
+				"dosisPautaCompletada": 241,
+				"porcentajeEntregadas": 0.9686153846153847,
+				"porcentajePoblacionAdministradas": 0.03510349027714636,
+				"porcentajePoblacionCompletas": 0.00041344644496101425
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 86370,
+				"dosisEntregadas": 95815,
+				"dosisEntregadasModerna": 2500,
+				"dosisEntregadasPfizer": 93315,
+				"dosisPautaCompletada": 6060,
+				"porcentajeEntregadas": 0.9014246203621562,
+				"porcentajePoblacionAdministradas": 0.03606386523463434,
+				"porcentajePoblacionCompletas": 0.002530358033135164
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 57031,
+				"dosisEntregadas": 63575,
+				"dosisEntregadasModerna": 1700,
+				"dosisEntregadasPfizer": 61875,
+				"dosisPautaCompletada": 1593,
+				"porcentajeEntregadas": 0.8970664569406213,
+				"porcentajePoblacionAdministradas": 0.027885006070248644,
+				"porcentajePoblacionCompletas": 0.0007788889318073695
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 173147,
+				"dosisEntregadas": 217020,
+				"dosisEntregadasModerna": 5800,
+				"dosisEntregadasPfizer": 211220,
+				"dosisPautaCompletada": 4101,
+				"porcentajeEntregadas": 0.7978389088563266,
+				"porcentajePoblacionAdministradas": 0.022254028318822016,
+				"porcentajePoblacionCompletas": 0.0005270883707802566
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 103426,
+				"dosisEntregadas": 111900,
+				"dosisEntregadasModerna": 2900,
+				"dosisEntregadasPfizer": 109000,
+				"dosisPautaCompletada": 4139,
+				"porcentajeEntregadas": 0.9242716711349419,
+				"porcentajePoblacionAdministradas": 0.02045061912822775,
+				"porcentajePoblacionCompletas": 0.0008184123196462655
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 32979,
+				"dosisEntregadas": 40275,
+				"dosisEntregadasModerna": 1000,
+				"dosisEntregadasPfizer": 39275,
+				"dosisPautaCompletada": 638,
+				"porcentajeEntregadas": 0.8188454376163873,
+				"porcentajePoblacionAdministradas": 0.030995679458489623,
+				"porcentajePoblacionCompletas": 0.0005996313864737069
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 65394,
+				"dosisEntregadas": 68605,
+				"dosisEntregadasModerna": 1800,
+				"dosisEntregadasPfizer": 66805,
+				"dosisPautaCompletada": 7204,
+				"porcentajeEntregadas": 0.953195831207638,
+				"porcentajePoblacionAdministradas": 0.02420369388178853,
+				"porcentajePoblacionCompletas": 0.002666351817053622
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 8967,
+				"dosisEntregadas": 11965,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 11765,
+				"dosisPautaCompletada": 317,
+				"porcentajeEntregadas": 0.7494358545758463,
+				"porcentajePoblacionAdministradas": 0.02802940790337403,
+				"porcentajePoblacionCompletas": 0.0009908913020374225
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 154778,
+				"dosisEntregadas": 176615,
+				"dosisEntregadasModerna": 4700,
+				"dosisEntregadasPfizer": 171915,
+				"dosisPautaCompletada": 2263,
+				"porcentajeEntregadas": 0.8763581802225179,
+				"porcentajePoblacionAdministradas": 0.022828990685391855,
+				"porcentajePoblacionCompletas": 0.000333781325001239
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 42261,
+				"dosisEntregadas": 46385,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 45185,
+				"dosisPautaCompletada": 2086,
+				"porcentajeEntregadas": 0.9110919478279617,
+				"porcentajePoblacionAdministradas": 0.027964249486021844,
+				"porcentajePoblacionCompletas": 0.0013803133959878274
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 16310,
+				"dosisEntregadas": 21125,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 20625,
+				"dosisPautaCompletada": 807,
+				"porcentajeEntregadas": 0.7720710059171597,
+				"porcentajePoblacionAdministradas": 0.024667383548322208,
+				"porcentajePoblacionCompletas": 0.0012205137046901301
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 41474,
+				"dosisEntregadas": 57380,
+				"dosisEntregadasModerna": 1400,
+				"dosisEntregadasPfizer": 55980,
+				"dosisPautaCompletada": 3044,
+				"porcentajeEntregadas": 0.7227953990937609,
+				"porcentajePoblacionAdministradas": 0.018677741629828184,
+				"porcentajePoblacionCompletas": 0.0013708599489124992
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 1641,
+				"dosisEntregadas": 2180,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1980,
+				"dosisPautaCompletada": 373,
+				"porcentajeEntregadas": 0.7527522935779817,
+				"porcentajePoblacionAdministradas": 0.019488848245884895,
+				"porcentajePoblacionCompletas": 0.0044298235196313625
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1500,
+				"dosisEntregadas": 2180,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1980,
+				"dosisPautaCompletada": 203,
+				"porcentajeEntregadas": 0.6880733944954128,
+				"porcentajePoblacionAdministradas": 0.0172263310211769,
+				"porcentajePoblacionCompletas": 0.002331296798199274
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 1165825,
+				"dosisEntregadas": 1346100,
+				"dosisEntregadasModerna": 35700,
+				"dosisEntregadasPfizer": 1310400,
+				"dosisPautaCompletada": 68456,
+				"porcentajeEntregadas": 0.8660760716142931,
+				"porcentajePoblacionAdministradas": 0.024836493395824458,
+				"porcentajePoblacionCompletas": 0.0014583723902854707
+			}
+		]
+	],
+	[
+		1611183600000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 194101,
+				"dosisEntregadas": 251420,
+				"dosisEntregadasModerna": 6800,
+				"dosisEntregadasPfizer": 244620,
+				"dosisPautaCompletada": 15193,
+				"porcentajeEntregadas": 0.7720189324636068,
+				"porcentajePoblacionAdministradas": 0.022931424289297862,
+				"porcentajePoblacionCompletas": 0.0017949270185486032
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 38170,
+				"dosisEntregadas": 42465,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 41265,
+				"dosisPautaCompletada": 1731,
+				"porcentajeEntregadas": 0.8988578829624396,
+				"porcentajePoblacionAdministradas": 0.028712395375025106,
+				"porcentajePoblacionCompletas": 0.0013020999841280706
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 40011,
+				"dosisEntregadas": 45395,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 44195,
+				"dosisPautaCompletada": 5664,
+				"porcentajeEntregadas": 0.8813966295847561,
+				"porcentajePoblacionAdministradas": 0.039273290511040615,
+				"porcentajePoblacionCompletas": 0.005559569054873261
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 18105,
+				"dosisEntregadas": 23190,
+				"dosisEntregadasModerna": 600,
+				"dosisEntregadasPfizer": 22590,
+				"dosisPautaCompletada": 1514,
+				"porcentajeEntregadas": 0.7807244501940491,
+				"porcentajePoblacionAdministradas": 0.015453978215054846,
+				"porcentajePoblacionCompletas": 0.0012923127874947826
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 45482,
+				"dosisEntregadas": 47485,
+				"dosisEntregadasModerna": 1300,
+				"dosisEntregadasPfizer": 46185,
+				"dosisPautaCompletada": 1744,
+				"porcentajeEntregadas": 0.9578182583973887,
+				"porcentajePoblacionAdministradas": 0.020902115487841644,
+				"porcentajePoblacionCompletas": 0.0008014882681235616
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 19980,
+				"dosisEntregadas": 21125,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 20625,
+				"dosisPautaCompletada": 241,
+				"porcentajeEntregadas": 0.9457988165680473,
+				"porcentajePoblacionAdministradas": 0.034276597387224335,
+				"porcentajePoblacionCompletas": 0.00041344644496101425
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 82162,
+				"dosisEntregadas": 95815,
+				"dosisEntregadasModerna": 2500,
+				"dosisEntregadasPfizer": 93315,
+				"dosisPautaCompletada": 5296,
+				"porcentajeEntregadas": 0.8575066534467464,
+				"porcentajePoblacionAdministradas": 0.03430681133967844,
+				"porcentajePoblacionCompletas": 0.002211349198594691
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 53880,
+				"dosisEntregadas": 63575,
+				"dosisEntregadasModerna": 1700,
+				"dosisEntregadasPfizer": 61875,
+				"dosisPautaCompletada": 1202,
+				"porcentajeEntregadas": 0.8475029492725128,
+				"porcentajePoblacionAdministradas": 0.026344341271676754,
+				"porcentajePoblacionCompletas": 0.0005877115480429744
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 168054,
+				"dosisEntregadas": 217020,
+				"dosisEntregadasModerna": 5800,
+				"dosisEntregadasPfizer": 211220,
+				"dosisPautaCompletada": 2598,
+				"porcentajeEntregadas": 0.774371025711916,
+				"porcentajePoblacionAdministradas": 0.021599441371154656,
+				"porcentajePoblacionCompletas": 0.0003339126035813476
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 101437,
+				"dosisEntregadas": 111900,
+				"dosisEntregadasModerna": 2900,
+				"dosisEntregadasPfizer": 109000,
+				"dosisPautaCompletada": 2956,
+				"porcentajeEntregadas": 0.906496872207328,
+				"porcentajePoblacionAdministradas": 0.020057330386073505,
+				"porcentajePoblacionCompletas": 0.0005844954860774005
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 32039,
+				"dosisEntregadas": 40275,
+				"dosisEntregadasModerna": 1000,
+				"dosisEntregadasPfizer": 39275,
+				"dosisPautaCompletada": 638,
+				"porcentajeEntregadas": 0.7955058969584109,
+				"porcentajePoblacionAdministradas": 0.0301122100176036,
+				"porcentajePoblacionCompletas": 0.0005996313864737069
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 62011,
+				"dosisEntregadas": 68605,
+				"dosisEntregadasModerna": 1800,
+				"dosisEntregadasPfizer": 66805,
+				"dosisPautaCompletada": 3861,
+				"porcentajeEntregadas": 0.9038845565192042,
+				"porcentajePoblacionAdministradas": 0.022951574476306517,
+				"porcentajePoblacionCompletas": 0.0014290372523103878
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 8684,
+				"dosisEntregadas": 11965,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 11765,
+				"dosisPautaCompletada": 267,
+				"porcentajeEntregadas": 0.7257835353113247,
+				"porcentajePoblacionAdministradas": 0.027144795163700244,
+				"porcentajePoblacionCompletas": 0.0008345992985614884
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 142765,
+				"dosisEntregadas": 176615,
+				"dosisEntregadasModerna": 4700,
+				"dosisEntregadasPfizer": 171915,
+				"dosisPautaCompletada": 1738,
+				"porcentajeEntregadas": 0.808340174956827,
+				"porcentajePoblacionAdministradas": 0.02105713250720366,
+				"porcentajePoblacionCompletas": 0.00025634641752194135
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 40757,
+				"dosisEntregadas": 46385,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 45185,
+				"dosisPautaCompletada": 1784,
+				"porcentajeEntregadas": 0.878667672739032,
+				"porcentajePoblacionAdministradas": 0.02696904749773532,
+				"porcentajePoblacionCompletas": 0.0011804789541909318
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 15754,
+				"dosisEntregadas": 21125,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 20625,
+				"dosisPautaCompletada": 767,
+				"porcentajeEntregadas": 0.7457514792899408,
+				"porcentajePoblacionAdministradas": 0.023826484391187498,
+				"porcentajePoblacionCompletas": 0.0011600173624502228
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 36864,
+				"dosisEntregadas": 57380,
+				"dosisEntregadasModerna": 1400,
+				"dosisEntregadasPfizer": 55980,
+				"dosisPautaCompletada": 1333,
+				"porcentajeEntregadas": 0.6424538166608574,
+				"porcentajePoblacionAdministradas": 0.01660163638525308,
+				"porcentajePoblacionCompletas": 0.0006003141629107626
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 1545,
+				"dosisEntregadas": 2180,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1980,
+				"dosisPautaCompletada": 326,
+				"porcentajeEntregadas": 0.7087155963302753,
+				"porcentajePoblacionAdministradas": 0.01834873280919693,
+				"porcentajePoblacionCompletas": 0.00387164200375288
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1500,
+				"dosisEntregadas": 2180,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1980,
+				"dosisPautaCompletada": 203,
+				"porcentajeEntregadas": 0.6880733944954128,
+				"porcentajePoblacionAdministradas": 0.0172263310211769,
+				"porcentajePoblacionCompletas": 0.002331296798199274
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 1103301,
+				"dosisEntregadas": 1346100,
+				"dosisEntregadasModerna": 35700,
+				"dosisEntregadasPfizer": 1310400,
+				"dosisPautaCompletada": 49056,
+				"porcentajeEntregadas": 0.819627813683976,
+				"porcentajePoblacionAdministradas": 0.023504495100127823,
+				"porcentajePoblacionCompletas": 0.0010450788240306775
+			}
+		]
+	],
+	[
+		1611097200000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 174279,
+				"dosisEntregadas": 251420,
+				"dosisEntregadasModerna": 6800,
+				"dosisEntregadasPfizer": 244620,
+				"dosisPautaCompletada": 4568,
+				"porcentajeEntregadas": 0.693178744729934,
+				"porcentajePoblacionAdministradas": 0.020589619289517015,
+				"porcentajePoblacionCompletas": 0.0005396713368478917
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 33734,
+				"dosisEntregadas": 42465,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 41265,
+				"dosisPautaCompletada": 623,
+				"porcentajeEntregadas": 0.79439538443424,
+				"porcentajePoblacionAdministradas": 0.025375529095653573,
+				"porcentajePoblacionCompletas": 0.0004686356384239099
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 36054,
+				"dosisEntregadas": 45395,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 44195,
+				"dosisPautaCompletada": 1687,
+				"porcentajeEntregadas": 0.7942284392554246,
+				"porcentajePoblacionAdministradas": 0.03538924835882778,
+				"porcentajePoblacionCompletas": 0.0016558956559977384
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 15697,
+				"dosisEntregadas": 23190,
+				"dosisEntregadasModerna": 600,
+				"dosisEntregadasPfizer": 22590,
+				"dosisPautaCompletada": 167,
+				"porcentajeEntregadas": 0.676886589047003,
+				"porcentajePoblacionAdministradas": 0.013398569237322062,
+				"porcentajePoblacionCompletas": 0.00014254705119658433
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 43599,
+				"dosisEntregadas": 47485,
+				"dosisEntregadasModerna": 1300,
+				"dosisEntregadasPfizer": 46185,
+				"dosisPautaCompletada": 339,
+				"porcentajeEntregadas": 0.9181636306201959,
+				"porcentajePoblacionAdministradas": 0.02003674713412796,
+				"porcentajePoblacionCompletas": 0.00015579387780612807
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 19473,
+				"dosisEntregadas": 21125,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 20625,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.9217988165680473,
+				"porcentajePoblacionAdministradas": 0.033406815861932906,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 74350,
+				"dosisEntregadas": 95815,
+				"dosisEntregadasModerna": 2500,
+				"dosisEntregadasPfizer": 93315,
+				"dosisPautaCompletada": 633,
+				"porcentajeEntregadas": 0.7759745342587278,
+				"porcentajePoblacionAdministradas": 0.031044904251419047,
+				"porcentajePoblacionCompletas": 0.000264309675738376
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 48755,
+				"dosisEntregadas": 63575,
+				"dosisEntregadasModerna": 1700,
+				"dosisEntregadasPfizer": 61875,
+				"dosisPautaCompletada": 195,
+				"porcentajeEntregadas": 0.7668895005898545,
+				"porcentajePoblacionAdministradas": 0.023838499604688198,
+				"porcentajePoblacionCompletas": 0.0000953442195244426
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 162830,
+				"dosisEntregadas": 217020,
+				"dosisEntregadasModerna": 5800,
+				"dosisEntregadasPfizer": 211220,
+				"dosisPautaCompletada": 913,
+				"porcentajeEntregadas": 0.7502995115657544,
+				"porcentajePoblacionAdministradas": 0.020928017413837888,
+				"porcentajePoblacionCompletas": 0.00011734496038097397
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 99932,
+				"dosisEntregadas": 111900,
+				"dosisEntregadasModerna": 2900,
+				"dosisEntregadasPfizer": 109000,
+				"dosisPautaCompletada": 1737,
+				"porcentajeEntregadas": 0.893047363717605,
+				"porcentajePoblacionAdministradas": 0.019759743881829092,
+				"porcentajePoblacionCompletas": 0.0003434603042342506
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 30941,
+				"dosisEntregadas": 40275,
+				"dosisEntregadasModerna": 1000,
+				"dosisEntregadasPfizer": 39275,
+				"dosisPautaCompletada": 254,
+				"porcentajeEntregadas": 0.7682433271260087,
+				"porcentajePoblacionAdministradas": 0.029080242521760134,
+				"porcentajePoblacionCompletas": 0.0002387247212606921
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 59104,
+				"dosisEntregadas": 68605,
+				"dosisEntregadasModerna": 1800,
+				"dosisEntregadasPfizer": 66805,
+				"dosisPautaCompletada": 1197,
+				"porcentajeEntregadas": 0.8615115516361781,
+				"porcentajePoblacionAdministradas": 0.021875632675615948,
+				"porcentajePoblacionCompletas": 0.0004430348591078825
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 8335,
+				"dosisEntregadas": 11965,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 11765,
+				"dosisPautaCompletada": 44,
+				"porcentajeEntregadas": 0.6966151274550773,
+				"porcentajePoblacionAdministradas": 0.026053876979438225,
+				"porcentajePoblacionCompletas": 0.00013753696305882207
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 129194,
+				"dosisEntregadas": 176615,
+				"dosisEntregadasModerna": 4700,
+				"dosisEntregadasPfizer": 171915,
+				"dosisPautaCompletada": 812,
+				"porcentajeEntregadas": 0.7315007219092377,
+				"porcentajePoblacionAdministradas": 0.01905547702262928,
+				"porcentajePoblacionCompletas": 0.00011976599023464694
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 39142,
+				"dosisEntregadas": 46385,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 45185,
+				"dosisPautaCompletada": 1522,
+				"porcentajeEntregadas": 0.8438503826668103,
+				"porcentajePoblacionAdministradas": 0.02590039642653669,
+				"porcentajePoblacionCompletas": 0.0010071126503803803
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 14559,
+				"dosisEntregadas": 21125,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 20625,
+				"dosisPautaCompletada": 503,
+				"porcentajeEntregadas": 0.6891834319526627,
+				"porcentajePoblacionAdministradas": 0.022019156166770266,
+				"porcentajePoblacionCompletas": 0.0007607415036668346
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 33523,
+				"dosisEntregadas": 57380,
+				"dosisEntregadasModerna": 1400,
+				"dosisEntregadasPfizer": 55980,
+				"dosisPautaCompletada": 390,
+				"porcentajeEntregadas": 0.5842279539909376,
+				"porcentajePoblacionAdministradas": 0.01509702301819767,
+				"porcentajePoblacionCompletas": 0.0001756358016017985
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 1110,
+				"dosisEntregadas": 2180,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1980,
+				"dosisPautaCompletada": 29,
+				"porcentajeEntregadas": 0.5091743119266054,
+				"porcentajePoblacionAdministradas": 0.013182584736704592,
+				"porcentajePoblacionCompletas": 0.00034440987149948933
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1326,
+				"dosisEntregadas": 2180,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1980,
+				"dosisPautaCompletada": 29,
+				"porcentajeEntregadas": 0.6082568807339449,
+				"porcentajePoblacionAdministradas": 0.015228076622720382,
+				"porcentajePoblacionCompletas": 0.00033304239974275347
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 1025937,
+				"dosisEntregadas": 1346100,
+				"dosisEntregadasModerna": 35700,
+				"dosisEntregadasPfizer": 1310400,
+				"dosisPautaCompletada": 15642,
+				"porcentajeEntregadas": 0.7621551147760196,
+				"porcentajePoblacionAdministradas": 0.021856348530038348,
+				"porcentajePoblacionCompletas": 0.0003332339156369834
+			}
+		]
+	],
+	[
+		1611010800000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 164820,
+				"dosisEntregadas": 216320,
+				"dosisEntregadasModerna": 6800,
+				"dosisEntregadasPfizer": 209520,
+				"dosisPautaCompletada": 1773,
+				"porcentajeEntregadas": 0.761926775147929,
+				"porcentajePoblacionAdministradas": 0.01947211684309753,
+				"porcentajePoblacionCompletas": 0.00020946525399109282
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 28316,
+				"dosisEntregadas": 36615,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35415,
+				"dosisPautaCompletada": 250,
+				"porcentajeEntregadas": 0.7733442578178342,
+				"porcentajePoblacionAdministradas": 0.021299978712056872,
+				"porcentajePoblacionCompletas": 0.0001880560346805417
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 34293,
+				"dosisEntregadas": 36620,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35420,
+				"dosisPautaCompletada": 1285,
+				"porcentajeEntregadas": 0.9364554888039323,
+				"porcentajePoblacionAdministradas": 0.033660717090178094,
+				"porcentajePoblacionCompletas": 0.0012613075980777084
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 14658,
+				"dosisEntregadas": 17340,
+				"dosisEntregadasModerna": 600,
+				"dosisEntregadasPfizer": 16740,
+				"dosisPautaCompletada": 164,
+				"porcentajeEntregadas": 0.8453287197231834,
+				"porcentajePoblacionAdministradas": 0.012511704649338522,
+				"porcentajePoblacionCompletas": 0.00013998632572598702
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 43209,
+				"dosisEntregadas": 42610,
+				"dosisEntregadasModerna": 1300,
+				"dosisEntregadasPfizer": 41310,
+				"dosisPautaCompletada": 339,
+				"porcentajeEntregadas": 1.014057732926543,
+				"porcentajePoblacionAdministradas": 0.01985751523930675,
+				"porcentajePoblacionCompletas": 0.00015579387780612807
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 18967,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 1.042142857142857,
+				"porcentajePoblacionAdministradas": 0.03253874988205625,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 70885,
+				"dosisEntregadas": 79240,
+				"dosisEntregadasModerna": 2500,
+				"dosisEntregadasPfizer": 76740,
+				"dosisPautaCompletada": 432,
+				"porcentajeEntregadas": 0.8945608278647148,
+				"porcentajePoblacionAdministradas": 0.02959809062356206,
+				"porcentajePoblacionCompletas": 0.00018038195879775424
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 43682,
+				"dosisEntregadas": 54800,
+				"dosisEntregadasModerna": 1700,
+				"dosisEntregadasPfizer": 53100,
+				"dosisPautaCompletada": 189,
+				"porcentajeEntregadas": 0.7971167883211678,
+				"porcentajePoblacionAdministradas": 0.02135808306290616,
+				"porcentajePoblacionCompletas": 0.00009241055123138282
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 156627,
+				"dosisEntregadas": 185820,
+				"dosisEntregadasModerna": 5800,
+				"dosisEntregadasPfizer": 180020,
+				"dosisPautaCompletada": 432,
+				"porcentajeEntregadas": 0.8428963513077171,
+				"porcentajePoblacionAdministradas": 0.020130765727919837,
+				"porcentajePoblacionCompletas": 0.000055523573805674433
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 95260,
+				"dosisEntregadas": 94350,
+				"dosisEntregadasModerna": 2900,
+				"dosisEntregadasPfizer": 91450,
+				"dosisPautaCompletada": 588,
+				"porcentajeEntregadas": 1.0096449390567037,
+				"porcentajePoblacionAdministradas": 0.018835940461344108,
+				"porcentajePoblacionCompletas": 0.00011626635514665478
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 29125,
+				"dosisEntregadas": 33450,
+				"dosisEntregadasModerna": 1000,
+				"dosisEntregadasPfizer": 32450,
+				"dosisPautaCompletada": 254,
+				"porcentajeEntregadas": 0.8707025411061285,
+				"porcentajePoblacionAdministradas": 0.027373454750856917,
+				"porcentajePoblacionCompletas": 0.0002387247212606921
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 57871,
+				"dosisEntregadas": 57880,
+				"dosisEntregadasModerna": 1800,
+				"dosisEntregadasPfizer": 56080,
+				"dosisPautaCompletada": 1191,
+				"porcentajeEntregadas": 0.9998445058742226,
+				"porcentajePoblacionAdministradas": 0.021419273459843166,
+				"porcentajePoblacionCompletas": 0.00044081413299706604
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 8049,
+				"dosisEntregadas": 9040,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 8840,
+				"dosisPautaCompletada": 44,
+				"porcentajeEntregadas": 0.8903761061946903,
+				"porcentajePoblacionAdministradas": 0.02515988671955588,
+				"porcentajePoblacionCompletas": 0.00013753696305882207
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 120168,
+				"dosisEntregadas": 152240,
+				"dosisEntregadasModerna": 4700,
+				"dosisEntregadasPfizer": 147540,
+				"dosisPautaCompletada": 719,
+				"porcentajeEntregadas": 0.7893326326852338,
+				"porcentajePoblacionAdministradas": 0.017724186594232826,
+				"porcentajePoblacionCompletas": 0.00010604894948117136
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 36730,
+				"dosisEntregadas": 39560,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 38360,
+				"dosisPautaCompletada": 934,
+				"porcentajeEntregadas": 0.9284630940343782,
+				"porcentajePoblacionAdministradas": 0.024304367705960162,
+				"porcentajePoblacionCompletas": 0.0006180310219811269
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 12991,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"dosisPautaCompletada": 299,
+				"porcentajeEntregadas": 0.7137912087912088,
+				"porcentajePoblacionAdministradas": 0.0196476995509659,
+				"porcentajePoblacionCompletas": 0.0004522101582433072
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 28069,
+				"dosisEntregadas": 48605,
+				"dosisEntregadasModerna": 1400,
+				"dosisEntregadasPfizer": 47205,
+				"dosisPautaCompletada": 390,
+				"porcentajeEntregadas": 0.5774920275691802,
+				"porcentajePoblacionAdministradas": 0.012640823885027904,
+				"porcentajePoblacionCompletas": 0.0001756358016017985
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 1080,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"dosisPautaCompletada": 29,
+				"porcentajeEntregadas": 0.8962655601659751,
+				"porcentajePoblacionAdministradas": 0.012826298662739603,
+				"porcentajePoblacionCompletas": 0.00034440987149948933
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1297,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"dosisPautaCompletada": 29,
+				"porcentajeEntregadas": 1.0763485477178423,
+				"porcentajePoblacionAdministradas": 0.014895034222977629,
+				"porcentajePoblacionCompletas": 0.00033304239974275347
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 966097,
+				"dosisEntregadas": 1143300,
+				"dosisEntregadasModerna": 35700,
+				"dosisEntregadasPfizer": 1107600,
+				"dosisPautaCompletada": 9341,
+				"porcentajeEntregadas": 0.8450074346190851,
+				"porcentajePoblacionAdministradas": 0.020581529612270985,
+				"porcentajePoblacionCompletas": 0.0001989987217724755
+			}
+		]
+	],
+	[
+		1610924400000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 151404,
+				"dosisEntregadas": 216320,
+				"dosisEntregadasModerna": 6800,
+				"dosisEntregadasPfizer": 209520,
+				"dosisPautaCompletada": 533,
+				"porcentajeEntregadas": 0.6999075443786982,
+				"porcentajePoblacionAdministradas": 0.017887127645384894,
+				"porcentajePoblacionCompletas": 0.00006296953207966863
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 25133,
+				"dosisEntregadas": 36615,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35415,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.6864126724020211,
+				"porcentajePoblacionAdministradas": 0.018905649278504216,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 33572,
+				"dosisEntregadas": 36620,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35420,
+				"dosisPautaCompletada": 202,
+				"porcentajeEntregadas": 0.9167667941015838,
+				"porcentajePoblacionAdministradas": 0.03295301064798819,
+				"porcentajePoblacionCompletas": 0.0001982755912931495
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 13750,
+				"dosisEntregadas": 17340,
+				"dosisEntregadasModerna": 600,
+				"dosisEntregadasPfizer": 16740,
+				"dosisPautaCompletada": 155,
+				"porcentajeEntregadas": 0.792964244521338,
+				"porcentajePoblacionAdministradas": 0.0117366584069044,
+				"porcentajePoblacionCompletas": 0.00013230414931419504
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 42113,
+				"dosisEntregadas": 42610,
+				"dosisEntregadasModerna": 1300,
+				"dosisEntregadasPfizer": 41310,
+				"dosisPautaCompletada": 327,
+				"porcentajeEntregadas": 0.9883360713447548,
+				"porcentajePoblacionAdministradas": 0.019353827657963042,
+				"porcentajePoblacionCompletas": 0.00015027905027316778
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 17724,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.9738461538461538,
+				"porcentajePoblacionAdministradas": 0.030406326931489695,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 67079,
+				"dosisEntregadas": 79240,
+				"dosisEntregadasModerna": 2500,
+				"dosisEntregadasPfizer": 76740,
+				"dosisPautaCompletada": 124,
+				"porcentajeEntregadas": 0.8465295305401312,
+				"porcentajePoblacionAdministradas": 0.0280088921624874,
+				"porcentajePoblacionCompletas": 0.000051776302988244276
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 38321,
+				"dosisEntregadas": 54800,
+				"dosisEntregadasModerna": 1700,
+				"dosisEntregadasPfizer": 53100,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.6992883211678832,
+				"porcentajePoblacionAdministradas": 0.018736850443057253,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 145073,
+				"dosisEntregadas": 185820,
+				"dosisEntregadasModerna": 5800,
+				"dosisEntregadasPfizer": 180020,
+				"dosisPautaCompletada": 167,
+				"porcentajeEntregadas": 0.7807178990420838,
+				"porcentajePoblacionAdministradas": 0.018645767182200478,
+				"porcentajePoblacionCompletas": 0.000021463974133212108
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 93695,
+				"dosisEntregadas": 94350,
+				"dosisEntregadasModerna": 2900,
+				"dosisEntregadasPfizer": 91450,
+				"dosisPautaCompletada": 152,
+				"porcentajeEntregadas": 0.993057763645999,
+				"porcentajePoblacionAdministradas": 0.018526490043309217,
+				"porcentajePoblacionCompletas": 0.000030055248269203277
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 27613,
+				"dosisEntregadas": 33450,
+				"dosisEntregadasModerna": 1000,
+				"dosisEntregadasPfizer": 32450,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.8255007473841555,
+				"porcentajePoblacionAdministradas": 0.02595238475658067,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 56481,
+				"dosisEntregadas": 57880,
+				"dosisEntregadasModerna": 1800,
+				"dosisEntregadasPfizer": 56080,
+				"dosisPautaCompletada": 150,
+				"porcentajeEntregadas": 0.9758293020041465,
+				"porcentajePoblacionAdministradas": 0.020904805244170686,
+				"porcentajePoblacionCompletas": 0.00005551815277041134
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 7761,
+				"dosisEntregadas": 9040,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 8840,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.8585176991150443,
+				"porcentajePoblacionAdministradas": 0.0242596447795345,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 104490,
+				"dosisEntregadas": 152240,
+				"dosisEntregadasModerna": 4700,
+				"dosisEntregadasPfizer": 147540,
+				"dosisPautaCompletada": 476,
+				"porcentajeEntregadas": 0.6863504992117709,
+				"porcentajePoblacionAdministradas": 0.015411759014308201,
+				"porcentajePoblacionCompletas": 0.00007020764944789649
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 34103,
+				"dosisEntregadas": 39560,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 38360,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.8620576339737108,
+				"porcentajePoblacionAdministradas": 0.022566072743707036,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 11834,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.6502197802197802,
+				"porcentajePoblacionAdministradas": 0.01789784285167658,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 25526,
+				"dosisEntregadas": 48605,
+				"dosisEntregadasModerna": 1400,
+				"dosisEntregadasPfizer": 47205,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 0.5251723073757844,
+				"porcentajePoblacionAdministradas": 0.01149558838894233,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 981,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"dosisPautaCompletada": 29,
+				"porcentajeEntregadas": 0.8141078838174274,
+				"porcentajePoblacionAdministradas": 0.011650554618655138,
+				"porcentajePoblacionCompletas": 0.00034440987149948933
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1289,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"dosisPautaCompletada": 0,
+				"porcentajeEntregadas": 1.0697095435684647,
+				"porcentajePoblacionAdministradas": 0.014803160457531352,
+				"porcentajePoblacionCompletas": 0
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 897942,
+				"dosisEntregadas": 1143300,
+				"dosisEntregadasModerna": 35700,
+				"dosisEntregadasPfizer": 1107600,
+				"dosisPautaCompletada": 2315,
+				"porcentajeEntregadas": 0.7853949094725794,
+				"porcentajePoblacionAdministradas": 0.019129569663400084,
+				"porcentajePoblacionCompletas": 0.00004931827865360034
+			}
+		]
+	],
+	[
+		1610665200000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 139718,
+				"dosisEntregadas": 216320,
+				"dosisEntregadasModerna": 6800,
+				"dosisEntregadasPfizer": 209520,
+				"porcentajeEntregadas": 0.645885724852071,
+				"porcentajePoblacionAdministradas": 0.016506523608080942,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 23619,
+				"dosisEntregadas": 36615,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35415,
+				"porcentajeEntregadas": 0.6450634985661614,
+				"porcentajePoblacionAdministradas": 0.017766781932478857,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 31247,
+				"dosisEntregadas": 36620,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35420,
+				"porcentajeEntregadas": 0.8532768978700164,
+				"porcentajePoblacionAdministradas": 0.0306708782234507,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 9366,
+				"dosisEntregadas": 13440,
+				"dosisEntregadasModerna": 600,
+				"dosisEntregadasPfizer": 12840,
+				"porcentajeEntregadas": 0.696875,
+				"porcentajePoblacionAdministradas": 0.007994584919204843,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 30732,
+				"dosisEntregadas": 42610,
+				"dosisEntregadasModerna": 1300,
+				"dosisEntregadasPfizer": 41310,
+				"porcentajeEntregadas": 0.7212391457404366,
+				"porcentajePoblacionAdministradas": 0.014123473311911293,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 14639,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"porcentajeEntregadas": 0.8043406593406593,
+				"porcentajePoblacionAdministradas": 0.025113869326905756,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 59411,
+				"dosisEntregadas": 79240,
+				"dosisEntregadasModerna": 2500,
+				"dosisEntregadasPfizer": 76740,
+				"porcentajeEntregadas": 0.7497602221100454,
+				"porcentajePoblacionAdministradas": 0.02480711239382726,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 33809,
+				"dosisEntregadas": 54800,
+				"dosisEntregadasModerna": 1700,
+				"dosisEntregadasPfizer": 53100,
+				"porcentajeEntregadas": 0.6169525547445256,
+				"porcentajePoblacionAdministradas": 0.016530731886676305,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 122577,
+				"dosisEntregadas": 185820,
+				"dosisEntregadasModerna": 5800,
+				"dosisEntregadasPfizer": 180020,
+				"porcentajeEntregadas": 0.6596545043590571,
+				"porcentajePoblacionAdministradas": 0.01575442848698647,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 86927,
+				"dosisEntregadas": 94350,
+				"dosisEntregadasModerna": 2900,
+				"dosisEntregadasPfizer": 91450,
+				"porcentajeEntregadas": 0.9213248542660307,
+				"porcentajePoblacionAdministradas": 0.01718824056774364,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 22322,
+				"dosisEntregadas": 33450,
+				"dosisEntregadasModerna": 1000,
+				"dosisEntregadasPfizer": 32450,
+				"porcentajeEntregadas": 0.6673243647234679,
+				"porcentajePoblacionAdministradas": 0.020979579637721138,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 49768,
+				"dosisEntregadas": 57880,
+				"dosisEntregadasModerna": 1800,
+				"dosisEntregadasPfizer": 56080,
+				"porcentajeEntregadas": 0.8598479612992398,
+				"porcentajePoblacionAdministradas": 0.018420182847185544,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 5953,
+				"dosisEntregadas": 9040,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 8840,
+				"porcentajeEntregadas": 0.6585176991150442,
+				"porcentajePoblacionAdministradas": 0.01860812593384472,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 77921,
+				"dosisEntregadas": 152240,
+				"dosisEntregadasModerna": 4700,
+				"dosisEntregadasPfizer": 147540,
+				"porcentajeEntregadas": 0.5118300052548608,
+				"porcentajePoblacionAdministradas": 0.011492962715608282,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 27001,
+				"dosisEntregadas": 39560,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 38360,
+				"porcentajeEntregadas": 0.6825328614762386,
+				"porcentajePoblacionAdministradas": 0.0178666548442317,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 9305,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"porcentajeEntregadas": 0.5112637362637362,
+				"porcentajePoblacionAdministradas": 0.01407296161355844,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 22464,
+				"dosisEntregadas": 48605,
+				"dosisEntregadasModerna": 1400,
+				"dosisEntregadasPfizer": 47205,
+				"porcentajeEntregadas": 0.46217467338751156,
+				"porcentajePoblacionAdministradas": 0.010116622172263594,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 941,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"porcentajeEntregadas": 0.7809128630705394,
+				"porcentajePoblacionAdministradas": 0.011175506520035154,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1230,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"porcentajeEntregadas": 1.020746887966805,
+				"porcentajePoblacionAdministradas": 0.01412559143736506,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 768950,
+				"dosisEntregadas": 1139400,
+				"dosisEntregadasModerna": 35700,
+				"dosisEntregadasPfizer": 1103700,
+				"porcentajeEntregadas": 0.6748727400386169,
+				"porcentajePoblacionAdministradas": 0.01638155091606306,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	],
+	[
+		1610578800000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 123459,
+				"dosisEntregadas": 216320,
+				"dosisEntregadasModerna": 6800,
+				"dosisEntregadasPfizer": 209520,
+				"porcentajeEntregadas": 0.570723927514793,
+				"porcentajePoblacionAdministradas": 0.014585657525373,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 20854,
+				"dosisEntregadas": 36615,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35415,
+				"porcentajeEntregadas": 0.5695479994537758,
+				"porcentajePoblacionAdministradas": 0.015686882188912066,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 29074,
+				"dosisEntregadas": 36620,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 35420,
+				"porcentajeEntregadas": 0.7939377389404697,
+				"porcentajePoblacionAdministradas": 0.028537943273549644,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 7552,
+				"dosisEntregadas": 13440,
+				"dosisEntregadasModerna": 600,
+				"dosisEntregadasPfizer": 12840,
+				"porcentajeEntregadas": 0.5619047619047619,
+				"porcentajePoblacionAdministradas": 0.006446199584650329,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 25159,
+				"dosisEntregadas": 42610,
+				"dosisEntregadasModerna": 1300,
+				"dosisEntregadasPfizer": 41310,
+				"porcentajeEntregadas": 0.5904482515841352,
+				"porcentajePoblacionAdministradas": 0.01156229549181232,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 12779,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"porcentajeEntregadas": 0.7021428571428572,
+				"porcentajePoblacionAdministradas": 0.02192295485542241,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 57969,
+				"dosisEntregadas": 79240,
+				"dosisEntregadasModerna": 2500,
+				"dosisEntregadasPfizer": 76740,
+				"porcentajeEntregadas": 0.7315623422513882,
+				"porcentajePoblacionAdministradas": 0.024205004096173648,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 30613,
+				"dosisEntregadas": 54800,
+				"dosisEntregadasModerna": 1700,
+				"dosisEntregadasPfizer": 53100,
+				"porcentajeEntregadas": 0.5586313868613139,
+				"porcentajePoblacionAdministradas": 0.014968064575906466,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 105587,
+				"dosisEntregadas": 185820,
+				"dosisEntregadasModerna": 5800,
+				"dosisEntregadasPfizer": 180020,
+				"porcentajeEntregadas": 0.5682219352061134,
+				"porcentajePoblacionAdministradas": 0.013570758304212376,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 80429,
+				"dosisEntregadas": 94350,
+				"dosisEntregadasModerna": 2900,
+				"dosisEntregadasPfizer": 91450,
+				"porcentajeEntregadas": 0.852453630100689,
+				"porcentajePoblacionAdministradas": 0.0159033787042352,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 17862,
+				"dosisEntregadas": 33450,
+				"dosisEntregadasModerna": 1000,
+				"dosisEntregadasPfizer": 32450,
+				"porcentajeEntregadas": 0.5339910313901345,
+				"porcentajePoblacionAdministradas": 0.016787799099049143,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 44014,
+				"dosisEntregadas": 57880,
+				"dosisEntregadasModerna": 1800,
+				"dosisEntregadasPfizer": 56080,
+				"porcentajeEntregadas": 0.7604353835521769,
+				"porcentajePoblacionAdministradas": 0.016290506506912564,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 5385,
+				"dosisEntregadas": 9040,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 8840,
+				"porcentajeEntregadas": 0.5956858407079646,
+				"porcentajePoblacionAdministradas": 0.016832648774358108,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 63385,
+				"dosisEntregadas": 152240,
+				"dosisEntregadasModerna": 4700,
+				"dosisEntregadasPfizer": 147540,
+				"porcentajeEntregadas": 0.41634918549658434,
+				"porcentajePoblacionAdministradas": 0.009348974496333862,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 21739,
+				"dosisEntregadas": 39560,
+				"dosisEntregadasModerna": 1200,
+				"dosisEntregadasPfizer": 38360,
+				"porcentajeEntregadas": 0.5495197168857432,
+				"porcentajePoblacionAdministradas": 0.014384771292128177,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 8314,
+				"dosisEntregadas": 18200,
+				"dosisEntregadasModerna": 500,
+				"dosisEntregadasPfizer": 17700,
+				"porcentajeEntregadas": 0.45681318681318683,
+				"porcentajePoblacionAdministradas": 0.012574164734564736,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 20003,
+				"dosisEntregadas": 48605,
+				"dosisEntregadasModerna": 1400,
+				"dosisEntregadasPfizer": 47205,
+				"porcentajeEntregadas": 0.4115420224256764,
+				"porcentajePoblacionAdministradas": 0.009008315229335323,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 911,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"porcentajeEntregadas": 0.7560165975103734,
+				"porcentajePoblacionAdministradas": 0.010819220446070164,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1098,
+				"dosisEntregadas": 1205,
+				"dosisEntregadasModerna": 200,
+				"dosisEntregadasPfizer": 1005,
+				"porcentajeEntregadas": 0.9112033195020747,
+				"porcentajePoblacionAdministradas": 0.012609674307501493,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 676186,
+				"dosisEntregadas": 1139400,
+				"dosisEntregadasModerna": 35700,
+				"dosisEntregadasPfizer": 1103700,
+				"porcentajeEntregadas": 0.5934579603299982,
+				"porcentajePoblacionAdministradas": 0.014405325948018747,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	],
+	[
+		1610492400000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 109831,
+				"porcentajeEntregadas": 0.5242029400534555,
+				"porcentajePoblacionAdministradas": 0.012975622284881961,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 17043,
+				"porcentajeEntregadas": 0.4812367640830157,
+				"porcentajePoblacionAdministradas": 0.012820155996241887,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 25278,
+				"porcentajeEntregadas": 0.7136645962732919,
+				"porcentajePoblacionAdministradas": 0.024811932656971448,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 4931,
+				"porcentajeEntregadas": 0.38403426791277256,
+				"porcentajePoblacionAdministradas": 0.004208979098505134,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 22290,
+				"porcentajeEntregadas": 0.5395787944807553,
+				"porcentajePoblacionAdministradas": 0.01024379214247373,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 11302,
+				"porcentajeEntregadas": 0.6385310734463276,
+				"porcentajePoblacionAdministradas": 0.01938909427779827,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 48243,
+				"porcentajeEntregadas": 0.6286551993745113,
+				"porcentajePoblacionAdministradas": 0.020143904718240874,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 26879,
+				"porcentajeEntregadas": 0.506195856873823,
+				"porcentajePoblacionAdministradas": 0.01314234500819227,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 92133,
+				"porcentajeEntregadas": 0.5117931340962115,
+				"porcentajePoblacionAdministradas": 0.011841558855181024,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 70870,
+				"porcentajeEntregadas": 0.7749589939857846,
+				"porcentajePoblacionAdministradas": 0.014013259505516028,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 14293,
+				"porcentajeEntregadas": 0.44046224961479197,
+				"porcentajePoblacionAdministradas": 0.013433434807004221,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 37745,
+				"porcentajeEntregadas": 0.6730563480741797,
+				"porcentajePoblacionAdministradas": 0.01397021784212784,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 4651,
+				"porcentajeEntregadas": 0.526131221719457,
+				"porcentajePoblacionAdministradas": 0.014538282163331395,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 49228,
+				"porcentajeEntregadas": 0.33365866883557,
+				"porcentajePoblacionAdministradas": 0.007260886905506404,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 19905,
+				"porcentajeEntregadas": 0.5188998957247133,
+				"porcentajePoblacionAdministradas": 0.013171207165454316,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 7420,
+				"porcentajeEntregadas": 0.4192090395480226,
+				"porcentajePoblacionAdministradas": 0.011222071485502808,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 17771,
+				"porcentajeEntregadas": 0.3764643575892384,
+				"porcentajePoblacionAdministradas": 0.008003138026321951,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 820,
+				"porcentajeEntregadas": 0.8159203980099502,
+				"porcentajePoblacionAdministradas": 0.009738486021709698,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1005,
+				"porcentajeEntregadas": 1,
+				"porcentajePoblacionAdministradas": 0.011541641784188525,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 581638,
+				"porcentajeEntregadas": 0.5269892180846244,
+				"porcentajePoblacionAdministradas": 0.012391095014912654,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	],
+	[
+		1610406000000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 94879,
+				"porcentajeEntregadas": 0.6762821198189529,
+				"porcentajePoblacionAdministradas": 0.01120916741873711,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 11983,
+				"porcentajeEntregadas": 0.505292009276829,
+				"porcentajePoblacionAdministradas": 0.009013901854307725,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 22428,
+				"porcentajeEntregadas": 0.945531197301855,
+				"porcentajePoblacionAdministradas": 0.0220144800075384,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 4835,
+				"porcentajeEntregadas": 0.3765576323987539,
+				"porcentajePoblacionAdministradas": 0.00412703588344602,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 15328,
+				"porcentajeEntregadas": 0.5541576283441794,
+				"porcentajePoblacionAdministradas": 0.007044273035434605,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 9527,
+				"porcentajeEntregadas": 0.8039662447257384,
+				"porcentajePoblacionAdministradas": 0.016344001166570882,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 41340,
+				"porcentajeEntregadas": 0.804436660828955,
+				"porcentajePoblacionAdministradas": 0.01726155133495176,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 23342,
+				"porcentajeEntregadas": 0.6565963431786217,
+				"porcentajePoblacionAdministradas": 0.011412947549433533,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 82785,
+				"porcentajeEntregadas": 0.6867559832427724,
+				"porcentajePoblacionAdministradas": 0.010640090410886014,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 57223,
+				"porcentajeEntregadas": 0.9346345447121274,
+				"porcentajePoblacionAdministradas": 0.011314812313872494,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 11346,
+				"porcentajeEntregadas": 0.5222554660529344,
+				"porcentajePoblacionAdministradas": 0.010663664123715798,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 33346,
+				"porcentajeEntregadas": 0.88792437757955,
+				"porcentajePoblacionAdministradas": 0.012342055481880911,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 3826,
+				"porcentajeEntregadas": 0.6468300929839391,
+				"porcentajePoblacionAdministradas": 0.011959464105978482,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 35949,
+				"porcentajeEntregadas": 0.3638931065897358,
+				"porcentajePoblacionAdministradas": 0.005302299978996703,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 16191,
+				"porcentajeEntregadas": 0.6303679190188826,
+				"porcentajePoblacionAdministradas": 0.010713640553422298,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 6557,
+				"porcentajeEntregadas": 0.5533333333333333,
+				"porcentajePoblacionAdministradas": 0.009916862901676808,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 15393,
+				"porcentajeEntregadas": 0.4870431893687708,
+				"porcentajePoblacionAdministradas": 0.006932209984760217,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 758,
+				"porcentajeEntregadas": 0.7542288557213931,
+				"porcentajePoblacionAdministradas": 0.00900216146884872,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 1005,
+				"porcentajeEntregadas": 1,
+				"porcentajePoblacionAdministradas": 0.011541641784188525,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 488041,
+				"porcentajeEntregadas": 0.6560352186040259,
+				"porcentajePoblacionAdministradas": 0.010397123988069877,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	],
+	[
+		1610319600000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 81387,
+				"porcentajeEntregadas": 0.5801133326205495,
+				"porcentajePoblacionAdministradas": 0.00961519945097184,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 10998,
+				"porcentajeEntregadas": 0.4637571157495256,
+				"porcentajePoblacionAdministradas": 0.00827296107766639,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 18943,
+				"porcentajeEntregadas": 0.7986087689713323,
+				"porcentajePoblacionAdministradas": 0.018593735276565004,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 4652,
+				"porcentajeEntregadas": 0.36230529595015576,
+				"porcentajePoblacionAdministradas": 0.003970831629739583,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 13607,
+				"porcentajeEntregadas": 0.4919378163412871,
+				"porcentajePoblacionAdministradas": 0.006253354853415884,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 8474,
+				"porcentajeEntregadas": 0.7151054852320675,
+				"porcentajePoblacionAdministradas": 0.014537531844811762,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 36205,
+				"porcentajeEntregadas": 0.704514496983849,
+				"porcentajePoblacionAdministradas": 0.015117427820075677,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 19209,
+				"porcentajeEntregadas": 0.5403375527426161,
+				"porcentajePoblacionAdministradas": 0.00939213904023086,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 68405,
+				"porcentajeEntregadas": 0.5674644323696545,
+				"porcentajePoblacionAdministradas": 0.00879187515318787,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 45674,
+				"porcentajeEntregadas": 0.7460024499795835,
+				"porcentajePoblacionAdministradas": 0.009031206641102569,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 9303,
+				"porcentajeEntregadas": 0.4282163406214039,
+				"porcentajePoblacionAdministradas": 0.00874352788144968,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 30418,
+				"porcentajeEntregadas": 0.8099587272001065,
+				"porcentajePoblacionAdministradas": 0.011258341139802482,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 3457,
+				"porcentajeEntregadas": 0.5844463229078614,
+				"porcentajePoblacionAdministradas": 0.010806029120326088,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 24897,
+				"porcentajeEntregadas": 0.25201943516550257,
+				"porcentajePoblacionAdministradas": 0.00367218455526109,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 10361,
+				"porcentajeEntregadas": 0.40338719096749076,
+				"porcentajePoblacionAdministradas": 0.006855909441912693,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 5468,
+				"porcentajeEntregadas": 0.4614345991561181,
+				"porcentajePoblacionAdministradas": 0.00826984998419533,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 13103,
+				"porcentajeEntregadas": 0.4145862996361335,
+				"porcentajePoblacionAdministradas": 0.005900912585611194,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 698,
+				"porcentajeEntregadas": 0.6945273631840796,
+				"porcentajePoblacionAdministradas": 0.008289589320918743,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 832,
+				"porcentajeEntregadas": 0.8278606965174129,
+				"porcentajePoblacionAdministradas": 0.00955487160641279,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 406091,
+				"porcentajeEntregadas": 0.5458762644083744,
+				"porcentajePoblacionAdministradas": 0.0086512782275245,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	],
+	[
+		1609974000000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 53934,
+				"porcentajeEntregadas": 0.38443280230941945,
+				"porcentajePoblacionAdministradas": 0.006371855052879639,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 6186,
+				"porcentajeEntregadas": 0.2608475648323846,
+				"porcentajePoblacionAdministradas": 0.004653258522135323,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 14406,
+				"porcentajeEntregadas": 0.6073355817875211,
+				"porcentajePoblacionAdministradas": 0.014140386971134214,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 3190,
+				"porcentajeEntregadas": 0.2484423676012461,
+				"porcentajePoblacionAdministradas": 0.0027229047504018205,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 7330,
+				"porcentajeEntregadas": 0.2650036153289949,
+				"porcentajePoblacionAdministradas": 0.0033686404847165746,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 1564,
+				"porcentajeEntregadas": 0.1319831223628692,
+				"porcentajePoblacionAdministradas": 0.0026831130287096527,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 22103,
+				"porcentajeEntregadas": 0.4301031329052345,
+				"porcentajePoblacionAdministradas": 0.009229126007654543,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 7666,
+				"porcentajeEntregadas": 0.21563994374120957,
+				"porcentajePoblacionAdministradas": 0.003748250189099369,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 24515,
+				"porcentajeEntregadas": 0.20336803683271806,
+				"porcentajePoblacionAdministradas": 0.003150834286680807,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 11677,
+				"porcentajeEntregadas": 0.1907227439771335,
+				"porcentajePoblacionAdministradas": 0.0023089153555229387,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 3309,
+				"porcentajeEntregadas": 0.15231300345224397,
+				"porcentajePoblacionAdministradas": 0.0031100004041402763,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 20265,
+				"porcentajeEntregadas": 0.5396085740913327,
+				"porcentajePoblacionAdministradas": 0.007500502439282572,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 858,
+				"porcentajeEntregadas": 0.14505494505494507,
+				"porcentajePoblacionAdministradas": 0.00268197077964703,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 11337,
+				"porcentajeEntregadas": 0.11475857880352262,
+				"porcentajePoblacionAdministradas": 0.001672151516367232,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 7287,
+				"porcentajeEntregadas": 0.28370644344948415,
+				"porcentajePoblacionAdministradas": 0.004821833037662176,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 2960,
+				"porcentajeEntregadas": 0.249789029535865,
+				"porcentajePoblacionAdministradas": 0.004476729325753142,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 7734,
+				"porcentajeEntregadas": 0.2447081158044613,
+				"porcentajePoblacionAdministradas": 0.003482993050226435,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 576,
+				"porcentajeEntregadas": 0.573134328358209,
+				"porcentajePoblacionAdministradas": 0.006840692620127788,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 426,
+				"porcentajeEntregadas": 0.42388059701492536,
+				"porcentajePoblacionAdministradas": 0.00489227801001424,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 207323,
+				"porcentajeEntregadas": 0.27868803978895723,
+				"porcentajePoblacionAdministradas": 0.0044167660843630165,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	],
+	[
+		1610060400000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 69445,
+				"porcentajeEntregadas": 0.4949926939662853,
+				"porcentajePoblacionAdministradas": 0.00820435113559585,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 9944,
+				"porcentajeEntregadas": 0.41931267130508115,
+				"porcentajePoblacionAdministradas": 0.007480116835453227,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 17843,
+				"porcentajeEntregadas": 0.7522344013490725,
+				"porcentajePoblacionAdministradas": 0.01751401671011716,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 4257,
+				"porcentajeEntregadas": 0.33154205607476633,
+				"porcentajePoblacionAdministradas": 0.003633669442777602,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 9572,
+				"porcentajeEntregadas": 0.346059291395517,
+				"porcentajePoblacionAdministradas": 0.004398994095457988,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 2334,
+				"porcentajeEntregadas": 0.1969620253164557,
+				"porcentajePoblacionAdministradas": 0.004004082998087167,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 28325,
+				"porcentajeEntregadas": 0.551177271842771,
+				"porcentajePoblacionAdministradas": 0.011827127275338863,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 12380,
+				"porcentajeEntregadas": 0.34824191279887484,
+				"porcentajePoblacionAdministradas": 0.006053135578013329,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 38826,
+				"porcentajeEntregadas": 0.32208718735741837,
+				"porcentajePoblacionAdministradas": 0.00499018119578499,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 15965,
+				"porcentajeEntregadas": 0.2607594936708861,
+				"porcentajePoblacionAdministradas": 0.003156789727748884,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 4727,
+				"porcentajeEntregadas": 0.21758342922899884,
+				"porcentajePoblacionAdministradas": 0.004442723454327919,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 24750,
+				"porcentajeEntregadas": 0.6590334176541073,
+				"porcentajePoblacionAdministradas": 0.00916049520711787,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 1674,
+				"porcentajeEntregadas": 0.28300929839391376,
+				"porcentajePoblacionAdministradas": 0.0052326562763742755,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 14152,
+				"porcentajeEntregadas": 0.14325336572527583,
+				"porcentajePoblacionAdministradas": 0.0020873501155181324,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 8958,
+				"porcentajeEntregadas": 0.34876386996301345,
+				"porcentajePoblacionAdministradas": 0.005927539502041686,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 3703,
+				"porcentajeEntregadas": 0.31248945147679325,
+				"porcentajePoblacionAdministradas": 0.00560044888285942,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 9811,
+				"porcentajeEntregadas": 0.31042556557506723,
+				"porcentajePoblacionAdministradas": 0.004418366280808321,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 637,
+				"porcentajeEntregadas": 0.6338308457711442,
+				"porcentajePoblacionAdministradas": 0.007565140970523266,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 673,
+				"porcentajeEntregadas": 0.6696517412935323,
+				"porcentajePoblacionAdministradas": 0.007728880518168037,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 277976,
+				"porcentajeEntregadas": 0.37366132338609404,
+				"porcentajePoblacionAdministradas": 0.005921942905837239,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	],
+	[
+		1609714800000,
+		[
+			{
+				"ccaa": "Andalucía",
+				"dosisAdministradas": 25809,
+				"porcentajeEntregadas": 0.18396236501657223,
+				"porcentajePoblacionAdministradas": 0.0030491194248483443,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Aragón",
+				"dosisAdministradas": 2004,
+				"porcentajeEntregadas": 0.08450347881087919,
+				"porcentajePoblacionAdministradas": 0.0015074571739992222,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Asturias",
+				"dosisAdministradas": 9380,
+				"porcentajeEntregadas": 0.3954468802698145,
+				"porcentajePoblacionAdministradas": 0.009207054684800703,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Baleares",
+				"dosisAdministradas": 153,
+				"porcentajeEntregadas": 0.017114093959731545,
+				"porcentajePoblacionAdministradas": 0.00013059699900046348,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Canarias",
+				"dosisAdministradas": 4846,
+				"porcentajeEntregadas": 0.5245020398368131,
+				"porcentajePoblacionAdministradas": 0.0022270711853937955,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cantabria",
+				"dosisAdministradas": 304,
+				"porcentajeEntregadas": 0.025654008438818564,
+				"porcentajePoblacionAdministradas": 0.0005215258060919018,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla y Leon",
+				"dosisAdministradas": 10928,
+				"porcentajeEntregadas": 0.09429850165401829,
+				"porcentajePoblacionAdministradas": 0.004562995476254302,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Castilla La Mancha",
+				"dosisAdministradas": 1983,
+				"porcentajeEntregadas": 0.05578059071729958,
+				"porcentajePoblacionAdministradas": 0.0009695773708562547,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Cataluña",
+				"dosisAdministradas": 8150,
+				"porcentajeEntregadas": 0.06760960637106475,
+				"porcentajePoblacionAdministradas": 0.0010474933484172376,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "C. Valenciana",
+				"dosisAdministradas": 3252,
+				"porcentajeEntregadas": 0.05311555737035525,
+				"porcentajePoblacionAdministradas": 0.0006430241274437438,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Extremadura",
+				"dosisAdministradas": 686,
+				"porcentajeEntregadas": 0.031576524741081705,
+				"porcentajePoblacionAdministradas": 0.0006447447196253338,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Galicia",
+				"dosisAdministradas": 9124,
+				"porcentajeEntregadas": 0.24295033950206363,
+				"porcentajePoblacionAdministradas": 0.0033769841725148873,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "La Rioja",
+				"dosisAdministradas": 324,
+				"porcentajeEntregadas": 0.0547759932375317,
+				"porcentajePoblacionAdministradas": 0.0010127721825240533,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Madrid",
+				"dosisAdministradas": 2883,
+				"porcentajeEntregadas": 0.03237870619946091,
+				"porcentajePoblacionAdministradas": 0.0004252282633577428,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Murcia",
+				"dosisAdministradas": 442,
+				"porcentajeEntregadas": 0.01720848744403348,
+				"porcentajePoblacionAdministradas": 0.0002924729247490986,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Navarra",
+				"dosisAdministradas": 1583,
+				"porcentajeEntregadas": 0.22695340501792113,
+				"porcentajePoblacionAdministradas": 0.0023941427441443322,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "País Vasco",
+				"dosisAdministradas": 396,
+				"porcentajeEntregadas": 0.012529663028001898,
+				"porcentajePoblacionAdministradas": 0.0001783378908572108,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Ceuta",
+				"dosisAdministradas": 380,
+				"porcentajeEntregadas": 0.3781094527363184,
+				"porcentajePoblacionAdministradas": 0.00451295693688986,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Melilla",
+				"dosisAdministradas": 207,
+				"porcentajeEntregadas": 0.20597014925373133,
+				"porcentajePoblacionAdministradas": 0.0023772336809224125,
+				"porcentajePoblacionCompletas": null
+			},
+			{
+				"ccaa": "Totales",
+				"dosisAdministradas": 82834,
+				"porcentajeEntregadas": 0.11527537139477438,
+				"porcentajePoblacionAdministradas": 0.0017646783127396677,
+				"porcentajePoblacionCompletas": null
+			}
+		]
+	]
+]
