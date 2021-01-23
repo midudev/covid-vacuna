@@ -37,7 +37,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
             Vacunación COVID-19 en España
           </h1>
           <small className={styles.description}>
-            Datos actualizados <TimeAgo timestamp={info.lastModified} />. Fuente: <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Gobierno de España</a>
+            Datos actualizados <TimeAgo timestamp={info.lastModified} />. Fuente: <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Ministerio de Sanidad</a>
           </small>
 
           <div className={styles.grid}>
