@@ -11,7 +11,7 @@ export function DosisAdministradasTooltip ({ active, payload, label }) {
     <div className={styles.chartTooltip}>
       <p>
         A día <EnhanceText>{label}</EnhanceText> se han administrado{' '}
-        <EnhanceText>{payload?.pop().value}</EnhanceText> dosis.
+        <EnhanceText>{payload?.pop().value.toLocaleString()}</EnhanceText> dosis.
       </p>
     </div>
   )
@@ -24,7 +24,7 @@ export function DosisEntregadasTooltip ({ active, payload, label }) {
     <div className={styles.chartTooltip}>
       <p>
         A día <EnhanceText>{label}</EnhanceText> se han entregado{' '}
-        <EnhanceText>{payload?.pop().value}</EnhanceText> dosis.
+        <EnhanceText>{payload?.pop().value.toLocaleString()}</EnhanceText> dosis.
       </p>
     </div>
   )
