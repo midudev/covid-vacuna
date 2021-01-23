@@ -19,8 +19,8 @@ export default function Home ({ data, info }) {
   return (
     <>
       <Head>
-          <link rel='alternate icon' href='https://covid-vacuna.app/vacuna.png' type='image/png' />
-          <meta name='theme-color' content='#d2effd' />
+        <link rel='alternate icon' href='https://covid-vacuna.app/vacuna.png' type='image/png' />
+        <meta name='theme-color' content='#d2effd' />
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
