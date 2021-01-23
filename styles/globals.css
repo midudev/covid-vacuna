@@ -1,42 +1,56 @@
 :root {
   --app-background-color: #fefefe;
-  --app-background: radial-gradient(#cdd0ff 1px,transparent 0),radial-gradient(#cdd0ff 1px,#fefefe 0);
+  --app-background: 
+    radial-gradient(#cdd0ff 1px, transparent 0),
+    radial-gradient(#cdd0ff 1px,#fefefe 0);
 
   --text-base-color: #000;
   --text-title-color: #011440;
   --text-subtitle-color: #001e63;
-  --text-small-color: #444;
+  --text-small-color: rgb(100, 98, 98);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --app-background: radial-gradient(#e3e5ff 1px,transparent 0),radial-gradient(#e3e5ff 1px,#fefefe 0);
+  body {
+    --app-background:
+      radial-gradient(#15155a 1px, #111 0),
+      radial-gradient(#15155a 1px,#111 0);
   }
 
-  html {
+  #__next {
     filter: invert(1) hue-rotate(180deg);
   }
 
-  html img, html span[role='img'] {
+  #__next img, #__next span[role='img'] {
     filter: invert(1) hue-rotate(180deg);
   }
 }
 
-html[scheme='light-mode'] {
+html[scheme='light-mode'] body {
+  --app-background:
+    radial-gradient(#cdd0ff 1px, transparent 0),
+    radial-gradient(#cdd0ff 1px,#fefefe 0);
+}
+html[scheme='light-mode'] #__next {
   filter: invert(0) hue-rotate(0deg);
-  --app-background: radial-gradient(#cdd0ff 1px,transparent 0),radial-gradient(#cdd0ff 1px,#fefefe 0);
 }
 
-html[scheme='light-mode'] img, html[scheme='light-mode'] span[role='img'] {
+html[scheme='light-mode'] #__next img,
+html[scheme='light-mode'] #__next span[role='img'] {
   filter: invert(0) hue-rotate(0deg);
 }
 
-html[scheme='dark-mode'] {
-  --app-background: radial-gradient(#e3e5ff 1px,transparent 0),radial-gradient(#e3e5ff 1px,#fefefe 0);
+html[scheme='dark-mode'] body {
+  --app-background:
+    radial-gradient(#15155a 1px, #111 0),
+    radial-gradient(#15155a 1px,#111 0);
+}
+html[scheme='dark-mode'] #__next {
   filter: invert(1) hue-rotate(180deg);
 }
 
-html[scheme='dark-mode'] img, html[scheme='dark-mode'] span[role='img'] {
+html[scheme='dark-mode'] #__next img,
+html[scheme='dark-mode'] #__next span[role='img'] {
   filter: invert(1) hue-rotate(180deg);
 }
 
@@ -51,7 +65,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-rendering: optimizeSpeed;
-  transition: all .3s ease;
 }
 
 body {

@@ -15,7 +15,9 @@ module.exports = async function transformOdsToJson (odsFileName) {
       __EMPTY: ccaa,
       'Dosis entregadas Pfizer (1)': dosisEntregadasPfizer,
       'Dosis entregadas Moderna (1)': dosisEntregadasModerna,
-      'Total Dosis entregadas (1)': dosisEntregadas,
+      // usado en reporte antes del 13 de enero
+      'Dosis entregadas (1)': dosisEntregadasDeprecated,
+      'Total Dosis entregadas (1)': dosisEntregadasNew,
       'Dosis administradas (2)': dosisAdministradas,
       '% sobre entregadas': porcentajeEntregadas,
       'Nº Personas vacunadas\n(pauta completada)': dosisPautaCompletada
@@ -27,7 +29,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
     return {
       ccaa: ccaa.trim(),
       dosisAdministradas,
-      dosisEntregadas,
+      dosisEntregadas: dosisEntregadasDeprecated || dosisEntregadasNew,
       dosisEntregadasModerna,
       dosisEntregadasPfizer,
       dosisPautaCompletada,
