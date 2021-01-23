@@ -12,6 +12,7 @@ import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 
 import styles from 'styles/Home.module.css'
 import TimeAgo from 'components/TimeAgo.jsx'
+import { Term } from 'components/Term'
 
 export default function Home ({ data, info }) {
   const totals = data.find(({ ccaa }) => ccaa === 'Totales')
@@ -33,10 +34,9 @@ export default function Home ({ data, info }) {
 
           <div className={styles.grid}>
             <div className={styles.card}>
-              <button
-                title='Abrir diálogo con explicación sobre Dosis Distribuidas' onClick={() => {}}
-              >❔
-              </button>
+              <Term title='Abrir diálogo con explicación sobre Dosis Distribuidas'>
+                lorem <strong>ipsum</strong> dolor sit amet
+              </Term>
 
               <header>
                 <Image
@@ -51,6 +51,7 @@ export default function Home ({ data, info }) {
               <section>
                 <div>
                   <h3>Dosis distribuidas</h3>
+
                   <p>
                     <NumberDigits>{totals.dosisEntregadas}</NumberDigits>
                   </p>
@@ -169,7 +170,6 @@ export default function Home ({ data, info }) {
             </a>
           </Link>
         </main>
-
         <h2 className={styles.subtitle}>
           Por comunidades autónomas
         </h2>

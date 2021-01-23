@@ -4,6 +4,8 @@ import SEO from 'config/seo'
 import useFathom from 'hooks/useFathom'
 
 import 'styles/globals.css'
+import { ModalContextProvider } from 'contexts/modal.context'
+import { TermModal } from 'components/TermModal'
 
 function App ({ Component, pageProps }) {
   useFathom({ ID: 'MYEXKUNW', domains: ['covid-vacuna.app'] })
@@ -11,7 +13,10 @@ function App ({ Component, pageProps }) {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
+      <ModalContextProvider>
+        <TermModal />
+        <Component {...pageProps} />
+      </ModalContextProvider>
     </>
   )
 }
