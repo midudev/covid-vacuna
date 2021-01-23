@@ -46,3 +46,17 @@
 .table thead tr {
   border-bottom: 1px solid #333;
 }
+
+.table tr.totales{
+  background-color: #d2effd;
+}
+
+.table tr:hover {
+  background-color: #6cd0ff;
+  cursor: pointer;
+}
+
+.table tr.selected {
+  background-color: #6cd0ff;
+  color: #ffffff;
+}

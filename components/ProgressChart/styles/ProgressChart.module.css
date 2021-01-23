@@ -1,0 +1,21 @@
+.chartContainer {
+  max-width: 1000px;
+  margin-top: 3rem;
+  width: 100%;
+  box-shadow: rgb(210, 239, 253) 14px 14px;
+  background-image: radial-gradient(#cdd0ff56 1px,transparent 0),radial-gradient(#cdd0ff4f 1px,#fefefe 0);
+  background-size: 40px 40px;
+  background-position: 0 0,20px 20px;
+  border-radius: 8px;
+  border: 2px solid #111;
+  margin: 1rem 0 3rem;
+  padding-right: 3rem;
+}
+
+.chartTooltip {
+  color: #2c7cdc;
+  background-color: rgba(255, 255, 255, 0.892);
+  border: 2px solid var(--text-subtitle-color);
+  padding: 0 10px;
+  border-radius: 8px;
+}
