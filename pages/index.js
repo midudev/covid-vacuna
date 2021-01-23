@@ -1,4 +1,6 @@
 /* global fetch */
+import { useMemo, useState } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,7 +25,11 @@ import {
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 
 export default function Home ({ contributors, data, info, chartDatasets }) {
-  const totals = data.find(({ ccaa }) => ccaa === 'Totales')
+  const [filter, setFilter] = useState('Totales')
+
+  const totals = useMemo(() => data.find(({ ccaa }) => ccaa === filter), [
+    filter
+  ])
 
   return (
     <>
@@ -34,7 +40,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            Vacunación COVID-19 en España
+            Vacunación COVID-19 en {filter === 'Totales' ? 'España' : filter}
           </h1>
           <small className={styles.description}>
             Datos actualizados <TimeAgo timestamp={info.lastModified} />. Fuente: <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Ministerio de Sanidad</a>
@@ -154,7 +160,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
             </div>
           </div>
 
-          <Progress data={data} />
+          <Progress totals={totals} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
@@ -183,7 +189,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
           Por comunidades autónomas
         </h2>
 
-        <Table data={data} />
+        <Table data={data} setFilter={setFilter} />
 
         <h2 className={styles.subtitle}>
           Evolución de dosis entregadas
