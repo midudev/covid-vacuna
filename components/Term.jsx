@@ -16,8 +16,6 @@ export const Term = ({ children, title }) => {
   }
 
   return (
-    <>
-      <button className={styles.buttonHelper} title={title} onClick={(ev) => handleClick(ev)}>❔</button>
-    </>
+    <button className={styles.buttonHelper} title={title} onClick={(ev) => handleClick(ev)}>❔</button>
   )
 }

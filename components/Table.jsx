@@ -95,18 +95,16 @@ export default function Table ({ data }) {
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map(column => (
-                <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                >
-                  {column.render('Header')}
-                  {column.hasHelper && <Term title={dialogInfo[column.id]?.title}>{dialogInfo[column.id]?.description}</Term>}
-                  <span>
+                <th>
+                  <span {...column.getHeaderProps(column.getSortByToggleProps())}>
+                    {column.render('Header')}
                     {column.isSorted
                       ? column.isSortedDesc
                           ? ' ▼'
                           : ' ▲'
                       : ''}
                   </span>
+                  {column.hasHelper && <Term title={dialogInfo[column.id]?.title}>{dialogInfo[column.id]?.description}</Term>}
                 </th>
               ))}
             </tr>
