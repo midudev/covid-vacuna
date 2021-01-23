@@ -19,6 +19,7 @@ export function CustomXTick ({ x, y, payload }) {
 
 export function CustomYTick ({ x, y, payload }) {
   const omitZero = payload.value === 0 ? '' : payload.value
+  const localValue = new Intl.NumberFormat('es-ES').format(omitZero)
 
   return (
     <g transform={`translate(${x},${y})`}>
@@ -31,7 +32,7 @@ export function CustomYTick ({ x, y, payload }) {
         textAnchor='end'
         fill='var(--text-subtitle-color)'
       >
-        {omitZero}
+        {localValue}
       </text>
     </g>
   )
