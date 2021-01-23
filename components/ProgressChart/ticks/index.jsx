@@ -18,8 +18,7 @@ export function CustomXTick ({ x, y, payload }) {
 }
 
 export function CustomYTick ({ x, y, payload }) {
-  const exponentFormatValue = payload.value.toExponential(0)
-  const omitZero = payload.value === 0 ? '' : exponentFormatValue
+  const omitZero = payload.value === 0 ? '' : payload.value
 
   return (
     <g transform={`translate(${x},${y})`}>
