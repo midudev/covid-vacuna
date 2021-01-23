@@ -53,5 +53,10 @@
 
 .table tr:hover {
   background-color: #6cd0ff;
-  cursor: cell;
+  cursor: pointer;
+}
+
+.table tr.selected {
+  background-color: #6cd0ff;
+  color: #ffffff;
 }

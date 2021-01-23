@@ -5,10 +5,13 @@ import { toDigit } from './NumberDigits.jsx'
 import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
 
-export default function Table ({ data, setFilter }) {
+export default function Table ({ data, filter, setFilter }) {
   const locale = 'es'
 
-  const handleRowClick = useCallback(row => () => setFilter(row.original.ccaa), [])
+  const handleRowClick = useCallback(
+    ({ original: { ccaa } }) => () => setFilter(ccaa === filter ? 'Totales' : ccaa),
+    [filter, setFilter]
+  )
 
   const tableData = useMemo(
     () => data.map(row => {
@@ -111,8 +114,9 @@ export default function Table ({ data, setFilter }) {
         <tbody {...getTableBodyProps()}>
           {rows.map(row => {
             prepareRow(row)
+            const className = row.id === '19' ? styles.totales : row.original.ccaa === filter ? styles.selected : ''
             return (
-              <tr {...row.getRowProps()} className={row.id === '19' ? styles.totales : ''} onClick={handleRowClick(row)}>
+              <tr {...row.getRowProps()} className={className} onClick={handleRowClick(row)}>
                 {row.cells.map(cell => {
                   return (
                     <td {...cell.getCellProps()}>
