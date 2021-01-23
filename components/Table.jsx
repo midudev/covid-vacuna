@@ -5,6 +5,8 @@ import { useTable, useSortBy } from 'react-table'
 import { toDigit } from './NumberDigits.jsx'
 import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
+import { Term } from './Term.jsx'
+import { dialogInfo } from 'helpers/data/DialogInfo.jsx'
 
 export default function Table ({ data }) {
   const locale = 'es'
@@ -48,11 +50,13 @@ export default function Table ({ data }) {
       },
       {
         Header: 'Dosis entregadas',
-        accessor: 'dosisEntregadas'
+        accessor: 'dosisEntregadas',
+        hasHelper: true
       },
       {
         Header: 'Dosis administradas',
-        accessor: 'dosisAdministradas'
+        accessor: 'dosisAdministradas',
+        hasHelper: true
       },
       {
         Header: '% sobre entregadas',
@@ -95,6 +99,7 @@ export default function Table ({ data }) {
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                 >
                   {column.render('Header')}
+                  {column.hasHelper && <Term title={dialogInfo[column.id]?.title}>{dialogInfo[column.id]?.description}</Term>}
                   <span>
                     {column.isSorted
                       ? column.isSortedDesc

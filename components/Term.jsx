@@ -1,6 +1,7 @@
 
 import { ModalContext } from 'contexts/modal.context'
 import { useContext } from 'react'
+import styles from 'styles/Term.module.css'
 
 // include styles
 import 'rodal/lib/rodal.css'
@@ -16,7 +17,7 @@ export const Term = ({ children, title }) => {
 
   return (
     <>
-      <button title={title} onClick={(ev) => handleClick(ev)}>❔</button>
+      <button className={styles.buttonHelper} title={title} onClick={(ev) => handleClick(ev)}>❔</button>
     </>
   )
 }

@@ -20,6 +20,7 @@ import {
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
+import { dialogInfo } from '../helpers/data/DialogInfo'
 
 export default function Home ({ data, info, chartDatasets }) {
   const totals = data.find(({ ccaa }) => ccaa === 'Totales')
@@ -41,10 +42,9 @@ export default function Home ({ data, info, chartDatasets }) {
 
           <div className={styles.grid}>
             <div className={styles.card}>
-              <Term title='Abrir diálogo con explicación sobre Dosis Distribuidas'>
-                lorem <strong>ipsum</strong> dolor sit amet
+              <Term title={dialogInfo.dosisEntregadas.title}>
+                {dialogInfo.dosisEntregadas.description}
               </Term>
-
               <header>
                 <Image
                   className={styles.cardImage}
@@ -97,6 +97,9 @@ export default function Home ({ data, info, chartDatasets }) {
             </div>
 
             <div className={styles.card}>
+              <Term title={dialogInfo.dosisAdministradas.title}>
+                {dialogInfo.dosisAdministradas.description}
+              </Term>
               <header>
                 <Image
                   src='/vacuna.png'
