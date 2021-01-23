@@ -48,10 +48,10 @@
 }
 
 .table tr.totales{
-  background-color: rgb(210, 239, 253);
+  background-color: #d2effd;
 }
 
 .table tr:hover {
-  background-color: #6ba5a7;
+  background-color: #6cd0ff;
   cursor: cell;
 }
