@@ -51,3 +51,7 @@
   background-color: rgb(210, 239, 253);
 }
 
+.table tr:hover {
+  background-color: #6ba5a7;
+  cursor: cell;
+}
