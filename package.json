@@ -5,10 +5,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "start": "next start",
+    "export": "next export",
     "download-today-status": "node scripts/download-covid-vaccine-today-status.js",
     "lint": "standard",
-    "postinstall": "git config core.hooksPath ./git-hooks",
-    "start": "next start"
+    "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "dependencies": {
     "download": "8.0.0",
