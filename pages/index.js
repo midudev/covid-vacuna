@@ -1,7 +1,9 @@
+/* global fetch */
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
@@ -20,7 +22,7 @@ import {
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 
-export default function Home ({ data, info, chartDatasets }) {
+export default function Home ({ contributors, data, info, chartDatasets }) {
   const totals = data.find(({ ccaa }) => ccaa === 'Totales')
 
   return (
@@ -206,6 +208,9 @@ export default function Home ({ data, info, chartDatasets }) {
         </h2>
         <ul>
           <li>
+            <strong>1.5.0</strong>: Añadidas gráficas <span aria-label='Gráfica subiendo' role='img'>📈</span> y contribuidores <span aria-label='Emoji de ciclista' role='img'>🚵‍♀️</span>
+          </li>
+          <li>
             <strong>1.4.0</strong>: Añadida la posibilidad de incrustar los datos en otra página <span aria-label='Globo del mundo con meridianos' role='img'>🌐</span>
           </li>
           <li>
@@ -229,6 +234,11 @@ export default function Home ({ data, info, chartDatasets }) {
           <li><a target='_blank' rel='noreferrer' href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'>Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)</a></li>
           <li><a target='_blank' rel='noreferrer' href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'>Web para revisar el estado y progreso de la vacunación del COVID-19 en España (Menéame)</a></li>
         </ul>
+
+        <h2 className={styles.subtitle}>
+          Contribuidores
+        </h2>
+        <Contributors contributors={contributors} />
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
@@ -248,6 +258,13 @@ export default function Home ({ data, info, chartDatasets }) {
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
+  const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
+    .then(res => res.json())
+    .then(json =>
+      json.map(
+        ({ login, avatar_url: avatar, html_url: url }) => ({ login, avatar, url })
+      )
+    ).catch(() => [])
 
   const chartDatasets = normalizeChartData()
 
@@ -255,7 +272,8 @@ export async function getStaticProps () {
     props: {
       data,
       info,
-      chartDatasets
+      chartDatasets,
+      contributors
     }
   }
 }
