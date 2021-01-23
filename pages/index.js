@@ -14,7 +14,14 @@ import styles from 'styles/Home.module.css'
 import TimeAgo from 'components/TimeAgo.jsx'
 import { Term } from 'components/Term'
 
-export default function Home ({ data, info }) {
+import ProgressChart from 'components/ProgressChart'
+import {
+  DosisAdministradasTooltip,
+  DosisEntregadasTooltip
+} from 'components/ProgressChart/tooltips'
+import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
+
+export default function Home ({ data, info, chartDatasets }) {
   const totals = data.find(({ ccaa }) => ccaa === 'Totales')
 
   return (
@@ -176,6 +183,18 @@ export default function Home ({ data, info }) {
 
         <Table data={data} />
 
+        <h2 className={styles.subtitle}>
+          Dosis entregadas totales
+        </h2>
+
+        <ProgressChart dataset={chartDatasets.dosisEntregadas} tooltip={DosisEntregadasTooltip} />
+
+        <h2 className={styles.subtitle}>
+          Dosis administradas totales
+        </h2>
+
+        <ProgressChart dataset={chartDatasets.dosisAdministradas} tooltip={DosisAdministradasTooltip} />
+
         <h2 className={styles.subtitle}>Fuentes de datos y enlaces de interés</h2>
         <ul>
           <li><a target='_blank' rel='noreferrer' href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Estrategia de Vacunación COVID-19 en España</a></li>
@@ -230,10 +249,13 @@ export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
 
+  const chartDatasets = normalizeChartData()
+
   return {
     props: {
       data,
-      info
+      info,
+      chartDatasets
     }
   }
 }
