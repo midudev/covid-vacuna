@@ -1,3 +1,5 @@
+import { LOCALE } from '@config/locale'
+
 // global SEO config
 const title = 'Estado y progreso vacunación COVID-19 España 2021'
 const description =
@@ -9,7 +11,7 @@ const SEO = {
   canonical: 'https://covid-vacuna.app',
   openGraph: {
     type: 'website',
-    locale: 'es_ES',
+    locale: LOCALE.DEFAULT_LONG,
     url: 'https://covid-vacuna.app',
     title,
     description,

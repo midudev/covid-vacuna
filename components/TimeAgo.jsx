@@ -1,3 +1,5 @@
+import { LOCALE } from '@config/locale'
+
 const DATE_UNITS = {
   day: 86400,
   hour: 3600,
@@ -15,7 +17,7 @@ const getUnitAndValueDate = (secondsElapsed) => {
   }
 }
 
-const getTimeAgo = (timestamp, locale) => {
+const getTimeAgo = (timestamp, locale = LOCALE.DEFAULT) => {
   const rtf = new Intl.RelativeTimeFormat(locale)
 
   const secondsElapsed = getSecondsDiff(timestamp)
@@ -24,11 +26,10 @@ const getTimeAgo = (timestamp, locale) => {
 }
 
 export default function TimeAgo ({ timestamp }) {
-  const locale = 'es'
-  const timeago = getTimeAgo(timestamp, locale)
+  const timeago = getTimeAgo(timestamp)
 
   const date = new Date(timestamp)
-  const formattedDate = new Intl.DateTimeFormat(locale, {
+  const formattedDate = new Intl.DateTimeFormat(LOCALE.DEFAULT, {
     month: 'long', day: 'numeric'
   }).format(date)
 

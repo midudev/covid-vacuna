@@ -1,8 +1,8 @@
-export default function TimestampToDate ({ timestamp }) {
-  const locale = 'es'
+import { LOCALE } from '@config/locale'
 
+export default function TimestampToDate ({ timestamp }) {
   const date = new Date(timestamp)
-  const formattedDate = new Intl.DateTimeFormat(locale, {
+  const formattedDate = new Intl.DateTimeFormat(LOCALE.DEFAULT, {
     month: 'long', day: 'numeric'
   }).format(date)
 

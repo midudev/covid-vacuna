@@ -1,6 +1,8 @@
+import { LOCALE } from '@config/locale'
+
 import styles from '../styles/ProgressChart.module.css'
 
-function formatNumberToLocale (payload, locale) {
+function formatNumberToLocale (payload, locale = LOCALE.DEFAULT_LONG) {
   if (!payload) return
 
   const { value } = payload.pop()
@@ -16,7 +18,7 @@ function Bold ({ text }) {
 export function DosisAdministradasTooltip ({ active, payload, label }) {
   if (!active) return null
 
-  const value = formatNumberToLocale(payload, 'es-ES')
+  const value = formatNumberToLocale(payload)
 
   return (
     <div className={styles.chartTooltip}>
@@ -31,7 +33,7 @@ export function DosisAdministradasTooltip ({ active, payload, label }) {
 export function DosisEntregadasTooltip ({ active, payload, label }) {
   if (!active) return null
 
-  const value = formatNumberToLocale(payload, 'es-ES')
+  const value = formatNumberToLocale(payload)
 
   return (
     <div className={styles.chartTooltip}>

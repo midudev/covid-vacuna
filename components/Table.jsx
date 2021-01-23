@@ -6,8 +6,6 @@ import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
 
 export default function Table ({ data, filter, setFilter }) {
-  const locale = 'es'
-
   const handleRowClick = useCallback(
     ({ original: { ccaa } }) => () => setFilter(ccaa === filter ? 'Totales' : ccaa),
     [filter, setFilter]
@@ -27,8 +25,8 @@ export default function Table ({ data, filter, setFilter }) {
         ...rest
       } = row
 
-      const formatDigit = number => toDigit({ locale, number })
-      const formatPercentage = number => toPercentage({ locale, number })
+      const formatDigit = number => toDigit({ number })
+      const formatPercentage = number => toPercentage({ number })
 
       return {
         ...rest,

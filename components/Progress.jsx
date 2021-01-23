@@ -8,7 +8,6 @@ const FILTERS = {
 }
 
 export default function Progress ({ totals }) {
-  const locale = 'es' // get from context later
   const [filter, setFilter] = useState(FILTERS.parcial)
   const value = totals[filter]
 
@@ -36,7 +35,7 @@ export default function Progress ({ totals }) {
           </label>
         </div>
 
-        <section data-value={toPercentage({ locale, number: value })}>
+        <section data-value={toPercentage({ number: value })}>
           <progress max='100' value={value * 100} />
         </section>
       </form>

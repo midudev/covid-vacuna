@@ -1,3 +1,5 @@
+import { LOCALE } from '@config/locale'
+
 export function CustomXTick ({ x, y, payload }) {
   return (
     <g transform={`translate(${x},${y})`}>
@@ -19,7 +21,7 @@ export function CustomXTick ({ x, y, payload }) {
 
 export function CustomYTick ({ x, y, payload }) {
   const omitZero = payload.value === 0 ? '' : payload.value
-  const localValue = new Intl.NumberFormat('es-ES').format(omitZero)
+  const localValue = new Intl.NumberFormat(LOCALE.DEFAULT).format(omitZero)
 
   return (
     <g transform={`translate(${x},${y})`}>
