@@ -27,9 +27,10 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 export default function Home ({ contributors, data, info, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
 
-  const totals = useMemo(() => data.find(({ ccaa }) => ccaa === filter), [
-    filter
-  ])
+  const totals = useMemo(
+    () => data.find(({ ccaa }) => ccaa === filter),
+    [data, filter]
+  )
 
   return (
     <>
@@ -189,7 +190,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
           Por comunidades autónomas
         </h2>
 
-        <Table data={data} setFilter={setFilter} />
+        <Table data={data} filter={filter} setFilter={setFilter} />
 
         <h2 className={styles.subtitle}>
           Evolución de dosis entregadas
