@@ -8,7 +8,7 @@
   --text-small-color: #444;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: system) {
   :root {
     --app-background: radial-gradient(#e3e5ff 1px,transparent 0),radial-gradient(#e3e5ff 1px,#fefefe 0);
   }
@@ -32,7 +32,7 @@ html[scheme='light-mode'] img, html[scheme='light-mode'] span[role='img'] {
 }
 
 html[scheme='dark-mode'] {
-  --app-background: radial-gradient(#e3e5ff 1px,transparent 0),radial-gradient(#e3e5ff 1px,#fefefe 0);
+  --app-background: radial-gradient(#6b6b6b 1px, transparent 0),radial-gradient(#646464 1px, #0a0a0a 0);
   filter: invert(1) hue-rotate(180deg);
 }
 

@@ -83,7 +83,7 @@
   padding: 64px 1.5rem 1.5rem;
   position: relative;
   text-align: center;
-  box-shadow: rgb(210, 239, 253) 14px 14px;
+  box-shadow: rgba(210, 239, 253, 0.7) 14px 14px;
 }
 
 .card button {
