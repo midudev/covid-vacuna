@@ -18,7 +18,7 @@ const downloadFile = (url, filename) => {
     })
 }
 ;(async () => {
-  const days = [...Array(20).keys()].map(day => {
+  const days = [...Array(22).keys()].map(day => {
     const dayToUse = `${day + 1}`.padStart(2, '0')
     return { day: dayToUse, url: createUrl(dayToUse) }
   })

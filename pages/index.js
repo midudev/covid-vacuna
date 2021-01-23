@@ -186,13 +186,13 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         <Table data={data} />
 
         <h2 className={styles.subtitle}>
-          Dosis entregadas totales
+          Evolución de dosis entregadas
         </h2>
 
         <ProgressChart dataset={chartDatasets.dosisEntregadas} tooltip={DosisEntregadasTooltip} />
 
         <h2 className={styles.subtitle}>
-          Dosis administradas totales
+          Evolución de dosis administradas
         </h2>
 
         <ProgressChart dataset={chartDatasets.dosisAdministradas} tooltip={DosisAdministradasTooltip} />
