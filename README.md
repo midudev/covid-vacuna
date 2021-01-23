@@ -21,10 +21,14 @@ npm run dev # levantar el entorno de desarrollo
 ¡Claro que sí! Lo cierto es que no puedo dedicarle mucho tiempo a la app así que cualquier ayuda es bienvenida.
 
 Sólo te pido:
+- **No hagas PRs para pasar a TypeScript**. Me gustan las ventajas que ofrece en muchos proyectos pero en este en concreto no le encuentro el mismo valor.
+- **No hagas PRs para refactorizar toda la estructura de carpetas y/o refactorizar muchas cosas.** Seguramente se quedarán sin mergear.
+- **No hagas PRs cambiando configuraciones de linter.** Me gusta `standard`.
 
-- No hagas Pull Requests grandes. Cuanto más atómicas, más posibilidades que haga merge.
-- Sigue el estilo y pásale el linter antes de hacer la PR.
-- No reinventes la rueda. No hace falta que añadas un nuevo framework, dependencia o cosa trending. La idea es que la app sea funcional y tenga lo mínimo necesario.
+En definitiva:
+- **No hagas Pull Requests grandes.** Cuanto más atómicas, más posibilidades que haga merge. 🚀
+- **Sigue el estilo** y pásale el linter antes de hacer la PR.
+- No reinventes la rueda. No hace falta que añadas un nuevo framework, dependencia o cosa trending. **La idea es que la app sea funcional y tenga lo mínimo necesario.**
 
 ## Próximo contenido
 
