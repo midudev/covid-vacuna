@@ -7,10 +7,10 @@ const FILTERS = {
   completa: 'porcentajePoblacionCompletas'
 }
 
-export default function Progress ({ data }) {
+export default function Progress ({ totals }) {
   const locale = 'es' // get from context later
   const [filter, setFilter] = useState(FILTERS.parcial)
-  const value = data.find(({ ccaa }) => ccaa === 'Totales')[filter]
+  const value = totals[filter]
 
   return (
     <>

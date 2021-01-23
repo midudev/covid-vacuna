@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-key */
-
-import { useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useTable, useSortBy } from 'react-table'
 import { toDigit } from './NumberDigits.jsx'
 import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
 
-export default function Table ({ data }) {
+export default function Table ({ data, setFilter }) {
   const locale = 'es'
+
+  const handleRowClick = useCallback(row => () => setFilter(row.original.ccaa), [])
 
   const tableData = useMemo(
     () => data.map(row => {
@@ -111,7 +112,7 @@ export default function Table ({ data }) {
           {rows.map(row => {
             prepareRow(row)
             return (
-              <tr {...row.getRowProps()} className={row.id === '19' ? styles.totales : ''}>
+              <tr {...row.getRowProps()} className={row.id === '19' ? styles.totales : ''} onClick={handleRowClick(row)}>
                 {row.cells.map(cell => {
                   return (
                     <td {...cell.getCellProps()}>
