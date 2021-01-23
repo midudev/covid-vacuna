@@ -10,7 +10,7 @@ export default function Footer () {
           rel='noreferrer'
         >
           Desarrollado por{' '}
-          <img src='https://midu.dev/logo.png' alt='midudev' />
+          <img width='92' height='24' loading='lazy' src='https://midu.dev/logo.png' alt='midudev' />
         </a>
         <span>&bull;</span>
         <a href='https://github.com/midudev/covid-vacuna' rel='nofollow noreferrer' target='_blank'>GitHub</a>

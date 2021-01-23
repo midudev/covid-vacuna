@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "download-today-status": "node scripts/download-covid-vaccine-today-status.js"
+    "dev": "next dev",
+    "download-today-status": "node scripts/download-covid-vaccine-today-status.js",
+    "lint": "standard",
+    "postinstall": "git config core.hooksPath ./git-hooks",
+    "start": "next start"
   },
   "dependencies": {
     "download": "8.0.0",
     "fathom-client": "3.0.0",
-    "fs-extra": "9.0.1",
+    "fs-extra": "9.1.0",
     "next": "10.0.5",
+    "next-seo": "4.17.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-table": "7.6.3",
