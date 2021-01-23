@@ -18,6 +18,9 @@ export function CustomXTick ({ x, y, payload }) {
 }
 
 export function CustomYTick ({ x, y, payload }) {
+  const exponentFormatValue = payload.value.toExponential(0)
+  const omitZero = payload.value === 0 ? '' : exponentFormatValue
+
   return (
     <g transform={`translate(${x},${y})`}>
       <text
@@ -29,7 +32,7 @@ export function CustomYTick ({ x, y, payload }) {
         textAnchor='end'
         fill='var(--text-subtitle-color)'
       >
-        {new Intl.NumberFormat('es-ES').format(payload.value)}
+        {omitZero}
       </text>
     </g>
   )
