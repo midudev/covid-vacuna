@@ -22,10 +22,16 @@ export default function Table ({ data, filter, setFilter }) {
   const tableData = useMemo(
     () => data.map(row => {
       const {
+        porcentajeEntregadas,
+        porcentajePoblacionAdministradas,
+        porcentajePoblacionCompletas,
         ...rest
       } = row
 
       return {
+        porcentajeEntregadas: porcentajeEntregadas.toFixed(4),
+        porcentajePoblacionAdministradas: porcentajePoblacionAdministradas.toFixed(4),
+        porcentajePoblacionCompletas: porcentajePoblacionCompletas.toFixed(4),
         ...rest
       }
     }), []
