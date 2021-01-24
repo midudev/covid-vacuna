@@ -75,6 +75,16 @@
   border-bottom: 1px dashed #09f;
 }
 
+.news {
+  color: #333;
+  border-bottom: 1px dashed #ddd;
+}
+
+.news:hover {
+  color: #555;
+  border-bottom: 1px dashed #09f;
+}
+
 .card {
   background: #ffffff;
   border-radius: 8px;
