@@ -60,7 +60,6 @@ export default function Table ({ data, filter, setFilter }) {
       {
         Header: '% sobre entregadas',
         accessor: 'porcentajeEntregadas',
-        format: formatPercentage
       },
       {
         Header: '% población vacunada',
@@ -115,11 +114,14 @@ export default function Table ({ data, filter, setFilter }) {
         )
       },
 
-      cells: (cell) => (
-        <td {...cell.getCellProps()}>
-          {evalDigit(cell.value)}
-        </td>
-      )
+      cells: (cell) => {
+        const { key, ...props } = cell.getCellProps();
+        return (
+          <td {...props} key={key}>
+            {evalDigit(cell.value)}
+          </td>
+        )
+      }
     }),
     []
   )
@@ -131,7 +133,7 @@ export default function Table ({ data, filter, setFilter }) {
         <tbody {...getTableBodyProps()}>
           {rows.map(mapRender.rows)}
           <tr role='row' className={styles.totales}>
-            {Object.values(totales).map(total => <td role='cell'>{evalDigit(total)}</td>)}
+            {Object.values(totales).map(total => <td key={JSON.stringify(total)}>{evalDigit(total)}</td>)}
           </tr>
         </tbody>
       </table>
