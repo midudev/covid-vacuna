@@ -6,12 +6,13 @@
 .progress label {
   font-weight: 500;
   line-height: 150%;
+  margin-right: 1rem;
 }
 
 .progress div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .progress progress {

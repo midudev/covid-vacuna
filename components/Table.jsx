@@ -25,6 +25,7 @@ export default function Table ({ data, filter, setFilter }) {
         porcentajeEntregadas: formatPercentage(current.porcentajeEntregadas),
         porcentajePoblacionAdministradas: formatPercentage(current.porcentajePoblacionAdministradas),
         porcentajePoblacionCompletas: formatPercentage(current.porcentajePoblacionCompletas)
+
       }
       return current.ccaa !== 'Totales'
         ? { ...acc, autonomias: [...acc.autonomias, current] }
@@ -42,27 +43,28 @@ export default function Table ({ data, filter, setFilter }) {
       },
       {
         Header: 'Dosis entregadas',
-        accessor: 'dosisEntregadas'
+        accessor: 'dosisEntregadas',
       },
       {
-        Header: 'Dosis entregadas Moderna',
+        Header: 'Entregadas Moderna',
         accessor: 'dosisEntregadasModerna'
       },
       {
-        Header: 'Dosis entregadas Pfizer',
+        Header: 'Entregadas Pfizer',
         accessor: 'dosisEntregadasPfizer'
       },
       {
         Header: 'Dosis administradas',
-        accessor: 'dosisAdministradas'
+        accessor: 'dosisAdministradas',
       },
       {
         Header: '% sobre entregadas',
-        accessor: 'porcentajeEntregadas'
+        accessor: 'porcentajeEntregadas',
+        format: formatPercentage
       },
       {
         Header: '% población vacunada',
-        accessor: 'porcentajePoblacionAdministradas'
+        accessor: 'porcentajePoblacionAdministradas',
       },
       {
         Header: 'Pauta completa',
@@ -75,7 +77,7 @@ export default function Table ({ data, filter, setFilter }) {
     ]
     , [])
 
-  const {
+  let {
     getTableProps,
     getTableBodyProps,
     headerGroups,
