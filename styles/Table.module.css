@@ -51,7 +51,16 @@
   background-color: #d2effd;
 }
 
-.table tr:hover {
+.table thead th:hover {
+  background-color: #caeeff;
+}
+
+.table tbody tr:hover {
   background-color: #6cd0ff;
-  cursor: cell;
+  cursor: pointer;
+}
+
+.table tr.selected {
+  background-color: #6cd0ff;
+  color: #ffffff;
 }

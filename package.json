@@ -5,16 +5,20 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "start": "next start",
+    "export": "next export",
     "download-today-status": "node scripts/download-covid-vaccine-today-status.js",
     "lint": "standard",
-    "postinstall": "git config core.hooksPath ./git-hooks",
-    "start": "next start"
+    "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "dependencies": {
     "download": "8.0.0",
     "fathom-client": "3.0.0",
     "fs-extra": "9.1.0",
     "next": "10.0.5",
+    "next-compose-plugins": "2.2.1",
+    "next-images": "1.7.0",
+    "next-pwa": "5.0.4",
     "next-seo": "4.17.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",

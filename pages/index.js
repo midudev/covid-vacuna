@@ -1,4 +1,6 @@
 /* global fetch */
+import { useMemo, useState } from 'react'
+
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -25,21 +27,35 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { dialogInfo } from '../helpers/data/DialogInfo'
 
 export default function Home ({ contributors, data, info, chartDatasets }) {
-  const totals = data.find(({ ccaa }) => ccaa === 'Totales')
+  const [filter, setFilter] = useState('Totales')
+
+  const totals = useMemo(
+    () => data.find(({ ccaa }) => ccaa === filter),
+    [data, filter]
+  )
 
   return (
     <>
       <Head>
-        <link rel='alternate icon' href='https://covid-vacuna.app/vacuna.png' type='image/png' />
+        <link
+          rel='alternate icon'
+          href='https://covid-vacuna.app/vacuna.png'
+          type='image/png'
+        />
+        <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            Vacunación COVID-19 en España
+            Vacunación COVID-19 en {filter === 'Totales' ? 'España' : filter}
           </h1>
           <small className={styles.description}>
-            Datos actualizados <TimeAgo timestamp={info.lastModified} />. Fuente: <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Ministerio de Sanidad</a>
+            Datos actualizados <TimeAgo timestamp={info.lastModified} />.
+            Fuente:{' '}
+            <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>
+              Ministerio de Sanidad
+            </a>
           </small>
 
           <div className={styles.grid}>
@@ -91,7 +107,9 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                       priority
                     />
                     <span>
-                      <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>
+                      <NumberDigits>
+                        {totals.dosisEntregadasModerna}
+                      </NumberDigits>
                     </span>
                   </small>
                 </div>
@@ -158,7 +176,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
             </div>
           </div>
 
-          <Progress data={data} />
+          <Progress totals={totals} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
@@ -182,65 +200,121 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
             </a>
           </Link>
         </main>
-        <h2 className={styles.subtitle}>
-          Por comunidades autónomas
-        </h2>
 
-        <Table data={data} />
+        <h2 className={styles.subtitle}>Por comunidades autónomas</h2>
 
-        <h2 className={styles.subtitle}>
-          Evolución de dosis entregadas
-        </h2>
+        <Table data={data} filter={filter} setFilter={setFilter} />
 
-        <ProgressChart dataset={chartDatasets.dosisEntregadas} tooltip={DosisEntregadasTooltip} />
+        <h2 className={styles.subtitle}>Evolución de dosis entregadas</h2>
 
-        <h2 className={styles.subtitle}>
-          Evolución de dosis administradas
-        </h2>
+        <ProgressChart
+          dataset={chartDatasets.dosisEntregadas}
+          tooltip={DosisEntregadasTooltip}
+        />
 
-        <ProgressChart dataset={chartDatasets.dosisAdministradas} tooltip={DosisAdministradasTooltip} />
+        <h2 className={styles.subtitle}>Evolución de dosis administradas</h2>
 
-        <h2 className={styles.subtitle}>Fuentes de datos y enlaces de interés</h2>
-        <ul>
-          <li><a target='_blank' rel='noreferrer' href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>Estrategia de Vacunación COVID-19 en España</a></li>
-          <li><a target='_blank' rel='noreferrer' href='https://www.vacunacovid.gob.es'>Información oficial sobre la vacunación contra el nuevo coronavirus</a></li>
-        </ul>
+        <ProgressChart
+          dataset={chartDatasets.dosisAdministradas}
+          tooltip={DosisAdministradasTooltip}
+        />
 
         <h2 className={styles.subtitle}>
-          Changelog
+          Fuentes de datos y enlaces de interés
         </h2>
         <ul>
           <li>
-            <strong>1.5.0</strong>: Añadidas gráficas <span aria-label='Gráfica subiendo' role='img'>📈</span> y contribuidores <span aria-label='Emoji de ciclista' role='img'>🚵‍♀️</span>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'
+            >
+              Estrategia de Vacunación COVID-19 en España
+            </a>
           </li>
           <li>
-            <strong>1.4.0</strong>: Añadida la posibilidad de incrustar los datos en otra página <span aria-label='Globo del mundo con meridianos' role='img'>🌐</span>
-          </li>
-          <li>
-            <strong>1.3.0</strong>: Añadido modo oscuro a la app <span aria-label='Luna' role='img'>🌚</span>
-          </li>
-          <li>
-            <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en población <span aria-label='Globo terrícola con vistas a América' role='img'>🌎</span>
-          </li>
-          <li>
-            <strong>1.1.0</strong>: Añadidas personas con pauta completa <span aria-label='Jeringuilla' role='img'>💉</span>
-          </li>
-          <li>
-            <strong>1.0.0</strong>: Primera versión <span aria-label='Fuego' role='img'>🔥</span>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.vacunacovid.gob.es'
+            >
+              Información oficial sobre la vacunación contra el nuevo
+              coronavirus
+            </a>
           </li>
         </ul>
 
-        <h2 className={styles.subtitle}>
-          En los medios
-        </h2>
+        <h2 className={styles.subtitle}>Changelog</h2>
         <ul>
-          <li><a target='_blank' rel='noreferrer' href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'>Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)</a></li>
-          <li><a target='_blank' rel='noreferrer' href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'>Web para revisar el estado y progreso de la vacunación del COVID-19 en España (Menéame)</a></li>
+          <li>
+            <strong>1.5.0</strong>: Añadidas gráficas{' '}
+            <span aria-label='Gráfica subiendo' role='img'>
+              📈
+            </span>{' '}
+            y contribuidores{' '}
+            <span aria-label='Emoji de ciclista' role='img'>
+              🚵‍♀️
+            </span>
+          </li>
+          <li>
+            <strong>1.4.0</strong>: Añadida la posibilidad de incrustar los
+            datos en otra página{' '}
+            <span aria-label='Globo del mundo con meridianos' role='img'>
+              🌐
+            </span>
+          </li>
+          <li>
+            <strong>1.3.0</strong>: Añadido modo oscuro a la app{' '}
+            <span aria-label='Luna' role='img'>
+              🌚
+            </span>
+          </li>
+          <li>
+            <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en
+            población{' '}
+            <span aria-label='Globo terrícola con vistas a América' role='img'>
+              🌎
+            </span>
+          </li>
+          <li>
+            <strong>1.1.0</strong>: Añadidas personas con pauta completa{' '}
+            <span aria-label='Jeringuilla' role='img'>
+              💉
+            </span>
+          </li>
+          <li>
+            <strong>1.0.0</strong>: Primera versión{' '}
+            <span aria-label='Fuego' role='img'>
+              🔥
+            </span>
+          </li>
         </ul>
 
-        <h2 className={styles.subtitle}>
-          Contribuidores
-        </h2>
+        <h2 className={styles.subtitle}>En los medios</h2>
+        <ul>
+          <li>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'
+            >
+              Lanzan una web con datos del Gobierno que permite ver cómo avanza
+              en España la vacunación contra el coronavirus (20 Minutos)
+            </a>
+          </li>
+          <li>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'
+            >
+              Web para revisar el estado y progreso de la vacunación del
+              COVID-19 en España (Menéame)
+            </a>
+          </li>
+        </ul>
+
+        <h2 className={styles.subtitle}>Contribuidores</h2>
         <Contributors contributors={contributors} />
       </div>
 
