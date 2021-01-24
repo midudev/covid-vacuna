@@ -9,11 +9,14 @@ const LOCALES = {
   'es-ES': {
     name: 'Castellano'
   },
-  'es-CT': {
+  'es-CA': {
     name: 'Catalán'
   },
   'es-GA': {
     name: 'Gallego'
+  },
+  'es-EU': {
+    name: 'Euskera'
   }
 }
 
