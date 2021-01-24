@@ -34,3 +34,5 @@ yarn-error.log*
 .vercel
 
 package-lock.json
+yarn.lock
+public/workbox-*.js
