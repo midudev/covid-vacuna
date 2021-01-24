@@ -16,33 +16,17 @@ export default function Table ({ data, filter, setFilter }) {
     [filter, setFilter]
   )
 
+  const formatDigit = number => toDigit({ locale, number })
+  const formatPercentage = number => toPercentage({ locale, number })
+
   const tableData = useMemo(
     () => data.map(row => {
       const {
-        dosisAdministradas,
-        dosisEntregadas,
-        dosisEntregadasModerna,
-        dosisEntregadasPfizer,
-        dosisPautaCompletada,
-        porcentajeEntregadas,
-        porcentajePoblacionAdministradas,
-        porcentajePoblacionCompletas,
         ...rest
       } = row
 
-      const formatDigit = number => toDigit({ locale, number })
-      const formatPercentage = number => toPercentage({ locale, number })
-
       return {
-        ...rest,
-        dosisAdministradas: formatDigit(dosisAdministradas),
-        dosisEntregadas: formatDigit(dosisEntregadas),
-        dosisEntregadasModerna: formatDigit(dosisEntregadasModerna),
-        dosisEntregadasPfizer: formatDigit(dosisEntregadasPfizer),
-        dosisPautaCompletada: formatDigit(dosisPautaCompletada),
-        porcentajeEntregadas: formatPercentage(porcentajeEntregadas),
-        porcentajePoblacionAdministradas: formatPercentage(porcentajePoblacionAdministradas),
-        porcentajePoblacionCompletas: formatPercentage(porcentajePoblacionCompletas)
+        ...rest
       }
     }), []
   )
@@ -51,45 +35,53 @@ export default function Table ({ data, filter, setFilter }) {
     () => [
       {
         Header: '',
-        accessor: 'ccaa'
+        accessor: 'ccaa',
+        format: (ccaa) => ccaa
       },
       {
         Header: 'Dosis entregadas',
-        accessor: 'dosisEntregadas'
+        accessor: 'dosisEntregadas',
+        format: formatDigit
       },
       {
         Header: 'Dosis administradas',
-        accessor: 'dosisAdministradas'
+        accessor: 'dosisAdministradas',
+        format: formatDigit
       },
       {
         Header: '% sobre entregadas',
-        accessor: 'porcentajeEntregadas'
+        accessor: 'porcentajeEntregadas',
+        format: formatPercentage
       },
       {
         Header: '% población vacunada',
-        accessor: 'porcentajePoblacionAdministradas'
+        accessor: 'porcentajePoblacionAdministradas',
+        format: formatPercentage
       },
       {
         Header: 'Pauta completa',
         accessor: 'dosisPautaCompletada',
-        format: 'digit'
+        format: formatDigit
       },
       {
         Header: '% población totalmente vacunada',
         accessor: 'porcentajePoblacionCompletas',
-        format: 'percentatge'
+        format: formatPercentage
       }
     ],
     []
   )
 
-  const {
+  let {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     rows,
     prepareRow
   } = useTable({ columns, data: tableData }, useSortBy)
+
+  // totales siempre en la ultima fila
+  rows = [...rows.filter(row => row.id !== '19'), rows.find(row => row.id === '19')]
 
   return (
     <div className={styles.container}>
@@ -123,7 +115,7 @@ export default function Table ({ data, filter, setFilter }) {
                 {row.cells.map(cell => {
                   return (
                     <td {...cell.getCellProps()}>
-                      {cell.render('Cell')}
+                      {cell.column.format(cell.value)}
                     </td>
                   )
                 })}
