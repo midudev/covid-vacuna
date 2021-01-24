@@ -9,7 +9,10 @@ export default function Table ({ data, filter, setFilter }) {
   const locale = 'es'
 
   const handleRowClick = useCallback(
-    ({ original: { ccaa } }) => () => setFilter(ccaa === filter ? 'Totales' : ccaa),
+    ({ original: { ccaa } }) => () => {
+      setFilter(ccaa === filter ? 'Totales' : ccaa)
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
     [filter, setFilter]
   )
 
