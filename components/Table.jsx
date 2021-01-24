@@ -7,7 +7,7 @@ import styles from 'styles/Table.module.css'
 import { useLocale } from 'hooks/useMainContexts.js'
 
 export default function Table ({ data, filter, setFilter }) {
-  const locale = useLocale()
+  const { locale } = useLocale()
 
   const handleRowClick = useCallback(
     ({ original: { ccaa } }) => () => {

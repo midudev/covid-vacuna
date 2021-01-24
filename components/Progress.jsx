@@ -9,7 +9,7 @@ const FILTERS = {
 }
 
 export default function Progress ({ totals }) {
-  const locale = useLocale()
+  const { locale } = useLocale()
   const [filter, setFilter] = useState(FILTERS.parcial)
   const value = totals[filter]
 

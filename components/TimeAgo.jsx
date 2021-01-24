@@ -26,7 +26,7 @@ const getTimeAgo = (timestamp, locale) => {
 }
 
 export default function TimeAgo ({ timestamp }) {
-  const locale = useLocale()
+  const { locale } = useLocale()
   const timeago = getTimeAgo(timestamp, locale)
 
   const date = new Date(timestamp)
