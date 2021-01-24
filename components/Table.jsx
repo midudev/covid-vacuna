@@ -6,53 +6,51 @@ import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
 
 export default function Table ({ data, filter, setFilter }) {
-  const locale = 'es'
+  const locale = 'es-ES'
+
+  const formatDigit = useCallback((number) => toDigit({ locale, number }), [])
+  const formatPercentage = useCallback((number) => toPercentage({ locale, number }), [])
+  const evalDigit = useCallback((value) => typeof value === 'number' ? formatDigit(value) : value, [])
 
   const handleRowClick = useCallback(
-    ({ original: { ccaa } }) => () => setFilter(ccaa === filter ? 'Totales' : ccaa),
+    ({ original: { ccaa } }) => () =>
+      setFilter(ccaa === filter ? 'Totales' : ccaa),
     [filter, setFilter]
   )
 
-  const tableData = useMemo(
-    () => data.map(row => {
-      const {
-        dosisAdministradas,
-        dosisEntregadas,
-        dosisEntregadasModerna,
-        dosisEntregadasPfizer,
-        dosisPautaCompletada,
-        porcentajeEntregadas,
-        porcentajePoblacionAdministradas,
-        porcentajePoblacionCompletas,
-        ...rest
-      } = row
-
-      const formatDigit = number => toDigit({ locale, number })
-      const formatPercentage = number => toPercentage({ locale, number })
-
-      return {
-        ...rest,
-        dosisAdministradas: formatDigit(dosisAdministradas),
-        dosisEntregadas: formatDigit(dosisEntregadas),
-        dosisEntregadasModerna: formatDigit(dosisEntregadasModerna),
-        dosisEntregadasPfizer: formatDigit(dosisEntregadasPfizer),
-        dosisPautaCompletada: formatDigit(dosisPautaCompletada),
-        porcentajeEntregadas: formatPercentage(porcentajeEntregadas),
-        porcentajePoblacionAdministradas: formatPercentage(porcentajePoblacionAdministradas),
-        porcentajePoblacionCompletas: formatPercentage(porcentajePoblacionCompletas)
+  const { autonomias, totales } = useMemo(() => data.reduce(
+    (acc, current) => {
+      current = {
+        ...current,
+        porcentajeEntregadas: formatPercentage(current.porcentajeEntregadas),
+        porcentajePoblacionAdministradas: formatPercentage(current.porcentajePoblacionAdministradas),
+        porcentajePoblacionCompletas: formatPercentage(current.porcentajePoblacionCompletas)
       }
-    }), []
+      return current.ccaa !== 'Totales'
+        ? { ...acc, autonomias: [...acc.autonomias, current] }
+        : { ...acc, totales: current }
+    },
+    { autonomias: [], totales: {} }
   )
+  , [])
 
   const columns = useMemo(
     () => [
       {
-        Header: '',
+        Header: 'Comunidad Autónoma',
         accessor: 'ccaa'
       },
       {
         Header: 'Dosis entregadas',
         accessor: 'dosisEntregadas'
+      },
+      {
+        Header: 'Dosis entregadas Moderna',
+        accessor: 'dosisEntregadasModerna'
+      },
+      {
+        Header: 'Dosis entregadas Pfizer',
+        accessor: 'dosisEntregadasPfizer'
       },
       {
         Header: 'Dosis administradas',
@@ -68,17 +66,14 @@ export default function Table ({ data, filter, setFilter }) {
       },
       {
         Header: 'Pauta completa',
-        accessor: 'dosisPautaCompletada',
-        format: 'digit'
+        accessor: 'dosisPautaCompletada'
       },
       {
         Header: '% población totalmente vacunada',
-        accessor: 'porcentajePoblacionCompletas',
-        format: 'percentatge'
+        accessor: 'porcentajePoblacionCompletas'
       }
-    ],
-    []
-  )
+    ]
+    , [])
 
   const {
     getTableProps,
@@ -86,47 +81,56 @@ export default function Table ({ data, filter, setFilter }) {
     headerGroups,
     rows,
     prepareRow
-  } = useTable({ columns, data: tableData }, useSortBy)
+  } = useTable({ columns, data: autonomias }, useSortBy)
+
+  const mapRender = useMemo(
+    () => ({
+      heads: (headerGroup) => (
+        <tr {...headerGroup.getHeaderGroupProps()}>
+          {headerGroup.headers.map(mapRender.columns)}
+        </tr>
+      ),
+
+      columns: (column) => (
+        <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+          {column.render('Header')}
+          <span>
+            {column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
+          </span>
+        </th>
+      ),
+
+      rows: (row) => {
+        prepareRow(row)
+        return (
+          <tr
+            {...row.getRowProps()}
+            className={row.original.ccaa === filter ? styles.selected : undefined}
+            onClick={handleRowClick(row)}
+          >
+            {row.cells.map(mapRender.cells)}
+          </tr>
+        )
+      },
+
+      cells: (cell) => (
+        <td {...cell.getCellProps()}>
+          {evalDigit(cell.value)}
+        </td>
+      )
+    }),
+    []
+  )
 
   return (
     <div className={styles.container}>
       <table className={styles.table} {...getTableProps()}>
-        <thead>
-          {headerGroups.map(headerGroup => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map(column => (
-                <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                >
-                  {column.render('Header')}
-                  <span>
-                    {column.isSorted
-                      ? column.isSortedDesc
-                          ? ' ▼'
-                          : ' ▲'
-                      : ''}
-                  </span>
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
+        <thead>{headerGroups.map(mapRender.heads)}</thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map(row => {
-            prepareRow(row)
-            const className = row.id === '19' ? styles.totales : row.original.ccaa === filter ? styles.selected : ''
-            return (
-              <tr {...row.getRowProps()} className={className} onClick={handleRowClick(row)}>
-                {row.cells.map(cell => {
-                  return (
-                    <td {...cell.getCellProps()}>
-                      {cell.render('Cell')}
-                    </td>
-                  )
-                })}
-              </tr>
-            )
-          })}
+          {rows.map(mapRender.rows)}
+          <tr role='row' className={styles.totales}>
+            {Object.values(totales).map(total => <td role='cell'>{evalDigit(total)}</td>)}
+          </tr>
         </tbody>
       </table>
     </div>
