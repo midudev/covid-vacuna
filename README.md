@@ -16,6 +16,10 @@ npm install # instalar las dependencias
 npm run dev # levantar el entorno de desarrollo
 ```
 
+## Forks para otros países
+
+- UK: https://covid-vaccine.app/
+
 ## ¿Aceptas Pull Request?
 
 ¡Claro que sí! Lo cierto es que no puedo dedicarle mucho tiempo a la app así que cualquier ayuda es bienvenida.
