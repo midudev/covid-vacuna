@@ -23,9 +23,11 @@ import {
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
+import { useTranslate } from 'hooks/useTranslate'
 
 export default function Home ({ contributors, data, info, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
+  const translate = useTranslate()
 
   const totals = useMemo(
     () => data.find(({ ccaa }) => ccaa === filter),
@@ -46,7 +48,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            Vacunación COVID-19 en {filter === 'Totales' ? 'España' : filter}
+            {translate.home.mainTitle} {filter === 'Totales' ? 'España' : filter}
           </h1>
           <small className={styles.description}>
             Datos actualizados <TimeAgo timestamp={info.lastModified} />.

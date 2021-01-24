@@ -4,9 +4,10 @@ import { useTable, useSortBy } from 'react-table'
 import { toDigit } from './NumberDigits.jsx'
 import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
+import { useLocale } from 'hooks/useMainContexts.js'
 
 export default function Table ({ data, filter, setFilter }) {
-  const locale = 'es'
+  const locale = useLocale()
 
   const handleRowClick = useCallback(
     ({ original: { ccaa } }) => () => {

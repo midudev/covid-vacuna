@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from 'styles/Progress.module.css'
 import { toPercentage } from 'components/NumberPercentage.jsx'
+import { useLocale } from 'hooks/useMainContexts'
 
 const FILTERS = {
   parcial: 'porcentajePoblacionAdministradas',
@@ -8,7 +9,7 @@ const FILTERS = {
 }
 
 export default function Progress ({ totals }) {
-  const locale = 'es' // get from context later
+  const locale = useLocale()
   const [filter, setFilter] = useState(FILTERS.parcial)
   const value = totals[filter]
 
