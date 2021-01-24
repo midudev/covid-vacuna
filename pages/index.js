@@ -10,6 +10,7 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
+import I18nWidget from 'components/I18nWidget.jsx'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
@@ -254,6 +255,8 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
       </dialog>
 
       <SchemeColorSwitcher />
+
+      <I18nWidget />
 
       <Share />
 
