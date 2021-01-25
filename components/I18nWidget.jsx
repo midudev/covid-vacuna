@@ -45,13 +45,13 @@ const I18nWidget = () => {
           ? (
             <ul className={styles.dropDown}>
               {options.map(locale =>
-                <li key={locale}>
-                  <Link href={currentPath} locale={locale}>
-                    <a onClick={() => setDisplay(false)}>
+                <Link key={locale} href={currentPath} locale={locale}>
+                  <a onClick={() => setDisplay(false)}>
+                    <li>
                       {LOCALES[locale].name}
-                    </a>
-                  </Link>
-                </li>)}
+                    </li>
+                  </a>
+                </Link>)}
             </ul>
             )
           : null}
