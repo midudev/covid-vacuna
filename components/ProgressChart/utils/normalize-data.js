@@ -75,6 +75,18 @@ export default function normalizeChartData () {
     }
   }
 
+  /**/
+  const completed = dataset.dosisPautaCompletada.filter(({ value }) => Boolean(value))
+  let populationCompleted = completed[completed.length - 1].value
+  const mean = populationCompleted / completed.length
+  for (; populationCompleted < 46940000; populationCompleted += mean) {
+    completed.push({ name: populationCompleted, value: populationCompleted + mean })
+  }
+
+  dataset.estimacionPoblacionCompleta = completed
+  /**/
+
+  console.log(completed)
   return dataset
 }
 

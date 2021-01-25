@@ -217,6 +217,13 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
           tooltip={DosisAdministradasTooltip}
         />
 
+        <h2 className={styles.subtitle}>Estimación de dosis administradas</h2>
+
+        <ProgressChart
+          dataset={chartDatasets.estimacionPoblacionCompleta}
+          tooltip={DosisAdministradasTooltip}
+        />
+
         <h2 className={styles.subtitle}>
           Fuentes de datos y enlaces de interés
         </h2>
