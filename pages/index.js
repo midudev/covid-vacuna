@@ -206,7 +206,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         <h2 className={styles.subtitle}>Evolución de dosis entregadas</h2>
 
         <ProgressChart
-          dataset={chartDatasets.dosisEntregadas}
+          dataset={chartDatasets.dosisEntregadasPorEmpresa}
           tooltip={DosisEntregadasTooltip}
         />
 
@@ -344,6 +344,14 @@ export async function getStaticProps () {
     ).catch(() => [])
 
   const chartDatasets = normalizeChartData()
+
+  chartDatasets.dosisEntregadasPorEmpresa = chartDatasets.dosisEntregadas.map((elemento, index) => {
+    return {
+      name: elemento.name,
+      pfizer: chartDatasets.dosisEntregadasPfizer[index].value,
+      moderna: chartDatasets.dosisEntregadasModerna[index].value
+    }
+  })
 
   return {
     props: {

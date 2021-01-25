@@ -23,6 +23,14 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
 
   if (!dataset) return null
 
+  const fields = Object.keys(dataset[0])
+    .filter(item => !['name']
+      .includes(item))
+
+  const coloresAleatorios = ['red', 'blue', 'brown', '#d2effd']
+
+  const getRandomColor = coloresAleatorios[Math.floor(Math.random() * coloresAleatorios.length)]
+
   return (
     <div className={styles.chartContainer} ref={elementRef}>
       {isVisible && (
@@ -46,12 +54,17 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
                 tick={<CustomYTick />}
               />
               <Tooltip content={<CustomTooltip />} />
-              <Area
-                type='monotone'
-                dataKey='value'
-                stroke='var(--text-subtitle-color)'
-                fill='#d2effd'
-              />
+              {fields.map((field, index) => {
+                return (
+                  <Area
+                    type='monotone'
+                    key={`area-${index}`}
+                    dataKey={field}
+                    stroke='var(--text-subtitle-color)'
+                    fill={getRandomColor}
+                  />
+                )
+              })}
             </AreaChart>
           </ResponsiveContainer>
         </div>
