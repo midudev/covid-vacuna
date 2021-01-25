@@ -10,6 +10,7 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
+import Prevision from 'components/Prevision.jsx'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
@@ -175,6 +176,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
           </div>
 
           <Progress totals={totals} />
+          <Prevision totals={totals} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
