@@ -2,6 +2,7 @@ import { useState } from 'react'
 import styles from 'styles/Progress.module.css'
 import { toPercentage } from 'components/NumberPercentage.jsx'
 import { useLocale } from 'hooks/useMainContexts'
+import { useTranslate } from 'hooks/useTranslate'
 
 const FILTERS = {
   parcial: 'porcentajePoblacionAdministradas',
@@ -11,6 +12,7 @@ const FILTERS = {
 export default function Progress ({ totals }) {
   const { locale } = useLocale()
   const [filter, setFilter] = useState(FILTERS.parcial)
+  const translate = useTranslate()
   const value = totals[filter]
 
   return (
@@ -24,7 +26,7 @@ export default function Progress ({ totals }) {
               type='radio'
               name='filter'
             />
-            Ver población vacunada
+            {translate.progress.verPoblacionVacunada}
           </label>
           <label>
             <input
@@ -33,7 +35,7 @@ export default function Progress ({ totals }) {
               onChange={() => setFilter(FILTERS.completa)}
               type='radio'
             />
-            Ver población con pauta completa
+            {translate.progress.verPoblacionConPauta}
           </label>
         </div>
 

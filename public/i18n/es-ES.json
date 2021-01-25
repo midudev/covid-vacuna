@@ -1,5 +1,55 @@
 {
     "home": {
-        "mainTitle": "Vacunación COVID-19 en"
+        "tituloPricipal": "Vacunación COVID-19 en",
+        "datosActualizados": "Datos actualizados",
+        "fuente": "Fuente:",
+        "ministerioDeSanidad": "Ministerio de Sanidad",
+        "descargarDatosJSON": "Descargar últimos datos en formato JSON",
+        "incrustarDatos": "Quiero incrustar los datos de vacunación en otra página web",
+        "porComunidadesAutonomas": "Por comunidades autónomas",
+        "evolucionDosisEntregadas": "Evolución de dosis entregadas",
+        "evolucionDosisAdministradas": "Evolución de dosis administradas",
+        "fuenteDatosEnlacesInteres": "Fuentes de datos y enlaces de interés",
+        "fuente1": "Estrategia de Vacunación COVID-19 en España",
+        "fuente2": "Información oficial sobre la vacunación contra el nuevo coronavirus",
+        "changelog": "Changelog",
+        "changelog5": "Añadidas gráficas",
+        "changelog5.1": "y contribuidores",
+        "changelog4": "Añadida la posibilidad de incrustar los datos en otra página",
+        "changelog3": "Añadido modo oscuro a la app",
+        "changelog2": "Añadida barra de progreso de vacunación en población",
+        "changelog1": "Añadidas personas con pauta completa",
+        "changelog0": "Primera versión",
+        "enLosMedios": "En los medios",
+        "medio1": "Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)",
+        "medio2": "Web para revisar el estado y progreso de la vacunación del COVID-19 en España (Menéame)",
+        "contribuidores": "Contribuidores",
+        "alt": {
+            "vacunasDistribuidas": "Vacunas distribuidas en España",
+            "pfizerLogo": "Pfizer Logo",
+            "modernaLogo": "Moderna Logo",
+            "vacunasAdministradas": "Vacunas administradas en España",
+            "dosisCompletas": "Dosis completas subministradas",
+            "descargarDatos": "Descargar datos",
+            "incrustarDatos": "Incrustar datos en una página web",
+            "graficaSubiendo": "Gráfica subiendo",
+            "emojiCiclista": "Emoji de ciclista",
+            "globoMundo": "Globo del mundo con meridianos",
+            "luna": "Luna",
+            "globoTerricola": "Globo terrícola con vistas a América",
+            "jeringuilla": "Jeringuilla",
+            "fuego": "Fuego"
+        }
+    },
+    "progress": {
+        "verPoblacionVacunada": "Ver población vacunada",
+        "verPoblacionConPauta": "Ver población con pauta completa"
+    },
+    "terminos": {
+        "dosisDistribuidas": "Dosis distribuidas",
+        "dosisAdministradas": "Dosis administradas",
+        "sobreDistribuidas": "% sobre distribuidas",
+        "personasConPautaCompleta": "Personas con pauta completa",
+        "sobreAdministradas": "% sobre administradas"
     }
 }

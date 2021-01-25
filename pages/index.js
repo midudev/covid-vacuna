@@ -49,13 +49,13 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            {translate.home.mainTitle} {filter === 'Totales' ? 'España' : filter}
+            {translate.home.tituloPricipal} {filter === 'Totales' ? 'España' : filter}
           </h1>
           <small className={styles.description}>
-            Datos actualizados <TimeAgo timestamp={info.lastModified} />.
-            Fuente:{' '}
+            {translate.home.datosActualizados} <TimeAgo timestamp={info.lastModified} />.
+            {' '}{translate.home.fuente}{' '}
             <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>
-              Ministerio de Sanidad
+              {translate.home.ministerioDeSanidad}
             </a>
           </small>
 
@@ -72,7 +72,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 <Image
                   className={styles.cardImage}
                   src='/mapa.png'
-                  alt='Vacunas distribuidas en España'
+                  alt={translate.home.alt.vacunasDistribuidas}
                   width={150}
                   height={150}
                   priority
@@ -80,7 +80,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               </header>
               <section>
                 <div>
-                  <h3>Dosis distribuidas</h3>
+                  <h3>{translate.terminos.dosisDistribuidas}</h3>
                   <p>
                     <NumberDigits>{totals.dosisEntregadas}</NumberDigits>
                   </p>
@@ -88,7 +88,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 <div>
                   <small>
                     <Image
-                      alt='Pfizer Logo'
+                      alt={translate.home.alt.pfizerLogo}
                       className={styles.companyLogo}
                       src='/pfizer-logo.png'
                       height={29}
@@ -103,7 +103,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                   </small>
                   <small>
                     <Image
-                      alt='Moderna Logo'
+                      alt={translate.home.alt.modernaLogo}
                       className={styles.companyLogo}
                       src='/moderna-logo.png'
                       height={16.5}
@@ -124,7 +124,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               <header>
                 <Image
                   src='/vacuna.png'
-                  alt='Vacunas administradas en España'
+                  alt={translate.home.alt.vacunasAdministradas}
                   width={150}
                   height={150}
                   priority
@@ -132,13 +132,13 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               </header>
               <section>
                 <div>
-                  <h3>Dosis administradas</h3>
+                  <h3>{translate.terminos.dosisAdministradas}</h3>
                   <p>
                     <NumberDigits>{totals.dosisAdministradas}</NumberDigits>
                   </p>
                 </div>
                 <div>
-                  <h4>% sobre distribuidas</h4>
+                  <h4>{translate.terminos.sobreDistribuidas}</h4>
                   <p className={styles.secondary}>
                     <NumberPercentage>
                       {totals.porcentajeEntregadas}
@@ -152,7 +152,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               <header>
                 <Image
                   src='/vacunas-completas.png'
-                  alt='Dosis completas subministradas'
+                  alt={translate.home.alt.dosisCompletas}
                   width={150}
                   height={150}
                   priority
@@ -160,13 +160,13 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               </header>
               <section>
                 <div>
-                  <h3>Personas con pauta completa</h3>
+                  <h3>{translate.terminos.personasConPautaCompleta}</h3>
                   <p>
                     <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>
                   </p>
                 </div>
                 <div>
-                  <h4>% sobre administradas</h4>
+                  <h4>{translate.terminos.sobreAdministradas}</h4>
                   <p className={styles.secondary}>
                     <NumberPercentage>
                       {totals.dosisPautaCompletada / totals.dosisAdministradas}
@@ -184,9 +184,9 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               width={32}
               height={32}
               src='/download.png'
-              alt='Descargar datos'
+              alt={translate.home.alt.descargarDatos}
             />
-            Descargar últimos datos en formato JSON
+            {translate.home.descargarDatosJSON}
           </a>
 
           <Link href='/como-incrustar'>
@@ -195,25 +195,25 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 width={32}
                 height={32}
                 src='/embed.png'
-                alt='Incrustar datos en una página web'
+                alt={translate.home.alt.incrustarDatos}
               />
-              Quiero incrustar los datos de vacunación en otra página web
+              {translate.home.incrustarDatos}
             </a>
           </Link>
         </main>
 
-        <h2 className={styles.subtitle}>Por comunidades autónomas</h2>
+        <h2 className={styles.subtitle}>{translate.home.porComunidadesAutonomas}</h2>
 
         <Table data={data} filter={filter} setFilter={setFilter} />
 
-        <h2 className={styles.subtitle}>Evolución de dosis entregadas</h2>
+        <h2 className={styles.subtitle}>{translate.home.evolucionDosisEntregadas}</h2>
 
         <ProgressChart
           dataset={chartDatasets.dosisEntregadas}
           tooltip={DosisEntregadasTooltip}
         />
 
-        <h2 className={styles.subtitle}>Evolución de dosis administradas</h2>
+        <h2 className={styles.subtitle}>{translate.home.evolucionDosisAdministradas}</h2>
 
         <ProgressChart
           dataset={chartDatasets.dosisAdministradas}
@@ -221,7 +221,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         />
 
         <h2 className={styles.subtitle}>
-          Fuentes de datos y enlaces de interés
+          {translate.home.fuenteDatosEnlacesInteres}
         </h2>
         <ul>
           <li>
@@ -230,7 +230,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'
             >
-              Estrategia de Vacunación COVID-19 en España
+              {translate.home.fuente1}
             </a>
           </li>
           <li>
@@ -239,59 +239,56 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.vacunacovid.gob.es'
             >
-              Información oficial sobre la vacunación contra el nuevo
-              coronavirus
+              {translate.home.fuente2}
             </a>
           </li>
         </ul>
 
-        <h2 className={styles.subtitle}>Changelog</h2>
+        <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
         <ul>
           <li>
-            <strong>1.5.0</strong>: Añadidas gráficas{' '}
-            <span aria-label='Gráfica subiendo' role='img'>
+            <strong>1.5.0</strong>: {translate.home.changelog5}{' '}
+            <span aria-label={translate.home.alt.graficaSubiendo} role='img'>
               📈
             </span>{' '}
-            y contribuidores{' '}
-            <span aria-label='Emoji de ciclista' role='img'>
+            {translate.home['changelog5.1']}{' '}
+            <span aria-label={translate.home.alt.emojiCiclista} role='img'>
               🚵‍♀️
             </span>
           </li>
           <li>
-            <strong>1.4.0</strong>: Añadida la posibilidad de incrustar los
-            datos en otra página{' '}
-            <span aria-label='Globo del mundo con meridianos' role='img'>
+            <strong>1.4.0</strong>: {translate.home.changelog4}{' '}
+            <span aria-label={translate.home.alt.globoMundo} role='img'>
               🌐
             </span>
           </li>
           <li>
-            <strong>1.3.0</strong>: Añadido modo oscuro a la app{' '}
-            <span aria-label='Luna' role='img'>
+            <strong>1.3.0</strong>: {translate.home.changelog3}{' '}
+            <span aria-label={translate.home.alt.luna} role='img'>
               🌚
             </span>
           </li>
           <li>
-            <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en
-            población{' '}
-            <span aria-label='Globo terrícola con vistas a América' role='img'>
+            <strong>1.2.0</strong>: {translate.home.changelog2}{' '}
+            <span aria-label={translate.home.alt.globoTerricola} role='img'>
               🌎
             </span>
           </li>
           <li>
-            <strong>1.1.0</strong>: Añadidas personas con pauta completa{' '}
-            <span aria-label='Jeringuilla' role='img'>
+            <strong>1.1.0</strong>: {translate.home.changelog1}{' '}
+            <span aria-label={translate.home.alt.jeringuilla} role='img'>
               💉
             </span>
           </li>
           <li>
-            <strong>1.0.0</strong>: Primera versión{' '}
-            <span aria-label='Fuego' role='img'>
+            <strong>1.0.0</strong>: {translate.home.changelog0}{' '}
+            <span aria-label={translate.home.alt.fuego} role='img'>
               🔥
             </span>
           </li>
         </ul>
 
-        <h2 className={styles.subtitle}>En los medios</h2>
+        <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
         <ul>
           <li>
             <a
@@ -300,8 +297,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'
             >
-              Lanzan una web con datos del Gobierno que permite ver cómo avanza
-              en España la vacunación contra el coronavirus (20 Minutos)
+              {translate.home.medio1}
             </a>
           </li>
           <li>
@@ -311,13 +307,12 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'
             >
-              Web para revisar el estado y progreso de la vacunación del
-              COVID-19 en España (Menéame)
+              {translate.home.medio2}
             </a>
           </li>
         </ul>
 
-        <h2 className={styles.subtitle}>Contribuidores</h2>
+        <h2 className={styles.subtitle}>{translate.home.contribuidores}</h2>
         <Contributors contributors={contributors} />
       </div>
 
