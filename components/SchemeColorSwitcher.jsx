@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import useStickyState from 'hooks/useStickyState'
 import styles from 'styles/SchemeColorSwitcher.module.css'
 
 const SCHEMES = {
@@ -8,7 +9,7 @@ const SCHEMES = {
 }
 
 export default function SchemeColorSwitcher () {
-  const [scheme, setScheme] = useState(SCHEMES.SYSTEM)
+  const [scheme, setScheme] = useStickyState(SCHEMES.LIGHT, 'schemeColor')
 
   useEffect(() => {
     const html = document.querySelector('html')
@@ -23,25 +24,51 @@ export default function SchemeColorSwitcher () {
   }
 
   return (
-    <>
-      <section className={styles.colorSwitch}>
-        <label data-checked={scheme === SCHEMES.LIGHT} title='Usa el tema claro'>
-          <input onChange={handleChange} name='switch' value={SCHEMES.LIGHT} type='radio' />
-          <span aria-label='Un sol que invertido parece el malo de Doom' role='img'>🌞</span>
-        </label>
+    <section className={styles.colorSwitch}>
+      <label data-checked={scheme === SCHEMES.LIGHT} title='Usa el tema claro'>
+        <input
+          onChange={handleChange}
+          name='switch'
+          value={SCHEMES.LIGHT}
+          type='radio'
+        />
+        <span
+          aria-label='Un sol que invertido parece el malo de Doom'
+          role='img'
+        >
+          🌞
+        </span>
+      </label>
 
-        <label data-checked={scheme === SCHEMES.SYSTEM} title='Usa el tema dependiendo tu configuración de sistema'>
-          <input onChange={handleChange} name='switch' value={SCHEMES.SYSTEM} type='radio' />
-          <span aria-label='Tus preferencias molonas de tu sistema' role='img'>💻</span>
-        </label>
+      <label
+        data-checked={scheme === SCHEMES.SYSTEM}
+        title='Usa el tema dependiendo tu configuración de sistema'
+      >
+        <input
+          onChange={handleChange}
+          name='switch'
+          value={SCHEMES.SYSTEM}
+          type='radio'
+        />
+        <span aria-label='Tus preferencias molonas de tu sistema' role='img'>
+          💻
+        </span>
+      </label>
 
-        <label data-checked={scheme === SCHEMES.DARK} title='Usa el tema oscuro'>
-          <input onChange={handleChange} name='switch' value={SCHEMES.DARK} type='radio' />
-          <span aria-label='Una luna con ojos sospechosos que parece que está tramando algo jodido' role='img'>🌚</span>
-        </label>
-
-        <div />
-      </section>
-    </>
+      <label data-checked={scheme === SCHEMES.DARK} title='Usa el tema oscuro'>
+        <input
+          onChange={handleChange}
+          name='switch'
+          value={SCHEMES.DARK}
+          type='radio'
+        />
+        <span
+          aria-label='Una luna con ojos sospechosos que parece que está tramando algo jodido'
+          role='img'
+        >
+          🌚
+        </span>
+      </label>
+    </section>
   )
 }
