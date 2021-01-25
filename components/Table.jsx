@@ -113,7 +113,7 @@ export default function Table ({ data, filter, setFilter }) {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map(row => {
+          {rows.map((row, index) => {
             prepareRow(row)
             const className = row.id === '19' ? styles.totales : row.original.ccaa === filter ? styles.selected : ''
             return (
@@ -125,6 +125,15 @@ export default function Table ({ data, filter, setFilter }) {
                     </td>
                   )
                 })}
+                <td className={styles.mobileData}>
+                  {row.cells.map((cell, index) => {
+                    return (
+                      <span>
+                        {index === 0 ? '' : `${headerGroups[0].headers[index].Header} - ${cell.column.format(cell.value)}`}
+                      </span>
+                    )
+                  })}
+                </td>
               </tr>
             )
           })}
