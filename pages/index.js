@@ -25,6 +25,7 @@ import {
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
+import ClientSideComponent from 'components/ClientSideComponent'
 
 export default function Home ({ contributors, data, info, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
@@ -321,7 +322,9 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         <p>Las vacunas distribuidas...</p>
       </dialog>
 
-      <SchemeColorSwitcher />
+      <ClientSideComponent>
+        <SchemeColorSwitcher />
+      </ClientSideComponent>
 
       <I18nWidget />
 
