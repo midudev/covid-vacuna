@@ -9,7 +9,7 @@ const SCHEMES = {
 }
 
 export default function SchemeColorSwitcher () {
-  const [scheme, setScheme] = useStickyState(SCHEMES.LIGHT, 'schemeColor')
+  const [scheme, setScheme] = useStickyState(SCHEMES.SYSTEM, 'schemeColor')
 
   useEffect(() => {
     const html = document.querySelector('html')
