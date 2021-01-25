@@ -88,7 +88,6 @@ export default function Table ({ data, filter, setFilter }) {
 
   // totales siempre en la ultima fila
   rows = [...rows.filter(row => row.id !== '19'), rows.find(row => row.id === '19')]
-  console.log('TEST')
 
   return (
     <div className={styles.container}>
