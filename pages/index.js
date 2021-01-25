@@ -20,7 +20,8 @@ import TimeAgo from 'components/TimeAgo.jsx'
 import ProgressChart from 'components/ProgressChart'
 import {
   DosisAdministradasTooltip,
-  DosisEntregadasTooltip
+  DosisEntregadasTooltip,
+  PautaCompletaEstimadaTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 
@@ -217,11 +218,11 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
           tooltip={DosisAdministradasTooltip}
         />
 
-        <h2 className={styles.subtitle}>Estimación de dosis administradas</h2>
+        <h2 className={styles.subtitle}>Estimación para pauta completa</h2>
 
         <ProgressChart
           dataset={chartDatasets.estimacionPoblacionCompleta}
-          tooltip={DosisAdministradasTooltip}
+          tooltip={PautaCompletaEstimadaTooltip}
         />
 
         <h2 className={styles.subtitle}>

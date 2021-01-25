@@ -42,3 +42,18 @@ export function DosisEntregadasTooltip ({ active, payload, label }) {
     </div>
   )
 }
+
+export function PautaCompletaEstimadaTooltip ({ active, payload, label }) {
+  if (!active) return null
+
+  const value = formatNumberToLocale(payload, 'es-ES')
+
+  return (
+    <div className={styles.chartTooltip}>
+      <p>
+        A día <Bold text={label} /> se habrían inmunizado{' '}
+        <Bold text={value} /> personas.
+      </p>
+    </div>
+  )
+}

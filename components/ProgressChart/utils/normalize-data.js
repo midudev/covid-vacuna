@@ -1,6 +1,26 @@
 import fs from 'fs'
 import path from 'path'
 
+const formatDate = date => new Intl.DateTimeFormat('es-ES', { year: '2-digit', month: 'numeric', day: 'numeric' }).format(date)
+
+const normalizeEstimate = (dataset) => {
+  const completed = dataset.dosisPautaCompletada.filter(({ value }) => Boolean(value))
+  let populationCompleted = completed[completed.length - 1].value
+  const mean = populationCompleted / completed.length
+
+  const lastDateList = completed[completed.length - 1].name.split('/')
+  const dateNowLoop = new Date(2021, lastDateList[1] - 1, lastDateList[0])
+
+  for (; populationCompleted < 46940000; populationCompleted += mean) {
+    dateNowLoop.setDate(dateNowLoop.getDate() + 1)
+    completed.push({
+      name: formatDate(dateNowLoop),
+      value: populationCompleted + mean
+    })
+  }
+
+  return completed
+}
 /**
  * Take data files and process json for chart model type
  * Type: Array of { name: string, value: number }
@@ -75,18 +95,8 @@ export default function normalizeChartData () {
     }
   }
 
-  /**/
-  const completed = dataset.dosisPautaCompletada.filter(({ value }) => Boolean(value))
-  let populationCompleted = completed[completed.length - 1].value
-  const mean = populationCompleted / completed.length
-  for (; populationCompleted < 46940000; populationCompleted += mean) {
-    completed.push({ name: populationCompleted, value: populationCompleted + mean })
-  }
+  dataset.estimacionPoblacionCompleta = normalizeEstimate(dataset)
 
-  dataset.estimacionPoblacionCompleta = completed
-  /**/
-
-  console.log(completed)
   return dataset
 }
 
