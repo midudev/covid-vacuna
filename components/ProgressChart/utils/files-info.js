@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 const getChartFilesData = () => {
-// read files names from dir
+  // read files names from dir
   const dataPath = path.join('public', 'data')
   let files = fs.readdirSync(dataPath)
 
