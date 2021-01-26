@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import useStickyState from 'hooks/useStickyState'
 import styles from 'styles/SchemeColorSwitcher.module.css'
 
@@ -10,27 +10,35 @@ const SCHEMES = {
 
 export default function SchemeColorSwitcher () {
   const [scheme, setScheme] = useStickyState(SCHEMES.SYSTEM, 'schemeColor')
+  const slider = useRef(null)
+  const switcher = useRef(null)
 
   useEffect(() => {
     const html = document.querySelector('html')
     scheme === SCHEMES.SYSTEM
       ? html.removeAttribute('scheme')
       : html.setAttribute('scheme', scheme)
+    const target = switcher.current.querySelector('[data-checked="true"]').querySelector('input')
+    slider.current.style = 'transform: translateX(' + target.dataset.location + ')'
   }, [scheme])
 
   const handleChange = e => {
     e.preventDefault()
-    setScheme(e.target.value)
+    const { target } = e
+    setScheme(target.value)
+    slider.current.style = 'transform: translateX(' + target.dataset.location + ')'
   }
 
   return (
-    <section className={styles.colorSwitch}>
+    <section ref={switcher} className={styles.colorSwitch}>
+      <div ref={slider} className={styles.slider} />
       <label data-checked={scheme === SCHEMES.LIGHT} title='Usa el tema claro'>
         <input
           onChange={handleChange}
           name='switch'
           value={SCHEMES.LIGHT}
           type='radio'
+          data-location='0'
         />
         <span
           aria-label='Un sol que invertido parece el malo de Doom'
@@ -49,6 +57,7 @@ export default function SchemeColorSwitcher () {
           name='switch'
           value={SCHEMES.SYSTEM}
           type='radio'
+          data-location='calc(100% - 6px)'
         />
         <span aria-label='Tus preferencias molonas de tu sistema' role='img'>
           💻
@@ -61,6 +70,7 @@ export default function SchemeColorSwitcher () {
           name='switch'
           value={SCHEMES.DARK}
           type='radio'
+          data-location='calc(200% - 12px)'
         />
         <span
           aria-label='Una luna con ojos sospechosos que parece que está tramando algo jodido'
