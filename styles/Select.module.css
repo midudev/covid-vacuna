@@ -1,0 +1,31 @@
+.sectionSelect {
+  align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .select {
+    background-color: #eee;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    margin-left: 8px;
+    height: 32px;
+    outline: none;
+    padding: 4px;
+    text-align-last: center;
+    width: 200px;
+  }
+
+  .select:hover {
+    border-color: #ccc;
+  }
+
+  @media (max-width: 530px) {
+    .sectionSelect {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }

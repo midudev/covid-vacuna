@@ -10,12 +10,14 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
+import Select from 'components/Select'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 
 import styles from 'styles/Home.module.css'
 import TimeAgo from 'components/TimeAgo.jsx'
+import useSearch from 'hooks/useSearchReport'
 
 import ProgressChart from 'components/ProgressChart'
 import {
@@ -24,12 +26,14 @@ import {
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 
-export default function Home ({ contributors, data, info, chartDatasets }) {
+export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
+  const [valueSearch, setValueSearch] = useState('')
+  const reportFound = useSearch({ valueSearch })
 
   const totals = useMemo(
-    () => data.find(({ ccaa }) => ccaa === filter),
-    [data, filter]
+    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === 'Totales') : data.find(({ ccaa }) => ccaa === 'Totales'),
+    [data, filter, reportFound]
   )
 
   return (
@@ -56,6 +60,8 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
             </a>
           </small>
 
+          <Select data={reports} onChange={setValueSearch} />
+
           <div className={styles.grid}>
             <div className={styles.card}>
               <button
@@ -79,7 +85,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 <div>
                   <h3>Dosis distribuidas</h3>
                   <p>
-                    <NumberDigits>{totals.dosisEntregadas}</NumberDigits>
+                    {isNaN(totals.dosisEntregadas) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadas}</NumberDigits>}
                   </p>
                 </div>
                 <div>
@@ -93,9 +99,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                       priority
                     />
                     <span>
-                      <NumberDigits>
-                        {totals.dosisEntregadasPfizer}
-                      </NumberDigits>
+                      {isNaN(totals.dosisEntregadasPfizer) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasPfizer}</NumberDigits>}
                     </span>
                   </small>
                   <small>
@@ -108,9 +112,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                       priority
                     />
                     <span>
-                      <NumberDigits>
-                        {totals.dosisEntregadasModerna}
-                      </NumberDigits>
+                      {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
                     </span>
                   </small>
                 </div>
@@ -131,15 +133,13 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 <div>
                   <h3>Dosis administradas</h3>
                   <p>
-                    <NumberDigits>{totals.dosisAdministradas}</NumberDigits>
+                    {isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberDigits>{totals.dosisAdministradas}</NumberDigits>}
                   </p>
                 </div>
                 <div>
                   <h4>% sobre distribuidas</h4>
                   <p className={styles.secondary}>
-                    <NumberPercentage>
-                      {totals.porcentajeEntregadas}
-                    </NumberPercentage>
+                    {isNaN(totals.porcentajeEntregadas) ? 'Desconocido' : <NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage>}
                   </p>
                 </div>
               </section>
@@ -159,22 +159,20 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 <div>
                   <h3>Personas con pauta completa</h3>
                   <p>
-                    <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>
+                    {isNaN(totals.dosisPautaCompletada) ? 'Desconocido' : <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>}
                   </p>
                 </div>
                 <div>
                   <h4>% sobre administradas</h4>
                   <p className={styles.secondary}>
-                    <NumberPercentage>
-                      {totals.dosisPautaCompletada / totals.dosisAdministradas}
-                    </NumberPercentage>
+                    {isNaN(totals.dosisPautaCompletada) || isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage>}
                   </p>
                 </div>
               </section>
             </div>
           </div>
 
-          <Progress totals={totals} />
+          <Progress totals={totals} reportFound={reportFound} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
@@ -201,7 +199,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
 
         <h2 className={styles.subtitle}>Por comunidades autónomas</h2>
 
-        <Table data={data} filter={filter} setFilter={setFilter} />
+        <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 
         <h2 className={styles.subtitle}>Evolución de dosis entregadas</h2>
 
@@ -335,6 +333,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
+  const reports = require('../public/data/reports.json')
   const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
     .then(res => res.json())
     .then(json =>
@@ -349,6 +348,7 @@ export async function getStaticProps () {
     props: {
       data,
       info,
+      reports,
       chartDatasets,
       contributors
     }
