@@ -7,16 +7,20 @@ import styles from 'styles/I18nWidget.module.css'
 
 const LOCALES = {
   'es-ES': {
-    name: 'Castellano'
+    name: 'Castellano',
+    zone: 'España'
   },
   'es-CA': {
-    name: 'Catalán'
+    name: 'Catalán',
+    zone: 'Catalunya'
   },
   'es-GA': {
-    name: 'Gallego'
+    name: 'Gallego',
+    zone: 'Galicia'
   },
   'es-EU': {
-    name: 'Euskera'
+    name: 'Euskera',
+    zone: 'Euskadi'
   }
 }
 
@@ -24,9 +28,12 @@ const I18nWidget = () => {
   const { locale, locales, defaultLocale = 'es-ES', asPath: currentPath } = useRouter()
   const [display, setDisplay] = useState(false)
   const { setLocale } = useLocale()
+
   const options = locales?.filter(val => val !== locale)
   const currentLocale = locale || defaultLocale
   setLocale(currentLocale)
+
+  const { name, zone } = LOCALES[currentLocale]
 
   return (
     <>
@@ -36,8 +43,8 @@ const I18nWidget = () => {
           type='button'
           onClick={() => setDisplay(!display)}
         >
-          <img src='flag-es.svg' alt='Bandera de España' />
-          {LOCALES[currentLocale].name}
+          <img src={`flag-${currentLocale}.svg`} alt={`Bandera de ${zone}`} />
+          {name}
         </button>
         {options?.length && display
           ? (
