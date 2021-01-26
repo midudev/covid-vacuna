@@ -1,14 +1,16 @@
 .colorSwitch {
+  align-items: center;
   background: #fff;
   border-radius: 5000px;
-  border: 1px solid #333;
+  box-shadow: 0 0 0px 1px #000, #92d5ff 4px 4px;
+  display: flex;
   height: 26px;
+  left: 32px;
+  outline: 1px solid transparent;
+  overflow: hidden;
   padding: 0 8px;
   position: fixed;
-  left: 32px;
   top: 16px;
-  display: flex;
-  align-items: center;
 }
 
 .colorSwitch input[type="radio"] {
@@ -25,4 +27,19 @@
   line-height: 26px;
   padding: 0 4px;
   opacity: .5;
+  z-index: 1;
+}
+
+.slider {
+
+  background-color: #2c7cdc;
+  bottom: -5px;
+  display: block;
+  left: -1px;
+  pointer-events: none;
+  position: absolute;
+  top: -5px;
+  transition: transform 0.3s;
+  width: 35%;
+
 }

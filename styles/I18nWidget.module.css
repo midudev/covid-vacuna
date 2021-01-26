@@ -1,0 +1,62 @@
+.i18nWidget,
+.dropDown {
+  position: fixed;
+  margin: auto;
+  left: 32px;
+  right: 32px;
+  top: 16px;
+  width: fit-content;
+}
+
+.i18nWidget button,
+.dropDown li {
+  align-items: center;
+  border: 1px solid #000000;
+  background: #fff;
+  box-shadow: #92d5ff 1px 4px;
+  display: flex;
+  border-radius: 99999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 110%;
+  padding: 4px 16px;
+  cursor: pointer;
+  width: 110px;
+}
+
+.i18nWidget button:hover,
+.i18nWidget button:focus {
+  background-color: rgb(210, 237, 255);
+  box-shadow: none;
+  transform: translate3d(4px, 4px, 0);
+  transition: all 0.1s ease;
+  outline: none;
+}
+
+.i18nWidget img {
+  height: 16px;
+  margin-left: 4px;
+  width: 16px;
+  margin-right: 4px;
+}
+
+.dropDown {
+  top: 55px;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.dropDown li {
+  list-style-type: none;
+  box-shadow: none;
+  border-radius: 0px;
+  border: none;
+  margin: 0.5rem 0;
+}
+
+.dropDown li:hover {
+  background-color: rgb(210, 237, 255);
+}

@@ -1,5 +1,7 @@
+import { useLocale } from 'hooks/useMainContexts'
+
 export default function TimestampToDate ({ timestamp }) {
-  const locale = 'es'
+  const { locale } = useLocale()
 
   const date = new Date(timestamp)
   const formattedDate = new Intl.DateTimeFormat(locale, {
