@@ -46,7 +46,7 @@ export default function Embed ({ data, info, totalPopulation }) {
                 </p>
               </div>
               <p>
-                Supone el <strong><NumberPercentage>{totals.dosisAdministradas / totalPopulation}</NumberPercentage></strong> del total de España<br />Es el <strong><NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage></strong> sobre las vacunas distruibidas
+                Supone el <strong><NumberPercentage>{totals.dosisAdministradas / totalPopulation}</NumberPercentage></strong> del total de España<br />Es el <strong><NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage></strong> sobre las vacunas distribuidas
               </p>
             </section>
           </div>
