@@ -23,13 +23,18 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
 
   if (!dataset) return null
 
+  // Recojo los atributos del dataset y los pongo
+  // para leyenda (a excepción del name)
   const fields = Object.keys(dataset[0])
     .filter(item => !['name']
       .includes(item))
 
-  const coloresAleatorios = ['red', 'blue', 'brown', '#d2effd']
-
-  const getRandomColor = coloresAleatorios[Math.floor(Math.random() * coloresAleatorios.length)]
+  // Refactor cuando se tenga el tema en el state
+  // https://www.cssfontstack.com/oldsites/hexcolortool/
+  const degradados = {
+    DARKEN: ['#2C7CDC', '#4696F6', '#5FAFFF', '#79C9FF', '#92E2FF'],
+    LIGHTEN: ['#2C7CDC', '#1363C3', '#0049A9', '#003090', '#001676']
+  }
 
   return (
     <div className={styles.chartContainer} ref={elementRef}>
@@ -61,7 +66,7 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
                     key={`area-${index}`}
                     dataKey={field}
                     stroke='var(--text-subtitle-color)'
-                    fill={getRandomColor}
+                    fill={degradados.LIGHTEN[index]}
                   />
                 )
               })}
