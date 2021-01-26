@@ -1,0 +1,34 @@
+.container {
+    max-width: 100vw;
+    padding-right: 16px;
+    width: 1000px;
+}
+
+.mapa g {
+    cursor: pointer;
+}
+
+.tooltip {
+    border: 1px solid #000;
+    border-radius: 1vw;
+    background-color: white;
+    padding: 0.6vw;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.tooltip::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -2vw;
+    left: 45%;
+    border-top: 1vw solid #000;
+    border-right: 1vw solid transparent;
+    border-left: 1vw solid transparent;
+    border-bottom: 1vw solid transparent;
+}

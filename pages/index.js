@@ -24,6 +24,7 @@ import {
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import ClientSideComponent from 'components/ClientSideComponent'
+import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
@@ -201,6 +202,8 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         </main>
 
         <h2 className={styles.subtitle}>Por comunidades autónomas</h2>
+
+        <SpainMap data={data} />
 
         <Table data={data} filter={filter} setFilter={setFilter} />
 
