@@ -57,7 +57,7 @@ export default function SchemeColorSwitcher () {
           name='switch'
           value={SCHEMES.SYSTEM}
           type='radio'
-          data-location='calc(100% - 6px)'
+          data-location='calc(100% - 2px)'
         />
         <span aria-label='Tus preferencias molonas de tu sistema' role='img'>
           💻
@@ -70,7 +70,7 @@ export default function SchemeColorSwitcher () {
           name='switch'
           value={SCHEMES.DARK}
           type='radio'
-          data-location='calc(200% - 12px)'
+          data-location='calc(200% - 4px)'
         />
         <span
           aria-label='Una luna con ojos sospechosos que parece que está tramando algo jodido'
