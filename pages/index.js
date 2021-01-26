@@ -29,12 +29,12 @@ import {
   DosisAdministradasTooltip,
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
-import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
+import getChartFilesData from 'components/ProgressChart/utils/files-info'
 import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
 
-export default function Home ({ contributors, data, info, reports, chartDatasets }) {
+export default function Home ({ contributors, data, info, reports, chartFilesData }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
@@ -45,6 +45,11 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
       ? reportFound.find(({ ccaa }) => ccaa === filter)
       : data.find(({ ccaa }) => ccaa === filter),
     [data, filter, reportFound]
+  )
+
+  const chartDatasets = useMemo(
+    () => chartFilesData.find(({ ccaa }) => ccaa === filter).dataset,
+    [chartFilesData, filter]
   )
 
   return (
@@ -343,14 +348,14 @@ export async function getStaticProps () {
   })(require.context('../public/data/', true, /2021[0-9]{4}.json$/))
 
   const contributors = await getGitHubContributors()
-  const chartDatasets = normalizeChartData()
+  const chartFilesData = getChartFilesData()
 
   return {
     props: {
       data,
       info,
       reports,
-      chartDatasets,
+      chartFilesData,
       contributors
     }
   }
