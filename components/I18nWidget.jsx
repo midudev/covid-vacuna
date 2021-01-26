@@ -39,19 +39,17 @@ const I18nWidget = () => {
           <img src='flag-es.svg' alt='Bandera de España' />
           {LOCALES[currentLocale].name}
         </button>
-      </div>
-      <div>
         {options?.length && display
           ? (
-            <ul className={styles.dropDown}>
+            <ul>
               {options.map(locale =>
-                <Link key={locale} href={currentPath} locale={locale}>
-                  <a onClick={() => setDisplay(false)}>
-                    <li>
+                <li key={locale}>
+                  <Link href={currentPath} locale={locale}>
+                    <a onClick={() => setDisplay(false)}>
                       {LOCALES[locale].name}
-                    </li>
-                  </a>
-                </Link>)}
+                    </a>
+                  </Link>
+                </li>)}
             </ul>
             )
           : null}
