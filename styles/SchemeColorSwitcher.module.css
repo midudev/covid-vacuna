@@ -27,6 +27,7 @@
   line-height: 26px;
   padding: 0 4px;
   opacity: .5;
+  z-index: 1;
 }
 
 .slider {
