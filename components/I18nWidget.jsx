@@ -1,5 +1,5 @@
 
-import { useLocale } from 'hooks/useMainContexts'
+import { useLocale } from 'hooks/useLocale'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -11,29 +11,27 @@ const LOCALES = {
     zone: 'España'
   },
   'es-CA': {
-    name: 'Catalán',
+    name: 'Català',
     zone: 'Catalunya'
   },
   'es-GA': {
-    name: 'Gallego',
+    name: 'Galego',
     zone: 'Galicia'
   },
   'es-EU': {
-    name: 'Euskera',
+    name: 'Euskara',
     zone: 'Euskadi'
   }
 }
 
 const I18nWidget = () => {
-  const { locale, locales, defaultLocale = 'es-ES', asPath: currentPath } = useRouter()
+  const { asPath: currentPath } = useRouter()
+  const { locale, locales } = useLocale()
   const [display, setDisplay] = useState(false)
-  const { setLocale } = useLocale()
 
   const options = locales?.filter(val => val !== locale)
-  const currentLocale = locale || defaultLocale
-  setLocale(currentLocale)
 
-  const { name, zone } = LOCALES[currentLocale]
+  const { name, zone } = LOCALES[locale]
 
   return (
     <>
@@ -43,7 +41,7 @@ const I18nWidget = () => {
           type='button'
           onClick={() => setDisplay(!display)}
         >
-          <img src={`flag-${currentLocale}.svg`} alt={`Bandera de ${zone}`} />
+          <img src={`flag-${locale}.svg`} alt={`Bandera de ${zone}`} />
           {name}
         </button>
         {options?.length && display

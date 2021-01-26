@@ -1,4 +1,4 @@
-import { useLocale } from 'hooks/useMainContexts'
+import { useLocale } from 'hooks/useLocale'
 
 export default function TimestampToDate ({ timestamp }) {
   const { locale } = useLocale()

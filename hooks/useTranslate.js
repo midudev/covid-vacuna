@@ -1,8 +1,7 @@
-const { LocaleContext } = require('contexts/local.context')
-const { useContext } = require('react')
+import { useLocale } from './useLocale'
 
 export const useTranslate = () => {
-  const { locale } = useContext(LocaleContext)
+  const { locale } = useLocale()
   const lang = require(`public/i18n/${locale}.json`)
   return lang
 }

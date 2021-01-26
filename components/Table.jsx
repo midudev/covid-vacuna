@@ -1,10 +1,11 @@
 /* eslint-disable react/jsx-key */
+
 import { useCallback, useMemo } from 'react'
 import { useTable, useSortBy } from 'react-table'
 import { toDigit } from './NumberDigits.jsx'
 import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
-import { useLocale } from 'hooks/useMainContexts.js'
+import { useLocale } from 'hooks/useLocale.js'
 
 export default function Table ({ data, filter, setFilter }) {
   const { locale } = useLocale()
@@ -116,7 +117,12 @@ export default function Table ({ data, filter, setFilter }) {
         <tbody {...getTableBodyProps()}>
           {rows.map((row, index) => {
             prepareRow(row)
-            const className = row.id === '19' ? styles.totales : row.original.ccaa === filter ? styles.selected : ''
+            const className = row.id === '19'
+              ? styles.totales
+              : row.original.ccaa === filter
+                ? styles.selected
+                : ''
+
             return (
               <tr {...row.getRowProps()} className={className} onClick={handleRowClick(row)}>
                 {row.cells.map(cell => {
@@ -129,7 +135,7 @@ export default function Table ({ data, filter, setFilter }) {
                 <td className={styles.mobileData}>
                   {row.cells.map((cell, index) => {
                     return (
-                      <span>
+                      <span key={index}>
                         {index === 0 ? '' : `${headerGroups[0].headers[index].Header} - ${cell.column.format(cell.value)}`}
                       </span>
                     )

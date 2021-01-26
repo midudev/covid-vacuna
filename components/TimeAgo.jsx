@@ -1,4 +1,4 @@
-import { useLocale } from 'hooks/useMainContexts'
+import { useLocale } from 'hooks/useLocale'
 
 const DATE_UNITS = {
   day: 86400,
@@ -27,6 +27,7 @@ const getTimeAgo = (timestamp, locale) => {
 
 export default function TimeAgo ({ timestamp }) {
   const { locale } = useLocale()
+  console.log(locale)
   const timeago = getTimeAgo(timestamp, locale)
 
   const date = new Date(timestamp)

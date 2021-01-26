@@ -1,4 +1,4 @@
-import { useLocale } from 'hooks/useMainContexts'
+import { useLocale } from 'hooks/useLocale'
 
 export const toDigit = ({ locale, number }) => new Intl.NumberFormat(locale).format(number)
 
