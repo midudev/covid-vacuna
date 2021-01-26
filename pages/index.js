@@ -47,7 +47,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
       </Head>
-      <div className={styles.container}>
+      <div id='container' className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
             {translate.home.tituloPricipal} {filter === 'Totales' ? 'España' : filter}
