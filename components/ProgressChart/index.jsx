@@ -6,6 +6,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  Legend,
   ResponsiveContainer
 } from 'recharts'
 
@@ -58,6 +59,7 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
                 scale='linear'
                 tick={<CustomYTick />}
               />
+              <Legend verticalAlign='top' height={36} />
               <Tooltip content={<CustomTooltip />} />
               {fields.map((field, index) => {
                 return (
@@ -65,7 +67,7 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
                     type='monotone'
                     key={`area-${index}`}
                     dataKey={field}
-                    stroke='var(--text-subtitle-color)'
+                    stroke={degradados.LIGHTEN[index]}
                     fill={degradados.LIGHTEN[index]}
                   />
                 )
