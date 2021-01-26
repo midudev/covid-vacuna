@@ -66,7 +66,7 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
                     key={`area-${index}`}
                     dataKey={field}
                     stroke='var(--text-subtitle-color)'
-                    fill={degradados.DARKEN[index]}
+                    fill={degradados.LIGHTEN[index]}
                   />
                 )
               })}
