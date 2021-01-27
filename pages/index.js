@@ -211,7 +211,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
         <h2 className={styles.subtitle}>{translate.home.porComunidadesAutonomas}</h2>
 
-        <SpainMap data={data} />
+        <SpainMap data={data} reportFound={reportFound} />
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 

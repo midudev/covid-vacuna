@@ -10,14 +10,15 @@ const projection = geoEqualEarth()
   .scale(2500)
   .translate([500, 2100])
 
-const SpainMap = ({ data }) => {
+const SpainMap = ({ data, reportFound }) => {
   const [geoFile, setGeoFile] = useState([])
   const [content, setContent] = useState([])
 
   useEffect(() => {
     const object = feature(spainMapa, spainMapa.objects.ESP_adm1).features
+    const values = reportFound !== undefined ? reportFound : data
     object.forEach(element => {
-      data.map(el => {
+      values.map(el => {
         if (el.ccaa === element.properties.NAME) {
           element.properties.porcentaje = el.porcentajeEntregadas
         }
@@ -25,7 +26,7 @@ const SpainMap = ({ data }) => {
       })
     })
     setGeoFile(object)
-  }, [])
+  }, [reportFound])
 
   const colorearMapa = porcentaje => {
     if (porcentaje) {
