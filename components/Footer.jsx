@@ -19,6 +19,8 @@ export default function Footer () {
         <span>&bull;</span>
         <a href='https://midu.live' rel='nofollow noreferrer' target='_blank'>Twitch</a>
         <span>&bull;</span>
+        <a href='https://app.usefathom.com/share/myexkunw/covid-vacuna.vercel.app' rel='nofollow noreferrer' target='_blank'>Estadísticas</a>
+        <span>&bull;</span>
         <a href='https://github.com/midudev/covid-vacuna/issues/new' rel='nofollow noreferrer' target='_blank'>Enviar sugerencia</a>
       </div>
     </footer>
