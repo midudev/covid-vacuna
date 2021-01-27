@@ -18,7 +18,8 @@ npm run dev # levantar el entorno de desarrollo
 
 ## Forks para otros países
 
-- UK: https://covid-vaccine.app/
+- 🇬🇧 UK: https://covid-vaccine.app/
+- 🇨🇺 Cuba: https://covid-resume-cuba.kenriortega.vercel.app/
 
 ## ¿Aceptas Pull Request?
 

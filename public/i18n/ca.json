@@ -1,0 +1,61 @@
+{
+    "home": {
+      "tituloPricipal": "Vacunació COVID-19 en",
+      "datosActualizados": "dades actualitzades",
+      "fuente": "font:",
+      "ministerioDeSanidad": "Ministeri de Sanitat",
+      "descargarDatosJSON": "Descarregar últimes dades en format JSON",
+      "incrustarDatos": "Vull incrustar les dades de vacunació en una altra pàgina web",
+      "porComunidadesAutonomas": "Per comunitats autònomes",
+      "dosisEntregadas": "Dosis entregades",
+      "dosisAdministradas": "Dosis administrades",
+      "sobreEntregadas": "% sobre entregades",
+      "poblacionVacunada": "% població vacunada",
+      "pautaCompleta": "Pauta completa",
+      "poblacionTotalmenteVacunada": "% població totalment vacunada",
+      "evolucionDosisEntregadas": "Evolució de dosi lliurades",
+      "evolucionDosisAdministradas": "Evolució de dosis administrades",
+      "fuenteDatosEnlacesInteres": "Fonts de dades i enllaços d'interès",
+      "fuente1": "Estratègia de Vacunació COVID-19 a Espanya",
+      "fuente2": "Informació oficial sobre la vacunació contra el nou coronavirus",
+      "changelog": "changelog",
+      "changelog5": "Afegides gràfiques",
+      "changelog5.1": "i contribuïdors",
+      "changelog4": "Afegida la possibilitat d'incrustar les dades en una altra pàgina",
+      "changelog3": "Afegit manera fosc a l'app",
+      "changelog2": "Afegida barra de progrés de vacunació en població",
+      "changelog1": "Afegides persones amb pauta completa",
+      "changelog0": "primera versió",
+      "enLosMedios": "En els mitjans",
+      "medio1": "Llancen un web amb dades de el Govern que permet veure com avança a Espanya la vacunació contra el coronavirus (20 Minuts)",
+      "medio2": "Web per revisar l'estat i progrés de la vacunació de l'COVID-19 a Espanya (Menéame)",
+      "contribuidores": "Contribuïdors",
+      "alt": {
+        "vacunasDistribuidas": "Vacunes distribuïdes a Espanya",
+        "pfizerLogo": "Pfizer Logo",
+        "modernaLogo": "moderna Logo",
+        "vacunasAdministradas": "Vacunes administrades a Espanya",
+        "dosisCompletas": "Dosi completes subministrades",
+        "descargarDatos": "descarregar dades",
+        "incrustarDatos": "Incrusta dades en una pàgina web",
+        "graficaSubiendo": "gràfica pujant",
+        "emojiCiclista": "Emoji de ciclista",
+        "globoMundo": "Globus d'el món amb meridians",
+        "luna": "Lluna",
+        "globoTerricola": "Globus terrícola amb vista a Amèrica",
+        "jeringuilla": "xeringa",
+        "fuego": "foc"
+      }
+    },
+    "progress": {
+      "verPoblacionVacunada": "Veure població vacunada",
+      "verPoblacionConPauta": "Veure població amb pauta completa"
+    },
+    "terminos": {
+      "dosisDistribuidas": "dosi distribuïdes",
+      "dosisAdministradas": "dosis administrades",
+      "sobreDistribuidas": "% sobre distribuïdes",
+      "personasConPautaCompleta": "Persones amb pauta completa",
+      "sobreAdministradas": "% sobre administrades"
+    }
+  }

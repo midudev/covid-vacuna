@@ -64,3 +64,31 @@
   background-color: #6cd0ff;
   color: #ffffff;
 }
+
+.table .mobileData {
+  display: none;
+}
+
+.table .mobileData span {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  .table tr td:not(:first-child):not(.mobileData) {
+    display: none;
+  }
+
+  .table tr td:first-child {
+    text-align: center;
+  }
+  
+  .table tr th {
+    display: none;
+  }
+
+  .table .mobileData {
+    display: block;
+  }
+}

@@ -13,11 +13,13 @@
   overflow: hidden;
   grid-template-columns: 1fr;
   grid-template-rows: 33% 33% 33%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .embedWrapper {
   position: relative;
-  padding-top: 56.25%
+  padding-top: 56.25%;
 }
 
 .description {
