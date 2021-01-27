@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from 'styles/Progress.module.css'
 import { toPercentage } from 'components/NumberPercentage.jsx'
-import { useLocale } from 'hooks/useMainContexts'
+import { useLocale } from 'hooks/useLocale'
 import { useTranslate } from 'hooks/useTranslate'
 
 const FILTERS = {

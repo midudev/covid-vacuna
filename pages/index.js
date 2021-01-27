@@ -1,10 +1,10 @@
-/* global fetch */
 import { useMemo, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Changelog from 'components/Changelog.jsx'
 import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
@@ -14,12 +14,14 @@ import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
+import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
+
+import getGitHubContributors from 'services/getGitHubContributors'
 
 import styles from 'styles/Home.module.css'
 import TimeAgo from 'components/TimeAgo.jsx'
 import useSearch from 'hooks/useSearchReport'
-
 import ProgressChart from 'components/ProgressChart'
 import {
   DosisAdministradasTooltip,
@@ -50,6 +52,12 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         />
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
+        <link rel='alternate' href='https://covid-vacuna.app/' hreflang='x-default' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-CA' hreflang='ca-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-GA' hreflang='gl-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-EU' hreflang='eu-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-ES' hreflang='es-es' />
+
       </Head>
       <div id='container' className={styles.container}>
         <main className={styles.main}>
@@ -244,48 +252,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         </ul>
 
         <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
-        <ul>
-          <li>
-            <strong>1.5.0</strong>: {translate.home.changelog5}{' '}
-            <span aria-label={translate.home.alt.graficaSubiendo} role='img'>
-              📈
-            </span>{' '}
-            {translate.home['changelog5.1']}{' '}
-            <span aria-label={translate.home.alt.emojiCiclista} role='img'>
-              🚵‍♀️
-            </span>
-          </li>
-          <li>
-            <strong>1.4.0</strong>: {translate.home.changelog4}{' '}
-            <span aria-label={translate.home.alt.globoMundo} role='img'>
-              🌐
-            </span>
-          </li>
-          <li>
-            <strong>1.3.0</strong>: {translate.home.changelog3}{' '}
-            <span aria-label={translate.home.alt.luna} role='img'>
-              🌚
-            </span>
-          </li>
-          <li>
-            <strong>1.2.0</strong>: {translate.home.changelog2}{' '}
-            <span aria-label={translate.home.alt.globoTerricola} role='img'>
-              🌎
-            </span>
-          </li>
-          <li>
-            <strong>1.1.0</strong>: {translate.home.changelog1}{' '}
-            <span aria-label={translate.home.alt.jeringuilla} role='img'>
-              💉
-            </span>
-          </li>
-          <li>
-            <strong>1.0.0</strong>: {translate.home.changelog0}{' '}
-            <span aria-label={translate.home.alt.fuego} role='img'>
-              🔥
-            </span>
-          </li>
-        </ul>
+        <Changelog />
 
         <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
         <ul>
@@ -345,6 +312,7 @@ export async function getStaticProps () {
       )
     ).catch(() => [])
 
+  const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
 
   return {

@@ -1,4 +1,4 @@
-import { useLocale } from 'hooks/useMainContexts'
+import { useLocale } from 'hooks/useLocale'
 
 const DATE_UNITS = {
   day: 86400,

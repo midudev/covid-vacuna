@@ -17,11 +17,11 @@
       radial-gradient(#15155a 1px,#111 0);
   }
 
-  #__next {
+  #container {
     filter: invert(1) hue-rotate(180deg);
   }
 
-  #__next img, #__next span[role='img'] {
+  #container img, #container span[role='img'] {
     filter: invert(1) hue-rotate(180deg);
   }
 }
@@ -35,8 +35,8 @@ html[scheme='light-mode'] #container {
   filter: invert(0) hue-rotate(0deg);
 }
 
-html[scheme='light-mode'] #__next img,
-html[scheme='light-mode'] #__next span[role='img'] {
+html[scheme='light-mode'] #container img,
+html[scheme='light-mode'] #container span[role='img'] {
   filter: invert(0) hue-rotate(0deg);
 }
 
@@ -49,8 +49,8 @@ html[scheme='dark-mode'] #container {
   filter: invert(1) hue-rotate(180deg);
 }
 
-html[scheme='dark-mode'] #__next img,
-html[scheme='dark-mode'] #__next span[role='img'] {
+html[scheme='dark-mode'] #container img,
+html[scheme='dark-mode'] #container span[role='img'] {
   filter: invert(1) hue-rotate(180deg);
 }
 

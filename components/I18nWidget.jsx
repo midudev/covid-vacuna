@@ -1,32 +1,37 @@
 
-import { useLocale } from 'hooks/useMainContexts'
+import { useLocale } from 'hooks/useLocale'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import styles from 'styles/I18nWidget.module.css'
 
 const LOCALES = {
-  'es-ES': {
-    name: 'Castellano'
+  es: {
+    name: 'Castellano',
+    zone: 'España'
   },
-  'es-CA': {
-    name: 'Catalán'
+  ca: {
+    name: 'Català',
+    zone: 'Catalunya'
   },
-  'es-GA': {
-    name: 'Gallego'
+  gl: {
+    name: 'Galego',
+    zone: 'Galicia'
   },
-  'es-EU': {
-    name: 'Euskera'
+  eu: {
+    name: 'Euskara',
+    zone: 'Euskadi'
   }
 }
 
 const I18nWidget = () => {
-  const { locale, locales, defaultLocale = 'es-ES', asPath: currentPath } = useRouter()
+  const { asPath: currentPath } = useRouter()
+  const { locale, locales } = useLocale()
   const [display, setDisplay] = useState(false)
-  const { setLocale } = useLocale()
+
   const options = locales?.filter(val => val !== locale)
-  const currentLocale = locale || defaultLocale
-  setLocale(currentLocale)
+
+  const { name, zone } = LOCALES[locale]
 
   return (
     <>
@@ -36,22 +41,20 @@ const I18nWidget = () => {
           type='button'
           onClick={() => setDisplay(!display)}
         >
-          <img src='flag-es.svg' alt='Bandera de España' />
-          {LOCALES[currentLocale].name}
+          <img src={`flag-${locale}.svg`} alt={`Bandera de ${zone}`} />
+          {name}
         </button>
-      </div>
-      <div>
         {options?.length && display
           ? (
-            <ul className={styles.dropDown}>
+            <ul>
               {options.map(locale =>
-                <Link key={locale} href={currentPath} locale={locale}>
-                  <a onClick={() => setDisplay(false)}>
-                    <li>
+                <li key={locale}>
+                  <Link href={currentPath} locale={locale}>
+                    <a onClick={() => setDisplay(false)}>
                       {LOCALES[locale].name}
-                    </li>
-                  </a>
-                </Link>)}
+                    </a>
+                  </Link>
+                </li>)}
             </ul>
             )
           : null}
