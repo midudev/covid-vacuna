@@ -6,9 +6,11 @@ import { toDigit } from './NumberDigits.jsx'
 import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
 import { useLocale } from 'hooks/useLocale.js'
+import { useTranslate } from 'hooks/useTranslate'
 
 export default function Table ({ data, filter, setFilter }) {
   const { locale } = useLocale()
+  const translate = useTranslate()
 
   const handleRowClick = useCallback(
     ({ original: { ccaa } }) => () => {
@@ -47,32 +49,32 @@ export default function Table ({ data, filter, setFilter }) {
         format: (ccaa) => ccaa
       },
       {
-        Header: 'Dosis entregadas',
+        Header: translate.home.dosisEntregadas,
         accessor: 'dosisEntregadas',
         format: formatDigit
       },
       {
-        Header: 'Dosis administradas',
+        Header: translate.home.dosisAdministradas,
         accessor: 'dosisAdministradas',
         format: formatDigit
       },
       {
-        Header: '% sobre entregadas',
+        Header: translate.home.sobreEntregadas,
         accessor: 'porcentajeEntregadas',
         format: formatPercentage
       },
       {
-        Header: '% población vacunada',
+        Header: translate.home.poblacionVacunada,
         accessor: 'porcentajePoblacionAdministradas',
         format: formatPercentage
       },
       {
-        Header: 'Pauta completa',
+        Header: translate.home.pautaCompleta,
         accessor: 'dosisPautaCompletada',
         format: formatDigit
       },
       {
-        Header: '% población totalmente vacunada',
+        Header: translate.home.poblacionTotalmenteVacunada,
         accessor: 'porcentajePoblacionCompletas',
         format: formatPercentage
       }
