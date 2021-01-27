@@ -6,19 +6,19 @@ import { useState } from 'react'
 import styles from 'styles/I18nWidget.module.css'
 
 const LOCALES = {
-  'es-ES': {
+  es: {
     name: 'Castellano',
     zone: 'España'
   },
-  'es-CA': {
+  ca: {
     name: 'Català',
     zone: 'Catalunya'
   },
-  'es-GA': {
+  gl: {
     name: 'Galego',
     zone: 'Galicia'
   },
-  'es-EU': {
+  eu: {
     name: 'Euskara',
     zone: 'Euskadi'
   }
