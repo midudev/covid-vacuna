@@ -1,0 +1,61 @@
+{
+    "home": {
+      "tituloPricipal": "COVID-19 txertoa",
+      "datosActualizados": "Eguneratutako datuak",
+      "fuente": "Iturria:",
+      "ministerioDeSanidad": "Osasun Ministerioa",
+      "descargarDatosJSON": "Deskargatu azken datuak JSON formatuan",
+      "incrustarDatos": "Txertaketa datuak beste web orri batean txertatu nahi ditut",
+      "porComunidadesAutonomas": "Autonomia erkidegoen arabera",
+      "dosisEntregadas": "Entregatutako dosiak",
+      "dosisAdministradas": "Emandako dosiak",
+      "sobreEntregadas": "% buruz entregatutako",
+      "poblacionVacunada": "% txertatutako populazioa",
+      "pautaCompleta": "Jarraibide osoa",
+      "poblacionTotalmenteVacunada": "% guztiz txertatutako populazioa",
+      "evolucionDosisEntregadas": "Emandako dosien bilakaera",
+      "evolucionDosisAdministradas": "Administratutako dosien bilakaera",
+      "fuenteDatosEnlacesInteres": "Datu iturriak eta esteka interesgarriak",
+      "fuente1": "COVID-19 Txertaketa Estrategia Espainian",
+      "fuente2": "Koronabirus berriaren aurkako txertoari buruzko informazio ofiziala",
+      "changelog": "Aldaketa-erregistroa",
+      "changelog5": "Gehitutako grafikoak",
+      "changelog5.1": "eta laguntzaileak",
+      "changelog4": "Datuak beste orri batean txertatzeko aukera gehitu da",
+      "changelog3": "Modu iluna gehitu da aplikazioan",
+      "changelog2": "Gehitu da biztanleriaren txertoa aurrera egiteko barra",
+      "changelog1": "Jarraibide osoak dituzten pertsonak gehitu dira",
+      "changelog0": "Lehen bertsioa",
+      "enLosMedios": "Komunikabideetan",
+      "medio1": "Webgune bat estreinatu dute gobernuaren datuekin, Espainian coronavirusaren aurkako txertoa nola garatzen ari den ikusteko aukera ematen diguna (20 minutu)",
+      "medio2": "COVID-19 txertaketaren egoera eta aurrerapenak aztertzeko webgunea Espainian (Menéame)",
+      "contribuidores": "Laguntzaileak",
+      "alt": {
+        "vacunasDistribuidas": "Espainian banatutako txertoak",
+        "pfizerLogo": "Pfizer logotipoa",
+        "modernaLogo": "Logotipo modernoa",
+        "vacunasAdministradas": "Espainian ematen diren txertoak",
+        "dosisCompletas": "Administratutako dosi osoak",
+        "descargarDatos": "Datuak deskargatu",
+        "incrustarDatos": "Datuak txertatu web orri batean",
+        "graficaSubiendo": "Grafikoa gorantz doa",
+        "emojiCiclista": "Biker emoji",
+        "globoMundo": "Munduko globoa meridianoekin",
+        "luna": "Ilargia",
+        "globoTerricola": "Lurreko globoa Amerikara begira",
+        "jeringuilla": "Xiringa",
+        "fuego": "Sute"
+      }
+    },
+    "progress": {
+      "verPoblacionVacunada": "Ikusi txertatutako populazioa",
+      "verPoblacionConPauta": "Ikusi populazioa jarraibide osoekin"
+    },
+    "terminos": {
+      "dosisDistribuidas": "Banatutako dosiak",
+      "dosisAdministradas": "Administratutako dosia",
+      "sobreDistribuidas": "% banatutakoaren gainekoa",
+      "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
+      "sobreAdministradas": "% baino gehiago kudeatzen da"
+    }
+  }

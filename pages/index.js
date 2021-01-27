@@ -1,37 +1,45 @@
-/* global fetch */
 import { useMemo, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Changelog from 'components/Changelog.jsx'
 import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
+import Select from 'components/Select'
+import I18nWidget from 'components/I18nWidget.jsx'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
+import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 
-import styles from 'styles/Home.module.css'
-import TimeAgo from 'components/TimeAgo.jsx'
+import getGitHubContributors from 'services/getGitHubContributors'
 
+import styles from 'styles/Home.module.css'
+import useSearch from 'hooks/useSearchReport'
 import ProgressChart from 'components/ProgressChart'
 import {
   DosisAdministradasTooltip,
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
+import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
 
-export default function Home ({ contributors, data, info, chartDatasets }) {
+export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
+  const [valueSearch, setValueSearch] = useState('')
+  const reportFound = useSearch({ valueSearch })
+  const translate = useTranslate()
 
   const totals = useMemo(
-    () => data.find(({ ccaa }) => ccaa === filter),
-    [data, filter]
+    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === 'Totales') : data.find(({ ccaa }) => ccaa === 'Totales'),
+    [data, filter, reportFound]
   )
 
   return (
@@ -44,19 +52,27 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         />
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
+        <link rel='alternate' href='https://covid-vacuna.app/' hreflang='x-default' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-CA' hreflang='ca-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-GA' hreflang='gl-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-EU' hreflang='eu-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-ES' hreflang='es-es' />
+
       </Head>
       <div className={styles.container}>
-        <main className={styles.main}>
+        <main id='container' className={styles.main}>
           <h1 className={styles.title}>
-            Vacunación COVID-19 en {filter === 'Totales' ? 'España' : filter}
+            {translate.home.tituloPricipal} {filter === 'Totales' ? 'España' : filter}
           </h1>
           <small className={styles.description}>
-            Datos actualizados <TimeAgo timestamp={info.lastModified} />.
-            Fuente:{' '}
+            {translate.home.datosActualizados} <TimeAgo timestamp={info.lastModified} />.
+            {' '}{translate.home.fuente}{' '}
             <a href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'>
-              Ministerio de Sanidad
+              {translate.home.ministerioDeSanidad}
             </a>
           </small>
+
+          <Select data={reports} onChange={setValueSearch} />
 
           <div className={styles.grid}>
             <div className={styles.card}>
@@ -71,7 +87,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 <Image
                   className={styles.cardImage}
                   src='/mapa.png'
-                  alt='Vacunas distribuidas en España'
+                  alt={translate.home.alt.vacunasDistribuidas}
                   width={150}
                   height={150}
                   priority
@@ -79,15 +95,15 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               </header>
               <section>
                 <div>
-                  <h3>Dosis distribuidas</h3>
+                  <h3>{translate.terminos.dosisDistribuidas}</h3>
                   <p>
-                    <NumberDigits>{totals.dosisEntregadas}</NumberDigits>
+                    {isNaN(totals.dosisEntregadas) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadas}</NumberDigits>}
                   </p>
                 </div>
                 <div>
                   <small>
                     <Image
-                      alt='Pfizer Logo'
+                      alt={translate.home.alt.pfizerLogo}
                       className={styles.companyLogo}
                       src='/pfizer-logo.png'
                       height={29}
@@ -95,14 +111,12 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                       priority
                     />
                     <span>
-                      <NumberDigits>
-                        {totals.dosisEntregadasPfizer}
-                      </NumberDigits>
+                      {isNaN(totals.dosisEntregadasPfizer) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasPfizer}</NumberDigits>}
                     </span>
                   </small>
                   <small>
                     <Image
-                      alt='Moderna Logo'
+                      alt={translate.home.alt.modernaLogo}
                       className={styles.companyLogo}
                       src='/moderna-logo.png'
                       height={16.5}
@@ -110,9 +124,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                       priority
                     />
                     <span>
-                      <NumberDigits>
-                        {totals.dosisEntregadasModerna}
-                      </NumberDigits>
+                      {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
                     </span>
                   </small>
                 </div>
@@ -123,7 +135,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               <header>
                 <Image
                   src='/vacuna.png'
-                  alt='Vacunas administradas en España'
+                  alt={translate.home.alt.vacunasAdministradas}
                   width={150}
                   height={150}
                   priority
@@ -131,17 +143,15 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               </header>
               <section>
                 <div>
-                  <h3>Dosis administradas</h3>
+                  <h3>{translate.terminos.dosisAdministradas}</h3>
                   <p>
-                    <NumberDigits>{totals.dosisAdministradas}</NumberDigits>
+                    {isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberDigits>{totals.dosisAdministradas}</NumberDigits>}
                   </p>
                 </div>
                 <div>
-                  <h4>% sobre distribuidas</h4>
+                  <h4>{translate.terminos.sobreDistribuidas}</h4>
                   <p className={styles.secondary}>
-                    <NumberPercentage>
-                      {totals.porcentajeEntregadas}
-                    </NumberPercentage>
+                    {isNaN(totals.porcentajeEntregadas) ? 'Desconocido' : <NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage>}
                   </p>
                 </div>
               </section>
@@ -151,7 +161,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               <header>
                 <Image
                   src='/vacunas-completas.png'
-                  alt='Dosis completas subministradas'
+                  alt={translate.home.alt.dosisCompletas}
                   width={150}
                   height={150}
                   priority
@@ -159,33 +169,31 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               </header>
               <section>
                 <div>
-                  <h3>Personas con pauta completa</h3>
+                  <h3>{translate.terminos.personasConPautaCompleta}</h3>
                   <p>
-                    <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>
+                    {isNaN(totals.dosisPautaCompletada) ? 'Desconocido' : <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>}
                   </p>
                 </div>
                 <div>
-                  <h4>% sobre administradas</h4>
+                  <h4>{translate.terminos.sobreAdministradas}</h4>
                   <p className={styles.secondary}>
-                    <NumberPercentage>
-                      {totals.dosisPautaCompletada / totals.dosisAdministradas}
-                    </NumberPercentage>
+                    {isNaN(totals.dosisPautaCompletada) || isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage>}
                   </p>
                 </div>
               </section>
             </div>
           </div>
 
-          <Progress totals={totals} />
+          <Progress totals={totals} reportFound={reportFound} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
               width={32}
               height={32}
               src='/download.png'
-              alt='Descargar datos'
+              alt={translate.home.alt.descargarDatos}
             />
-            Descargar últimos datos en formato JSON
+            {translate.home.descargarDatosJSON}
           </a>
 
           <Link href='/como-incrustar'>
@@ -194,27 +202,27 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
                 width={32}
                 height={32}
                 src='/embed.png'
-                alt='Incrustar datos en una página web'
+                alt={translate.home.alt.incrustarDatos}
               />
-              Quiero incrustar los datos de vacunación en otra página web
+              {translate.home.incrustarDatos}
             </a>
           </Link>
         </main>
 
-        <h2 className={styles.subtitle}>Por comunidades autónomas</h2>
+        <h2 className={styles.subtitle}>{translate.home.porComunidadesAutonomas}</h2>
 
         <SpainMap data={data} />
 
-        <Table data={data} filter={filter} setFilter={setFilter} />
+        <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 
-        <h2 className={styles.subtitle}>Evolución de dosis entregadas</h2>
+        <h2 className={styles.subtitle}>{translate.home.evolucionDosisEntregadas}</h2>
 
         <ProgressChart
           dataset={chartDatasets.dosisEntregadas}
           tooltip={DosisEntregadasTooltip}
         />
 
-        <h2 className={styles.subtitle}>Evolución de dosis administradas</h2>
+        <h2 className={styles.subtitle}>{translate.home.evolucionDosisAdministradas}</h2>
 
         <ProgressChart
           dataset={chartDatasets.dosisAdministradas}
@@ -222,7 +230,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         />
 
         <h2 className={styles.subtitle}>
-          Fuentes de datos y enlaces de interés
+          {translate.home.fuenteDatosEnlacesInteres}
         </h2>
         <ul>
           <li>
@@ -231,7 +239,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'
             >
-              Estrategia de Vacunación COVID-19 en España
+              {translate.home.fuente1}
             </a>
           </li>
           <li>
@@ -240,59 +248,15 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.vacunacovid.gob.es'
             >
-              Información oficial sobre la vacunación contra el nuevo
-              coronavirus
+              {translate.home.fuente2}
             </a>
           </li>
         </ul>
 
-        <h2 className={styles.subtitle}>Changelog</h2>
-        <ul>
-          <li>
-            <strong>1.5.0</strong>: Añadidas gráficas{' '}
-            <span aria-label='Gráfica subiendo' role='img'>
-              📈
-            </span>{' '}
-            y contribuidores{' '}
-            <span aria-label='Emoji de ciclista' role='img'>
-              🚵‍♀️
-            </span>
-          </li>
-          <li>
-            <strong>1.4.0</strong>: Añadida la posibilidad de incrustar los
-            datos en otra página{' '}
-            <span aria-label='Globo del mundo con meridianos' role='img'>
-              🌐
-            </span>
-          </li>
-          <li>
-            <strong>1.3.0</strong>: Añadido modo oscuro a la app{' '}
-            <span aria-label='Luna' role='img'>
-              🌚
-            </span>
-          </li>
-          <li>
-            <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en
-            población{' '}
-            <span aria-label='Globo terrícola con vistas a América' role='img'>
-              🌎
-            </span>
-          </li>
-          <li>
-            <strong>1.1.0</strong>: Añadidas personas con pauta completa{' '}
-            <span aria-label='Jeringuilla' role='img'>
-              💉
-            </span>
-          </li>
-          <li>
-            <strong>1.0.0</strong>: Primera versión{' '}
-            <span aria-label='Fuego' role='img'>
-              🔥
-            </span>
-          </li>
-        </ul>
+        <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
+        <Changelog />
 
-        <h2 className={styles.subtitle}>En los medios</h2>
+        <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
         <ul>
           <li>
             <a
@@ -301,8 +265,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'
             >
-              Lanzan una web con datos del Gobierno que permite ver cómo avanza
-              en España la vacunación contra el coronavirus (20 Minutos)
+              {translate.home.medio1}
             </a>
           </li>
           <li>
@@ -312,13 +275,12 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               rel='noreferrer'
               href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'
             >
-              Web para revisar el estado y progreso de la vacunación del
-              COVID-19 en España (Menéame)
+              {translate.home.medio2}
             </a>
           </li>
         </ul>
 
-        <h2 className={styles.subtitle}>Contribuidores</h2>
+        <h2 className={styles.subtitle}>{translate.home.contribuidores}</h2>
         <Contributors contributors={contributors} />
       </div>
 
@@ -331,6 +293,8 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         <SchemeColorSwitcher />
       </ClientSideComponent>
 
+      <I18nWidget />
+
       <Share />
 
       <Footer />
@@ -341,20 +305,16 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
-  const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
-    .then(res => res.json())
-    .then(json =>
-      json.map(
-        ({ login, avatar_url: avatar, html_url: url }) => ({ login, avatar, url })
-      )
-    ).catch(() => [])
+  const reports = require('../public/data/reports.json')
 
+  const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
 
   return {
     props: {
       data,
       info,
+      reports,
       chartDatasets,
       contributors
     }

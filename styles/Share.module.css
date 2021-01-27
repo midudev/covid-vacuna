@@ -30,3 +30,13 @@
   margin-left: 4px;
   width: 16px;
 }
+
+@media (max-width: 600px) {
+
+  .share span {
+    display: none;
+  }
+  .share svg{
+    margin: 0;
+  }
+}

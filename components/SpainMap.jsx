@@ -8,7 +8,7 @@ import spainMapa from 'public/maps/spain.json'
 
 const projection = geoEqualEarth()
   .scale(2500)
-  .translate([500, 2150])
+  .translate([500, 2100])
 
 const SpainMap = ({ data }) => {
   const [geoFile, setGeoFile] = useState([])
@@ -28,8 +28,9 @@ const SpainMap = ({ data }) => {
   }, [])
 
   const colorearMapa = porcentaje => {
+    console.log('colorea ', porcentaje >= 0.95)
     if (porcentaje) {
-      const resultado = porcentaje >= 0.95 ? '#2c7cdc' : (porcentaje >= 0.90 ? '#5995dd' : (porcentaje >= 0.85 ? '#80abdf' : '#a8c0e2'))
+      const resultado = porcentaje >= 0.9 ? '#00414D' : (porcentaje >= 0.8 ? '#00778C' : (porcentaje >= 0.7 ? '#0097B3' : (porcentaje >= 0.6 ? '#00ADCC' : '#00B8D9')))
       return resultado
     }
   }

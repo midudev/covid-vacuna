@@ -1,0 +1,81 @@
+.i18nWidget,
+.i18nWidget ul {
+  left: 32px;
+  margin: auto;
+  position: fixed;
+  right: 32px;
+  top: 16px;
+  width: fit-content;
+}
+
+.i18nWidget button {
+  align-items: center;
+  border: 1px solid #000000;
+  background: #fff;
+  box-shadow: #92d5ff 1px 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: flex;
+  border-radius: 99999px;
+  justify-content: center;
+  line-height: 110%;
+  padding: 4px 16px;
+  cursor: pointer;
+  width: 110px;
+}
+
+.i18nWidget button:hover,
+.i18nWidget button:focus {
+  background-color: rgb(210, 237, 255);
+  box-shadow: none;
+  transform: translate3d(4px, 4px, 0);
+  transition: all 0.1s ease;
+  outline: none;
+}
+
+.i18nWidget img {
+  height: 16px;
+  margin-right: 4px;
+  width: 16px;
+}
+
+.i18nWidget ul {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #000;
+  padding: 0;
+  top: 50px;
+}
+
+.i18nWidget li {
+  border: none;
+  box-shadow: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.i18nWidget a {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.i18nWidget a:hover {
+  background-color: rgb(210, 237, 255);
+}
+
+
+@media (max-width: 600px) {
+
+  .i18nWidget button{
+    width: fit-content;
+  }
+  .i18nWidget span {
+    display: none;
+  }
+  .i18nWidget img{
+    margin: 0;
+  }
+}

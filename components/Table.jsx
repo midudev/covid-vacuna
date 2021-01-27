@@ -1,12 +1,16 @@
 /* eslint-disable react/jsx-key */
+
 import { useCallback, useMemo } from 'react'
 import { useTable, useSortBy } from 'react-table'
 import { toDigit } from './NumberDigits.jsx'
 import { toPercentage } from './NumberPercentage.jsx'
 import styles from 'styles/Table.module.css'
+import { useLocale } from 'hooks/useLocale.js'
+import { useTranslate } from 'hooks/useTranslate'
 
-export default function Table ({ data, filter, setFilter }) {
-  const locale = 'es'
+export default function Table ({ data, filter, setFilter, reportFound }) {
+  const { locale } = useLocale
+  const translate = useTranslate()
 
   const handleRowClick = useCallback(
     ({ original: { ccaa } }) => () => {
@@ -20,21 +24,41 @@ export default function Table ({ data, filter, setFilter }) {
   const formatPercentage = number => toPercentage({ locale, number })
 
   const tableData = useMemo(
-    () => data.map(row => {
-      const {
-        porcentajeEntregadas,
-        porcentajePoblacionAdministradas,
-        porcentajePoblacionCompletas,
-        ...rest
-      } = row
+    () => reportFound !== undefined
+      ? reportFound.map(row => {
+          const {
+            dosisPautaCompletada,
+            porcentajeEntregadas,
+            porcentajePoblacionAdministradas,
+            porcentajePoblacionCompletas,
+            ...rest
+          } = row
 
-      return {
-        porcentajeEntregadas: porcentajeEntregadas.toFixed(4),
-        porcentajePoblacionAdministradas: porcentajePoblacionAdministradas.toFixed(4),
-        porcentajePoblacionCompletas: porcentajePoblacionCompletas.toFixed(4),
-        ...rest
-      }
-    }), []
+          return {
+            dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
+            porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
+            porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
+            porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
+            ...rest
+          }
+        })
+      : data.map(row => {
+        const {
+          dosisPautaCompletada,
+          porcentajeEntregadas,
+          porcentajePoblacionAdministradas,
+          porcentajePoblacionCompletas,
+          ...rest
+        } = row
+
+        return {
+          dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
+          porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
+          porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
+          porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
+          ...rest
+        }
+      }), [reportFound]
   )
 
   const columns = useMemo(
@@ -45,37 +69,37 @@ export default function Table ({ data, filter, setFilter }) {
         format: (ccaa) => ccaa
       },
       {
-        Header: 'Dosis entregadas',
+        Header: translate.home.dosisEntregadas,
         accessor: 'dosisEntregadas',
         format: formatDigit
       },
       {
-        Header: 'Dosis administradas',
+        Header: translate.home.dosisAdministradas,
         accessor: 'dosisAdministradas',
         format: formatDigit
       },
       {
-        Header: '% sobre entregadas',
+        Header: translate.home.sobreEntregadas,
         accessor: 'porcentajeEntregadas',
         format: formatPercentage
       },
       {
-        Header: '% población vacunada',
+        Header: translate.home.poblacionVacunada,
         accessor: 'porcentajePoblacionAdministradas',
         format: formatPercentage
       },
       {
-        Header: 'Pauta completa',
+        Header: translate.home.pautaCompleta,
         accessor: 'dosisPautaCompletada',
         format: formatDigit
       },
       {
-        Header: '% población totalmente vacunada',
+        Header: translate.home.poblacionTotalmenteVacunada,
         accessor: 'porcentajePoblacionCompletas',
         format: formatPercentage
       }
     ],
-    []
+    [translate]
   )
 
   let {
@@ -115,7 +139,12 @@ export default function Table ({ data, filter, setFilter }) {
         <tbody {...getTableBodyProps()}>
           {rows.map((row, index) => {
             prepareRow(row)
-            const className = row.id === '19' ? styles.totales : row.original.ccaa === filter ? styles.selected : ''
+            const className = row.id === '19'
+              ? styles.totales
+              : row.original.ccaa === filter
+                ? styles.selected
+                : ''
+
             return (
               <tr {...row.getRowProps()} className={className} onClick={handleRowClick(row)}>
                 {row.cells.map(cell => {
@@ -128,7 +157,7 @@ export default function Table ({ data, filter, setFilter }) {
                 <td className={styles.mobileData}>
                   {row.cells.map((cell, index) => {
                     return (
-                      <span>
+                      <span key={index}>
                         {index === 0 ? '' : `${headerGroups[0].headers[index].Header} - ${cell.column.format(cell.value)}`}
                       </span>
                     )

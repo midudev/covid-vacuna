@@ -26,7 +26,7 @@ export default function Share () {
         href={url}
         title='Comparte este enlace en Twitter'
       >
-        ¡Compártelo!
+        <span>¡Compártelo!</span>
         <TwitterLogo />
       </a>
     </div>
