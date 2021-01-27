@@ -303,13 +303,6 @@ export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
   const reports = require('../public/data/reports.json')
-  const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
-    .then(res => res.json())
-    .then(json =>
-      json.map(
-        ({ login, avatar_url: avatar, html_url: url }) => ({ login, avatar, url })
-      )
-    ).catch(() => [])
 
   const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
