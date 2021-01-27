@@ -9,6 +9,20 @@
   margin-right: 1rem;
 }
 
+.progress label input[type="radio"] {
+  appearance: none;
+  background: #ffffff;
+  border: 2px solid #111;
+  border-radius: 500%;
+  box-shadow: rgb(210, 239, 253) 4px 4px;
+  margin-right: 8px;
+  padding: 6px;
+}
+
+.progress label input[type="radio"]:checked {
+  background: radial-gradient(currentcolor 50%, rgba(255, 0, 0, 0) 51%);
+}
+
 .progress div {
   display: flex;
   flex-wrap: wrap;
