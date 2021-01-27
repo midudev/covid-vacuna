@@ -28,7 +28,6 @@ const SpainMap = ({ data }) => {
   }, [])
 
   const colorearMapa = porcentaje => {
-    console.log('colorea ', porcentaje >= 0.95)
     if (porcentaje) {
       const resultado = porcentaje >= 0.9 ? '#00414D' : (porcentaje >= 0.8 ? '#00778C' : (porcentaje >= 0.7 ? '#0097B3' : (porcentaje >= 0.6 ? '#00ADCC' : '#00B8D9')))
       return resultado
