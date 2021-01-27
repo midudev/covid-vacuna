@@ -57,5 +57,10 @@
         "sobreDistribuidas": "% sobre distribuidas",
         "personasConPautaCompleta": "Personas con pauta completa",
         "sobreAdministradas": "% sobre administradas"
+    },
+    "share": {
+        "textParamUrl": "¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n",
+        "titleAnchor": "Comparte este enlace en Twitter",
+        "textoButton": "¡Compártelo!"
     }
 }

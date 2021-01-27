@@ -57,5 +57,10 @@
       "sobreDistribuidas": "% banatutakoaren gainekoa",
       "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
       "sobreAdministradas": "% baino gehiago kudeatzen da"
+    },
+    "share": {
+      "textParamUrl": "Jarrai ezazu COVID19ren aurkako txertoaren aurrerapena @midudev-ek sortutako webgune honetan!\n\n",
+      "titleAnchor": "Partekatu esteka hau Twitterren",
+      "textoButton": "Parteka ezazu!"
     }
   }
