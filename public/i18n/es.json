@@ -1,4 +1,13 @@
 {
+    "colorSwitcher": {
+        "lightTitleLabel": "Usa el tema claro",
+        "lightAriaLabel": "Un sol que invertido parece el malo de Doom",
+        "standardTitleLabel": "Usa el tema dependiendo tu configuración de sistema",
+        "standardAriaLabel": "Tus preferencias molonas de tu sistema",
+        "darkTitleLabel": "Usa el tema oscuro",
+        "darkAriaLabel": "Una luna con ojos sospechosos que parece que está tramando algo jodido"
+
+    },
     "home": {
         "tituloPricipal": "Vacunación COVID-19 en",
         "datosActualizados": "Datos actualizados",

@@ -1,4 +1,12 @@
 {
+    "colorSwitcher": {
+      "lightTitleLabel": "Utilitza el tema clar",
+      "lightAriaLabel": "Un sol que invertit sembla el dolent de Doom",
+      "standardTitleLabel": "Utilitza el tema depenent la configuració de sistema",
+      "standardAriaLabel": "Les teves preferències molones del teu sistema",
+      "darkTitleLabel": "Utilitza el tema fosc",
+      "darkAriaLabel": "Una lluna amb ulls sospitosos que sembla que està tramant alguna cosa fotut"
+    },
     "home": {
       "tituloPricipal": "Vacunació COVID-19 en",
       "datosActualizados": "dades actualitzades",
@@ -58,4 +66,4 @@
       "personasConPautaCompleta": "Persones amb pauta completa",
       "sobreAdministradas": "% sobre administrades"
     }
-  }
+}

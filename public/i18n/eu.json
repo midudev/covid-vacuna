@@ -1,4 +1,12 @@
 {
+    "colorSwitcher": {
+      "lightTitleLabel": "Erabili gai argia",
+      "lightAriaLabel": "Alderantziz jarritako eguzkia Doom-eko gaiztoaren itxura du",
+      "standardTitleLabel": "Erabili gaia zure sistemaren konfigurazioaren arabera",
+      "standardAriaLabel": "Zure sistemaren hobespen bikainak",
+      "darkTitleLabel": "Erabili gai iluna",
+      "darkAriaLabel": "Begi susmagarriak dituen ilargia, izorratuta dagoen zerbait dela dirudi"
+    },
     "home": {
       "tituloPricipal": "COVID-19 txertoa",
       "datosActualizados": "Eguneratutako datuak",
