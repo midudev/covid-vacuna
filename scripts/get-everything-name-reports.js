@@ -8,6 +8,7 @@ module.exports = fs.readdir('./public/data', (error, files) => {
       element !== 'bbdd.json' &&
       element !== 'info.json' &&
       element !== 'latest.json' &&
+      element !== 'reports.json' &&
       element.includes('.json')
   )
   const reports = json.map((el) => el.replace('.json', ''))
