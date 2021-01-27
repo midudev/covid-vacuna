@@ -99,7 +99,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
         format: formatPercentage
       }
     ],
-    []
+    [translate]
   )
 
   let {
