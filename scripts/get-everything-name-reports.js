@@ -1,16 +1,13 @@
 const fs = require('fs-extra')
 
-module.exports = fs.readdir('./public/data', (error, files) => {
-  if (error) return console.log(error)
+const ignoredFiles = ['bbdd', 'info', 'latest', 'reports']
 
-  const json = files.filter(
-    (element) =>
-      element !== 'bbdd.json' &&
-      element !== 'info.json' &&
-      element !== 'latest.json' &&
-      element.includes('.json')
+module.exports = async () => {
+  const files = await fs.readdir('./public/data').catch(error => console.error(error))
+  const json = files.filter(el =>
+    !ignoredFiles.includes(el.replace('.json', '')) && el.includes('.json')
   )
-  const reports = json.map((el) => el.replace('.json', ''))
+  const reports = json.map(el => el.replace('.json', ''))
 
-  fs.writeJson('./public/data/reports.json', reports)
-})
+  await fs.writeJson('./public/data/reports.json', reports)
+}
