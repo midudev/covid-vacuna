@@ -20,7 +20,6 @@ import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 import getGitHubContributors from 'services/getGitHubContributors'
 
 import styles from 'styles/Home.module.css'
-import TimeAgo from 'components/TimeAgo.jsx'
 import useSearch from 'hooks/useSearchReport'
 import ProgressChart from 'components/ProgressChart'
 import {
