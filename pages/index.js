@@ -1,10 +1,10 @@
-/* global fetch */
 import { useMemo, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Changelog from 'components/Changelog.jsx'
 import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
@@ -13,10 +13,12 @@ import Progress from 'components/Progress.jsx'
 import I18nWidget from 'components/I18nWidget.jsx'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
+import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 
+import getGitHubContributors from 'services/getGitHubContributors'
+
 import styles from 'styles/Home.module.css'
-import TimeAgo from 'components/TimeAgo.jsx'
 
 import ProgressChart from 'components/ProgressChart'
 import {
@@ -252,48 +254,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
         </ul>
 
         <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
-        <ul>
-          <li>
-            <strong>1.5.0</strong>: {translate.home.changelog5}{' '}
-            <span aria-label={translate.home.alt.graficaSubiendo} role='img'>
-              📈
-            </span>{' '}
-            {translate.home['changelog5.1']}{' '}
-            <span aria-label={translate.home.alt.emojiCiclista} role='img'>
-              🚵‍♀️
-            </span>
-          </li>
-          <li>
-            <strong>1.4.0</strong>: {translate.home.changelog4}{' '}
-            <span aria-label={translate.home.alt.globoMundo} role='img'>
-              🌐
-            </span>
-          </li>
-          <li>
-            <strong>1.3.0</strong>: {translate.home.changelog3}{' '}
-            <span aria-label={translate.home.alt.luna} role='img'>
-              🌚
-            </span>
-          </li>
-          <li>
-            <strong>1.2.0</strong>: {translate.home.changelog2}{' '}
-            <span aria-label={translate.home.alt.globoTerricola} role='img'>
-              🌎
-            </span>
-          </li>
-          <li>
-            <strong>1.1.0</strong>: {translate.home.changelog1}{' '}
-            <span aria-label={translate.home.alt.jeringuilla} role='img'>
-              💉
-            </span>
-          </li>
-          <li>
-            <strong>1.0.0</strong>: {translate.home.changelog0}{' '}
-            <span aria-label={translate.home.alt.fuego} role='img'>
-              🔥
-            </span>
-          </li>
-        </ul>
+        <Changelog />
 
         <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
         <ul>
@@ -344,14 +305,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
-  const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
-    .then(res => res.json())
-    .then(json =>
-      json.map(
-        ({ login, avatar_url: avatar, html_url: url }) => ({ login, avatar, url })
-      )
-    ).catch(() => [])
-
+  const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
 
   return {
