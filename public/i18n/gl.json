@@ -60,7 +60,8 @@
     "progress": {
       "verPoblacionVacunada": "Ver poboación vacinada",
       "verPoblacionConPauta": "Ver poboación con directrices completas",
-      "estimacionPoblacionVacunada": "Estimación da poboación vacinada"
+      "estimacionPoblacionVacunada": "Estimación da poboación vacinada",
+      "noDatos": "Non dispoñemos de datos para esa data."
     },
     "terminos": {
       "dosisDistribuidas": "Doses distribuídas",
