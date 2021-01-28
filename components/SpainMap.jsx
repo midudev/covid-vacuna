@@ -26,7 +26,7 @@ const SpainMap = ({ data, reportFound }) => {
         return true
       })
     })
-    console.log(object)
+    
     setGeoFile(object)
   }, [reportFound])
 
