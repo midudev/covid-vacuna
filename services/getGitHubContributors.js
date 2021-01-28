@@ -10,7 +10,7 @@ const MAPPED_USERS = {
   }
 }
 
-function mapFromApiResponseToContributors (apiResponse) {
+function mapFromApiResponseToContributors(apiResponse) {
   return apiResponse.map(
     ({ login, avatar_url: avatar, html_url: url }) => {
       return MAPPED_USERS[login] || ({ login, avatar, url })
@@ -18,9 +18,9 @@ function mapFromApiResponseToContributors (apiResponse) {
   )
 }
 
-export default async function getGitHubContributors () {
+export default async function getGitHubContributors() {
   const apiResponse = await fetch(GITHUB_API_ENDPOINT)
-    .then(res => res.json())
+    .then(res => res.ok() ? res.json() : [])
     .catch(() => [])
 
   return mapFromApiResponseToContributors(apiResponse)
