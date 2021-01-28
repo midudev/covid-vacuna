@@ -62,5 +62,10 @@
       "textParamUrl": "Jarrai ezazu COVID19ren aurkako txertoaren aurrerapena @midudev-ek sortutako webgune honetan!\n\n",
       "titleAnchor": "Partekatu esteka hau Twitterren",
       "textoButton": "Parteka ezazu!"
+    },
+    "footer": {
+      "desarrolladoPor": "Garatu du",
+      "estadisticas": "Estatistikak",
+      "enviarSugerencia": "Bidali iradokizuna"
     }
   }

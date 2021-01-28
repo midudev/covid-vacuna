@@ -62,5 +62,10 @@
       "textParamUrl": "Siga o progreso da vacinación contra COVID19 neste sitio web creado por @midudev.\n\n",
       "titleAnchor": "Comparte esta ligazón en Twitter",
       "textoButton": "Compárteo!"
+    },
+    "footer": {
+      "desarrolladoPor": "Desenvolvido por",
+      "estadisticas": "Estatísticas",
+      "enviarSugerencia": "Enviar suxestión"
     }
   }

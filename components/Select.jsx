@@ -30,7 +30,6 @@ export default function Select ({ data, onChange }) {
             ))}
         </select>
       </section>
-      <style jsx>{styles}</style>
     </>
   )
 }
