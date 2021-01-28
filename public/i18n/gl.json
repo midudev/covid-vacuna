@@ -65,5 +65,10 @@
       "sobreDistribuidas": "% sobre distribuído",
       "personasConPautaCompleta": "Persoas con directrices completas",
       "sobreAdministradas": "% sobre xestionado"
+    },
+    "footer": {
+      "desarrolladoPor": "Desenvolvido por",
+      "estadisticas": "Estatísticas",
+      "enviarSugerencia": "Enviar suxestión"
     }
   }

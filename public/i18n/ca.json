@@ -65,5 +65,11 @@
       "sobreDistribuidas": "% sobre distribuïdes",
       "personasConPautaCompleta": "Persones amb pauta completa",
       "sobreAdministradas": "% sobre administrades"
+    },
+    "footer": {
+      "desarrolladoPor": "Desenvolupat per",
+      "estadisticas": "Estadístiques",
+      "enviarSugerencia": "Enviar suggeriment"
     }
 }
+

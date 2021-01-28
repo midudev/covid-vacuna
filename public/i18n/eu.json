@@ -65,5 +65,10 @@
       "sobreDistribuidas": "% banatutakoaren gainekoa",
       "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
       "sobreAdministradas": "% baino gehiago kudeatzen da"
+    },
+    "footer": {
+      "desarrolladoPor": "Garatu du",
+      "estadisticas": "Estatistikak",
+      "enviarSugerencia": "Bidali iradokizuna"
     }
   }
