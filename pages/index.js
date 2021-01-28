@@ -38,7 +38,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
   const translate = useTranslate()
 
   const totals = useMemo(
-    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === 'Totales') : data.find(({ ccaa }) => ccaa === 'Totales'),
+    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === filter) : data.find(({ ccaa }) => ccaa === filter),
     [data, filter, reportFound]
   )
 
