@@ -53,11 +53,11 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         />
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
-        <link rel='alternate' href='https://covid-vacuna.app/' hreflang='x-default' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-CA' hreflang='ca-es' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-GA' hreflang='gl-es' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-EU' hreflang='eu-es' />
-        <link rel='alternate' href='https://covid-vacuna.app/es-ES' hreflang='es-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/' hrefLang='x-default' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-CA' hrefLang='ca-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-GA' hrefLang='gl-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-EU' hrefLang='eu-es' />
+        <link rel='alternate' href='https://covid-vacuna.app/es-ES' hrefLang='es-es' />
 
       </Head>
       <div id='container' className={styles.container}>
