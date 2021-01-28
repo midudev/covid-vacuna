@@ -30,7 +30,7 @@ const points = [{
 }]
 
 export default function Progress ({ totals }) {
-  const locale = useLocale()
+  const { locale } = useLocale()
   const translate = useTranslate()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
 
