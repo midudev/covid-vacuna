@@ -1,4 +1,12 @@
 {
+    "colorSwitcher": {
+      "lightTitleLabel": "Usa o tema claro",
+      "lightAriaLabel": "Un sol invertido semella o malo de Doom",
+      "standardTitleLabel": "Use o tema dependendo da configuración do seu sistema",
+      "standardAriaLabel": "As túas preferencias de sistema interesantes",
+      "darkTitleLabel": "Usa o tema escuro",
+      "darkAriaLabel": "Unha lúa de ollos sospeitosos que parece que está a piques de foderse"
+    },
     "home": {
       "tituloPricipal": "Vacinación COVID-19 en",
       "datosActualizados": "Datos actualizados",
