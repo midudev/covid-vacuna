@@ -1,4 +1,5 @@
 import { useLocale } from 'hooks/useLocale.js'
+import { useTranslate } from 'hooks/useTranslate'
 
 const START_DATA_VACCINATION = '01/04/2021'
 const MILISECONDS_DAY = 1000 * 60 * 60 * 24
@@ -30,13 +31,14 @@ const points = [{
 
 export default function Progress ({ totals }) {
   const locale = useLocale()
+  const translate = useTranslate()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
 
   const getDays = days => getDaysToAchievePercentage(days, totals.porcentajePoblacionCompletas)
 
   return (
     <>
-      <h2>Estimación población vacunada</h2>
+      <h2>{translate.progress.estimacionPoblacionVacunada}</h2>
       <section>
         {
           points.map(({ color, percentage }) => (
