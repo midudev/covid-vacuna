@@ -1,6 +1,6 @@
 import styles from 'styles/Select.module.css'
 
-export default function Select ({ data, onChange }) {
+export default function Select({ data, onChange }) {
   const normalizedDate = (date) => {
     let dateFormat = ''
     for (let i = 0; i < date.length; i++) {
@@ -17,20 +17,23 @@ export default function Select ({ data, onChange }) {
   return (
     <>
       <section className={styles.sectionSelect}>
-        <h3>Mostrar reporte a la fecha: </h3>
-        <select className={styles.select} onChange={(e) => onChange(e.target.value)}>
-          <option disabled selected>
-            Seleccionar Fecha
-          </option>
-          {data &&
-            data.map((date) => (
-              <option key={date} value={date}>
-                {normalizedDate(date)}
-              </option>
-            ))}
-        </select>
+        <label htmlFor="date-select">Mostrar reporte de fecha:</label>
+        <div>
+          <select
+            defaultValue={data[data.length - 1]}
+            id="date-select"
+            className={styles.select}
+            onChange={(e) => onChange(e.target.value)}
+          >
+            {data &&
+              data.map((date) => (
+                <option key={date} value={date}>
+                  {normalizedDate(date)}
+                </option>
+              ))}
+          </select>
+        </div>
       </section>
-      <style jsx>{styles}</style>
     </>
   )
 }
