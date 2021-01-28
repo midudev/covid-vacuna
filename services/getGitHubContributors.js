@@ -27,7 +27,5 @@ export default async function getGitHubContributors () {
     .then(res => res.ok ? res.json() : [])
     .catch(() => [])
 
-  console.log(apiResponse)
-
   return mapFromApiResponseToContributors(apiResponse)
 }
