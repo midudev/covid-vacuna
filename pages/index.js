@@ -59,8 +59,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <link rel='alternate' href='https://covid-vacuna.app/es-ES' hreflang='es-es' />
 
       </Head>
-      <div className={styles.container}>
-        <main id='container' className={styles.main}>
+      <div id='container' className={styles.container}>
+        <main className={styles.main}>
           <h1 className={styles.title}>
             {translate.home.tituloPricipal} {filter === 'Totales' ? 'España' : filter}
           </h1>

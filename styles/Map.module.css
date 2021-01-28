@@ -20,15 +20,9 @@
     font-weight: bold;
 }
 
-.tooltip::after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: -2vw;
-    left: 45%;
-    border-top: 1vw solid #000;
-    border-right: 1vw solid transparent;
-    border-left: 1vw solid transparent;
-    border-bottom: 1vw solid transparent;
+.tooltipSubText {
+    content: "- ";
+    font-size: 10px;
+    font-weight: 500;
+    text-align: left;
 }
