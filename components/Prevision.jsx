@@ -1,5 +1,8 @@
+import { useLocale } from 'hooks/useLocale.js'
+
 const START_DATA_VACCINATION = '01/04/2021'
 const MILISECONDS_DAY = 1000 * 60 * 60 * 24
+const dateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 const getDaysFromStartVaccination = () => {
   return (new Date().getTime() - new Date(START_DATA_VACCINATION).getTime()) / MILISECONDS_DAY
@@ -14,16 +17,76 @@ const addDaysToInitialData = (days) => {
   return new Date(initialData)
 }
 
+const points = [{
+  color: '#dd8f01',
+  percentage: 50
+}, {
+  color: '#a3dd01',
+  percentage: 75
+}, {
+  color: '#41ca0d',
+  percentage: 100
+}]
+
 export default function Progress ({ totals }) {
-  const locale = 'es' // get from context later
-  const daysToHalfVaccination = getDaysToAchievePercentage(50, totals.porcentajePoblacionCompletas)
-  const daysToFinalVaccination = getDaysToAchievePercentage(100, totals.porcentajePoblacionCompletas)
+  const locale = useLocale()
+  const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
+
+  const getDays = days => getDaysToAchievePercentage(days, totals.porcentajePoblacionCompletas)
 
   return (
     <>
-      <h3>Fechas estimadas de final de vacunación a la velocidad actual</h3>
-      <>50% población {new Intl.DateTimeFormat(locale).format(addDaysToInitialData(daysToHalfVaccination))}</>
-      <p>Total de la población {new Intl.DateTimeFormat(locale).format(addDaysToInitialData(daysToFinalVaccination))}</p>
+      <h2>Estimación población vacunada</h2>
+      <section>
+        {
+          points.map(({ color, percentage }) => (
+            <div key={percentage}>
+              <span className='number' style={{ '--color': color }}>{percentage}%</span>
+              <time>{intl.format(addDaysToInitialData(getDays(percentage)))}</time>
+            </div>
+          ))
+}
+      </section>
+      <style jsx>{`
+        section {
+          align-items: center;
+          display: flex;
+          display: grid;
+          gap: 32px;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          justify-content: center;
+          justify-items: center;
+          place-content: center;
+          margin-bottom: 4rem;
+          max-width: 1000px;
+          place-content: center;
+          width: 100%;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        div span, div time {
+          background: #fff;
+        }
+
+        div time {
+          color: #333;
+          font-size: .9rem;
+          font-weight: 500;
+        }
+
+        div span {
+          color: var(--color);
+          font-size: 5ch;
+          font-weight: 500;
+          margin-right: 8px;
+          padding-right: 8px;
+        }
+    `}
+      </style>
     </>
   )
 }
