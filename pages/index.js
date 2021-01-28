@@ -10,6 +10,7 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
+import Prevision from 'components/Prevision.jsx'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
 import Share from 'components/Share.jsx'
@@ -37,7 +38,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
   const translate = useTranslate()
 
   const totals = useMemo(
-    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === 'Totales') : data.find(({ ccaa }) => ccaa === 'Totales'),
+    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === filter) : data.find(({ ccaa }) => ccaa === filter),
     [data, filter, reportFound]
   )
 
@@ -184,6 +185,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           </div>
 
           <Progress totals={totals} reportFound={reportFound} />
+          <Prevision totals={totals} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image

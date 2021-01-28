@@ -1,9 +1,19 @@
 {
+    "colorSwitcher": {
+      "lightTitleLabel": "Erabili gai argia",
+      "lightAriaLabel": "Alderantziz jarritako eguzkia Doom-eko gaiztoaren itxura du",
+      "standardTitleLabel": "Erabili gaia zure sistemaren konfigurazioaren arabera",
+      "standardAriaLabel": "Zure sistemaren hobespen bikainak",
+      "darkTitleLabel": "Erabili gai iluna",
+      "darkAriaLabel": "Begi susmagarriak dituen ilargia, izorratuta dagoen zerbait dela dirudi"
+    },
     "home": {
       "tituloPricipal": "COVID-19 txertoa",
       "datosActualizados": "Eguneratutako datuak",
       "fuente": "Iturria:",
       "ministerioDeSanidad": "Osasun Ministerioa",
+      "mostrarReporteFecha": "Erakutsi txostena orain arte",
+      "seleccionarFecha": "Hautatu data",
       "descargarDatosJSON": "Deskargatu azken datuak JSON formatuan",
       "incrustarDatos": "Txertaketa datuak beste web orri batean txertatu nahi ditut",
       "porComunidadesAutonomas": "Autonomia erkidegoen arabera",
@@ -49,7 +59,9 @@
     },
     "progress": {
       "verPoblacionVacunada": "Ikusi txertatutako populazioa",
-      "verPoblacionConPauta": "Ikusi populazioa jarraibide osoekin"
+      "verPoblacionConPauta": "Ikusi populazioa jarraibide osoekin",
+      "estimacionPoblacionVacunada": "Txertatutako biztanleriaren estimazioa",
+      "noDatos": "Ez dugu data horretarako daturik."
     },
     "terminos": {
       "dosisDistribuidas": "Banatutako dosiak",
@@ -57,5 +69,15 @@
       "sobreDistribuidas": "% banatutakoaren gainekoa",
       "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
       "sobreAdministradas": "% baino gehiago kudeatzen da"
+    },
+    "share": {
+      "textParamUrl": "Jarrai ezazu COVID19ren aurkako txertoaren aurrerapena @midudev-ek sortutako webgune honetan!\n\n",
+      "titleAnchor": "Partekatu esteka hau Twitterren",
+      "textoButton": "Parteka ezazu!"
+    },
+    "footer": {
+      "desarrolladoPor": "Garatu du",
+      "estadisticas": "Estatistikak",
+      "enviarSugerencia": "Bidali iradokizuna"
     }
   }

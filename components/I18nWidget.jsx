@@ -42,7 +42,7 @@ const I18nWidget = () => {
           onClick={() => setDisplay(!display)}
         >
           <img src={`flag-${locale}.svg`} alt={`Bandera de ${zone}`} />
-          {name}
+          <span>{name}</span>
         </button>
         {options?.length && display
           ? (
