@@ -12,6 +12,8 @@
       "datosActualizados": "Datos actualizados",
       "fuente": "Fonte:",
       "ministerioDeSanidad": "Ministerio de Sanidade",
+      "mostrarReporteFecha": "Amosar informe ata a data",
+      "seleccionarFecha": "Seleccionar data",
       "descargarDatosJSON": "Descarga os últimos datos en formato JSON",
       "incrustarDatos": "Quero inserir os datos de vacinación noutra páxina web",
       "porComunidadesAutonomas": "Por comunidades autónomas",
@@ -57,7 +59,8 @@
     },
     "progress": {
       "verPoblacionVacunada": "Ver poboación vacinada",
-      "verPoblacionConPauta": "Ver poboación con directrices completas"
+      "verPoblacionConPauta": "Ver poboación con directrices completas",
+      "estimacionPoblacionVacunada": "Estimación da poboación vacinada"
     },
     "terminos": {
       "dosisDistribuidas": "Doses distribuídas",

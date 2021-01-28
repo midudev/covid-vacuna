@@ -12,6 +12,8 @@
       "datosActualizados": "dades actualitzades",
       "fuente": "font:",
       "ministerioDeSanidad": "Ministeri de Sanitat",
+      "mostrarReporteFecha": "Mostrar dades a data",
+      "seleccionarFecha": "Seleccionar data",
       "descargarDatosJSON": "Descarregar últimes dades en format JSON",
       "incrustarDatos": "Vull incrustar les dades de vacunació en una altra pàgina web",
       "porComunidadesAutonomas": "Per comunitats autònomes",
@@ -57,7 +59,8 @@
     },
     "progress": {
       "verPoblacionVacunada": "Veure població vacunada",
-      "verPoblacionConPauta": "Veure població amb pauta completa"
+      "verPoblacionConPauta": "Veure població amb pauta completa",
+      "estimacionPoblacionVacunada": "Estimació població vacunada"
     },
     "terminos": {
       "dosisDistribuidas": "dosi distribuïdes",
@@ -69,7 +72,7 @@
     "share": {
       "textParamUrl": "Segueix el progrés de la vacunació contra el COVID19 en aquesta web creada per @midudev!\n\n",
       "titleAnchor": "Comparteix aquest enllaç a Twitter",
-      "textoButton": "ShareThis!"
+      "textoButton": "Comparteix-lo!"
     },
     "footer": {
       "desarrolladoPor": "Desenvolupat per",
