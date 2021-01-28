@@ -1,10 +1,11 @@
+import { useTranslate } from 'hooks/useTranslate'
 import styles from 'styles/Share.module.css'
 
 export default function Share () {
+  const translate = useTranslate()
   const params = new URLSearchParams({
     url: 'https://covid-vacuna.app',
-    text:
-      '¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n'
+    text: translate.share.textParamUrl
   })
 
   const url = `https://twitter.com/share?${params}`
@@ -24,9 +25,9 @@ export default function Share () {
         target='_blank'
         rel='nofollow noopener noreferrer'
         href={url}
-        title='Comparte este enlace en Twitter'
+        title={translate.share.titleAnchor}
       >
-        ¡Compártelo!
+        <span>{translate.share.textoButton}</span>
         <TwitterLogo />
       </a>
     </div>

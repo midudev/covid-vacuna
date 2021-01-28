@@ -1,4 +1,12 @@
 {
+    "colorSwitcher": {
+      "lightTitleLabel": "Utilitza el tema clar",
+      "lightAriaLabel": "Un sol que invertit sembla el dolent de Doom",
+      "standardTitleLabel": "Utilitza el tema depenent la configuració de sistema",
+      "standardAriaLabel": "Les teves preferències molones del teu sistema",
+      "darkTitleLabel": "Utilitza el tema fosc",
+      "darkAriaLabel": "Una lluna amb ulls sospitosos que sembla que està tramant alguna cosa fotut"
+    },
     "home": {
       "tituloPricipal": "Vacunació COVID-19 en",
       "datosActualizados": "dades actualitzades",
@@ -57,5 +65,16 @@
       "sobreDistribuidas": "% sobre distribuïdes",
       "personasConPautaCompleta": "Persones amb pauta completa",
       "sobreAdministradas": "% sobre administrades"
+    },
+    "share": {
+      "textParamUrl": "Segueix el progrés de la vacunació contra el COVID19 en aquesta web creada per @midudev!\n\n",
+      "titleAnchor": "Comparteix aquest enllaç a Twitter",
+      "textoButton": "ShareThis!"
+    },
+    "footer": {
+      "desarrolladoPor": "Desenvolupat per",
+      "estadisticas": "Estadístiques",
+      "enviarSugerencia": "Enviar suggeriment"
     }
-  }
+}
+

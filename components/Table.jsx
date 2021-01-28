@@ -8,8 +8,8 @@ import styles from 'styles/Table.module.css'
 import { useLocale } from 'hooks/useLocale.js'
 import { useTranslate } from 'hooks/useTranslate'
 
-export default function Table ({ data, filter, setFilter }) {
-  const { locale } = useLocale()
+export default function Table ({ data, filter, setFilter, reportFound }) {
+  const { locale } = useLocale
   const translate = useTranslate()
 
   const handleRowClick = useCallback(
@@ -24,21 +24,41 @@ export default function Table ({ data, filter, setFilter }) {
   const formatPercentage = number => toPercentage({ locale, number })
 
   const tableData = useMemo(
-    () => data.map(row => {
-      const {
-        porcentajeEntregadas,
-        porcentajePoblacionAdministradas,
-        porcentajePoblacionCompletas,
-        ...rest
-      } = row
+    () => reportFound !== undefined
+      ? reportFound.map(row => {
+          const {
+            dosisPautaCompletada,
+            porcentajeEntregadas,
+            porcentajePoblacionAdministradas,
+            porcentajePoblacionCompletas,
+            ...rest
+          } = row
 
-      return {
-        porcentajeEntregadas: porcentajeEntregadas.toFixed(4),
-        porcentajePoblacionAdministradas: porcentajePoblacionAdministradas.toFixed(4),
-        porcentajePoblacionCompletas: porcentajePoblacionCompletas.toFixed(4),
-        ...rest
-      }
-    }), []
+          return {
+            dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
+            porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
+            porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
+            porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
+            ...rest
+          }
+        })
+      : data.map(row => {
+        const {
+          dosisPautaCompletada,
+          porcentajeEntregadas,
+          porcentajePoblacionAdministradas,
+          porcentajePoblacionCompletas,
+          ...rest
+        } = row
+
+        return {
+          dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
+          porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
+          porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
+          porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
+          ...rest
+        }
+      }), [reportFound]
   )
 
   const columns = useMemo(
@@ -79,7 +99,7 @@ export default function Table ({ data, filter, setFilter }) {
         format: formatPercentage
       }
     ],
-    []
+    [translate]
   )
 
   let {

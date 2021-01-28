@@ -65,3 +65,17 @@
 .i18nWidget a:hover {
   background-color: rgb(210, 237, 255);
 }
+
+
+@media (max-width: 600px) {
+
+  .i18nWidget button{
+    width: fit-content;
+  }
+  .i18nWidget span {
+    display: none;
+  }
+  .i18nWidget img{
+    margin: 0;
+  }
+}

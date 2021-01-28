@@ -1,4 +1,12 @@
 {
+    "colorSwitcher": {
+      "lightTitleLabel": "Erabili gai argia",
+      "lightAriaLabel": "Alderantziz jarritako eguzkia Doom-eko gaiztoaren itxura du",
+      "standardTitleLabel": "Erabili gaia zure sistemaren konfigurazioaren arabera",
+      "standardAriaLabel": "Zure sistemaren hobespen bikainak",
+      "darkTitleLabel": "Erabili gai iluna",
+      "darkAriaLabel": "Begi susmagarriak dituen ilargia, izorratuta dagoen zerbait dela dirudi"
+    },
     "home": {
       "tituloPricipal": "COVID-19 txertoa",
       "datosActualizados": "Eguneratutako datuak",
@@ -57,5 +65,15 @@
       "sobreDistribuidas": "% banatutakoaren gainekoa",
       "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
       "sobreAdministradas": "% baino gehiago kudeatzen da"
+    },
+    "share": {
+      "textParamUrl": "Jarrai ezazu COVID19ren aurkako txertoaren aurrerapena @midudev-ek sortutako webgune honetan!\n\n",
+      "titleAnchor": "Partekatu esteka hau Twitterren",
+      "textoButton": "Parteka ezazu!"
+    },
+    "footer": {
+      "desarrolladoPor": "Garatu du",
+      "estadisticas": "Estatistikak",
+      "enviarSugerencia": "Bidali iradokizuna"
     }
   }

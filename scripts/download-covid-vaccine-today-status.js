@@ -3,6 +3,7 @@
 const download = require('download')
 const fs = require('fs-extra')
 const transformOdsToJson = require('./transform-ods-to-json')
+const getNameReports = require('./get-everything-name-reports')
 
 const PREFIX_URL = 'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_'
 const SUFFIX_URL = '.ods'
@@ -23,6 +24,7 @@ download(url, 'public/data', { filename })
     const jsonFileName = filename.replace('.ods', '.json')
 
     await fs.writeJson(`./public/data/${jsonFileName}`, json)
+    await getNameReports()
     await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
     await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
   })
