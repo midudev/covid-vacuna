@@ -1,6 +1,8 @@
+import { useTranslate } from 'hooks/useTranslate'
 import styles from 'styles/Footer.module.css'
 
 export default function Footer () {
+  const translate = useTranslate()
   return (
     <footer className={styles.footer}>
       <div>
@@ -9,7 +11,7 @@ export default function Footer () {
           target='_blank'
           rel='noreferrer'
         >
-          Desarrollado por{' '}
+          {translate.footer.desarrolladoPor}{' '}
           <img width='92' height='24' loading='lazy' src='https://midu.dev/logo.png' alt='midudev' />
         </a>
         <span>&bull;</span>
@@ -19,9 +21,9 @@ export default function Footer () {
         <span>&bull;</span>
         <a href='https://midu.live' rel='nofollow noreferrer' target='_blank'>Twitch</a>
         <span>&bull;</span>
-        <a href='https://app.usefathom.com/share/myexkunw/covid-vacuna.vercel.app' rel='nofollow noreferrer' target='_blank'>Estadísticas</a>
+        <a href='https://app.usefathom.com/share/myexkunw/covid-vacuna.vercel.app' rel='nofollow noreferrer' target='_blank'>{translate.footer.estadisticas}</a>
         <span>&bull;</span>
-        <a href='https://github.com/midudev/covid-vacuna/issues/new' rel='nofollow noreferrer' target='_blank'>Enviar sugerencia</a>
+        <a href='https://github.com/midudev/covid-vacuna/issues/new' rel='nofollow noreferrer' target='_blank'>{translate.footer.enviarSugerencia}</a>
       </div>
     </footer>
   )

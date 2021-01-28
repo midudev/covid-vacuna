@@ -36,6 +36,7 @@ html[scheme='light-mode'] #container {
 }
 
 html[scheme='light-mode'] #container img,
+html[scheme='light-mode'] #container .mapa,
 html[scheme='light-mode'] #container span[role='img'] {
   filter: invert(0) hue-rotate(0deg);
 }
@@ -50,6 +51,7 @@ html[scheme='dark-mode'] #container {
 }
 
 html[scheme='dark-mode'] #container img,
+html[scheme='dark-mode'] #container .mapa,
 html[scheme='dark-mode'] #container span[role='img'] {
   filter: invert(1) hue-rotate(180deg);
 }

@@ -1,9 +1,20 @@
 {
+    "colorSwitcher": {
+        "lightTitleLabel": "Usa el tema claro",
+        "lightAriaLabel": "Un sol que invertido parece el malo de Doom",
+        "standardTitleLabel": "Usa el tema dependiendo tu configuración de sistema",
+        "standardAriaLabel": "Tus preferencias molonas de tu sistema",
+        "darkTitleLabel": "Usa el tema oscuro",
+        "darkAriaLabel": "Una luna con ojos sospechosos que parece que está tramando algo jodido"
+
+    },
     "home": {
         "tituloPricipal": "Vacunación COVID-19 en",
         "datosActualizados": "Datos actualizados",
         "fuente": "Fuente:",
         "ministerioDeSanidad": "Ministerio de Sanidad",
+        "mostrarReporteFecha": "Mostrar reporte a la fecha",
+        "seleccionarFecha": "Seleccionar fecha",
         "descargarDatosJSON": "Descargar últimos datos en formato JSON",
         "incrustarDatos": "Quiero incrustar los datos de vacunación en otra página web",
         "porComunidadesAutonomas": "Por comunidades autónomas",
@@ -49,7 +60,9 @@
     },
     "progress": {
         "verPoblacionVacunada": "Ver población vacunada",
-        "verPoblacionConPauta": "Ver población con pauta completa"
+        "verPoblacionConPauta": "Ver población con pauta completa",
+        "estimacionPoblacionVacunada": "Estimación población vacunada",
+        "noDatos": "No disponemos de datos para esa fecha."
     },
     "terminos": {
         "dosisDistribuidas": "Dosis distribuidas",
@@ -57,5 +70,15 @@
         "sobreDistribuidas": "% sobre distribuidas",
         "personasConPautaCompleta": "Personas con pauta completa",
         "sobreAdministradas": "% sobre administradas"
+    },
+    "share": {
+        "textParamUrl": "¡Sigue el progreso de la vacunación contra el COVID19 en esta web creada por @midudev!\n\n",
+        "titleAnchor": "Comparte este enlace en Twitter",
+        "textoButton": "¡Compártelo!"
+    },
+    "footer": {
+        "desarrolladoPor": "Desarrollado por",
+        "estadisticas": "Estadísticas",
+        "enviarSugerencia": "Enviar sugerencia"
     }
 }
