@@ -12,6 +12,7 @@
     "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "dependencies": {
+    "d3-geo": "2.0.1",
     "download": "8.0.0",
     "fathom-client": "3.0.0",
     "fs-extra": "9.1.0",
@@ -23,7 +24,9 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-table": "7.6.3",
+    "react-tooltip": "4.2.13",
     "recharts": "2.0.3",
+    "topojson-client": "3.1.0",
     "xlsx": "0.16.9"
   },
   "devDependencies": {

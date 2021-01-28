@@ -30,6 +30,7 @@ import {
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
+import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
@@ -211,6 +212,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         </main>
 
         <h2 className={styles.subtitle}>{translate.home.porComunidadesAutonomas}</h2>
+
+        <SpainMap data={data} reportFound={reportFound} />
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 
