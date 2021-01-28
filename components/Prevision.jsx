@@ -39,16 +39,24 @@ export default function Progress ({ totals }) {
   return (
     <>
       <h2>{translate.progress.estimacionPoblacionVacunada}</h2>
-      <section>
-        {
+      {totals.porcentajePoblacionCompletas
+        ? (
+          <section>
+            {
           points.map(({ color, percentage }) => (
             <div key={percentage}>
               <span className='number' style={{ '--color': color }}>{percentage}%</span>
               <time>{intl.format(addDaysToInitialData(getDays(percentage)))}</time>
             </div>
           ))
-}
-      </section>
+        }
+          </section>)
+        : (
+          <p>
+            <b>{translate.progress.noDatos}</b>
+          </p>
+          )}
+
       <style jsx>{`
         section {
           align-items: center;

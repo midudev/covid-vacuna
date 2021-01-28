@@ -60,7 +60,8 @@
     "progress": {
       "verPoblacionVacunada": "Ikusi txertatutako populazioa",
       "verPoblacionConPauta": "Ikusi populazioa jarraibide osoekin",
-      "estimacionPoblacionVacunada": "Txertatutako biztanleriaren estimazioa"
+      "estimacionPoblacionVacunada": "Txertatutako biztanleriaren estimazioa",
+      "noDatos": "Ez dugu data horretarako daturik."
     },
     "terminos": {
       "dosisDistribuidas": "Banatutako dosiak",

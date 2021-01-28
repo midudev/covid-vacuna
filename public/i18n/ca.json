@@ -60,7 +60,8 @@
     "progress": {
       "verPoblacionVacunada": "Veure població vacunada",
       "verPoblacionConPauta": "Veure població amb pauta completa",
-      "estimacionPoblacionVacunada": "Estimació població vacunada"
+      "estimacionPoblacionVacunada": "Estimació població vacunada",
+      "noDatos": "No disposem de dades per a aquesta data."
     },
     "terminos": {
       "dosisDistribuidas": "dosi distribuïdes",

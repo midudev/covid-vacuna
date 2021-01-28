@@ -61,7 +61,8 @@
     "progress": {
         "verPoblacionVacunada": "Ver población vacunada",
         "verPoblacionConPauta": "Ver población con pauta completa",
-        "estimacionPoblacionVacunada": "Estimación población vacunada"
+        "estimacionPoblacionVacunada": "Estimación población vacunada",
+        "noDatos": "No disponemos de datos para esa fecha."
     },
     "terminos": {
         "dosisDistribuidas": "Dosis distribuidas",
