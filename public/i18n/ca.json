@@ -66,6 +66,11 @@
       "personasConPautaCompleta": "Persones amb pauta completa",
       "sobreAdministradas": "% sobre administrades"
     },
+    "share": {
+      "textParamUrl": "Segueix el progrés de la vacunació contra el COVID19 en aquesta web creada per @midudev!\n\n",
+      "titleAnchor": "Comparteix aquest enllaç a Twitter",
+      "textoButton": "ShareThis!"
+    },
     "footer": {
       "desarrolladoPor": "Desenvolupat per",
       "estadisticas": "Estadístiques",
