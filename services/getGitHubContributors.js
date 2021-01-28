@@ -1,6 +1,10 @@
 /* global fetch */
 
+const { GITHUB_TOKEN } = process.env
 const GITHUB_API_ENDPOINT = 'https://api.github.com/repos/midudev/covid-vacuna/contributors'
+const headers = {
+  Authorization: `token ${GITHUB_TOKEN}`
+}
 
 const MAPPED_USERS = {
   btisjelo: {
@@ -10,7 +14,7 @@ const MAPPED_USERS = {
   }
 }
 
-function mapFromApiResponseToContributors(apiResponse) {
+function mapFromApiResponseToContributors (apiResponse) {
   return apiResponse.map(
     ({ login, avatar_url: avatar, html_url: url }) => {
       return MAPPED_USERS[login] || ({ login, avatar, url })
@@ -18,10 +22,12 @@ function mapFromApiResponseToContributors(apiResponse) {
   )
 }
 
-export default async function getGitHubContributors() {
-  const apiResponse = await fetch(GITHUB_API_ENDPOINT)
-    .then(res => res.ok() ? res.json() : [])
+export default async function getGitHubContributors () {
+  const apiResponse = await fetch(GITHUB_API_ENDPOINT, { headers })
+    .then(res => res.ok ? res.json() : [])
     .catch(() => [])
+
+  console.log(apiResponse)
 
   return mapFromApiResponseToContributors(apiResponse)
 }
