@@ -1,7 +1,7 @@
 import styles from 'styles/Select.module.css'
 import { useTranslate } from 'hooks/useTranslate'
 
-export default function Select({ data, onChange }) {
+export default function Select ({ data, onChange }) {
   const translate = useTranslate()
   const normalizedDate = (date) => {
     let dateFormat = ''
@@ -19,11 +19,11 @@ export default function Select({ data, onChange }) {
   return (
     <>
       <section className={styles.sectionSelect}>
-        <label htmlFor="date-select">{translate.home.mostrarReporteFecha}</label>
+        <label htmlFor='date-select'>{translate.home.mostrarReporteFecha}</label>
         <div>
           <select
             defaultValue={data[data.length - 1]}
-            id="date-select"
+            id='date-select'
             className={styles.select}
             onChange={(e) => onChange(e.target.value)}
           >
