@@ -44,8 +44,8 @@ export default function Progress ({ totals }) {
           <section>
             {
           points.map(({ color, percentage }) => (
-            <div key={percentage}>
-              <span className='number' style={{ '--color': color }}>{percentage}%</span>
+            <div className='card' key={percentage}>
+              <span style={{ '--color': color }}>{percentage}%</span>
               <time>{intl.format(addDaysToInitialData(getDays(percentage)))}</time>
             </div>
           ))
@@ -86,14 +86,24 @@ export default function Progress ({ totals }) {
           color: #333;
           font-size: .9rem;
           font-weight: 500;
+          margin-top: .7rem;
         }
 
         div span {
           color: var(--color);
           font-size: 5ch;
           font-weight: 500;
-          margin-right: 8px;
-          padding-right: 8px;
+        }
+        
+        .card {
+          background: #ffffff;
+          border-radius: 8px;
+          border: 2px solid #111;
+          margin: 1rem 0 0;
+          padding: 1rem 1.5rem 1.5rem;
+          text-align: center;
+          box-shadow: rgb(210,239,253) 14px 14px;
+          }
         }
     `}
       </style>
