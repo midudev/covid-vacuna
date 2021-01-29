@@ -1,31 +1,47 @@
 .sectionSelect {
   align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionSelect div {
+  background: #fff;
+  border-radius: 5000px;
+  border: 1px solid #000;
+  box-shadow: #92d5ff 1px 4px;
+  margin-left: 8px;
+  position: relative;
+}
+
+.sectionSelect div::after {
+  content: '▾';
+  font-size: 1.3rem;
+  margin: auto;
+  position: absolute;
+  right: 8px;
+  top: -2px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sectionSelect select {
+  appearance: none;
+  background: transparent;
+  border: transparent;
+  font-size: 0.8rem;
+  padding: 4px 24px 4px 16px;
+  outline: none;
+}
+
+.sectionSelect select:hover {
+  border-color: #ccc;
+}
+
+@media (max-width: 530px) {
+  .sectionSelect {
+    align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
-
-  .select {
-    background-color: #eee;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    margin-top: 4px;
-    margin-left: 8px;
-    height: 32px;
-    outline: none;
-    padding: 4px;
-    text-align-last: center;
-    width: 200px;
-  }
-
-  .select:hover {
-    border-color: #ccc;
-  }
-
-  @media (max-width: 530px) {
-    .sectionSelect {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
+}
