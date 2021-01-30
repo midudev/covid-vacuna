@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
 import { feature } from 'topojson-client'
-import { geoEqualEarth, geoPath } from 'd3-geo'
+import { geoPath } from 'd3-geo'
+import { geoConicConformalSpain } from 'd3-composite-projections'
 import ReactTooltip from 'react-tooltip'
 import useHasMounted from 'hooks/useHasMounted'
 
 import NumberPercentage from './NumberPercentage'
 import styles from 'styles/Map.module.css'
-import spainMapa from 'public/maps/spain.json'
+import spainMap from 'public/maps/spain.json'
+import canaryIslandsMap from 'public/maps/canaryIslands.json'
 import NumberDigits from './NumberDigits'
 
-const projection = geoEqualEarth().scale(2500).translate([500, 2100])
+const projection = geoConicConformalSpain()
 
 const SpainMap = ({ data, reportFound }) => {
   const [geoFile, setGeoFile] = useState([])
@@ -17,7 +19,9 @@ const SpainMap = ({ data, reportFound }) => {
   const hasMounted = useHasMounted()
 
   useEffect(() => {
-    const object = feature(spainMapa, spainMapa.objects.ESP_adm1).features
+    const spainFeatures = feature(spainMap, spainMap.objects.ESP_adm1).features
+    const canaryIslandsFeatures = feature(canaryIslandsMap, canaryIslandsMap.objects.ESP_adm2).features
+    const object = [...spainFeatures, ...canaryIslandsFeatures]
     const values = reportFound !== undefined ? reportFound : data
     object.forEach((element) => {
       values.map((el) => {
@@ -101,7 +105,7 @@ const SpainMap = ({ data, reportFound }) => {
   return (
     <>
       <div className={`mapa ${styles.container}`} data-tip=''>
-        <svg className={styles.mapa} viewBox='0 0 800 450'>
+        <svg className={styles.mapa} viewBox='100 0 800 520'>
           <g className='ESP_adm1'>
             {geoFile.map((d, i) => (
               <path
@@ -115,6 +119,15 @@ const SpainMap = ({ data, reportFound }) => {
                 strokeWidth={0.5}
               />
             ))}
+            <path
+              className={`${styles.enabled}`}
+              // d={`M 120,375 L 370,375 L 400,400 L 400, 510 L 120,510 Z`} // closed box
+              d={`M 120,375 L 370,375 L 400,400 L 400, 510`} // open box
+              key={`path-canary-islands-box`}
+              fillOpacity={0.0}
+              stroke='#BBBBBB'
+              strokeWidth={1.0}
+            />
           </g>
         </svg>
         {hasMounted && <ReactTooltip>{content}</ReactTooltip>}
