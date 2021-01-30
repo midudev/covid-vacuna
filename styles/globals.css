@@ -24,6 +24,11 @@
   #container img, #container .mapa, #container span[role='img'] {
     filter: invert(1) hue-rotate(180deg);
   }
+
+  #container img, #container #pre-embed {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
 }
 
 html[scheme='light-mode'] body {
