@@ -13,7 +13,7 @@ const projection = geoEqualEarth().scale(2500).translate([500, 2100])
 
 const SpainMap = ({ data, reportFound }) => {
   const [geoFile, setGeoFile] = useState([])
-  const [content, setContent] = useState([])
+  const [content, setContent] = useState('')
   const hasMounted = useHasMounted()
 
   useEffect(() => {
@@ -45,6 +45,18 @@ const SpainMap = ({ data, reportFound }) => {
                 : '#00B8D9'
       return resultado
     }
+  }
+
+  const updatePosition = ({ left, top }, node) => {
+    const html = document.querySelector('html')
+    if (html.getAttribute('scheme')) {
+      const d = document.documentElement
+      left = Math.min(d.clientWidth - node.clientWidth, left)
+      top = Math.min(d.clientHeight - node.clientHeight, top)
+      left = Math.max(0, left * 0.5)
+      top = Math.max(0, top * 0.25)
+    }
+    return { top, left }
   }
 
   const tooltipText = ({
@@ -100,7 +112,7 @@ const SpainMap = ({ data, reportFound }) => {
 
   return (
     <>
-      <div className={`mapa ${styles.container}`} data-tip=''>
+      <div className={`mapa ${styles.container}`} data-tip='' data-for='toolitpMap'>
         <svg className={styles.mapa} viewBox='0 0 800 450'>
           <g className='ESP_adm1'>
             {geoFile.map((d, i) => (
@@ -117,7 +129,7 @@ const SpainMap = ({ data, reportFound }) => {
             ))}
           </g>
         </svg>
-        {hasMounted && <ReactTooltip>{content}</ReactTooltip>}
+        {hasMounted && <ReactTooltip id='toolitpMap' overridePosition={({ left, top }, _currentEvent, _currentTarget, node) => updatePosition({ left, top }, node)}>{content}</ReactTooltip>}
       </div>
     </>
   )
