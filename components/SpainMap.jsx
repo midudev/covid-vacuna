@@ -102,6 +102,20 @@ const SpainMap = ({ data, reportFound }) => {
     )
   }
 
+  const CanaryIslandsContainer = ({ closed }) => {
+    const openContainerSVGPath = 'M 120,375 L 370,375 L 400,400 L 400, 510'
+    const closedContainerSVGPath = 'M 120,375 L 370,375 L 400,400 L 400, 510 L 120,510 Z'
+    const containerSVGPath = closed ? closedContainerSVGPath : openContainerSVGPath
+    return (<path
+      className={`${styles.enabled}`}
+      d={containerSVGPath}
+      key={`path-canary-islands-box`}
+      fillOpacity={0.0}
+      stroke='#BBBBBB'
+      strokeWidth={1.0}
+    />)
+  }
+
   return (
     <>
       <div className={`mapa ${styles.container}`} data-tip=''>
@@ -119,15 +133,7 @@ const SpainMap = ({ data, reportFound }) => {
                 strokeWidth={0.5}
               />
             ))}
-            <path
-              className={`${styles.enabled}`}
-              // d={`M 120,375 L 370,375 L 400,400 L 400, 510 L 120,510 Z`} // closed box
-              d={`M 120,375 L 370,375 L 400,400 L 400, 510`} // open box
-              key={`path-canary-islands-box`}
-              fillOpacity={0.0}
-              stroke='#BBBBBB'
-              strokeWidth={1.0}
-            />
+            <CanaryIslandsContainer closed={false}></CanaryIslandsContainer>
           </g>
         </svg>
         {hasMounted && <ReactTooltip>{content}</ReactTooltip>}
