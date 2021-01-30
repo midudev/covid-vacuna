@@ -79,5 +79,10 @@
       "desarrolladoPor": "Desenvolvido por",
       "estadisticas": "Estatísticas",
       "enviarSugerencia": "Enviar suxestión"
+    },
+    "mapa": {
+        "sobreEntregadas": "sobre o total entregado",
+        "poblacionVacunada": "poboación vacinada",
+        "poblacionTotalmenteVacunada": "poboación totalmente vacinada"
     }
   }
