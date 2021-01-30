@@ -31,6 +31,7 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
+import ScrollToTop from 'react-scroll-up'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
@@ -290,6 +291,13 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <h2>Sobre las vacunas distribuidas</h2>
         <p>Las vacunas distribuidas...</p>
       </dialog>
+
+      <ScrollToTop showUnder={160}>
+        <img
+          src='/arrow-to-top.png'
+          alt='Flecha hacia arriba'
+        />
+      </ScrollToTop>
 
       <ClientSideComponent>
         <SchemeColorSwitcher />
