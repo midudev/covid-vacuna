@@ -79,5 +79,10 @@
       "desarrolladoPor": "Garatu du",
       "estadisticas": "Estatistikak",
       "enviarSugerencia": "Bidali iradokizuna"
+    },
+    "mapa": {
+        "sobreEntregadas": "entregatutako guztiaren gainean",
+        "poblacionVacunada": "txertatutako populazioa",
+        "poblacionTotalmenteVacunada": "guztiz txertatutako populazioa"
     }
   }

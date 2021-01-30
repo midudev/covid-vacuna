@@ -79,6 +79,11 @@
       "desarrolladoPor": "Desenvolupat per",
       "estadisticas": "Estadístiques",
       "enviarSugerencia": "Enviar suggeriment"
+    },
+    "mapa": {
+        "sobreEntregadas": "sobre el total d'entregades",
+        "poblacionVacunada": "població vacunada",
+        "poblacionTotalmenteVacunada": "població totalment vacunada"
     }
 }
 
