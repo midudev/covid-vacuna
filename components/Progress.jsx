@@ -39,8 +39,8 @@ export default function Progress ({ totals }) {
           </label>
         </div>
 
-        <section data-value={toPercentage({ locale, number: value })}>
-          <progress max='100' value={value * 100} />
+        <section>
+          <progress max='100' value={value * 100} data-value={toPercentage({ locale, number: value })} />
         </section>
       </form>
     </>
