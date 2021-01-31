@@ -58,8 +58,8 @@
       }
     },
     "progress": {
-      "verPoblacionVacunada": "Ver poboación vacinada",
-      "verPoblacionConPauta": "Ver poboación con directrices completas",
+      "verPoblacionVacunada": "Poboación vacinada",
+      "verPoblacionConPauta": "Poboación con directrices completas",
       "estimacionPoblacionVacunada": "Estimación da poboación vacinada",
       "noDatos": "Non dispoñemos de datos para esa data."
     },
@@ -79,5 +79,10 @@
       "desarrolladoPor": "Desenvolvido por",
       "estadisticas": "Estatísticas",
       "enviarSugerencia": "Enviar suxestión"
+    },
+    "mapa": {
+        "sobreEntregadas": "sobre o total entregado",
+        "poblacionVacunada": "poboación vacinada",
+        "poblacionTotalmenteVacunada": "poboación totalmente vacinada"
     }
   }
