@@ -58,8 +58,8 @@
       }
     },
     "progress": {
-      "verPoblacionVacunada": "Ikusi txertatutako populazioa",
-      "verPoblacionConPauta": "Ikusi populazioa jarraibide osoekin",
+      "verPoblacionVacunada": "Txertatutako populazioa",
+      "verPoblacionConPauta": "Populazioa jarraibide osoekin",
       "estimacionPoblacionVacunada": "Txertatutako biztanleriaren estimazioa",
       "noDatos": "Ez dugu data horretarako daturik."
     },
