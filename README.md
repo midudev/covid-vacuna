@@ -18,8 +18,9 @@ npm run dev # levantar el entorno de desarrollo
 
 ## Forks para otros países
 
-- 🇬🇧 UK: https://covid-vaccine.app/
-- 🇨🇺 Cuba: https://covid-resume-cuba.kenriortega.vercel.app/
+- 🇬🇧 UK: https://covid-vaccine.app
+- 🇨🇺 Cuba: https://covid-resume-cuba.kenriortega.vercel.app
+- 🇦🇷 Argentina: https://covid-vacuna-ar.vercel.app
 
 ## ¿Aceptas Pull Request?
 
@@ -35,13 +36,11 @@ En definitiva:
 - **Sigue el estilo** y pásale el linter antes de hacer la PR.
 - No reinventes la rueda. No hace falta que añadas un nuevo framework, dependencia o cosa trending. **La idea es que la app sea funcional y tenga lo mínimo necesario.**
 
-## Próximo contenido
+## Próximas características
 
-- [ ] 🔹 Seleccionar días para ver el progreso
+- [x] 🔹 Seleccionar días para ver el progreso
 - [x] 🔹 Modo oscuro
-- [ ] 🔹 Gráfica con el progreso
-- [ ] 🔹 PWA
-- [ ] 🔹 Traducción a las lenguas oficiales del Estado
-- [ ] 🔹 Mapa con info encima
-
-y más cosas. :)
+- [x] 🔹 Gráfica con el progreso
+- [x] 🔹 PWA
+- [x] 🔹 Traducción a las lenguas oficiales del Estado
+- [x] 🔹 Mapa con info encima
