@@ -4,6 +4,7 @@ import { geoPath } from 'd3-geo'
 import { geoConicConformalSpain } from 'd3-composite-projections'
 import ReactTooltip from 'react-tooltip'
 import useHasMounted from 'hooks/useHasMounted'
+import { useTranslate } from 'hooks/useTranslate'
 
 import NumberPercentage from './NumberPercentage'
 import styles from 'styles/Map.module.css'
@@ -15,7 +16,8 @@ const projection = geoConicConformalSpain()
 
 const SpainMap = ({ data, reportFound }) => {
   const [geoFile, setGeoFile] = useState([])
-  const [content, setContent] = useState([])
+  const [content, setContent] = useState('')
+  const translate = useTranslate()
   const hasMounted = useHasMounted()
 
   useEffect(() => {
@@ -51,6 +53,18 @@ const SpainMap = ({ data, reportFound }) => {
     }
   }
 
+  const updatePosition = ({ left, top }, node) => {
+    const html = document.querySelector('html')
+    if (html.getAttribute('scheme')) {
+      const d = document.documentElement
+      left = Math.min(d.clientWidth - node.clientWidth, left)
+      top = Math.min(d.clientHeight - node.clientHeight, top)
+      left = Math.max(0, left * 0.5)
+      top = Math.max(0, top * 0.25)
+    }
+    return { top, left }
+  }
+
   const tooltipText = ({
     ccaa,
     dosisAdministradas,
@@ -66,37 +80,26 @@ const SpainMap = ({ data, reportFound }) => {
       <div className={styles.tooltip}>
         <p>{ccaa}</p>
         <p className={styles.tooltipSubText}>
-          <NumberDigits>{dosisEntregadas}</NumberDigits> dosis Entregadas
+          <NumberDigits>{dosisEntregadas}</NumberDigits> {translate.home.dosisEntregadas}
         </p>
         <p className={styles.tooltipSubText}>
-          <NumberDigits>{dosisAdministradas}</NumberDigits> personas con primera
-          dosis inyectada
+          <NumberDigits>{dosisAdministradas}</NumberDigits> {translate.home.dosisAdministradas}
         </p>
         <p className={styles.tooltipSubText}>
-          <NumberDigits>{dosisEntregadasPfizer}</NumberDigits> dosis Entregadas
-          de Pfizer
+          <NumberDigits>{dosisPautaCompletada}</NumberDigits> {translate.home.pautaCompleta}
         </p>
         <p className={styles.tooltipSubText}>
-          <NumberDigits>{dosisEntregadasModerna}</NumberDigits> dosis Entregadas
-          de Moderna
-        </p>
-        <p className={styles.tooltipSubText}>
-          <NumberDigits>{dosisPautaCompletada}</NumberDigits> personas con
-          segunda dosis inyectada
-        </p>
-        <p className={styles.tooltipSubText}>
-          <NumberPercentage>{porcentajeEntregadas}</NumberPercentage> sobre el
-          total de entregadas
+          <NumberPercentage>{porcentajeEntregadas}</NumberPercentage> {translate.mapa.sobreEntregadas}
         </p>
         <p className={styles.tooltipSubText}>
           <NumberPercentage>
             {porcentajePoblacionAdministradas}
           </NumberPercentage>{' '}
-          población vacunada
+          {translate.mapa.poblacionVacunada}
         </p>
         <p className={styles.tooltipSubText}>
           <NumberPercentage>{porcentajePoblacionCompletas}</NumberPercentage>{' '}
-          población totalmente vacunada
+          {translate.mapa.poblacionTotalmenteVacunada}
         </p>
       </div>
     )
@@ -118,7 +121,7 @@ const SpainMap = ({ data, reportFound }) => {
 
   return (
     <>
-      <div className={`mapa ${styles.container}`} data-tip=''>
+      <div className={`mapa ${styles.container}`} data-tip='' data-for='toolitpMap'>
         <svg className={styles.mapa} viewBox='100 0 800 520'>
           <g className='ESP_adm1'>
             {geoFile.map((d, i) => (
@@ -136,7 +139,7 @@ const SpainMap = ({ data, reportFound }) => {
             <CanaryIslandsContainer closed={false}></CanaryIslandsContainer>
           </g>
         </svg>
-        {hasMounted && <ReactTooltip>{content}</ReactTooltip>}
+        {hasMounted && <ReactTooltip id='toolitpMap' overridePosition={({ left, top }, _currentEvent, _currentTarget, node) => updatePosition({ left, top }, node)}>{content}</ReactTooltip>}
       </div>
     </>
   )

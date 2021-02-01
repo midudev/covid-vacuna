@@ -9,20 +9,20 @@
 }
 
 .tooltip {
-    border: 1px solid #000;
-    border-radius: 1vw;
-    background-color: white;
-    padding: 0.6vw;
-    position: relative;
-    display: inline-block;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .tooltipSubText {
-    content: "- ";
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     text-align: left;
+}
+
+.__react_component_tooltip.place-bottom::after,
+.__react_component_tooltip.place-top::after,
+.__react_component_tooltip.place-left::after,
+.__react_component_tooltip.place-right::after {
+    border: 1px solid transparent;
 }
