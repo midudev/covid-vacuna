@@ -109,14 +109,16 @@ const SpainMap = ({ data, reportFound }) => {
     const openContainerSVGPath = 'M 120,375 L 370,375 L 400,400 L 400, 510'
     const closedContainerSVGPath = 'M 120,375 L 370,375 L 400,400 L 400, 510 L 120,510 Z'
     const containerSVGPath = closed ? closedContainerSVGPath : openContainerSVGPath
-    return (<path
-      className={`${styles.enabled}`}
-      d={containerSVGPath}
-      key={`path-canary-islands-box`}
-      fillOpacity={0.0}
-      stroke='#BBBBBB'
-      strokeWidth={1.0}
-    />)
+    return (
+      <path
+        className={`${styles.enabled}`}
+        d={containerSVGPath}
+        key='path-canary-islands-box'
+        fillOpacity={0.0}
+        stroke='#BBBBBB'
+        strokeWidth={1.0}
+      />
+    )
   }
 
   return (
@@ -124,6 +126,7 @@ const SpainMap = ({ data, reportFound }) => {
       <div className={`mapa ${styles.container}`} data-tip='' data-for='toolitpMap'>
         <svg className={styles.mapa} viewBox='100 0 800 520'>
           <g className='ESP_adm1'>
+            <CanaryIslandsContainer closed={false} />
             {geoFile.map((d, i) => (
               <path
                 className={`${styles.enabled}`}
@@ -136,7 +139,6 @@ const SpainMap = ({ data, reportFound }) => {
                 strokeWidth={0.5}
               />
             ))}
-            <CanaryIslandsContainer closed={false}></CanaryIslandsContainer>
           </g>
         </svg>
         {hasMounted && <ReactTooltip id='toolitpMap' overridePosition={({ left, top }, _currentEvent, _currentTarget, node) => updatePosition({ left, top }, node)}>{content}</ReactTooltip>}
