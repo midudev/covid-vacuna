@@ -1,4 +1,24 @@
 {
+  "slugs": {
+    "andalucia": "Andalucía",
+    "aragon": "Aragón",
+    "asturias": "Asturias",
+    "baleares": "Baleares",
+    "canarias": "Canarias",
+    "cantabria": "Cantabria",
+    "castilla-y-leon": "Castilla y Leon",
+    "castilla-la-mancha": "Castilla La Mancha",
+    "cataluna": "Cataluña",
+    "valencia": "C. Valenciana",
+    "extremadura": "Extremadura",
+    "galicia": "Galicia",
+    "la-rioja": "La Rioja",
+    "madrid": "Madrid",
+    "navarra": "Navarra",
+    "pais-vasco": "País Vasco",
+    "ceuta": "Ceuta",
+    "melilla": "Melilla"
+  },
   "population": {
     "Andalucía": 8464411,
     "Aragón": 1329391,
