@@ -10,7 +10,8 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
-import Prevision from 'components/Prevision.jsx'
+// import PrevisionOLD from 'components/PrevisionOLD.jsx'
+import Prevision from 'components/Prevision/Prevision'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
 import Share from 'components/Share.jsx'
@@ -28,11 +29,12 @@ import {
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
+import getNewReports from 'components/Prevision/utils/get-lasts-reports'
 import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
 
-export default function Home ({ contributors, data, info, reports, chartDatasets }) {
+export default function Home ({ contributors, data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
@@ -186,7 +188,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           </div>
 
           <Progress totals={totals} reportFound={reportFound} />
-          <Prevision totals={totals} />
+          <Prevision data={newReports} totals={totals} />
+          {/* <PrevisionOLD totals={totals} /> */}
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
@@ -311,13 +314,14 @@ export async function getStaticProps () {
 
   const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
-
+  const newReports = getNewReports(reports)
   return {
     props: {
       data,
       info,
       reports,
       chartDatasets,
+      newReports,
       contributors
     }
   }
