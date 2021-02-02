@@ -280,6 +280,16 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               {translate.home.medio2}
             </a>
           </li>
+          <li>
+            <a
+              className={styles.news}
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'
+            >
+              {translate.home.medio3}
+            </a>
+          </li>
         </ul>
 
         <h2 className={styles.subtitle}>{translate.home.contribuidores}</h2>
