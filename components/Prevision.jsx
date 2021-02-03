@@ -4,14 +4,18 @@ import { useTranslate } from 'hooks/useTranslate'
 const START_DATA_VACCINATION = '01/04/2021'
 const MILISECONDS_DAY = 1000 * 60 * 60 * 24
 const dateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const DAYS_BETWEEN_FIRST_AND_SECOND = 28;
 
 const getDaysFromStartVaccination = () => {
   return (new Date().getTime() - new Date(START_DATA_VACCINATION).getTime()) / MILISECONDS_DAY
 }
 
 const getDaysToAchievePercentage = (percentageGoal, actualPercentage) => {
-  return getDaysFromStartVaccination() * percentageGoal / (actualPercentage * 100)
-}
+  return (
+    (getDaysFromStartVaccination() * percentageGoal) / (actualPercentage * 100) +
+    DAYS_BETWEEN_FIRST_AND_SECOND
+  );
+};
 
 const addDaysToInitialData = (days) => {
   const initialData = new Date(START_DATA_VACCINATION).getTime() + (days * MILISECONDS_DAY)
@@ -34,7 +38,11 @@ export default function Progress ({ totals }) {
   const translate = useTranslate()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
 
-  const getDays = days => getDaysToAchievePercentage(days, totals.porcentajePoblacionCompletas)
+  const getDays = (days) =>
+    getDaysToAchievePercentage(
+      days,
+      totals.porcentajePoblacionAdministradas - totals.porcentajePoblacionCompletas
+    );
 
   return (
     <>
