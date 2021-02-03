@@ -1,16 +1,15 @@
 .container {
   max-width: 100vw;
   overflow-x: auto;
-  padding-right: 16px;
+  border-radius: 8px;
+  border: 2px solid #111;
+  box-shadow: rgb(210, 239, 253) 14px 14px;
+  margin-bottom: 4rem;
 }
 
 .table {
   background: #fafafa;
-  border-radius: 8px;
-  border: 2px solid #111;
-  box-shadow: rgb(210, 239, 253) 14px 14px;
   font-size: .8rem;
-  margin-bottom: 4rem;
   max-width: 1000px;
   width: 100%;
 }
