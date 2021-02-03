@@ -15,7 +15,7 @@ export default function EjemploEmbed () {
       <Head>
         <title>¿Cómo puedo incrustar en una web los datos de vacunación del COVID-19? - covid-vacuna.app</title>
       </Head>
-      <section>
+      <section id='container'>
         <Link href='/'>
           <a>
             🡐 Volver a la página principal
@@ -38,7 +38,7 @@ export default function EjemploEmbed () {
         />
         <h2>Previsualización</h2>
         <p>Así es como quedará el embed en tu página web.</p>
-        <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+        <div id='pre-embed' style={{ position: 'relative', paddingBottom: '56.25%' }}>
           <iframe
             width='800'
             height='450'
@@ -107,6 +107,7 @@ export default function EjemploEmbed () {
           margin-top: 32px;
           margin-bottom: 4px;
         }
+        
       `}
       </style>
     </>
