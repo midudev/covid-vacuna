@@ -18,4 +18,6 @@
   border: 2px solid var(--text-subtitle-color);
   padding: 0 10px;
   border-radius: 8px;
+  text-align: center;
+  width: 10em;
 }

@@ -39,6 +39,7 @@
       "enLosMedios": "Nos medios",
       "medio1": "Lanzan un sitio web con datos gobernamentais que nos permite ver como avanza a vacinación contra o coronavirus en España (20 minutos)",
       "medio2": "Web para revisar o estado e o progreso da vacinación contra o COVID-19 en España (Menéame)",
+      "medio3": "1.000 voluntarios para unha soa web: así evoluciona a vacinación na túa comunidade (El Confidencial)",
       "contribuidores": "Colaboradores",
       "alt": {
         "vacunasDistribuidas": "Vacinas distribuídas en España",
@@ -58,8 +59,8 @@
       }
     },
     "progress": {
-      "verPoblacionVacunada": "Ver poboación vacinada",
-      "verPoblacionConPauta": "Ver poboación con directrices completas",
+      "verPoblacionVacunada": "Poboación vacinada",
+      "verPoblacionConPauta": "Poboación con directrices completas",
       "estimacionPoblacionVacunada": "Estimación da poboación vacinada",
       "noDatos": "Non dispoñemos de datos para esa data."
     },
@@ -79,5 +80,10 @@
       "desarrolladoPor": "Desenvolvido por",
       "estadisticas": "Estatísticas",
       "enviarSugerencia": "Enviar suxestión"
+    },
+    "mapa": {
+        "sobreEntregadas": "sobre o total entregado",
+        "poblacionVacunada": "poboación vacinada",
+        "poblacionTotalmenteVacunada": "poboación totalmente vacinada"
     }
   }
