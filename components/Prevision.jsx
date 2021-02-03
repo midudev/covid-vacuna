@@ -33,7 +33,7 @@ const points = [{
   percentage: 100
 }]
 
-export default function Progress ({ totals }) {
+export default function Prevision ({ totals }) {
   const { locale } = useLocale()
   const translate = useTranslate()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
@@ -73,7 +73,6 @@ export default function Progress ({ totals }) {
           gap: 32px;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           justify-content: center;
-          justify-items: center;
           place-content: center;
           margin-bottom: 4rem;
           max-width: 1000px;
