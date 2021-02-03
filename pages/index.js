@@ -280,6 +280,16 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               {translate.home.medio2}
             </a>
           </li>
+          <li>
+            <a
+              className={styles.news}
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.elconfidencial.com/tecnologia/ciencia/2021-01-24/vacunacion-web-campana-comunidad-autonoma_2918627/'
+            >
+              {translate.home.medio3}
+            </a>
+          </li>
         </ul>
 
         <h2 className={styles.subtitle}>{translate.home.contribuidores}</h2>
