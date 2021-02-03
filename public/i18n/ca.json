@@ -9,8 +9,8 @@
     },
     "home": {
       "tituloPricipal": "Vacunació COVID-19 en",
-      "datosActualizados": "dades actualitzades",
-      "fuente": "font:",
+      "datosActualizados": "Dades actualitzades",
+      "fuente": "Font:",
       "ministerioDeSanidad": "Ministeri de Sanitat",
       "mostrarReporteFecha": "Mostrar dades a data",
       "seleccionarFecha": "Seleccionar data",
@@ -23,7 +23,7 @@
       "poblacionVacunada": "% població vacunada",
       "pautaCompleta": "Pauta completa",
       "poblacionTotalmenteVacunada": "% població totalment vacunada",
-      "evolucionDosisEntregadas": "Evolució de dosi lliurades",
+      "evolucionDosisEntregadas": "Evolució de dosis lliurades",
       "evolucionDosisAdministradas": "Evolució de dosis administrades",
       "fuenteDatosEnlacesInteres": "Fonts de dades i enllaços d'interès",
       "fuente1": "Estratègia de Vacunació COVID-19 a Espanya",
@@ -45,7 +45,7 @@
         "pfizerLogo": "Pfizer Logo",
         "modernaLogo": "moderna Logo",
         "vacunasAdministradas": "Vacunes administrades a Espanya",
-        "dosisCompletas": "Dosi completes subministrades",
+        "dosisCompletas": "Dosis completes subministrades",
         "descargarDatos": "descarregar dades",
         "incrustarDatos": "Incrusta dades en una pàgina web",
         "graficaSubiendo": "gràfica pujant",
@@ -58,14 +58,14 @@
       }
     },
     "progress": {
-      "verPoblacionVacunada": "Veure població vacunada",
-      "verPoblacionConPauta": "Veure població amb pauta completa",
+      "verPoblacionVacunada": "Població vacunada",
+      "verPoblacionConPauta": "Població amb pauta completa",
       "estimacionPoblacionVacunada": "Estimació població vacunada",
       "noDatos": "No disposem de dades per a aquesta data."
     },
     "terminos": {
-      "dosisDistribuidas": "dosi distribuïdes",
-      "dosisAdministradas": "dosis administrades",
+      "dosisDistribuidas": "Dosis distribuïdes",
+      "dosisAdministradas": "Dosis administrades",
       "sobreDistribuidas": "% sobre distribuïdes",
       "personasConPautaCompleta": "Persones amb pauta completa",
       "sobreAdministradas": "% sobre administrades"
@@ -79,6 +79,11 @@
       "desarrolladoPor": "Desenvolupat per",
       "estadisticas": "Estadístiques",
       "enviarSugerencia": "Enviar suggeriment"
+    },
+    "mapa": {
+        "sobreEntregadas": "sobre el total d'entregades",
+        "poblacionVacunada": "població vacunada",
+        "poblacionTotalmenteVacunada": "població totalment vacunada"
     }
 }
 
