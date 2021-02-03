@@ -19,6 +19,28 @@
     "ceuta": "Ceuta",
     "melilla": "Melilla"
   },
+  "populationOver18": {
+    "Andalucía": 6876934,
+    "Aragón": 1105999,
+    "Asturias": 884947,
+    "Baleares": 997759,
+    "Canarias": 1881099,
+    "Cantabria": 490027,
+    "Castilla y Leon": 2055240,
+    "Castilla La Mancha": 1675399,
+    "Cataluña": 6240734,
+    "C. Valenciana": 4120060,
+    "Extremadura": 887000,
+    "Galicia": 2318381,
+    "La Rioja": 261031,
+    "Madrid": 5515403,
+    "Murcia": 1197902,
+    "Navarra": 534809,
+    "País Vasco": 1822741,
+    "Ceuta": 63991,
+    "Melilla": 61119,
+    "Totales": 38990575
+  },
   "population": {
     "Andalucía": 8464411,
     "Aragón": 1329391,
