@@ -12,6 +12,7 @@
     "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "dependencies": {
+    "d3-composite-projections": "1.4.0",
     "d3-geo": "2.0.1",
     "download": "8.0.0",
     "fathom-client": "3.0.0",
