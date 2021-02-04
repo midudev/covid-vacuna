@@ -10,7 +10,6 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
-// import PrevisionOLD from 'components/PrevisionOLD.jsx'
 import Prevision from 'components/Prevision/Prevision'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
@@ -189,7 +188,6 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
           <Progress totals={totals} reportFound={reportFound} />
           <Prevision data={newReports} totals={totals} />
-          {/* <PrevisionOLD totals={totals} /> */}
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
