@@ -38,7 +38,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
       porcentajeEntregadas,
       porcentajePoblacionAdministradas: dosisAdministradas / populationCCAA,
       porcentajePoblacionCompletas: dosisPautaCompletada / populationCCAA,
-      fechaUltRegistro
+      fechaUltRegistro: fechaUltRegistro.getTime()
     }
   })
 }
