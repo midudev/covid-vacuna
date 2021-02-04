@@ -37,6 +37,15 @@
   border-color: #ccc;
 }
 
+.sectionSelect select::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sectionSelect select::-webkit-scrollbar-thumb {
+  background-color: #92d5ff;
+  border-radius: 10px;
+}
+
 @media (max-width: 530px) {
   .sectionSelect {
     align-items: center;
