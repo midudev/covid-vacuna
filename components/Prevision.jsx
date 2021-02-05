@@ -4,13 +4,17 @@ import { useTranslate } from 'hooks/useTranslate'
 const START_DATA_VACCINATION = '01/04/2021'
 const MILISECONDS_DAY = 1000 * 60 * 60 * 24
 const dateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const DAYS_BETWEEN_FIRST_AND_SECOND = 28
 
 const getDaysFromStartVaccination = () => {
   return (new Date().getTime() - new Date(START_DATA_VACCINATION).getTime()) / MILISECONDS_DAY
 }
 
 const getDaysToAchievePercentage = (percentageGoal, actualPercentage) => {
-  return getDaysFromStartVaccination() * percentageGoal / (actualPercentage * 100)
+  return (
+    (getDaysFromStartVaccination() * percentageGoal) / (actualPercentage * 100) +
+    DAYS_BETWEEN_FIRST_AND_SECOND
+  )
 }
 
 const addDaysToInitialData = (days) => {
@@ -29,12 +33,16 @@ const points = [{
   percentage: 100
 }]
 
-export default function Progress ({ totals }) {
+export default function Prevision ({ totals }) {
   const { locale } = useLocale()
   const translate = useTranslate()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
 
-  const getDays = days => getDaysToAchievePercentage(days, totals.porcentajePoblacionCompletas)
+  const getDays = (days) =>
+    getDaysToAchievePercentage(
+      days,
+      totals.porcentajePoblacionAdministradas - totals.porcentajePoblacionCompletas
+    )
 
   return (
     <>
@@ -65,7 +73,6 @@ export default function Progress ({ totals }) {
           gap: 32px;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           justify-content: center;
-          justify-items: center;
           place-content: center;
           margin-bottom: 4rem;
           max-width: 1000px;

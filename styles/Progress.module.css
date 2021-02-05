@@ -9,6 +9,13 @@
   margin-right: 1rem;
   display: flex;
   align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.progress label:hover {
+  background-color: #d2effd;
 }
 
 .progress label input[type="radio"] {
@@ -19,6 +26,7 @@
   box-shadow: rgb(210, 239, 253) 4px 4px;
   margin-right: 8px;
   padding: 6px;
+  outline: 0;
 }
 
 .progress label input[type="radio"]:checked {
@@ -36,6 +44,19 @@
   margin-top: .5rem;
 }
 
+.progress section {
+  position: relative;
+}
+
+.progress section::before {
+  color: #555;
+  content: attr(data-value);
+  font-size: 1.5rem;
+  right: 8px;
+  top: .7rem;
+  position: absolute;
+}
+
 .progress progress[value] {
   /* Reset the default appearance */
   -webkit-appearance: none;
@@ -46,19 +67,6 @@
   overflow: hidden;
   width: 100%;
   height: 36px;
-}
-
-.progress section {
-  position: relative;
-}
-
-.progress section::before {
-  color: #555;
-  content: attr(data-value);
-  font-size: 1.5rem;
-  right: 8px;
-  top: 12px;
-  position: absolute;
 }
 
 .progress progress[value]::-webkit-progress-bar {

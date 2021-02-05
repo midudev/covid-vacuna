@@ -2,6 +2,9 @@
   "name": "covid-vacuna",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -12,6 +15,7 @@
     "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "dependencies": {
+    "d3-composite-projections": "1.4.0",
     "d3-geo": "2.0.1",
     "download": "8.0.0",
     "fathom-client": "3.0.0",

@@ -27,22 +27,22 @@ const I18nWidget = () => {
   const { asPath: currentPath } = useRouter()
   const { locale, locales } = useLocale()
   const [display, setDisplay] = useState(false)
-  const buttonLangRef = useRef(null);
-  const languagesRef = useRef(null);
-  
-  useEffect(() => {
-      function handleClickOutside(event) {
-          if (languagesRef.current && !languagesRef.current.contains(event.target) &&
-          buttonLangRef.current && !buttonLangRef.current.contains(event.target)) {
-              setDisplay(false)
-          }
-      }
+  const buttonLangRef = useRef(null)
+  const languagesRef = useRef(null)
 
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-          document.removeEventListener("mousedown", handleClickOutside);
-      };
-  }, [languagesRef]);
+  useEffect(() => {
+    function handleClickOutside (event) {
+      if (languagesRef.current && !languagesRef.current.contains(event.target) &&
+          buttonLangRef.current && !buttonLangRef.current.contains(event.target)) {
+        setDisplay(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [languagesRef])
 
   const options = locales?.filter(val => val !== locale)
 
