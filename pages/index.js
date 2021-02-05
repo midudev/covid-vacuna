@@ -28,11 +28,12 @@ import {
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
+import getNewReports from 'components/utils/get-lasts-reports'
 import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
 
-export default function Home ({ contributors, data, info, reports, chartDatasets }) {
+export default function Home ({ contributors, data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
@@ -186,7 +187,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           </div>
 
           <Progress totals={totals} reportFound={reportFound} />
-          <Prevision totals={totals} />
+          <Prevision data={newReports} totals={totals} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
@@ -321,6 +322,7 @@ export async function getStaticProps () {
 
   const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
+  const newReports = getNewReports(reports)
 
   return {
     props: {
@@ -328,6 +330,7 @@ export async function getStaticProps () {
       info,
       reports,
       chartDatasets,
+      newReports,
       contributors
     }
   }
