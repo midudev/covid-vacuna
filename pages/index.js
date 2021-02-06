@@ -17,6 +17,7 @@ import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
+import DownloadData from 'components/DownloadData'
 
 import getGitHubContributors from 'services/getGitHubContributors'
 
@@ -188,15 +189,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           <Progress totals={totals} reportFound={reportFound} />
           <Prevision totals={totals} />
 
-          <a className={styles.download} download href='/data/latest.json'>
-            <Image
-              width={32}
-              height={32}
-              src='/download.png'
-              alt={translate.home.alt.descargarDatos}
-            />
-            {translate.home.descargarDatosJSON}
-          </a>
+          <DownloadData valueSearch={valueSearch} />
 
           <Link href='/como-incrustar'>
             <a className={styles.download}>
