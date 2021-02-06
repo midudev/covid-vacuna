@@ -20,16 +20,15 @@ export default function Share () {
   )
 
   return (
-    <div className={styles.share}>
-      <a
-        target='_blank'
-        rel='nofollow noopener noreferrer'
-        href={url}
-        title={translate.share.titleAnchor}
-      >
-        <span>{translate.share.textoButton}</span>
-        <TwitterLogo />
-      </a>
-    </div>
+    <a
+      target='_blank'
+      rel='nofollow noopener noreferrer'
+      href={url}
+      title={translate.share.titleAnchor}
+      className={styles.share}
+    >
+      <span>{translate.share.textoButton}</span>
+      <TwitterLogo />
+    </a>
   )
 }

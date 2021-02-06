@@ -301,13 +301,17 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <p>Las vacunas distribuidas...</p>
       </dialog>
 
-      <ClientSideComponent>
-        <SchemeColorSwitcher />
-      </ClientSideComponent>
+      <div id='header' className={styles.headerSticky}>
+        <div className={styles.headerContent}>
+          <ClientSideComponent>
+            <SchemeColorSwitcher />
+          </ClientSideComponent>
 
-      <I18nWidget />
+          <I18nWidget />
 
-      <Share />
+          <Share />
+        </div>
+      </div>
 
       <Footer />
     </>

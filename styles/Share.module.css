@@ -1,10 +1,4 @@
 .share {
-  position: fixed;
-  right: 32px;
-  top: 16px;
-}
-
-.share a {
   align-items: center;
   background: #fff;
   border-radius: 50000px;

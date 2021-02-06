@@ -17,7 +17,11 @@
       radial-gradient(#15155a 1px,#111 0);
   }
 
-  #container {
+  #container, #header {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  #header > * {
     filter: invert(1) hue-rotate(180deg);
   }
 
@@ -36,7 +40,8 @@ html[scheme='light-mode'] body {
     radial-gradient(#cdd0ff 1px, transparent 0),
     radial-gradient(#cdd0ff 1px,#fefefe 0);
 }
-html[scheme='light-mode'] #container {
+html[scheme='light-mode'] #container, 
+html[scheme='light-mode'] #header{
   filter: invert(0) hue-rotate(0deg);
 }
 
@@ -46,18 +51,27 @@ html[scheme='light-mode'] #container span[role='img'] {
   filter: invert(0) hue-rotate(0deg);
 }
 
+html[scheme='light-mode'] #header > * {
+  filter: invert(0) hue-rotate(00deg);
+}
+
 html[scheme='dark-mode'] body {
   --app-background:
     radial-gradient(#15155a 1px, #111 0),
     radial-gradient(#15155a 1px,#111 0);
 }
-html[scheme='dark-mode'] #container {
+html[scheme='dark-mode'] #container, 
+html[scheme='dark-mode'] #header {
   filter: invert(1) hue-rotate(180deg);
 }
 
 html[scheme='dark-mode'] #container img,
 html[scheme='dark-mode'] #container .mapa,
 html[scheme='dark-mode'] #container span[role='img'] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html[scheme='dark-mode'] #header > * {
   filter: invert(1) hue-rotate(180deg);
 }
 
