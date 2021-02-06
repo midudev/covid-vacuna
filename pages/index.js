@@ -35,7 +35,8 @@ import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
-  const [valueSearch, setValueSearch] = useState('')
+  const lastReportName = reports.sort()[reports.length - 1]
+  const [valueSearch, setValueSearch] = useState(lastReportName)
   const reportFound = useSearch({ valueSearch })
   const translate = useTranslate()
 
