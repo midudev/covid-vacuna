@@ -3,7 +3,7 @@ import { useTranslate } from 'hooks/useTranslate'
 
 import Image from 'next/image'
 
-import styles from 'styles/Home.module.css'
+import styles from 'styles/DownloadData.module.css'
 
 const reports = require('../public/data/reports.json')
 
