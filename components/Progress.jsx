@@ -5,15 +5,22 @@ import { useLocale } from 'hooks/useLocale'
 import { useTranslate } from 'hooks/useTranslate'
 
 const FILTERS = {
-  parcial: 'porcentajePoblacionAdministradas',
-  completa: 'porcentajePoblacionCompletas'
+  parcial: 0,
+  completa: 1
+}
+
+const CALCULATIONS = {
+  [FILTERS.parcial]: totals =>
+    totals.porcentajePoblacionAdministradas - totals.porcentajePoblacionCompletas,
+  [FILTERS.completa]: totals =>
+    totals.porcentajePoblacionCompletas
 }
 
 export default function Progress ({ totals }) {
   const { locale } = useLocale()
   const [filter, setFilter] = useState(FILTERS.parcial)
   const translate = useTranslate()
-  const value = totals[filter]
+  const value = CALCULATIONS[filter](totals)
 
   return (
     <>
@@ -39,8 +46,8 @@ export default function Progress ({ totals }) {
           </label>
         </div>
 
-        <section>
-          <progress max='100' value={value * 100} data-value={toPercentage({ locale, number: value })} />
+        <section data-value={toPercentage({ locale, number: value })}>
+          <progress max='100' value={value * 100} />
         </section>
       </form>
     </>
