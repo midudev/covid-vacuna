@@ -50,7 +50,7 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
                 type='monotone'
                 dataKey='value'
                 stroke='var(--text-subtitle-color)'
-                fill='#d2effd'
+                fill='var(--app-shadow-color)'
               />
             </AreaChart>
           </ResponsiveContainer>

@@ -1,7 +1,7 @@
 .footer {
   align-items: center;
-  background: #fff;
-  border-top: 1px solid #eaeaea;
+  background: var(--app-background-color);
+  border-top: 1px solid var(--app-background-secondary-color);
   display: flex;
   font-size: .8rem;
   line-height: 1.5rem;
