@@ -128,6 +128,19 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
                     </span>
                   </small>
+                  <small>
+                    <Image
+                      alt={translate.home.alt.modernaLogo}
+                      className={styles.companyLogo}
+                      src='/astrazeneca-logo.png'
+                      height={16.5}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      {isNaN(totals.dosisEntregadasAstrazeneca) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasAstrazeneca}</NumberDigits>}
+                    </span>
+                  </small>
                 </div>
               </section>
             </div>
