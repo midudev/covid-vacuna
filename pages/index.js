@@ -130,7 +130,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   </small>
                   <small>
                     <Image
-                      alt={translate.home.alt.modernaLogo}
+                      alt={translate.home.alt.astrazenecaLogo}
                       className={styles.companyLogo}
                       src='/astrazeneca-logo.png'
                       height={16.5}
