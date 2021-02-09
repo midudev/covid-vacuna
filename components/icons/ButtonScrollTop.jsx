@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export default function SvgComponent (props) {
+export default function ButtonScrollTop (props) {
   return (
     <>
       <svg
