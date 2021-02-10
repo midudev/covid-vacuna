@@ -13,10 +13,12 @@ import Progress from 'components/Progress.jsx'
 import Prevision from 'components/Prevision.jsx'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
+import ScrollToTop from 'components/ScrollToTop'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
+import DownloadData from 'components/DownloadData'
 
 import getGitHubContributors from 'services/getGitHubContributors'
 
@@ -34,7 +36,8 @@ import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
-  const [valueSearch, setValueSearch] = useState('')
+  const lastReportName = reports.sort()[reports.length - 1]
+  const [valueSearch, setValueSearch] = useState(lastReportName)
   const reportFound = useSearch({ valueSearch })
   const translate = useTranslate()
 
@@ -201,15 +204,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           <Progress totals={totals} reportFound={reportFound} />
           <Prevision totals={totals} />
 
-          <a className={styles.download} download href='/data/latest.json'>
-            <Image
-              width={32}
-              height={32}
-              src='/download.png'
-              alt={translate.home.alt.descargarDatos}
-            />
-            {translate.home.descargarDatosJSON}
-          </a>
+          <DownloadData valueSearch={valueSearch} />
 
           <Link href='/como-incrustar'>
             <a className={styles.download}>
@@ -313,6 +308,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <h2>Sobre las vacunas distribuidas</h2>
         <p>Las vacunas distribuidas...</p>
       </dialog>
+
+      <ScrollToTop showButtonAt={250} />
 
       <ClientSideComponent>
         <SchemeColorSwitcher />
