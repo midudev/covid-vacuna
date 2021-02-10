@@ -5,10 +5,10 @@
       "standardTitleLabel": "Utilitza el tema depenent la configuració de sistema",
       "standardAriaLabel": "Les teves preferències molones del teu sistema",
       "darkTitleLabel": "Utilitza el tema fosc",
-      "darkAriaLabel": "Una lluna amb ulls sospitosos que sembla que està tramant alguna cosa fotut"
+      "darkAriaLabel": "Una lluna amb ulls sospitosos que sembla que està tramant alguna cosa fotuda"
     },
     "home": {
-      "tituloPricipal": "Vacunació COVID-19 en",
+      "tituloPricipal": "Vacunació COVID-19 a",
       "datosActualizados": "Dades actualitzades",
       "fuente": "Font:",
       "ministerioDeSanidad": "Ministeri de Sanitat",
@@ -32,7 +32,7 @@
       "changelog5": "Afegides gràfiques",
       "changelog5.1": "i contribuïdors",
       "changelog4": "Afegida la possibilitat d'incrustar les dades en una altra pàgina",
-      "changelog3": "Afegit manera fosc a l'app",
+      "changelog3": "Afegida la versió fosca a l'app",
       "changelog2": "Afegida barra de progrés de vacunació en població",
       "changelog1": "Afegides persones amb pauta completa",
       "changelog0": "primera versió",
@@ -51,7 +51,7 @@
         "incrustarDatos": "Incrusta dades en una pàgina web",
         "graficaSubiendo": "gràfica pujant",
         "emojiCiclista": "Emoji de ciclista",
-        "globoMundo": "Globus d'el món amb meridians",
+        "globoMundo": "Globus del món amb meridians",
         "luna": "Lluna",
         "globoTerricola": "Globus terrícola amb vista a Amèrica",
         "jeringuilla": "xeringa",
@@ -87,4 +87,3 @@
         "poblacionTotalmenteVacunada": "població totalment vacunada"
     }
 }
-
