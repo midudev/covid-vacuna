@@ -86,11 +86,11 @@ export default function Prevision ({ totals }) {
         }
 
         div span, div time {
-          background: #fff;
+          background: var(--app-background-color);
         }
 
         div time {
-          color: #333;
+          color: var(--text-secondary-color);
           font-size: .9rem;
           font-weight: 500;
           margin-top: .7rem;
@@ -103,13 +103,13 @@ export default function Prevision ({ totals }) {
         }
         
         .card {
-          background: #ffffff;
+          background: var(--app-background-color);
           border-radius: 8px;
-          border: 2px solid #111;
+          border: 2px solid var(--app-border-color);
           margin: 1rem 0 0;
           padding: 1rem 1.5rem 1.5rem;
           text-align: center;
-          box-shadow: rgb(210,239,253) 14px 14px;
+          box-shadow: var(--app-shadow-color) 14px 14px;
           }
         }
     `}
