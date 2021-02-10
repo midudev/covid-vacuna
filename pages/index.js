@@ -296,7 +296,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <p>Las vacunas distribuidas...</p>
       </dialog>
 
-      <ScrollToTop showButton={250} />
+      <ScrollToTop showButtonAt={250} />
 
       <ClientSideComponent>
         <SchemeColorSwitcher />

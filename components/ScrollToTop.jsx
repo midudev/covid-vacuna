@@ -1,23 +1,10 @@
 import ButtonScrollTop from 'components/icons/ButtonScrollTop.jsx'
-import { useState, useEffect } from 'react'
+import useIntersectionObserver from 'hooks/useIntersectionObserver'
+import { useRef } from 'react'
 
-export default function ScrollToTop ({ showButton }) {
-  const [show, setShow] = useState(!showButton)
-
-  useEffect(() => {
-    if (showButton) {
-      window.addEventListener('scroll', handleScroll)
-      return () => window.removeEventListener('scroll', handleScroll)
-    }
-  })
-
-  const handleScroll = () => {
-    if (window.pageYOffset > showButton) {
-      !show && setShow(true)
-    } else {
-      show && setShow(false)
-    }
-  }
+export default function ScrollToTop ({ showButtonAt }) {
+  const chivatoRef = useRef()
+  const [isIntersecting] = useIntersectionObserver({ elementRef: chivatoRef })
 
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -25,7 +12,25 @@ export default function ScrollToTop ({ showButton }) {
 
   return (
     <>
-      {show && <ButtonScrollTop className='button' onClick={handleClick} width={45} height={45} fill='#2c7cdc' />}
+      <div ref={chivatoRef} />
+      {!isIntersecting &&
+        <ButtonScrollTop
+          fill='#2c7cdc'
+          height={45}
+          onClick={handleClick}
+          width={45}
+        />}
+      <style jsx>{`
+        div {
+          opacity: 0;
+          height: 1px;
+          left: 1px;
+          position: absolute;
+          top: ${showButtonAt}px;
+          width: 1px;
+        }
+      `}
+      </style>
     </>
   )
 }
