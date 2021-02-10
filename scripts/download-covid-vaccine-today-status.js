@@ -1,7 +1,7 @@
 // https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_20210119.ods
 
 const download = require('download')
-const fs = require('fs-extra')
+const fs = require('fs')
 const transformOdsToJson = require('./transform-ods-to-json')
 const getNameReports = require('./get-everything-name-reports')
 
@@ -23,10 +23,10 @@ download(url, 'public/data', { filename })
     const json = await transformOdsToJson(filename)
     const jsonFileName = filename.replace('.ods', '.json')
 
-    await fs.writeJson(`./public/data/${jsonFileName}`, json)
+    await fs.promises.writeFile(`./public/data/${jsonFileName}`, JSON.stringify(json))
     await getNameReports()
-    await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
-    await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
+    await fs.promises.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
+    await fs.promises.writeFile('./public/data/info.json', JSON.stringify({ lastModified: +new Date() }))
   })
   .catch(err => {
     console.error(`${url} can't be downloaded. Error:`)

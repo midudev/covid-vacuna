@@ -2,6 +2,9 @@
   "name": "covid-vacuna",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -16,7 +19,6 @@
     "d3-geo": "2.0.1",
     "download": "8.0.0",
     "fathom-client": "3.0.0",
-    "fs-extra": "9.1.0",
     "next": "10.0.5",
     "next-compose-plugins": "2.2.1",
     "next-images": "1.7.0",
