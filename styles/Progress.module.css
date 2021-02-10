@@ -40,18 +40,20 @@
 }
 
 .progress progress {
-  position: relative;
   margin-bottom: 2rem;
   margin-top: .5rem;
 }
 
-.progress progress::before {
+.progress section {
+  position: relative;
+}
+
+.progress section::before {
   color: #555;
   content: attr(data-value);
   font-size: 1.5rem;
   right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: .7rem;
   position: absolute;
 }
 
