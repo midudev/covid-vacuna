@@ -13,6 +13,7 @@ import Progress from 'components/Progress.jsx'
 import Prevision from 'components/Prevision.jsx'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
+import ScrollToTop from 'components/ScrollToTop'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
@@ -294,6 +295,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <h2>Sobre las vacunas distribuidas</h2>
         <p>Las vacunas distribuidas...</p>
       </dialog>
+
+      <ScrollToTop showButton={250} />
 
       <ClientSideComponent>
         <SchemeColorSwitcher />
