@@ -36,13 +36,14 @@ import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
-  const lastReportName = reports.sort()[reports.length - 1]
-  const [valueSearch, setValueSearch] = useState(lastReportName)
+  const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
   const translate = useTranslate()
 
   const totals = useMemo(
-    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === filter) : data.find(({ ccaa }) => ccaa === filter),
+    () => reportFound !== undefined
+      ? reportFound.find(({ ccaa }) => ccaa === filter)
+      : data.find(({ ccaa }) => ccaa === filter),
     [data, filter, reportFound]
   )
 
@@ -327,7 +328,19 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
-  const reports = require('../public/data/reports.json')
+  const reports = (context => {
+    const keys = context.keys()
+
+    const data = keys.map((key, index) => {
+      return key
+        .replace(/^.*[\\/]/, '')
+        .split('.')
+        .slice(0, -1)
+        .join('.')
+    })
+
+    return data
+  })(require.context('../public/data/', true, /2021[0-9]{4}.json$/))
 
   const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
