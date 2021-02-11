@@ -1,4 +1,4 @@
-import ButtonScrollTop from 'components/icons/ButtonScrollTop.jsx'
+import ButtonScrollTop from 'components/icons/ButtonScrollTop'
 import useIntersectionObserver from 'hooks/useIntersectionObserver'
 import { useRef } from 'react'
 
@@ -13,13 +13,13 @@ export default function ScrollToTop ({ showButtonAt }) {
   return (
     <>
       <div ref={chivatoRef} />
-      {!isIntersecting &&
-        <ButtonScrollTop
-          fill='#2c7cdc'
-          height={45}
-          onClick={handleClick}
-          width={45}
-        />}
+      <ButtonScrollTop
+        fill='#2c7cdc'
+        height={45}
+        onClick={handleClick}
+        show={!isIntersecting}
+        width={45}
+      />
       <style jsx>{`
         div {
           opacity: 0;
