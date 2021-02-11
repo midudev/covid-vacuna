@@ -39,7 +39,7 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
             >
               <XAxis dataKey='name' tick={<CustomXTick />} />
               <YAxis
-                domain={[0, 'dataMax + 1000000']}
+                domain={[0, 'dataMax']}
                 interval='preserveStartEnd'
                 width={100}
                 scale='linear'
