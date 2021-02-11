@@ -26,16 +26,19 @@
 
 .sectionSelect select {
   appearance: none;
-  background: transparent;
+  background: var(--app-background-color);
   border: transparent;
+  border-radius: 5000px;
+  cursor: pointer;
   font-size: 0.8rem;
   color: var(--text-base-color);
   padding: 4px 24px 4px 16px;
   outline: none;
 }
 
-.sectionSelect select:hover {
+.sectionSelect div:hover {
   border-color: #ccc;
+  opacity: .8;
 }
 
 .sectionSelect select::-webkit-scrollbar {
