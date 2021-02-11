@@ -75,12 +75,12 @@
   border-bottom: 1px dashed #09f;
 }
 
-.news {
+.link {
   color: var(--text-secondary-color);
   border-bottom: 1px dashed #ddd;
 }
 
-.news:hover {
+.link:hover {
   color: var(--text-small-color);
   border-bottom: 1px dashed #09f;
 }

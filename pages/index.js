@@ -246,6 +246,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <ul>
           <li>
             <a
+              className={styles.link}
               target='_blank'
               rel='noreferrer'
               href='https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/vacunaCovid19.htm'
@@ -255,6 +256,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           </li>
           <li>
             <a
+              className={styles.link}
               target='_blank'
               rel='noreferrer'
               href='https://www.vacunacovid.gob.es'
@@ -271,7 +273,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <ul>
           <li>
             <a
-              className={styles.news}
+              className={styles.link}
               target='_blank'
               rel='noreferrer'
               href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'
@@ -281,7 +283,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           </li>
           <li>
             <a
-              className={styles.news}
+              className={styles.link}
               target='_blank'
               rel='noreferrer'
               href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'
@@ -291,7 +293,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           </li>
           <li>
             <a
-              className={styles.news}
+              className={styles.link}
               target='_blank'
               rel='noreferrer'
               href='https://www.elconfidencial.com/tecnologia/ciencia/2021-01-24/vacunacion-web-campana-comunidad-autonoma_2918627/'
