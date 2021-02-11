@@ -1,8 +1,8 @@
-const fs = require('fs-extra')
+const fs = require('fs')
 const download = require('download')
 const transformOdsToJson = require('./transform-ods-to-json')
 
-const createUrl = day => `https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_202101${day}.ods`
+const createUrl = day => `https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_202102${day}.ods`
 
 const downloadFile = (url, filename) => {
   return download(url, 'public/data', { filename })
@@ -11,7 +11,7 @@ const downloadFile = (url, filename) => {
       const json = await transformOdsToJson(filename)
       const jsonFileName = filename.replace('.ods', '.json')
 
-      await fs.writeJson(`./public/data/${jsonFileName}`, json)
+      await fs.promises.writeFile(`./public/data/${jsonFileName}`, JSON.stringify(json))
     })
     .catch(() => {
       console.error(`${url} can't be downloaded. Error:`)

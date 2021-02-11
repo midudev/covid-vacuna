@@ -13,10 +13,12 @@ import Progress from 'components/Progress.jsx'
 import Prevision from 'components/Prevision.jsx'
 import Select from 'components/Select'
 import I18nWidget from 'components/I18nWidget.jsx'
+import ScrollToTop from 'components/ScrollToTop'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
+import DownloadData from 'components/DownloadData'
 
 import getGitHubContributors from 'services/getGitHubContributors'
 
@@ -40,7 +42,9 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
   const translate = useTranslate()
 
   const totals = useMemo(
-    () => reportFound !== undefined ? reportFound.find(({ ccaa }) => ccaa === filter) : data.find(({ ccaa }) => ccaa === filter),
+    () => reportFound !== undefined
+      ? reportFound.find(({ ccaa }) => ccaa === filter)
+      : data.find(({ ccaa }) => ccaa === filter),
     [data, filter, reportFound]
   )
 
@@ -64,7 +68,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
       <div id='container' className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            {translate.home.tituloPricipal} {filter === 'Totales' ? 'España' : filter}
+            {translate.home.tituloPrincipal} {filter === 'Totales' ? 'España' : filter}
           </h1>
           <small className={styles.description}>
             {translate.home.datosActualizados} <TimeAgo timestamp={info.lastModified} />.
@@ -129,6 +133,19 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
                     </span>
                   </small>
+                  <small>
+                    <Image
+                      alt={translate.home.alt.astrazenecaLogo}
+                      className={styles.companyLogo}
+                      src='/astrazeneca-logo.png'
+                      height={16.5}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      {isNaN(totals.dosisEntregadasAstrazeneca) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasAstrazeneca}</NumberDigits>}
+                    </span>
+                  </small>
                 </div>
               </section>
             </div>
@@ -189,15 +206,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           <Progress totals={totals} reportFound={reportFound} />
           <Prevision data={newReports} totals={totals} />
 
-          <a className={styles.download} download href='/data/latest.json'>
-            <Image
-              width={32}
-              height={32}
-              src='/download.png'
-              alt={translate.home.alt.descargarDatos}
-            />
-            {translate.home.descargarDatosJSON}
-          </a>
+          <DownloadData valueSearch={valueSearch} />
 
           <Link href='/como-incrustar'>
             <a className={styles.download}>
@@ -302,6 +311,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <p>Las vacunas distribuidas...</p>
       </dialog>
 
+      <ScrollToTop showButtonAt={250} />
+
       <ClientSideComponent>
         <SchemeColorSwitcher />
       </ClientSideComponent>
@@ -318,7 +329,19 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
-  const reports = require('../public/data/reports.json')
+  const reports = (context => {
+    const keys = context.keys()
+
+    const data = keys.map((key, index) => {
+      return key
+        .replace(/^.*[\\/]/, '')
+        .split('.')
+        .slice(0, -1)
+        .join('.')
+    })
+
+    return data
+  })(require.context('../public/data/', true, /2021[0-9]{4}.json$/))
 
   const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()

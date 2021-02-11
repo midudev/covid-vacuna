@@ -3,17 +3,23 @@ import styles from 'styles/Progress.module.css'
 import { toPercentage } from 'components/NumberPercentage.jsx'
 import { useLocale } from 'hooks/useLocale'
 import { useTranslate } from 'hooks/useTranslate'
+import { getPartialVacunationPopulation, getCompleteVacunationPopulation } from 'services/getProgressCalculations'
 
 const FILTERS = {
-  parcial: 'porcentajePoblacionAdministradas',
-  completa: 'porcentajePoblacionCompletas'
+  parcial: 0,
+  completa: 1
+}
+
+const CALCULATIONS = {
+  [FILTERS.parcial]: getPartialVacunationPopulation,
+  [FILTERS.completa]: getCompleteVacunationPopulation
 }
 
 export default function Progress ({ totals }) {
   const { locale } = useLocale()
   const [filter, setFilter] = useState(FILTERS.parcial)
   const translate = useTranslate()
-  const value = totals[filter]
+  const value = CALCULATIONS[filter](totals)
 
   return (
     <>

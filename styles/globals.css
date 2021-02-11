@@ -1,64 +1,69 @@
 :root {
   --app-background-color: #fefefe;
+  --app-background-secondary-color: #fafafa;
+  --app-border-color: #000;
+  --app-shadow-color: #d2effd;
+  --app-selection-color: #6cd0ff;
   --app-background:
     radial-gradient(#cdd0ff 1px, transparent 0),
     radial-gradient(#cdd0ff 1px,#fefefe 0);
 
   --text-base-color: #000;
+  --text-secondary-color: #333;
   --text-title-color: #011440;
   --text-subtitle-color: #001e63;
-  --text-small-color: rgb(100, 98, 98);
+  --text-small-color: #555;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
+    --app-background-color: #111;
+    --app-background-secondary-color: #222;
+    --app-border-color: #fff;
+    --app-shadow-color: #002e47;
+    --app-selection-color: #005382;
     --app-background:
       radial-gradient(#15155a 1px, #111 0),
       radial-gradient(#15155a 1px,#111 0);
+    --text-base-color: #fff;
+    --text-secondary-color: #ccc;
+    --text-title-color: #daedff;
+    --text-subtitle-color: #c6e4ff;
+    --text-small-color: #aaa;
   }
-
-  #container {
-    filter: invert(1) hue-rotate(180deg);
-  }
-
-  #container img, #container .mapa, #container span[role='img'] {
-    filter: invert(1) hue-rotate(180deg);
-  }
-
-  #container img, #container #pre-embed {
-    filter: invert(1) hue-rotate(180deg);
-  }
-
 }
 
 html[scheme='light-mode'] body {
+  --app-background-color: #fefefe;
+  --app-background-secondary-color: #fafafa;
+  --app-border-color: #000;
+  --app-shadow-color: #d2effd;
+  --app-selection-color: #6cd0ff;
   --app-background:
     radial-gradient(#cdd0ff 1px, transparent 0),
     radial-gradient(#cdd0ff 1px,#fefefe 0);
-}
-html[scheme='light-mode'] #container {
-  filter: invert(0) hue-rotate(0deg);
-}
 
-html[scheme='light-mode'] #container img,
-html[scheme='light-mode'] #container .mapa,
-html[scheme='light-mode'] #container span[role='img'] {
-  filter: invert(0) hue-rotate(0deg);
+  --text-base-color: #000;
+  --text-secondary-color: #333;
+  --text-title-color: #011440;
+  --text-subtitle-color: #001e63;
+  --text-small-color: #555;
 }
 
 html[scheme='dark-mode'] body {
+  --app-background-color: #111;
+  --app-background-secondary-color: #222;
+  --app-border-color: #fff;
+  --app-shadow-color: #002e47;
+  --app-selection-color: #005382;
   --app-background:
     radial-gradient(#15155a 1px, #111 0),
     radial-gradient(#15155a 1px,#111 0);
-}
-html[scheme='dark-mode'] #container {
-  filter: invert(1) hue-rotate(180deg);
-}
-
-html[scheme='dark-mode'] #container img,
-html[scheme='dark-mode'] #container .mapa,
-html[scheme='dark-mode'] #container span[role='img'] {
-  filter: invert(1) hue-rotate(180deg);
+  --text-base-color: #fff;
+  --text-secondary-color: #ccc;
+  --text-title-color: #daedff;
+  --text-subtitle-color: #c6e4ff;
+  --text-small-color: #aaa;
 }
 
 * {

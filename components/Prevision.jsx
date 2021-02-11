@@ -136,22 +136,22 @@ export default function Prevision ({ data, totals }) {
             flex-direction: column;
           }
 
-          div span, div time {
-            background: #fff;
-          }
+        div span, div time {
+          background: var(--app-background-color);
+        }
 
-          div time {
-            color: #333;
-            font-size: .9rem;
-            font-weight: 500;
-            margin-top: .7rem;
-          }
+        div time {
+          color: var(--text-secondary-color);
+          font-size: .9rem;
+          font-weight: 500;
+          margin-top: .7rem;
+        }
 
-          div span {
-            color: var(--color);
-            font-size: 5ch;
-            font-weight: 500;
-          }
+        div span {
+          color: var(--color);
+          font-size: 5ch;
+          font-weight: 500;
+        }
           
           .card {
             background: #ffffff;

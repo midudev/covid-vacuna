@@ -5,10 +5,10 @@
 }
 
 .sectionSelect div {
-  background: #fff;
+  background: var(--app-background-color);
   border-radius: 5000px;
-  border: 1px solid #000;
-  box-shadow: #92d5ff 1px 4px;
+  border: 1px solid var(--app-border-color);
+  box-shadow: var(--app-shadow-color) 1px 4px;
   margin-left: 8px;
   position: relative;
 }
@@ -26,15 +26,28 @@
 
 .sectionSelect select {
   appearance: none;
-  background: transparent;
+  background: var(--app-background-color);
   border: transparent;
+  border-radius: 5000px;
+  cursor: pointer;
   font-size: 0.8rem;
+  color: var(--text-base-color);
   padding: 4px 24px 4px 16px;
   outline: none;
 }
 
-.sectionSelect select:hover {
+.sectionSelect div:hover {
   border-color: #ccc;
+  opacity: .8;
+}
+
+.sectionSelect select::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sectionSelect select::-webkit-scrollbar-thumb {
+  background-color: #92d5ff;
+  border-radius: 10px;
 }
 
 @media (max-width: 530px) {
