@@ -2,11 +2,12 @@
 
 import { useCallback, useMemo } from 'react'
 import { useTable, useSortBy } from 'react-table'
-import { toDigit } from './NumberDigits.jsx'
-import { toPercentage } from './NumberPercentage.jsx'
+import { toDigit } from './NumberDigits'
+import { toPercentage } from './NumberPercentage'
 import styles from 'styles/Table.module.css'
-import { useLocale } from 'hooks/useLocale.js'
+import { useLocale } from 'hooks/useLocale'
 import { useTranslate } from 'hooks/useTranslate'
+import { getPartialVacunationPopulation } from 'services/getProgressCalculations'
 
 export default function Table ({ data, filter, setFilter, reportFound }) {
   const { locale } = useLocale
@@ -24,25 +25,9 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
   const formatPercentage = number => toPercentage({ locale, number })
 
   const tableData = useMemo(
-    () => reportFound !== undefined
-      ? reportFound.map(row => {
-          const {
-            dosisPautaCompletada,
-            porcentajeEntregadas,
-            porcentajePoblacionAdministradas,
-            porcentajePoblacionCompletas,
-            ...rest
-          } = row
-
-          return {
-            dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
-            porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
-            porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
-            porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
-            ...rest
-          }
-        })
-      : data.map(row => {
+    () => {
+      const report = reportFound || data
+      return report.map(row => {
         const {
           dosisPautaCompletada,
           porcentajeEntregadas,
@@ -54,11 +39,12 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
         return {
           dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
           porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
-          porcentajePoblacionAdministradas: porcentajePoblacionAdministradas !== null ? porcentajePoblacionAdministradas.toFixed(4) : 0,
+          porcentajePoblacionAdministradas: getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas }),
           porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
           ...rest
         }
-      }), [reportFound]
+      })
+    }, [reportFound]
   )
 
   const columns = useMemo(
@@ -66,7 +52,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
       {
         Header: '',
         accessor: 'ccaa',
-        format: (ccaa) => ccaa
+        format: ccaa => ccaa
       },
       {
         Header: translate.home.dosisEntregadas,
@@ -115,7 +101,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
 
   return (
     <div className={styles.container}>
-      <table className={styles.table} {...getTableProps()}>
+      <table className={styles.table} {...getTableProps()} border='0' cellspacing='0' cellpadding='0'>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -137,7 +123,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map((row, index) => {
+          {rows.map(row => {
             prepareRow(row)
             const className = row.id === '19'
               ? styles.totales
@@ -158,7 +144,9 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
                   {row.cells.map((cell, index) => {
                     return (
                       <span key={index}>
-                        {index === 0 ? '' : `${headerGroups[0].headers[index].Header} - ${cell.column.format(cell.value)}`}
+                        {index === 0
+                          ? ''
+                          : `${headerGroups[0].headers[index].Header} - ${cell.column.format(cell.value)}`}
                       </span>
                     )
                   })}

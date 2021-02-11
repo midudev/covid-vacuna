@@ -15,16 +15,19 @@ module.exports = async function transformOdsToJson (odsFileName) {
       __EMPTY: ccaa,
       'Dosis entregadas Pfizer (1)': dosisEntregadasPfizer,
       'Dosis entregadas Moderna (1)': dosisEntregadasModerna,
+      'Dosis entregadas AstraZeneca (1)': dosisEntregadasAstrazeneca,
       // usado en reporte antes del 13 de enero
       'Dosis entregadas (1)': dosisEntregadasDeprecated,
       'Total Dosis entregadas (1)': dosisEntregadasNew,
       'Dosis administradas (2)': dosisAdministradas,
       '% sobre entregadas': porcentajeEntregadas,
-      'Nº Personas vacunadas\n(pauta completada)': dosisPautaCompletada
+      'Nº Personas vacunadas\n(pauta completada)': dosisPautaCompletada,
+      'Fecha de la última vacuna registrada (2)': fechaUltRegistroNumber
     } = element
 
     const normalizedCCAA = ccaa.trim()
     const populationCCAA = population[normalizedCCAA]
+    const fechaUltRegistro = new Date(XLSX.SSF.format('YYYY-MM-DD,HH:MM:SS', fechaUltRegistroNumber))
 
     return {
       ccaa: ccaa.trim(),
@@ -32,10 +35,12 @@ module.exports = async function transformOdsToJson (odsFileName) {
       dosisEntregadas: dosisEntregadasDeprecated || dosisEntregadasNew,
       dosisEntregadasModerna,
       dosisEntregadasPfizer,
+      dosisEntregadasAstrazeneca,
       dosisPautaCompletada,
       porcentajeEntregadas,
       porcentajePoblacionAdministradas: dosisAdministradas / populationCCAA,
-      porcentajePoblacionCompletas: dosisPautaCompletada / populationCCAA
+      porcentajePoblacionCompletas: dosisPautaCompletada / populationCCAA,
+      fechaUltRegistro: fechaUltRegistro.getTime()
     }
   })
 }

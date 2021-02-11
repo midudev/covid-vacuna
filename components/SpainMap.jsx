@@ -53,18 +53,6 @@ const SpainMap = ({ data, reportFound }) => {
     }
   }
 
-  const updatePosition = ({ left, top }, node) => {
-    const html = document.querySelector('html')
-    if (html.getAttribute('scheme')) {
-      const d = document.documentElement
-      left = Math.min(d.clientWidth - node.clientWidth, left)
-      top = Math.min(d.clientHeight - node.clientHeight, top)
-      left = Math.max(0, left * 0.5)
-      top = Math.max(0, top * 0.25)
-    }
-    return { top, left }
-  }
-
   const tooltipText = ({
     ccaa,
     dosisAdministradas,
@@ -141,7 +129,7 @@ const SpainMap = ({ data, reportFound }) => {
             ))}
           </g>
         </svg>
-        {hasMounted && <ReactTooltip id='toolitpMap' overridePosition={({ left, top }, _currentEvent, _currentTarget, node) => updatePosition({ left, top }, node)}>{content}</ReactTooltip>}
+        {hasMounted && <ReactTooltip id='toolitpMap'>{content}</ReactTooltip>}
       </div>
     </>
   )

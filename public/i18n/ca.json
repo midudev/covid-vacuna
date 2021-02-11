@@ -5,16 +5,16 @@
       "standardTitleLabel": "Utilitza el tema depenent la configuració de sistema",
       "standardAriaLabel": "Les teves preferències molones del teu sistema",
       "darkTitleLabel": "Utilitza el tema fosc",
-      "darkAriaLabel": "Una lluna amb ulls sospitosos que sembla que està tramant alguna cosa fotut"
+      "darkAriaLabel": "Una lluna amb ulls sospitosos que sembla que està tramant alguna cosa fotuda"
     },
     "home": {
-      "tituloPricipal": "Vacunació COVID-19 en",
+      "tituloPrincipal": "Vacunació COVID-19 a",
       "datosActualizados": "Dades actualitzades",
       "fuente": "Font:",
       "ministerioDeSanidad": "Ministeri de Sanitat",
       "mostrarReporteFecha": "Mostrar dades a data",
       "seleccionarFecha": "Seleccionar data",
-      "descargarDatosJSON": "Descarregar últimes dades en format JSON",
+      "descargarDatosJSON": "Descarregar dades en format JSON",
       "incrustarDatos": "Vull incrustar les dades de vacunació en una altra pàgina web",
       "porComunidadesAutonomas": "Per comunitats autònomes",
       "dosisEntregadas": "Dosis entregades",
@@ -32,7 +32,7 @@
       "changelog5": "Afegides gràfiques",
       "changelog5.1": "i contribuïdors",
       "changelog4": "Afegida la possibilitat d'incrustar les dades en una altra pàgina",
-      "changelog3": "Afegit manera fosc a l'app",
+      "changelog3": "Afegida la versió fosca a l'app",
       "changelog2": "Afegida barra de progrés de vacunació en població",
       "changelog1": "Afegides persones amb pauta completa",
       "changelog0": "primera versió",
@@ -45,13 +45,14 @@
         "vacunasDistribuidas": "Vacunes distribuïdes a Espanya",
         "pfizerLogo": "Pfizer Logo",
         "modernaLogo": "moderna Logo",
+        "astrazenecaLogo": "Astrazeneca Logo",
         "vacunasAdministradas": "Vacunes administrades a Espanya",
         "dosisCompletas": "Dosis completes subministrades",
         "descargarDatos": "descarregar dades",
         "incrustarDatos": "Incrusta dades en una pàgina web",
         "graficaSubiendo": "gràfica pujant",
         "emojiCiclista": "Emoji de ciclista",
-        "globoMundo": "Globus d'el món amb meridians",
+        "globoMundo": "Globus del món amb meridians",
         "luna": "Lluna",
         "globoTerricola": "Globus terrícola amb vista a Amèrica",
         "jeringuilla": "xeringa",
@@ -87,4 +88,3 @@
         "poblacionTotalmenteVacunada": "població totalment vacunada"
     }
 }
-

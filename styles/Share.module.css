@@ -1,5 +1,6 @@
 .share {
   align-items: center;
+  color: #000;
   background: #fff;
   border-radius: 50000px;
   border: 1px solid #000;
@@ -12,7 +13,7 @@
   padding: 4px 16px;
 }
 
-.share a:hover {
+.share:hover {
   background: rgb(210, 237, 255);
   box-shadow: none;
   transform: translate3d(4px, 4px, 0);

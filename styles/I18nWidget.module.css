@@ -51,6 +51,7 @@
 }
 
 .i18nWidget a {
+  color: #000;
   display: block;
   font-size: 0.7rem;
   font-weight: 500;
