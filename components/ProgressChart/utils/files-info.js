@@ -52,8 +52,7 @@ const getDatasetForCcaa = (ccaaHashMap, ccaaName) => {
     const getLastFilteredValue = v.filter(filterOnlyTotals).pop()
 
     // prepare name and value fields
-    const reversedMatrix = k.reverse()
-    const beautifyName = [reversedMatrix[0], reversedMatrix[1]].join('/') // <day/month>
+    const beautifyName = [k[2], k[1]].join('/') // <day/month>
     const getSpecificField = (v) => getLastFilteredValue[v] ?? 0 // some fields don't no exists on data files yet
 
     const createDatasetElement = (i) => {
