@@ -193,19 +193,3 @@
     flex-direction: column;
   }
 }
-
-.headerSticky{
-  background: var(--app-background-color);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px 24px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.headerContent {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  max-width: 1000px;
-}

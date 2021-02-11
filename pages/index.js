@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -12,12 +12,10 @@ import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
 import Prevision from 'components/Prevision.jsx'
 import Select from 'components/Select'
-import I18nWidget from 'components/I18nWidget.jsx'
+import Header from 'components/Header.jsx'
 import ScrollToTop from 'components/ScrollToTop'
-import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
-import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 import DownloadData from 'components/DownloadData'
 
 import getGitHubContributors from 'services/getGitHubContributors'
@@ -31,7 +29,6 @@ import {
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
-import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
@@ -39,6 +36,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
   const translate = useTranslate()
+  const titleRef = useRef(null)
 
   const totals = useMemo(
     () => reportFound !== undefined
@@ -66,7 +64,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
       </Head>
       <div id='container' className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.title}>
+          <h1 ref={titleRef} className={styles.title}>
             {translate.home.tituloPrincipal} {filter === 'Totales' ? 'España' : filter}
           </h1>
           <small className={styles.description}>
@@ -312,17 +310,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
       <ScrollToTop showButtonAt={250} />
 
-      <div id='header' className={styles.headerSticky}>
-        <div className={styles.headerContent}>
-          <ClientSideComponent>
-            <SchemeColorSwitcher />
-          </ClientSideComponent>
-
-          <I18nWidget />
-
-          <Share />
-        </div>
-      </div>
+      <Header titleRef={titleRef} filter={filter} />
 
       <Footer />
     </>
