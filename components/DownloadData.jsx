@@ -1,25 +1,15 @@
-import { useTranslate } from 'hooks/useTranslate'
-
 import Image from 'next/image'
-
+import { useTranslate } from 'hooks/useTranslate'
+import { useLocale } from 'hooks/useLocale'
+import formatDate from 'services/formatDateFromReport'
 import styles from 'styles/DownloadData.module.css'
 
-export default function DownloadData (props) {
+export default function DownloadData ({ valueSearch }) {
   const translate = useTranslate()
-  const dataFilePath = `../data/${props.valueSearch}.json`
+  const { locale } = useLocale()
+  const dataFilePath = `../data/${valueSearch}.json`
 
-  const normalizedDate = (date) => {
-    let dateFormat = ''
-    for (let i = 0; i < date.length; i++) {
-      dateFormat = dateFormat + date[i]
-      if (i === 3) {
-        dateFormat = dateFormat + '/'
-      } if (i === 5) {
-        dateFormat = dateFormat + '/'
-      }
-    }
-    return dateFormat
-  }
+  const date = valueSearch ? `(${formatDate({ locale, value: valueSearch })})` : ''
 
   return (
     <a className={styles.download} download href={dataFilePath}>
@@ -29,7 +19,7 @@ export default function DownloadData (props) {
         src='/download.png'
         alt={translate.home.alt.descargarDatos}
       />
-      {translate.home.descargarDatosJSON} ({normalizedDate(props.valueSearch)})
+      {translate.home.descargarDatosJSON}{date}
     </a>
   )
 }
