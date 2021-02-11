@@ -6,7 +6,7 @@ const REPORT_DATE_REGEXP = /(?<year>[0-9]{4})(?<month>[0-9]{2})(?<day>[0-9]{2})/
 
 const toDate = (value) => {
   const { year, month, day } = value.match(REPORT_DATE_REGEXP).groups
-  return new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
+  return new Date(+year, +month - 1, +day)
 }
 
 const formatDate = ({ locale, value }) => {
