@@ -6,7 +6,7 @@ export default function Custom404 () {
   return (
     <>
       <Head>
-        <title>404 | Covid Vacuna</title>
+        <title>404 | covid-vacuna.app</title>
       </Head>
       <section>
         <div className='card'>
