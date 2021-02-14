@@ -7,8 +7,7 @@ import styles from 'styles/DownloadData.module.css'
 export default function DownloadData ({ valueSearch }) {
   const translate = useTranslate()
   const { locale } = useLocale()
-  const dataFilePath = `../data/${valueSearch}.json`
-
+  const dataFilePath = valueSearch ? `../data/${valueSearch}.json` : '../data/latest.json'
   const date = valueSearch ? `(${formatDate({ locale, value: valueSearch })})` : ''
 
   return (
