@@ -67,7 +67,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
       <div id='container' className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
-            {translate.home.tituloPrincipal} {filter === 'Totales' ? 'España' : filter}
+            {translate.home.tituloPrincipal} {filter === 'Totales' ? translate.home.pais : translate.table.ccaa[filter]}
           </h1>
           <small className={styles.description}>
             {translate.home.datosActualizados} <TimeAgo timestamp={info.lastModified} />.

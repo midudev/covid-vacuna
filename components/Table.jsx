@@ -101,7 +101,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
 
   return (
     <div className={styles.container}>
-      <table className={styles.table} {...getTableProps()} border='0' cellspacing='0' cellpadding='0'>
+      <table className={styles.table} {...getTableProps()} border='0' cellSpacing='0' cellPadding='0'>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -136,7 +136,11 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
                 {row.cells.map(cell => {
                   return (
                     <td {...cell.getCellProps()}>
-                      {cell.column.format(cell.value)}
+                      {
+                        cell.column.id === 'ccaa'
+                        ? translate.table.ccaa[cell.value]
+                        : cell.column.format(cell.value)
+                      }
                     </td>
                   )
                 })}
