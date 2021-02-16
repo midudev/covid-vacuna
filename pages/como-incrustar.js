@@ -40,10 +40,11 @@ export default function EjemploEmbed () {
         <p>Así es como quedará el embed en tu página web.</p>
         <div id='pre-embed' style={{ position: 'relative', paddingBottom: '56.25%' }}>
           <iframe
+            title='Información de vacunación en covid-vacuna.app'
             width='800'
             height='450'
             src='https://covid-vacuna.app/embed'
-            frameborder='0'
+            frameBorder='0'
             scrolling='no'
             style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
           />
