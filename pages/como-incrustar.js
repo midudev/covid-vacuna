@@ -34,7 +34,7 @@ export default function EjemploEmbed () {
 
         <h2>Copia este código</h2>
         <textarea
-          onChange={() => {}} onFocus={handleFocus} autoComplete='off' autoCapitalize='none' value='&lt;div style=&quot;position: relative; padding-bottom: 56.25%;&quot;&gt; &lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://covid-vacuna.app/embed&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot; &gt;&lt;/iframe&gt; &lt;/div&gt;'
+          onChange={() => {}} onFocus={handleFocus} autoComplete='off' autoCapitalize='none' value='&lt;div style=&quot;position: relative; padding-bottom: 56.25%;&quot;&gt;&lt;iframe title=&quot;Información de vacunación en covid-vacuna.app&quot; width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://covid-vacuna.app/embed&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;'
         />
         <h2>Previsualización</h2>
         <p>Así es como quedará el embed en tu página web.</p>
