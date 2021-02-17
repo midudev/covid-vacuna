@@ -19,6 +19,7 @@ import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 import DownloadData from 'components/DownloadData'
+import Labs from 'components/Labs'
 
 import getGitHubContributors from 'services/getGitHubContributors'
 
@@ -105,47 +106,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                     {isNaN(totals.dosisEntregadas) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadas}</NumberDigits>}
                   </p>
                 </div>
-                <div>
-                  <small>
-                    <Image
-                      alt={translate.home.alt.pfizerLogo}
-                      className={styles.companyLogo}
-                      src='/pfizer-logo.png'
-                      height={29}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      {isNaN(totals.dosisEntregadasPfizer) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasPfizer}</NumberDigits>}
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt={translate.home.alt.modernaLogo}
-                      className={styles.companyLogo}
-                      src='/moderna-logo.png'
-                      height={16.5}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt={translate.home.alt.astrazenecaLogo}
-                      className={styles.companyLogo}
-                      src='/astrazeneca-logo.png'
-                      height={16.5}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      {isNaN(totals.dosisEntregadasAstrazeneca) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasAstrazeneca}</NumberDigits>}
-                    </span>
-                  </small>
-                </div>
+                <Labs totals={totals} labs={['pfizer', 'moderna', 'astrazeneca']} />
               </section>
             </div>
 
