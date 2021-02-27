@@ -25,6 +25,7 @@
       "poblacionTotalmenteVacunada": "% guztiz txertatutako populazioa",
       "evolucionDosisEntregadas": "Emandako dosien bilakaera",
       "evolucionDosisAdministradas": "Administratutako dosien bilakaera",
+      "evolucionDosisEntregadasVSAdministradas": "Emandako dosien bilakaera emandakoekin alderatuta",
       "fuenteDatosEnlacesInteres": "Datu iturriak eta esteka interesgarriak",
       "fuente1": "COVID-19 Txertaketa Estrategia Espainian",
       "fuente2": "Koronabirus berriaren aurkako txertoari buruzko informazio ofiziala",
@@ -86,5 +87,10 @@
         "sobreEntregadas": "entregatutako guztiaren gainean",
         "poblacionVacunada": "txertatutako populazioa",
         "poblacionTotalmenteVacunada": "guztiz txertatutako populazioa"
+    },
+    "chart": {
+        "aDia": "Egun bat ",
+        "seHanEntregado": " entregatu dute ",
+        "dosisYSeHanAdministrado": " dosiak eta eman zaizkie "
     }
   }

@@ -26,6 +26,7 @@
         "poblacionTotalmenteVacunada": "% población totalmente vacunada",
         "evolucionDosisEntregadas": "Evolución de dosis entregadas",
         "evolucionDosisAdministradas": "Evolución de dosis administradas",
+        "evolucionDosisEntregadasVSAdministradas": "Evolución de dosis entregadas respecto a las administradas",
         "fuenteDatosEnlacesInteres": "Fuentes de datos y enlaces de interés",
         "fuente1": "Estrategia de Vacunación COVID-19 en España",
         "fuente2": "Información oficial sobre la vacunación contra el nuevo coronavirus",
@@ -87,5 +88,10 @@
         "sobreEntregadas": "sobre el total de entregadas",
         "poblacionVacunada": "población vacunada",
         "poblacionTotalmenteVacunada": "población totalmente vacunada"
+    },
+    "chart": {
+        "aDia": "A día ",
+        "seHanEntregado": " se han entregado ",
+        "dosisYSeHanAdministrado": " dosis y se han administrado "
     }
 }
