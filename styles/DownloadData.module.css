@@ -2,11 +2,11 @@
   display: flex;
   align-items: center;
   font-size: 1rem;
-  color: #333;
+  color: var(--text-secondary-color);
   border-bottom: 1px dashed #ddd;
 }
 
 .download:hover {
-  color: #555;
+  color: var(--text-small-color);
   border-bottom: 1px dashed #09f;
 }
