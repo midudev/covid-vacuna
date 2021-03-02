@@ -8,13 +8,13 @@
       "darkAriaLabel": "Unha lúa de ollos sospeitosos que parece que está a piques de foderse"
     },
     "home": {
-      "tituloPricipal": "Vacinación COVID-19 en",
+      "tituloPrincipal": "Vacinación COVID-19 en",
       "datosActualizados": "Datos actualizados",
       "fuente": "Fonte:",
       "ministerioDeSanidad": "Ministerio de Sanidade",
       "mostrarReporteFecha": "Amosar informe ata a data",
       "seleccionarFecha": "Seleccionar data",
-      "descargarDatosJSON": "Descarga os últimos datos en formato JSON",
+      "descargarDatosJSON": "Descarga os datos en formato JSON",
       "incrustarDatos": "Quero inserir os datos de vacinación noutra páxina web",
       "porComunidadesAutonomas": "Por comunidades autónomas",
       "dosisEntregadas": "Doses entregadas",
@@ -45,6 +45,7 @@
         "vacunasDistribuidas": "Vacinas distribuídas en España",
         "pfizerLogo": "Logotipo de Pfizer",
         "modernaLogo": "Logotipo moderno",
+        "astrazenecaLogo": "Logotipo de Astrazeneca",
         "vacunasAdministradas": "Vacinas administradas en España",
         "dosisCompletas": "Administrar doses completas",
         "descargarDatos": "Descargar datos",

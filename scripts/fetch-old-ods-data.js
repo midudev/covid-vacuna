@@ -2,7 +2,7 @@ const fs = require('fs')
 const download = require('download')
 const transformOdsToJson = require('./transform-ods-to-json')
 
-const createUrl = day => `https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_202101${day}.ods`
+const createUrl = day => `https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_202102${day}.ods`
 
 const downloadFile = (url, filename) => {
   return download(url, 'public/data', { filename })

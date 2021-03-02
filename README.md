@@ -21,7 +21,7 @@ npm run dev # levantar el entorno de desarrollo
 - 🇬🇧 UK: https://covid-vaccine.app
 - 🇨🇺 Cuba: https://covid-resume-cuba.kenriortega.vercel.app
 - 🇦🇷 Argentina: https://covid-vacuna-ar.vercel.app
-- 🇵🇪 Peru: https://covid-resume-peru.vercel.app/
+- 🇵🇪 Perú: https://covidvacunaperu.app/
 
 ## ¿Aceptas Pull Request?
 

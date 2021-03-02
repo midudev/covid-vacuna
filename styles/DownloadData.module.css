@@ -1,0 +1,12 @@
+.download {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  border-bottom: 1px dashed #ddd;
+}
+
+.download:hover {
+  color: var(--text-small-color);
+  border-bottom: 1px dashed #09f;
+}

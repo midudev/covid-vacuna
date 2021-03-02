@@ -8,13 +8,13 @@
       "darkAriaLabel": "Una lluna amb ulls sospitosos que sembla que està tramant alguna cosa fotuda"
     },
     "home": {
-      "tituloPricipal": "Vacunació COVID-19 a",
+      "tituloPrincipal": "Vacunació COVID-19 a",
       "datosActualizados": "Dades actualitzades",
       "fuente": "Font:",
       "ministerioDeSanidad": "Ministeri de Sanitat",
       "mostrarReporteFecha": "Mostrar dades a data",
       "seleccionarFecha": "Seleccionar data",
-      "descargarDatosJSON": "Descarregar darreres dades en format JSON",
+      "descargarDatosJSON": "Descarregar dades en format JSON",
       "incrustarDatos": "Vull incrustar les dades de vacunació en una altra pàgina web",
       "porComunidadesAutonomas": "Per comunitats autònomes",
       "dosisEntregadas": "Dosis entregades",
@@ -45,6 +45,7 @@
         "vacunasDistribuidas": "Vacunes distribuïdes a Espanya",
         "pfizerLogo": "Pfizer Logo",
         "modernaLogo": "moderna Logo",
+        "astrazenecaLogo": "Astrazeneca Logo",
         "vacunasAdministradas": "Vacunes administrades a Espanya",
         "dosisCompletas": "Dosis completes subministrades",
         "descargarDatos": "descarregar dades",
