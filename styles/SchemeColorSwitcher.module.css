@@ -2,7 +2,7 @@
   align-items: center;
   background: #fff;
   border-radius: 5000px;
-  box-shadow: 0 0 0px 1px #000, #92d5ff 4px 4px;
+  box-shadow: 0 0 0px 1px #000, var(--app-shadow-color) 4px 4px;
   display: flex;
   height: 26px;
   left: 32px;
