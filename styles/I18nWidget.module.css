@@ -12,7 +12,7 @@
   align-items: center;
   border: 1px solid #000000;
   background: #fff;
-  box-shadow: #92d5ff 1px 4px;
+  box-shadow: var(--app-shadow-color) 4px 4px;
   font-size: 0.7rem;
   font-weight: 500;
   display: flex;
