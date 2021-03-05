@@ -37,7 +37,7 @@ export default function Contributors ({ contributors }) {
       }
 
       a:hover {
-        box-shadow: rgb(210 239 253) 7px 7px;
+        box-shadow: var(--app-shadow-color) 7px 7px;
       }
     `}
       </style>

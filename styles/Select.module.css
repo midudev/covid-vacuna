@@ -8,7 +8,7 @@
   background: var(--app-background-color);
   border-radius: 5000px;
   border: 1px solid var(--app-border-color);
-  box-shadow: var(--app-shadow-color) 1px 4px;
+  box-shadow: var(--app-shadow-color) 4px 4px;
   margin-left: 8px;
   position: relative;
 }
