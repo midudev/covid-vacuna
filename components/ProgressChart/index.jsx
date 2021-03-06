@@ -23,13 +23,20 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
 
   if (!dataset) return null
 
+  // Join dosisAdministradas y dosisEntregadas to make an unique graph
+  const joinDataset = []
+  for (const data of dataset.dosisEntregadas) {
+    const valueAdministradas = dataset.dosisAdministradas.find(x => x.name === data.name)?.value
+    joinDataset.push({ name: data.name, ve: data.value, va: valueAdministradas })
+  }
+
   return (
     <div className={styles.chartContainer} ref={elementRef}>
       {isVisible && (
         <div style={{ width: '100%', height: 450 }}>
           <ResponsiveContainer>
             <AreaChart
-              data={dataset}
+              data={joinDataset}
               margin={{
                 top: 50,
                 right: 0,
@@ -48,9 +55,15 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
               <Tooltip content={<CustomTooltip />} />
               <Area
                 type='monotone'
-                dataKey='value'
+                dataKey='ve'
                 stroke='var(--text-subtitle-color)'
                 fill='var(--app-shadow-color)'
+              />
+              <Area
+                type='monotone'
+                dataKey='va'
+                stroke='var(--app-selection-color)'
+                fill='var(--text-small-color)'
               />
             </AreaChart>
           </ResponsiveContainer>
