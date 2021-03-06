@@ -1,7 +1,7 @@
 /* global fetch */
 
 const { GITHUB_TOKEN } = process.env
-const GITHUB_API_ENDPOINT = 'https://api.github.com/repos/midudev/covid-vacuna/contributors'
+const GITHUB_API_ENDPOINT = 'https://api.github.com/repos/midudev/covid-vacuna/contributors?per_page=100'
 const headers = {
   Authorization: `token ${GITHUB_TOKEN}`
 }
