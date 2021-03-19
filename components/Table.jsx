@@ -39,7 +39,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
         return {
           dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
           porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
-          porcentajePoblacionAdministradas: getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas }),
+          porcentajePoblacionAdministradas: getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas }).toFixed(4),
           porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
           ...rest
         }
