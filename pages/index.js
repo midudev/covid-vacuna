@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Changelog from 'components/Changelog.jsx'
 import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
@@ -257,9 +256,6 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
             </a>
           </li>
         </ul>
-
-        <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
-        <Changelog />
 
         <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
         <ul>
