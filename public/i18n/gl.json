@@ -83,6 +83,7 @@
     "chart": {
         "aDia": "Un día ",
         "seHanEntregado": " entregaron ",
-        "dosisYSeHanAdministrado": " doses e administráronse "
+        "dosisYSeHanAdministrado": " doses e administráronse ",
+        "deLosCualesPautaCompleta": " dos cales teñen a guía completa "
     }
   }

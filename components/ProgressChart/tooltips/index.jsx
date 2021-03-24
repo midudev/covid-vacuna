@@ -53,12 +53,14 @@ export function DosisEntregadasVSAdministradasTooltip ({ active, payload, label 
   if (!payload) return null
   const valueE = formatValueToLocale(payload[0].value, 'es-ES')
   const valueA = formatValueToLocale(payload[1].value, 'es-ES')
+  const valueC = formatValueToLocale(payload[2].value, 'es-ES')
 
   return (
     <div className={styles.chartTooltip}>
       <p>
         {translate.chart.aDia} <Bold text={label} /> {translate.chart.seHanEntregado}
         <Bold text={valueE} />{translate.chart.dosisYSeHanAdministrado}<Bold text={valueA} />
+        {translate.chart.deLosCualesPautaCompleta}<Bold text={valueC} />
       </p>
     </div>
   )

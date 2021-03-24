@@ -14,6 +14,7 @@
   --text-subtitle-color: #001e63;
   --text-small-color: #555;
   --graph-fill-color: #00adcc;
+  --graph-fill-secondary-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {

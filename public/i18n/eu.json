@@ -83,6 +83,7 @@
     "chart": {
         "aDia": "Egun bat ",
         "seHanEntregado": " entregatu dute ",
-        "dosisYSeHanAdministrado": " dosiak eta eman zaizkie "
+        "dosisYSeHanAdministrado": " dosiak eta eman zaizkie ",
+        "deLosCualesPautaCompleta": " horietatik jarraibide osoa dute "
     }
   }

@@ -23,11 +23,12 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
 
   if (!dataset) return null
 
-  // Join dosisAdministradas y dosisEntregadas to make an unique graph
+  // Join dosisAdministradas, dosisEntregadas and pautasCompletas to make an unique graph
   const joinDataset = []
   for (const data of dataset.dosisEntregadas) {
     const valueAdministradas = dataset.dosisAdministradas.find(x => x.name === data.name)?.value
-    joinDataset.push({ name: data.name, ve: data.value, va: valueAdministradas })
+    const valuePautaCompletada = dataset.dosisPautaCompletada.find(x => x.name === data.name)?.value
+    joinDataset.push({ name: data.name, ve: data.value, va: valueAdministradas, vc: valuePautaCompletada })
   }
 
   return (
@@ -64,6 +65,12 @@ export default function ProgressChart ({ dataset, tooltip: CustomTooltip }) {
                 dataKey='va'
                 stroke='var(--text-subtitle-color)'
                 fill='var(--graph-fill-color)'
+              />
+              <Area
+                type='monotone'
+                dataKey='vc'
+                stroke='var(--text-subtitle-color)'
+                fill='var(--graph-fill-secondary-color)'
               />
             </AreaChart>
           </ResponsiveContainer>

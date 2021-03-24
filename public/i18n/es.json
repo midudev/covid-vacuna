@@ -84,6 +84,7 @@
     "chart": {
         "aDia": "A día ",
         "seHanEntregado": " se han entregado ",
-        "dosisYSeHanAdministrado": " dosis y se han administrado "
+        "dosisYSeHanAdministrado": " dosis y se han administrado ",
+        "deLosCualesPautaCompleta": " de los cuales tienen la pauta completa "
     }
 }
