@@ -3,6 +3,18 @@ const withPWA = require('next-pwa')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 
+const nextConfig = {
+  future: {
+    webpack5: true,
+    strictPostcssConfiguration: true
+  },
+  i18n: {
+    localeDetection: false,
+    locales: ['es', 'ca', 'gl', 'eu'],
+    defaultLocale: 'es'
+  }
+}
+
 module.exports = withPlugins([
   [
     withImages,
@@ -21,10 +33,4 @@ module.exports = withPlugins([
       }
     }
   ]
-], {
-  i18n: {
-    localeDetection: false,
-    locales: ['es', 'ca', 'gl', 'eu'],
-    defaultLocale: 'es'
-  }
-})
+], nextConfig)
