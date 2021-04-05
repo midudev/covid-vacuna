@@ -16,7 +16,9 @@ export default function Select ({ data, onChange }) {
             defaultValue={data[data.length - 1]}
             id='date-select'
             className={styles.select}
-            onChange={(e) => onChange(e.target.value)}
+            onChange={(e) => onChange({ day: e.target.value, previusDay: data[data.findIndex(day => e.target.value === day) - 1] })}
+            // onChange={(e) => onChange(data[data.findIndex(day => e.target.value === day)-1])}
+            // onChange={(e) => onChange(e.target.value)}
           >
             {data &&
               data.map((date) => (

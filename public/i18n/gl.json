@@ -61,6 +61,7 @@
     "terminos": {
       "dosisDistribuidas": "Doses distribuídas",
       "dosisAdministradas": "Dose administrada",
+      "desdeAnteriorReporte": "Do informe anterior",
       "sobreDistribuidas": "% sobre distribuído",
       "personasConPautaCompleta": "Persoas con directrices completas",
       "sobreAdministradas": "% sobre xestionado"

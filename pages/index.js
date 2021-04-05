@@ -32,10 +32,11 @@ import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
 
-export default function Home ({ contributors, data, info, reports, chartDatasets }) {
+export default function Home ({ contributors, data, info, reports, comparator, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
-  const reportFound = useSearch({ valueSearch })
+  const reportFound = useSearch({ valueSearch: valueSearch.day })
+  const reportFoundComparator = useSearch({ valueSearch: valueSearch.previusDay })
   const translate = useTranslate()
 
   const totals = useMemo(
@@ -43,6 +44,13 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
       ? reportFound.find(({ ccaa }) => ccaa === filter)
       : data.find(({ ccaa }) => ccaa === filter),
     [data, filter, reportFound]
+  )
+
+  const totalsComparator = useMemo(
+    () => reportFoundComparator !== undefined
+      ? reportFoundComparator.find(({ ccaa }) => ccaa === filter)
+      : comparator.find(({ ccaa }) => ccaa === filter),
+    [comparator, filter, reportFoundComparator]
   )
 
   return (
@@ -76,6 +84,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           </small>
 
           <Select data={reports} onChange={setValueSearch} />
+          {/* <Select data={reports} onChange={setValueSearchComparator} /> */}
+          {/* <Select data={reports} onChange={setValueSearch} /> */}
 
           <div className={styles.grid}>
             <div className={styles.card}>
@@ -165,6 +175,12 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   </p>
                 </div>
                 <div>
+                  <h4>{translate.terminos.desdeAnteriorReporte}</h4>
+                  <p>
+                    {isNaN(totals.dosisAdministradas) || isNaN(totalsComparator.dosisAdministradas) ? 'Desconocido' : <NumberDigits>{totals.dosisAdministradas - totalsComparator.dosisAdministradas}</NumberDigits>}
+                  </p>
+                </div>
+                <div>
                   <h4>{translate.terminos.sobreDistribuidas}</h4>
                   <p className={styles.secondary}>
                     {isNaN(totals.porcentajeEntregadas) ? 'Desconocido' : <NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage>}
@@ -203,7 +219,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
           <Progress totals={totals} reportFound={reportFound} />
           <Prevision totals={totals} />
 
-          <DownloadData valueSearch={valueSearch} />
+          <DownloadData valueSearch={valueSearch.day} />
 
           <Link href='/como-incrustar'>
             <a className={styles.download}>
@@ -331,6 +347,7 @@ export async function getStaticProps () {
 
     return data
   })(require.context('../public/data/', true, /2021[0-9]{4}.json$/))
+  const comparator = require('../public/data/' + reports[reports.length - 2] + '.json')
 
   const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
@@ -340,6 +357,7 @@ export async function getStaticProps () {
       data,
       info,
       reports,
+      comparator,
       chartDatasets,
       contributors
     }

@@ -61,6 +61,7 @@
     "terminos": {
       "dosisDistribuidas": "Dosis distribuïdes",
       "dosisAdministradas": "Dosis administrades",
+      "desdeAnteriorReporte": "Des anterior informe",
       "sobreDistribuidas": "% sobre distribuïdes",
       "personasConPautaCompleta": "Persones amb pauta completa",
       "sobreAdministradas": "% sobre administrades"

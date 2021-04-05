@@ -62,6 +62,7 @@
     "terminos": {
         "dosisDistribuidas": "Dosis distribuidas",
         "dosisAdministradas": "Dosis administradas",
+        "desdeAnteriorReporte": "Desde anterior reporte",
         "sobreDistribuidas": "% sobre distribuidas",
         "personasConPautaCompleta": "Personas con pauta completa",
         "sobreAdministradas": "% sobre administradas"
