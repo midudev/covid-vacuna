@@ -175,7 +175,6 @@ export default function Home ({ contributors, data, info, reports, comparator, c
                 <div>
                   <h4>{translate.terminos.desdeAnteriorReporte}</h4>
                   <p>
-                    {/* { isNaN(totals.dosisAdministradas) || isNaN(totalsComparator?.dosisAdministradas) ? 'Desconocido' : <NumberDigits>{totals.dosisAdministradas - totalsComparator.dosisAdministradas}</NumberDigits>} */}
                     <NumberDigits>{(totals?.dosisAdministradas | 0) - (totalsComparator?.dosisAdministradas | 0)}</NumberDigits>
                   </p>
                 </div>
