@@ -7,6 +7,15 @@ export default function Select ({ data, onChange }) {
   const { locale } = useLocale()
   const { home } = useTranslate()
 
+  function getPreviusDay (e) {
+    const index = data.findIndex(day => e.target.value === day) - 1
+    if (data[index]) {
+      return data[index]
+    } else {
+      return '20210103_'
+    }
+  }
+
   return (
     <>
       <section className={styles.sectionSelect}>
@@ -16,9 +25,7 @@ export default function Select ({ data, onChange }) {
             defaultValue={data[data.length - 1]}
             id='date-select'
             className={styles.select}
-            onChange={(e) => onChange({ day: e.target.value, previusDay: data[data.findIndex(day => e.target.value === day) - 1] })}
-            // onChange={(e) => onChange(data[data.findIndex(day => e.target.value === day)-1])}
-            // onChange={(e) => onChange(e.target.value)}
+            onChange={(e) => onChange({ day: e.target.value, previusDay: getPreviusDay(e) })}
           >
             {data &&
               data.map((date) => (

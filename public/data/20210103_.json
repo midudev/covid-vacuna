@@ -1,0 +1,162 @@
+[
+	{
+		"ccaa": "Andalucía",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Aragón",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Asturias",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Baleares",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Canarias",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Cantabria",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Castilla y Leon",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Castilla La Mancha",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Cataluña",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "C. Valenciana",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Extremadura",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Galicia",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "La Rioja",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Madrid",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Murcia",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Navarra",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "País Vasco",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Ceuta",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Melilla",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	},
+	{
+		"ccaa": "Totales",
+		"dosisAdministradas": 0,
+		"dosisEntregadas": 0,
+		"porcentajeEntregadas": 0,
+		"porcentajePoblacionAdministradas": 0,
+		"porcentajePoblacionCompletas": null
+	}
+]
