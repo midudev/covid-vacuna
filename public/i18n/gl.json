@@ -84,5 +84,15 @@
         "aDia": "A día ",
         "seHanEntregado": " entregáronse ",
         "dosisYSeHanAdministrado": " doses e administráronse "
+    },
+    "etariosBarChart": {
+        "titulo": "Poboación vacinada por idade en",
+        "paraLasPersonas": "Para persoas de ",
+        "conUnaPoblacion": "anos cunha poboación de",
+        "unaDosis": " persoas, deuse unha dose a",
+        "pautaCompleta": "e recibiron a guía completa ",
+        "keyPoblacionINE": "Poboación INE",
+        "keyUnaDosis": "Unha dose",
+        "keyPautaCompleta": "Pauta Completa"
     }
   }

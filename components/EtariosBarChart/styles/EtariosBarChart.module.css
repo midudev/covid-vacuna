@@ -1,0 +1,23 @@
+.chartContainer {
+  max-width: 1000px;
+  margin-top: 3rem;
+  width: 100%;
+  box-shadow: var(--app-shadow-color) 14px 14px;
+  background-image: var(--app-background);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  border-radius: 8px;
+  border: 2px solid var(--app-border-color);
+  margin: 1rem 0 3rem;
+  padding-right: 3rem;
+}
+
+.chartTooltip {
+  color: #2c7cdc;
+  background-color: var(--app-background-color);
+  border: 2px solid var(--text-subtitle-color);
+  padding: 0 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 20em;
+}
