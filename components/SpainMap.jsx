@@ -11,6 +11,7 @@ import styles from 'styles/Map.module.css'
 import spainMap from 'public/maps/spain.json'
 import canaryIslandsMap from 'public/maps/canaryIslands.json'
 import NumberDigits from './NumberDigits'
+import { getPartialVacunationPopulation, getCompleteVacunationPopulation } from 'services/getProgressCalculations'
 
 const projection = geoConicConformalSpain()
 
@@ -57,8 +58,6 @@ const SpainMap = ({ data, reportFound }) => {
     ccaa,
     dosisAdministradas,
     dosisEntregadas,
-    dosisEntregadasModerna,
-    dosisEntregadasPfizer,
     dosisPautaCompletada,
     porcentajeEntregadas,
     porcentajePoblacionAdministradas,
@@ -81,12 +80,12 @@ const SpainMap = ({ data, reportFound }) => {
         </p>
         <p className={styles.tooltipSubText}>
           <NumberPercentage>
-            {porcentajePoblacionAdministradas}
+            {getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas })}
           </NumberPercentage>{' '}
           {translate.mapa.poblacionVacunada}
         </p>
         <p className={styles.tooltipSubText}>
-          <NumberPercentage>{porcentajePoblacionCompletas}</NumberPercentage>{' '}
+          <NumberPercentage>{getCompleteVacunationPopulation({ porcentajePoblacionCompletas })}</NumberPercentage>{' '}
           {translate.mapa.poblacionTotalmenteVacunada}
         </p>
       </div>

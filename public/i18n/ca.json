@@ -25,17 +25,10 @@
       "poblacionTotalmenteVacunada": "% població totalment vacunada",
       "evolucionDosisEntregadas": "Evolució de dosis lliurades",
       "evolucionDosisAdministradas": "Evolució de dosis administrades",
+      "evolucionDosisEntregadasVSAdministradas": "Evolució de dosis entregades respecte a les administrades",
       "fuenteDatosEnlacesInteres": "Fonts de dades i enllaços d'interès",
       "fuente1": "Estratègia de Vacunació COVID-19 a Espanya",
       "fuente2": "Informació oficial sobre la vacunació contra el nou coronavirus",
-      "changelog": "changelog",
-      "changelog5": "Afegides gràfiques",
-      "changelog5.1": "i contribuïdors",
-      "changelog4": "Afegida la possibilitat d'incrustar les dades en una altra pàgina",
-      "changelog3": "Afegida la versió fosca a l'app",
-      "changelog2": "Afegida barra de progrés de vacunació en població",
-      "changelog1": "Afegides persones amb pauta completa",
-      "changelog0": "primera versió",
       "enLosMedios": "En els mitjans",
       "medio1": "Llancen un web amb dades de el Govern que permet veure com avança a Espanya la vacunació contra el coronavirus (20 Minuts)",
       "medio2": "Web per revisar l'estat i progrés de la vacunació de l'COVID-19 a Espanya (Menéame)",
@@ -86,5 +79,10 @@
         "sobreEntregadas": "sobre el total d'entregades",
         "poblacionVacunada": "població vacunada",
         "poblacionTotalmenteVacunada": "població totalment vacunada"
+    },
+    "chart": {
+        "aDia": "A dia ",
+        "seHanEntregado": " s'han entregat ",
+        "dosisYSeHanAdministrado": " dosis i s'han administrat "
     }
 }

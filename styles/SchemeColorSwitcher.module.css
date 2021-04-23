@@ -1,20 +1,19 @@
 .colorSwitch {
   align-items: center;
-  background: #fff;
+  border: 1px solid var(--app-border-color);
+  background: var(--app-background-color);
   border-radius: 5000px;
-  box-shadow: 0 0 0px 1px #000, #92d5ff 4px 4px;
+  box-shadow: var(--app-shadow-color) 4px 4px;
   display: flex;
   height: 26px;
   left: 32px;
-  outline: 1px solid transparent;
   overflow: hidden;
   position: fixed;
   top: 16px;
 }
 
 .colorSwitch:hover {
-  background: rgb(210, 237, 255);
-  border: 1px solid #000000;
+  background: var(--app-selection-color);  border: 1px solid var(--app-border-color);
   box-shadow: none;
   transform: translate3d(4px, 4px, 0);
   transition: all 0.1s ease;

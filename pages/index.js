@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Changelog from 'components/Changelog.jsx'
 import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
@@ -26,8 +25,7 @@ import styles from 'styles/Home.module.css'
 import useSearch from 'hooks/useSearchReport'
 import ProgressChart from 'components/ProgressChart'
 import {
-  DosisAdministradasTooltip,
-  DosisEntregadasTooltip
+  DosisEntregadasVSAdministradasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
@@ -226,18 +224,11 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
 
-        <h2 className={styles.subtitle}>{translate.home.evolucionDosisEntregadas}</h2>
+        <h2 className={styles.subtitle}>{translate.home.evolucionDosisEntregadasVSAdministradas}</h2>
 
         <ProgressChart
-          dataset={chartDatasets.dosisEntregadas}
-          tooltip={DosisEntregadasTooltip}
-        />
-
-        <h2 className={styles.subtitle}>{translate.home.evolucionDosisAdministradas}</h2>
-
-        <ProgressChart
-          dataset={chartDatasets.dosisAdministradas}
-          tooltip={DosisAdministradasTooltip}
+          dataset={chartDatasets}
+          tooltip={DosisEntregadasVSAdministradasTooltip}
         />
 
         <h2 className={styles.subtitle}>
@@ -265,9 +256,6 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
             </a>
           </li>
         </ul>
-
-        <h2 className={styles.subtitle}>{translate.home.changelog}</h2>
-        <Changelog />
 
         <h2 className={styles.subtitle}>{translate.home.enLosMedios}</h2>
         <ul>

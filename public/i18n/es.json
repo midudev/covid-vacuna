@@ -26,17 +26,10 @@
         "poblacionTotalmenteVacunada": "% población totalmente vacunada",
         "evolucionDosisEntregadas": "Evolución de dosis entregadas",
         "evolucionDosisAdministradas": "Evolución de dosis administradas",
+        "evolucionDosisEntregadasVSAdministradas": "Evolución de dosis entregadas respecto a las administradas",
         "fuenteDatosEnlacesInteres": "Fuentes de datos y enlaces de interés",
         "fuente1": "Estrategia de Vacunación COVID-19 en España",
         "fuente2": "Información oficial sobre la vacunación contra el nuevo coronavirus",
-        "changelog": "Changelog",
-        "changelog5": "Añadidas gráficas",
-        "changelog5.1": "y contribuidores",
-        "changelog4": "Añadida la posibilidad de incrustar los datos en otra página",
-        "changelog3": "Añadido modo oscuro a la app",
-        "changelog2": "Añadida barra de progreso de vacunación en población",
-        "changelog1": "Añadidas personas con pauta completa",
-        "changelog0": "Primera versión",
         "enLosMedios": "En los medios",
         "medio1": "Lanzan una web con datos del Gobierno que permite ver cómo avanza en España la vacunación contra el coronavirus (20 Minutos)",
         "medio2": "Web para revisar el estado y progreso de la vacunación del COVID-19 en España (Menéame)",
@@ -87,5 +80,10 @@
         "sobreEntregadas": "sobre el total de entregadas",
         "poblacionVacunada": "población vacunada",
         "poblacionTotalmenteVacunada": "población totalmente vacunada"
+    },
+    "chart": {
+        "aDia": "A día ",
+        "seHanEntregado": " se han entregado ",
+        "dosisYSeHanAdministrado": " dosis y se han administrado "
     }
 }
