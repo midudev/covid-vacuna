@@ -85,5 +85,15 @@
     "aDia": "Egun bat ",
     "seHanEntregado": " entregatu dute ",
     "dosisYSeHanAdministrado": " dosiak eta eman zaizkie "
+  },
+  "etariosBarChart": {
+    "titulo": "Biztanle txertatuak adinaren arabera",
+    "paraLasPersonas": "Herriko jendearentzat ",
+    "conUnaPoblacion": "urteko biztanleriarekin",
+    "unaDosis": " jendeari, dosi bat eman zaio",
+    "pautaCompleta": "eta jarraibide osoa jaso dute ",
+    "keyPoblacionINE": "Biztanleria INE",
+    "keyUnaDosis": "Dosi bat",
+    "keyPautaCompleta": "Jarraibide osoa"
   }
 }

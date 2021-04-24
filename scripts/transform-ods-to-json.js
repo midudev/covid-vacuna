@@ -1,5 +1,6 @@
 const XLSX = require('xlsx')
 const { population } = require('../public/data/bbdd.json')
+const { transformEtariosToJson, etariosForThisCCAA } = require('./transform-etarios-to-json')
 
 module.exports = async function transformOdsToJson (odsFileName) {
   const workbook = XLSX.readFile(`./public/data/${odsFileName}`)
@@ -9,6 +10,8 @@ module.exports = async function transformOdsToJson (odsFileName) {
   const sheet = Sheets[firstKey]
 
   const json = XLSX.utils.sheet_to_json(sheet)
+
+  const jsonEtarios = transformEtariosToJson(workbook)
 
   return json.map(element => {
     const {
@@ -29,6 +32,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
     const normalizedCCAA = ccaa.trim()
     const populationCCAA = population[normalizedCCAA]
     const fechaUltRegistro = new Date(XLSX.SSF.format('YYYY-MM-DD,HH:MM:SS', fechaUltRegistroNumber))
+    const etarios = etariosForThisCCAA(jsonEtarios, normalizedCCAA)
 
     return {
       ccaa: ccaa.trim(),
@@ -42,7 +46,8 @@ module.exports = async function transformOdsToJson (odsFileName) {
       porcentajeEntregadas,
       porcentajePoblacionAdministradas: dosisAdministradas / populationCCAA,
       porcentajePoblacionCompletas: dosisPautaCompletada / populationCCAA,
-      fechaUltRegistro: fechaUltRegistro.getTime()
+      fechaUltRegistro: fechaUltRegistro.getTime(),
+      etarios
     }
   })
 }

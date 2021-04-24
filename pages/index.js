@@ -18,6 +18,7 @@ import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 import DownloadData from 'components/DownloadData'
+import EtariosBarChart from 'components/EtariosBarChart'
 
 import getGitHubContributors from 'services/getGitHubContributors'
 
@@ -236,6 +237,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <SpainMap data={data} reportFound={reportFound} />
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
+
+        <EtariosBarChart data={totals} ccaa={filter === 'Totales' ? 'España' : filter} titleClass={styles.subtitle} />
 
         <h2 className={styles.subtitle}>{translate.home.evolucionDosisEntregadasVSAdministradas}</h2>
 
