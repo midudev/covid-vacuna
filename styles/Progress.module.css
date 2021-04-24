@@ -10,12 +10,7 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-  cursor: pointer;
   padding: 6px;
-}
-
-.progress label:hover {
-  background-color: var(--app-shadow-color);
 }
 
 .progress label input[type="radio"] {
