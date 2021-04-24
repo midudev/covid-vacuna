@@ -19,6 +19,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
       'Dosis entregadas Pfizer (1)': dosisEntregadasPfizer,
       'Dosis entregadas Moderna (1)': dosisEntregadasModerna,
       'Dosis entregadas AstraZeneca (1)': dosisEntregadasAstrazeneca,
+      'Dosis entregadas Janssen (1)': dosisEntregadasJanssen,
       // usado en reporte antes del 13 de enero
       'Dosis entregadas (1)': dosisEntregadasDeprecated,
       'Total Dosis entregadas (1)': dosisEntregadasNew,
@@ -40,6 +41,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
       dosisEntregadasModerna,
       dosisEntregadasPfizer,
       dosisEntregadasAstrazeneca,
+      dosisEntregadasJanssen,
       dosisPautaCompletada,
       porcentajeEntregadas,
       porcentajePoblacionAdministradas: dosisAdministradas / populationCCAA,

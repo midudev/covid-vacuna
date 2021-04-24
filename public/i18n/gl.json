@@ -1,98 +1,99 @@
 {
-    "colorSwitcher": {
-      "lightTitleLabel": "Usa o tema claro",
-      "lightAriaLabel": "Un sol invertido semella o malo de Doom",
-      "standardTitleLabel": "Usa o tema dependendo da túa configuración de sistema",
-      "standardAriaLabel": "As túas preferencias de sistema interesantes",
-      "darkTitleLabel": "Usa o tema escuro",
-      "darkAriaLabel": "Unha lúa con ollos sospeitosos que parece que está a tramar algo fodido"
-    },
-    "home": {
-      "tituloPrincipal": "Vacinación COVID-19 en",
-      "datosActualizados": "Datos actualizados",
-      "fuente": "Fonte:",
-      "ministerioDeSanidad": "Ministerio de Sanidade",
-      "mostrarReporteFecha": "Amosar informe á data",
-      "seleccionarFecha": "Seleccionar data",
-      "descargarDatosJSON": "Descarga de datos en formato JSON",
-      "incrustarDatos": "Quero inserir os datos de vacinación noutra páxina web",
-      "porComunidadesAutonomas": "Por comunidades autónomas",
-      "dosisEntregadas": "Doses entregadas",
-      "dosisAdministradas": "Doses administradas",
-      "sobreEntregadas": "% das entregadas",
-      "poblacionVacunada": "% poboación vacinada",
-      "pautaCompleta": "Pauta completa",
-      "poblacionTotalmenteVacunada": "% poboación totalmente vacinada",
-      "evolucionDosisEntregadas": "Evolución das doses entregadas",
-      "evolucionDosisAdministradas": "Evolución das doses administradas",
-      "evolucionDosisEntregadasVSAdministradas": "Evolución das doses entregadas en comparación coas administradas",
-      "fuenteDatosEnlacesInteres": "Fontes de datos e ligazóns de interese",
-      "fuente1": "Estratexia de vacinación COVID-19 en España",
-      "fuente2": "Información oficial sobre a vacinación contra o novo coronavirus",
-      "enLosMedios": "Nos medios",
-      "medio1": "Lanzan unha web con datos do Goberno que permite ver como avanza a vacinación contra o coronavirus en España (20 minutos)",
-      "medio2": "Web para revisar o estado e o progreso da vacinación contra o COVID-19 en España (Menéame)",
-      "medio3": "1.000 voluntarios para unha soa web: así evoluciona a vacinación na túa comunidade (El Confidencial)",
-      "contribuidores": "Contribuíntes",
-      "alt": {
-        "vacunasDistribuidas": "Vacinas distribuídas en España",
-        "pfizerLogo": "Logotipo de Pfizer",
-        "modernaLogo": "Logotipo Moderna",
-        "astrazenecaLogo": "Logotipo Astrazeneca",
-        "vacunasAdministradas": "Vacinas administradas en España",
-        "dosisCompletas": "Doses completas administradas",
-        "descargarDatos": "Descargar datos",
-        "incrustarDatos": "Inserir datos nunha páxina web",
-        "graficaSubiendo": "Gráfica subindo",
-        "emojiCiclista": "Emoji de ciclista",
-        "globoMundo": "Globo do mundo con meridianos",
-        "luna": "Lúa",
-        "globoTerricola": "Globo terrestre con vistas a América",
-        "jeringuilla": "Xiringa",
-        "fuego": "Lume"
-      }
-    },
-    "progress": {
-      "verPoblacionVacunada": "Poboación vacinada",
-      "verPoblacionConPauta": "Poboación con pauta completa",
-      "estimacionPoblacionVacunada": "Estimación da poboación vacinada",
-      "noDatos": "Non dispoñemos de datos para esa data."
-    },
-    "terminos": {
-      "dosisDistribuidas": "Doses distribuídas",
-      "dosisAdministradas": "Doses administradas",
-      "sobreDistribuidas": "% sobre distribuídas",
-      "personasConPautaCompleta": "Persoas con pauta completa",
-      "sobreAdministradas": "% sobre xestionado"
-    },
-    "share": {
-      "textParamUrl": "Segue o progreso da vacinación contra o COVID19 nesta web creada por @midudev.\n\n",
-      "titleAnchor": "Comparte esta ligazón en Twitter",
-      "textoButton": "Compárteo!"
-    },
-    "footer": {
-      "desarrolladoPor": "Desenvolto por",
-      "estadisticas": "Estatísticas",
-      "enviarSugerencia": "Enviar suxestión"
-    },
-    "mapa": {
-        "sobreEntregadas": "sobre o total de entregadas",
-        "poblacionVacunada": "poboación vacinada",
-        "poblacionTotalmenteVacunada": "poboación totalmente vacinada"
-    },
-    "chart": {
-        "aDia": "A día ",
-        "seHanEntregado": " entregáronse ",
-        "dosisYSeHanAdministrado": " doses e administráronse "
-    },
-    "etariosBarChart": {
-        "titulo": "Poboación vacinada por idade en",
-        "paraLasPersonas": "Para persoas de ",
-        "conUnaPoblacion": "anos cunha poboación de",
-        "unaDosis": " persoas, deuse unha dose a",
-        "pautaCompleta": "e recibiron a guía completa ",
-        "keyPoblacionINE": "Poboación INE",
-        "keyUnaDosis": "Unha dose",
-        "keyPautaCompleta": "Pauta Completa"
+  "colorSwitcher": {
+    "lightTitleLabel": "Usa o tema claro",
+    "lightAriaLabel": "Un sol invertido semella o malo de Doom",
+    "standardTitleLabel": "Usa o tema dependendo da túa configuración de sistema",
+    "standardAriaLabel": "As túas preferencias de sistema interesantes",
+    "darkTitleLabel": "Usa o tema escuro",
+    "darkAriaLabel": "Unha lúa con ollos sospeitosos que parece que está a tramar algo fodido"
+  },
+  "home": {
+    "tituloPrincipal": "Vacinación COVID-19 en",
+    "datosActualizados": "Datos actualizados",
+    "fuente": "Fonte:",
+    "ministerioDeSanidad": "Ministerio de Sanidade",
+    "mostrarReporteFecha": "Amosar informe á data",
+    "seleccionarFecha": "Seleccionar data",
+    "descargarDatosJSON": "Descarga de datos en formato JSON",
+    "incrustarDatos": "Quero inserir os datos de vacinación noutra páxina web",
+    "porComunidadesAutonomas": "Por comunidades autónomas",
+    "dosisEntregadas": "Doses entregadas",
+    "dosisAdministradas": "Doses administradas",
+    "sobreEntregadas": "% das entregadas",
+    "poblacionVacunada": "% poboación vacinada",
+    "pautaCompleta": "Pauta completa",
+    "poblacionTotalmenteVacunada": "% poboación totalmente vacinada",
+    "evolucionDosisEntregadas": "Evolución das doses entregadas",
+    "evolucionDosisAdministradas": "Evolución das doses administradas",
+    "evolucionDosisEntregadasVSAdministradas": "Evolución das doses entregadas en comparación coas administradas",
+    "fuenteDatosEnlacesInteres": "Fontes de datos e ligazóns de interese",
+    "fuente1": "Estratexia de vacinación COVID-19 en España",
+    "fuente2": "Información oficial sobre a vacinación contra o novo coronavirus",
+    "enLosMedios": "Nos medios",
+    "medio1": "Lanzan unha web con datos do Goberno que permite ver como avanza a vacinación contra o coronavirus en España (20 minutos)",
+    "medio2": "Web para revisar o estado e o progreso da vacinación contra o COVID-19 en España (Menéame)",
+    "medio3": "1.000 voluntarios para unha soa web: así evoluciona a vacinación na túa comunidade (El Confidencial)",
+    "contribuidores": "Contribuíntes",
+    "alt": {
+      "vacunasDistribuidas": "Vacinas distribuídas en España",
+      "pfizerLogo": "Logotipo de Pfizer",
+      "modernaLogo": "Logotipo Moderna",
+      "astrazenecaLogo": "Logotipo Astrazeneca",
+      "janssenLogo": "Logotipo Janssen",
+      "vacunasAdministradas": "Vacinas administradas en España",
+      "dosisCompletas": "Doses completas administradas",
+      "descargarDatos": "Descargar datos",
+      "incrustarDatos": "Inserir datos nunha páxina web",
+      "graficaSubiendo": "Gráfica subindo",
+      "emojiCiclista": "Emoji de ciclista",
+      "globoMundo": "Globo do mundo con meridianos",
+      "luna": "Lúa",
+      "globoTerricola": "Globo terrestre con vistas a América",
+      "jeringuilla": "Xiringa",
+      "fuego": "Lume"
     }
+  },
+  "progress": {
+    "verPoblacionVacunada": "Poboación vacinada",
+    "verPoblacionConPauta": "Poboación con pauta completa",
+    "estimacionPoblacionVacunada": "Estimación da poboación vacinada",
+    "noDatos": "Non dispoñemos de datos para esa data."
+  },
+  "terminos": {
+    "dosisDistribuidas": "Doses distribuídas",
+    "dosisAdministradas": "Doses administradas",
+    "sobreDistribuidas": "% sobre distribuídas",
+    "personasConPautaCompleta": "Persoas con pauta completa",
+    "sobreAdministradas": "% sobre xestionado"
+  },
+  "share": {
+    "textParamUrl": "Segue o progreso da vacinación contra o COVID19 nesta web creada por @midudev.\n\n",
+    "titleAnchor": "Comparte esta ligazón en Twitter",
+    "textoButton": "Compárteo!"
+  },
+  "footer": {
+    "desarrolladoPor": "Desenvolto por",
+    "estadisticas": "Estatísticas",
+    "enviarSugerencia": "Enviar suxestión"
+  },
+  "mapa": {
+    "sobreEntregadas": "sobre o total de entregadas",
+    "poblacionVacunada": "poboación vacinada",
+    "poblacionTotalmenteVacunada": "poboación totalmente vacinada"
+  },
+  "chart": {
+    "aDia": "A día ",
+    "seHanEntregado": " entregáronse ",
+    "dosisYSeHanAdministrado": " doses e administráronse "
+  },
+  "etariosBarChart": {
+    "titulo": "Poboación vacinada por idade en",
+    "paraLasPersonas": "Para persoas de ",
+    "conUnaPoblacion": "anos cunha poboación de",
+    "unaDosis": " persoas, deuse unha dose a",
+    "pautaCompleta": "e recibiron a guía completa ",
+    "keyPoblacionINE": "Poboación INE",
+    "keyUnaDosis": "Unha dose",
+    "keyPautaCompleta": "Pauta Completa"
   }
+}
