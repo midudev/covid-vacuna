@@ -81,7 +81,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
             <div className={styles.card}>
               <button
                 title='Abrir diálogo con explicación sobre Dosis Distribuidas'
-                onClick={() => {}}
+                onClick={() => { }}
               >
                 ❔
               </button>
@@ -141,6 +141,19 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                     />
                     <span>
                       {isNaN(totals.dosisEntregadasAstrazeneca) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasAstrazeneca}</NumberDigits>}
+                    </span>
+                  </small>
+                  <small>
+                    <Image
+                      alt={translate.home.alt.janssenLogo}
+                      className={styles.companyLogo}
+                      src='/janssen-logo.png'
+                      height={31}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      {isNaN(totals.dosisEntregadasJanssen) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasJanssen}</NumberDigits>}
                     </span>
                   </small>
                 </div>
