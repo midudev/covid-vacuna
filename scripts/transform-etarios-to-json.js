@@ -56,7 +56,7 @@ const etariosMapByCCAA = (json, etarioName) => {
       }
     })
   }, {})
-  etarios.Totales = calculateCCAATotales(etarios)
+  etarios.Totales = etarios['Total España']
   return etarios
 }
 
@@ -130,31 +130,6 @@ const readEtariosVacunados = (row, complete = false) => {
       porcentaje: row['%']
     }
   ]
-}
-
-const calculateCCAATotales = (etarios) => {
-  const etarioCCAATotalesInit = {
-    etarioTotal: {
-      vacunados: 0,
-      personasINE: 0
-    },
-    etarioRangos: []
-  }
-  return Object.values(etarios).reduce((totales, etario) => {
-    totales.etarioTotal.vacunados += etario.etarioTotal.vacunados
-    totales.etarioTotal.personasINE += etario.etarioTotal.personasINE
-    totales.etarioTotal.porcentaje = totales.etarioTotal.vacunados / totales.etarioTotal.personasINE
-    etario.etarioRangos.forEach((etarioRango, index) => {
-      if (totales.etarioRangos[index] === undefined) {
-        totales.etarioRangos[index] = { rango: etarioRango.rango, vacunados: 0, personasINE: 0 }
-      }
-      totales.etarioRangos[index].vacunados += etarioRango.vacunados
-      totales.etarioRangos[index].personasINE += etarioRango.personasINE
-      totales.etarioRangos[index].porcentaje =
-        totales.etarioRangos[index].vacunados / totales.etarioRangos[index].personasINE
-    })
-    return totales
-  }, etarioCCAATotalesInit)
 }
 
 module.exports = { transformEtariosToJson, etariosForThisCCAA }
