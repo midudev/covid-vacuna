@@ -6,7 +6,6 @@
         "standardAriaLabel": "Tus preferencias molonas de tu sistema",
         "darkTitleLabel": "Usa el tema oscuro",
         "darkAriaLabel": "Una luna con ojos sospechosos que parece que está tramando algo jodido"
-
     },
     "home": {
         "tituloPrincipal": "Vacunación COVID-19 en",
@@ -40,6 +39,7 @@
             "pfizerLogo": "Pfizer Logo",
             "modernaLogo": "Moderna Logo",
             "astrazenecaLogo": "Astrazeneca Logo",
+            "janssenLogo": "Janssen Logo",
             "vacunasAdministradas": "Vacunas administradas en España",
             "dosisCompletas": "Dosis completas subministradas",
             "descargarDatos": "Descargar datos",
@@ -85,5 +85,15 @@
         "aDia": "A día ",
         "seHanEntregado": " se han entregado ",
         "dosisYSeHanAdministrado": " dosis y se han administrado "
+    },
+    "etariosBarChart": {
+        "titulo": "Población vacunada por edades en",
+        "paraLasPersonas": "Para las personas de ",
+        "conUnaPoblacion": "años con una población de",
+        "unaDosis": " personas, se ha puesto una dosis a",
+        "pautaCompleta": "y han recibido la pauta completa ",
+        "keyPoblacionINE": "Población INE",
+        "keyUnaDosis": "Una Dosis",
+        "keyPautaCompleta": "Pauta Completa"
     }
 }

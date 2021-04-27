@@ -39,6 +39,7 @@
         "pfizerLogo": "Pfizer Logo",
         "modernaLogo": "moderna Logo",
         "astrazenecaLogo": "Astrazeneca Logo",
+        "janssenLogo": "Janssen Logo",
         "vacunasAdministradas": "Vacunes administrades a Espanya",
         "dosisCompletas": "Dosis completes subministrades",
         "descargarDatos": "descarregar dades",
@@ -84,5 +85,15 @@
         "aDia": "A dia ",
         "seHanEntregado": " s'han entregat ",
         "dosisYSeHanAdministrado": " dosis i s'han administrat "
+    },
+    "etariosBarChart": {
+        "titulo": "Població vacunada per edats en",
+        "paraLasPersonas": "Per a les persones de ",
+        "conUnaPoblacion": "anys amb una població de",
+        "unaDosis": " persones, s'ha posat una dosi a",
+        "pautaCompleta": "i han rebut la pauta completa ",
+        "keyPoblacionINE": "Població INE",
+        "keyUnaDosis": "Una Dosi",
+        "keyPautaCompleta": "Pauta Completa"
     }
 }

@@ -18,6 +18,7 @@ import Table from 'components/Table.jsx'
 import TimeAgo from 'components/TimeAgo.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 import DownloadData from 'components/DownloadData'
+import EtariosBarChart from 'components/EtariosBarChart'
 
 import getGitHubContributors from 'services/getGitHubContributors'
 
@@ -31,6 +32,7 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import { useTranslate } from 'hooks/useTranslate'
 import ClientSideComponent from 'components/ClientSideComponent'
 import SpainMap from 'components/SpainMap'
+import { Labs } from 'components/Labs.jsx'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
@@ -81,7 +83,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
             <div className={styles.card}>
               <button
                 title='Abrir diálogo con explicación sobre Dosis Distribuidas'
-                onClick={() => {}}
+                onClick={() => { }}
               >
                 ❔
               </button>
@@ -104,45 +106,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   </p>
                 </div>
                 <div>
-                  <small>
-                    <Image
-                      alt={translate.home.alt.pfizerLogo}
-                      className={styles.companyLogo}
-                      src='/pfizer-logo.png'
-                      height={29}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      {isNaN(totals.dosisEntregadasPfizer) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasPfizer}</NumberDigits>}
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt={translate.home.alt.modernaLogo}
-                      className={styles.companyLogo}
-                      src='/moderna-logo.png'
-                      height={16.5}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      {isNaN(totals.dosisEntregadasModerna) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasModerna}</NumberDigits>}
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt={translate.home.alt.astrazenecaLogo}
-                      className={styles.companyLogo}
-                      src='/astrazeneca-logo.png'
-                      height={16.5}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      {isNaN(totals.dosisEntregadasAstrazeneca) ? 'Desconocido' : <NumberDigits>{totals.dosisEntregadasAstrazeneca}</NumberDigits>}
-                    </span>
-                  </small>
+                  <Labs totals={totals} />
                 </div>
               </section>
             </div>
@@ -223,6 +187,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <SpainMap data={data} reportFound={reportFound} />
 
         <Table data={data} filter={filter} setFilter={setFilter} reportFound={reportFound} />
+
+        <EtariosBarChart data={totals} ccaa={filter === 'Totales' ? 'España' : filter} titleClass={styles.subtitle} />
 
         <h2 className={styles.subtitle}>{translate.home.evolucionDosisEntregadasVSAdministradas}</h2>
 

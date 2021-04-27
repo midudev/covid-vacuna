@@ -1,88 +1,99 @@
 {
-    "colorSwitcher": {
-      "lightTitleLabel": "Erabili gai argia",
-      "lightAriaLabel": "Alderantziz jarritako eguzkia Doom-eko gaiztoaren itxura du",
-      "standardTitleLabel": "Erabili gaia zure sistemaren konfigurazioaren arabera",
-      "standardAriaLabel": "Zure sistemaren hobespen bikainak",
-      "darkTitleLabel": "Erabili gai iluna",
-      "darkAriaLabel": "Begi susmagarriak dituen ilargia, izorratuta dagoen zerbait dela dirudi"
-    },
-    "home": {
-      "tituloPrincipal": "COVID-19 txertoa",
-      "datosActualizados": "Eguneratutako datuak",
-      "fuente": "Iturria:",
-      "ministerioDeSanidad": "Osasun Ministerioa",
-      "mostrarReporteFecha": "Erakutsi txostena orain arte",
-      "seleccionarFecha": "Hautatu data",
-      "descargarDatosJSON": "Deskargatu datuak JSON formatuan",
-      "incrustarDatos": "Txertaketa datuak beste web orri batean txertatu nahi ditut",
-      "porComunidadesAutonomas": "Autonomia erkidegoen arabera",
-      "dosisEntregadas": "Entregatutako dosiak",
-      "dosisAdministradas": "Emandako dosiak",
-      "sobreEntregadas": "% buruz entregatutako",
-      "poblacionVacunada": "% txertatutako populazioa",
-      "pautaCompleta": "Jarraibide osoa",
-      "poblacionTotalmenteVacunada": "% guztiz txertatutako populazioa",
-      "evolucionDosisEntregadas": "Emandako dosien bilakaera",
-      "evolucionDosisAdministradas": "Administratutako dosien bilakaera",
-      "evolucionDosisEntregadasVSAdministradas": "Emandako dosien bilakaera emandakoekin alderatuta",
-      "fuenteDatosEnlacesInteres": "Datu iturriak eta esteka interesgarriak",
-      "fuente1": "COVID-19 Txertaketa Estrategia Espainian",
-      "fuente2": "Koronabirus berriaren aurkako txertoari buruzko informazio ofiziala",
-      "enLosMedios": "Komunikabideetan",
-      "medio1": "Webgune bat estreinatu dute gobernuaren datuekin, Espainian coronavirusaren aurkako txertoa nola garatzen ari den ikusteko aukera ematen diguna (20 minutu)",
-      "medio2": "COVID-19 txertaketaren egoera eta aurrerapenak aztertzeko webgunea Espainian (Menéame)",
-      "medio3": "1.000 boluntario webgune bakarrerako: horrela garatzen da txertaketa zure komunitatean (El Confidencial)",
-      "contribuidores": "Laguntzaileak",
-      "alt": {
-        "vacunasDistribuidas": "Espainian banatutako txertoak",
-        "pfizerLogo": "Pfizer logotipoa",
-        "modernaLogo": "Logotipo modernoa",
-        "astrazenecaLogo": "Astrazeneca logotipoa",
-        "vacunasAdministradas": "Espainian ematen diren txertoak",
-        "dosisCompletas": "Administratutako dosi osoak",
-        "descargarDatos": "Datuak deskargatu",
-        "incrustarDatos": "Datuak txertatu web orri batean",
-        "graficaSubiendo": "Grafikoa gorantz doa",
-        "emojiCiclista": "Biker emoji",
-        "globoMundo": "Munduko globoa meridianoekin",
-        "luna": "Ilargia",
-        "globoTerricola": "Lurreko globoa Amerikara begira",
-        "jeringuilla": "Xiringa",
-        "fuego": "Sute"
-      }
-    },
-    "progress": {
-      "verPoblacionVacunada": "Txertatutako populazioa",
-      "verPoblacionConPauta": "Populazioa jarraibide osoekin",
-      "estimacionPoblacionVacunada": "Txertatutako biztanleriaren estimazioa",
-      "noDatos": "Ez dugu data horretarako daturik."
-    },
-    "terminos": {
-      "dosisDistribuidas": "Banatutako dosiak",
-      "dosisAdministradas": "Administratutako dosia",
-      "sobreDistribuidas": "% banatutakoaren gainekoa",
-      "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
-      "sobreAdministradas": "% baino gehiago kudeatzen da"
-    },
-    "share": {
-      "textParamUrl": "Jarrai ezazu COVID19ren aurkako txertoaren aurrerapena @midudev-ek sortutako webgune honetan!\n\n",
-      "titleAnchor": "Partekatu esteka hau Twitterren",
-      "textoButton": "Parteka ezazu!"
-    },
-    "footer": {
-      "desarrolladoPor": "Garatu du",
-      "estadisticas": "Estatistikak",
-      "enviarSugerencia": "Bidali iradokizuna"
-    },
-    "mapa": {
-        "sobreEntregadas": "entregatutako guztiaren gainean",
-        "poblacionVacunada": "txertatutako populazioa",
-        "poblacionTotalmenteVacunada": "guztiz txertatutako populazioa"
-    },
-    "chart": {
-        "aDia": "Egun bat ",
-        "seHanEntregado": " entregatu dute ",
-        "dosisYSeHanAdministrado": " dosiak eta eman zaizkie "
+  "colorSwitcher": {
+    "lightTitleLabel": "Erabili gai argia",
+    "lightAriaLabel": "Alderantziz jarritako eguzkia Doom-eko gaiztoaren itxura du",
+    "standardTitleLabel": "Erabili gaia zure sistemaren konfigurazioaren arabera",
+    "standardAriaLabel": "Zure sistemaren hobespen bikainak",
+    "darkTitleLabel": "Erabili gai iluna",
+    "darkAriaLabel": "Begi susmagarriak dituen ilargia, izorratuta dagoen zerbait dela dirudi"
+  },
+  "home": {
+    "tituloPrincipal": "COVID-19 txertoa",
+    "datosActualizados": "Eguneratutako datuak",
+    "fuente": "Iturria:",
+    "ministerioDeSanidad": "Osasun Ministerioa",
+    "mostrarReporteFecha": "Erakutsi txostena orain arte",
+    "seleccionarFecha": "Hautatu data",
+    "descargarDatosJSON": "Deskargatu datuak JSON formatuan",
+    "incrustarDatos": "Txertaketa datuak beste web orri batean txertatu nahi ditut",
+    "porComunidadesAutonomas": "Autonomia erkidegoen arabera",
+    "dosisEntregadas": "Entregatutako dosiak",
+    "dosisAdministradas": "Emandako dosiak",
+    "sobreEntregadas": "% buruz entregatutako",
+    "poblacionVacunada": "% txertatutako populazioa",
+    "pautaCompleta": "Jarraibide osoa",
+    "poblacionTotalmenteVacunada": "% guztiz txertatutako populazioa",
+    "evolucionDosisEntregadas": "Emandako dosien bilakaera",
+    "evolucionDosisAdministradas": "Administratutako dosien bilakaera",
+    "evolucionDosisEntregadasVSAdministradas": "Emandako dosien bilakaera emandakoekin alderatuta",
+    "fuenteDatosEnlacesInteres": "Datu iturriak eta esteka interesgarriak",
+    "fuente1": "COVID-19 Txertaketa Estrategia Espainian",
+    "fuente2": "Koronabirus berriaren aurkako txertoari buruzko informazio ofiziala",
+    "enLosMedios": "Komunikabideetan",
+    "medio1": "Webgune bat estreinatu dute gobernuaren datuekin, Espainian coronavirusaren aurkako txertoa nola garatzen ari den ikusteko aukera ematen diguna (20 minutu)",
+    "medio2": "COVID-19 txertaketaren egoera eta aurrerapenak aztertzeko webgunea Espainian (Menéame)",
+    "medio3": "1.000 boluntario webgune bakarrerako: horrela garatzen da txertaketa zure komunitatean (El Confidencial)",
+    "contribuidores": "Laguntzaileak",
+    "alt": {
+      "vacunasDistribuidas": "Espainian banatutako txertoak",
+      "pfizerLogo": "Pfizer logotipoa",
+      "modernaLogo": "Logotipo modernoa",
+      "astrazenecaLogo": "Astrazeneca logotipoa",
+      "janssenLogo": "Janssen logotipoa",
+      "vacunasAdministradas": "Espainian ematen diren txertoak",
+      "dosisCompletas": "Administratutako dosi osoak",
+      "descargarDatos": "Datuak deskargatu",
+      "incrustarDatos": "Datuak txertatu web orri batean",
+      "graficaSubiendo": "Grafikoa gorantz doa",
+      "emojiCiclista": "Biker emoji",
+      "globoMundo": "Munduko globoa meridianoekin",
+      "luna": "Ilargia",
+      "globoTerricola": "Lurreko globoa Amerikara begira",
+      "jeringuilla": "Xiringa",
+      "fuego": "Sute"
     }
+  },
+  "progress": {
+    "verPoblacionVacunada": "Txertatutako populazioa",
+    "verPoblacionConPauta": "Populazioa jarraibide osoekin",
+    "estimacionPoblacionVacunada": "Txertatutako biztanleriaren estimazioa",
+    "noDatos": "Ez dugu data horretarako daturik."
+  },
+  "terminos": {
+    "dosisDistribuidas": "Banatutako dosiak",
+    "dosisAdministradas": "Administratutako dosia",
+    "sobreDistribuidas": "% banatutakoaren gainekoa",
+    "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
+    "sobreAdministradas": "% baino gehiago kudeatzen da"
+  },
+  "share": {
+    "textParamUrl": "Jarrai ezazu COVID19ren aurkako txertoaren aurrerapena @midudev-ek sortutako webgune honetan!\n\n",
+    "titleAnchor": "Partekatu esteka hau Twitterren",
+    "textoButton": "Parteka ezazu!"
+  },
+  "footer": {
+    "desarrolladoPor": "Garatu du",
+    "estadisticas": "Estatistikak",
+    "enviarSugerencia": "Bidali iradokizuna"
+  },
+  "mapa": {
+    "sobreEntregadas": "entregatutako guztiaren gainean",
+    "poblacionVacunada": "txertatutako populazioa",
+    "poblacionTotalmenteVacunada": "guztiz txertatutako populazioa"
+  },
+  "chart": {
+    "aDia": "Egun bat ",
+    "seHanEntregado": " entregatu dute ",
+    "dosisYSeHanAdministrado": " dosiak eta eman zaizkie "
+  },
+  "etariosBarChart": {
+    "titulo": "Biztanle txertatuak adinaren arabera",
+    "paraLasPersonas": "Herriko jendearentzat ",
+    "conUnaPoblacion": "urteko biztanleriarekin",
+    "unaDosis": " jendeari, dosi bat eman zaio",
+    "pautaCompleta": "eta jarraibide osoa jaso dute ",
+    "keyPoblacionINE": "Biztanleria INE",
+    "keyUnaDosis": "Dosi bat",
+    "keyPautaCompleta": "Jarraibide osoa"
   }
+}
