@@ -66,8 +66,8 @@ export default function Embed ({ data, info, totalPopulation }) {
               </p>
             </div>
             <p>
-              Personas que han recibido las dos dosis de la vacuna.<br />
-              Suponen un <strong><NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage></strong> de las dosis administradas.<br />Supone el <strong><NumberPercentage>{getCompleteVacunationPopulation(totals)}</NumberPercentage></strong> del total de España
+              Personas que están totalmente vacunadas<br />
+              Supone el <strong><NumberPercentage>{getCompleteVacunationPopulation(totals)}</NumberPercentage></strong> del total de España<br />Suponen un <strong><NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage></strong> de las dosis administradas
             </p>
           </section>
         </div>
