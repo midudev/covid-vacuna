@@ -3,6 +3,7 @@ import styles from 'styles/Embed.module.css'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import TimeAgo from 'components/TimeAgo'
+import { getPartialVacunationPopulation, getCompleteVacunationPopulation } from 'services/getProgressCalculations'
 
 export default function Embed ({ data, info, totalPopulation }) {
   const totals = data.find(({ ccaa }) => ccaa === 'Totales')
@@ -45,7 +46,7 @@ export default function Embed ({ data, info, totalPopulation }) {
               </p>
             </div>
             <p>
-              Supone el <strong><NumberPercentage>{totals.dosisAdministradas / totalPopulation}</NumberPercentage></strong> del total de España<br />Es el <strong><NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage></strong> sobre las vacunas distribuidas
+              Supone que el <strong><NumberPercentage>{getPartialVacunationPopulation(totals)}</NumberPercentage></strong> del total de España ha recibido al menos una dosis<br />Es el <strong><NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage></strong> sobre las vacunas distribuidas
             </p>
           </section>
         </div>
@@ -66,7 +67,7 @@ export default function Embed ({ data, info, totalPopulation }) {
             </div>
             <p>
               Personas que han recibido las dos dosis de la vacuna.<br />
-              Suponen un <strong><NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage></strong> de las dosis administradas.<br />Supone el <strong><NumberPercentage>{totals.dosisPautaCompletada / totalPopulation}</NumberPercentage></strong> del total de España
+              Suponen un <strong><NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage></strong> de las dosis administradas.<br />Supone el <strong><NumberPercentage>{getCompleteVacunationPopulation(totals)}</NumberPercentage></strong> del total de España
             </p>
           </section>
         </div>
