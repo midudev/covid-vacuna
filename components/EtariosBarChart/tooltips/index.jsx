@@ -15,6 +15,9 @@ const EtariosBarChartToolTip = ({ active, payload, label }) => {
 
   if (!active) return null
   if (!payload) return null
+  if (!payload || !Array.isArray(payload) || payload.length < 3) {
+    return null
+  }
   const poblacionINE = formatValueToLocale(payload[0].value, 'es-ES')
   const unaDosis = formatValueToLocale(payload[1].value, 'es-ES')
   const unaDosisPorcentaje = `(${((100 * payload[1].value) / payload[0].value).toFixed(1)}%)`
