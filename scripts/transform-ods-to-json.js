@@ -25,6 +25,7 @@ module.exports = async function transformOdsToJson (odsFileName) {
       'Total Dosis entregadas (1)': dosisEntregadasNew,
       'Dosis administradas (2)': dosisAdministradas,
       '% sobre entregadas': porcentajeEntregadas,
+      'Nº Personas con al menos 1 dosis': dosisPrimeraDosis,
       'Nº Personas vacunadas\n(pauta completada)': dosisPautaCompletada,
       'Fecha de la última vacuna registrada (2)': fechaUltRegistroNumber
     } = element
@@ -42,9 +43,11 @@ module.exports = async function transformOdsToJson (odsFileName) {
       dosisEntregadasPfizer,
       dosisEntregadasAstrazeneca,
       dosisEntregadasJanssen,
+      dosisPrimeraDosis,
       dosisPautaCompletada,
       porcentajeEntregadas,
       porcentajePoblacionAdministradas: dosisAdministradas / populationCCAA,
+      porcentajePoblacionPrimeraDosis: dosisPrimeraDosis / populationCCAA,
       porcentajePoblacionCompletas: dosisPautaCompletada / populationCCAA,
       fechaUltRegistro: fechaUltRegistro.getTime(),
       etarios
