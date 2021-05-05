@@ -25,6 +25,6 @@ const downloadFile = (url, filename) => {
 
   days.reduce(
     (promise, { day, url }) =>
-      promise.then(() => downloadFile(url, `202104${day}.ods`))
+      promise.then(() => downloadFile(url, `202105${day}.ods`))
     , Promise.resolve())
 })()
