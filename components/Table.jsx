@@ -37,6 +37,8 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
           ...rest
         } = row
 
+        if (row.dosisAdministradas === undefined) return false
+
         return {
           dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
           porcentajeEntregadas: !isNaN(porcentajeEntregadas) ? porcentajeEntregadas.toFixed(4) : 0,
@@ -44,7 +46,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
           porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
           ...rest
         }
-      })
+      }).filter(Boolean)
     }, [reportFound]
   )
 
@@ -98,7 +100,10 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
   } = useTable({ columns, data: tableData }, useSortBy)
 
   // totales siempre en la ultima fila
-  rows = [...rows.filter(row => row.id !== '19'), rows.find(row => row.id === '19')]
+  rows = [
+    ...rows.filter(row => row.id !== '19'),
+    rows.find(row => row.id === '19')
+  ]
 
   return (
     <div className={styles.container}>
