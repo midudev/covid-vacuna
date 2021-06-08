@@ -33,17 +33,20 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
           porcentajeEntregadas,
           porcentajePoblacionAdministradas,
           porcentajePoblacionCompletas,
+          porcentajePoblacionPrimeraDosis,
           ...rest
         } = row
 
+        if (row.dosisAdministradas === undefined) return false
+
         return {
           dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
-          porcentajeEntregadas: porcentajeEntregadas !== null ? porcentajeEntregadas.toFixed(4) : 0,
-          porcentajePoblacionAdministradas: getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas }).toFixed(4),
+          porcentajeEntregadas: !isNaN(porcentajeEntregadas) ? porcentajeEntregadas.toFixed(4) : 0,
+          porcentajePoblacionAdministradas: getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas, porcentajePoblacionPrimeraDosis }).toFixed(4),
           porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
           ...rest
         }
-      })
+      }).filter(Boolean)
     }, [reportFound]
   )
 
@@ -97,7 +100,10 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
   } = useTable({ columns, data: tableData }, useSortBy)
 
   // totales siempre en la ultima fila
-  rows = [...rows.filter(row => row.id !== '19'), rows.find(row => row.id === '19')]
+  rows = [
+    ...rows.filter(row => row.id !== '19'),
+    rows.find(row => row.id === '19')
+  ]
 
   return (
     <div className={styles.container}>

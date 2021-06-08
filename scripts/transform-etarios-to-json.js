@@ -15,7 +15,8 @@ const transformEtariosToJson = (workbook) => {
 
 const transformEtariosToJsonFromWorkbook = (workbook) => {
   const { Sheets } = workbook
-  const [, , , Etarios1dosisKey, EtariosCompleteKey] = Object.keys(Sheets)
+  const Etarios1dosisKey = 'Etarios_con_al_menos_1_dosis'
+  const EtariosCompleteKey = 'Etarios_con_pauta_completa'
   const sheetEtarios1dosis = Sheets[Etarios1dosisKey]
   const sheetEtariosComplete = Sheets[EtariosCompleteKey]
   const unaDosis = etariosMapByCCAA(XLSX.utils.sheet_to_json(sheetEtarios1dosis), 'unaDosis')
