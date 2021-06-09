@@ -7,10 +7,8 @@ const transformOdsToJson = require('./transform-ods-to-json')
 const PREFIX_URL = 'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov/documentos/Informe_Comunicacion_'
 const SUFFIX_URL = '.ods'
 
-const date = new Date()
-const year = date.getFullYear()
-const day = `${date.getDate()}`.padStart(2, '0')
-const month = `${date.getMonth() + 1}`.padStart(2, '0')
+const date = new Intl.DateTimeFormat('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date());
+const [day, month, year] = date.split('/');
 
 const url = `${PREFIX_URL}${year}${month}${day}${SUFFIX_URL}`
 
