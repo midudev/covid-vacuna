@@ -153,8 +153,8 @@
 
 .card h4 {
   color: #888;
-  font-size: 1.3rem;
-  margin: 1rem 0 0;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 .card p {
@@ -162,6 +162,10 @@
   margin: 0;
   font-size: 2rem;
   line-height: 1.5;
+}
+
+.card div + div {
+  margin-top: 24px;
 }
 
 .card .secondary {

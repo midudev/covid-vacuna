@@ -63,6 +63,7 @@
         "dosisDistribuidas": "Dosis distribuidas",
         "dosisAdministradas": "Dosis administradas",
         "sobreDistribuidas": "% sobre distribuidas",
+        "personasConUnaDosis": "Personas con almenos una dosis",
         "personasConPautaCompleta": "Personas con pauta completa",
         "sobreAdministradas": "% sobre administradas"
     },

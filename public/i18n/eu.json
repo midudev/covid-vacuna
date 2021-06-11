@@ -63,6 +63,7 @@
     "dosisDistribuidas": "Banatutako dosiak",
     "dosisAdministradas": "Administratutako dosia",
     "sobreDistribuidas": "% banatutakoaren gainekoa",
+    "personasConUnaDosis": "Gutxienez dosi bat duten pertsonak",
     "personasConPautaCompleta": "Jarraibide osoa duten pertsonak",
     "sobreAdministradas": "% baino gehiago kudeatzen da"
   },

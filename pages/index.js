@@ -127,11 +127,16 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   <p>
                     {isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberDigits>{totals.dosisAdministradas}</NumberDigits>}
                   </p>
-                </div>
-                <div>
                   <h4>{translate.terminos.sobreDistribuidas}</h4>
                   <p className={styles.secondary}>
                     {isNaN(totals.porcentajeEntregadas) ? 'Desconocido' : <NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage>}
+                  </p>
+                </div>
+
+                <div>
+                  <h3>{translate.terminos.personasConUnaDosis}</h3>
+                  <p>
+                    {isNaN(totals.dosisPrimeraDosis) ? 'Desconocido' : <NumberDigits>{totals.dosisPrimeraDosis}</NumberDigits>}
                   </p>
                 </div>
               </section>
@@ -153,8 +158,6 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   <p>
                     {isNaN(totals.dosisPautaCompletada) ? 'Desconocido' : <NumberDigits>{totals.dosisPautaCompletada}</NumberDigits>}
                   </p>
-                </div>
-                <div>
                   <h4>{translate.terminos.sobreAdministradas}</h4>
                   <p className={styles.secondary}>
                     {isNaN(totals.dosisPautaCompletada) || isNaN(totals.dosisAdministradas) ? 'Desconocido' : <NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage>}
