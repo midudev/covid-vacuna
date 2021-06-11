@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+console.log('hola! COOOOL! ')
+
 export default function Contributors ({ contributors }) {
   return (
     <>
