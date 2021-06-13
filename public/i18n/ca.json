@@ -54,7 +54,7 @@
       }
     },
     "progress": {
-      "verPoblacionVacunada": "Població vacunada",
+      "verPoblacionVacunada": "Població amb almenys una dosi",
       "verPoblacionConPauta": "Població amb pauta completa",
       "estimacionPoblacionVacunada": "Estimació població vacunada",
       "noDatos": "No disposem de dades per a aquesta data."

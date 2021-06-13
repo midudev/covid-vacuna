@@ -54,7 +54,7 @@
     }
   },
   "progress": {
-    "verPoblacionVacunada": "Poboación vacinada",
+    "verPoblacionVacunada": "Poboación con polo menos unha dose",
     "verPoblacionConPauta": "Poboación con pauta completa",
     "estimacionPoblacionVacunada": "Estimación da poboación vacinada",
     "noDatos": "Non dispoñemos de datos para esa data."
