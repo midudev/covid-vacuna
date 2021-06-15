@@ -20,6 +20,10 @@ const LOCALES = {
   eu: {
     name: 'Euskara',
     zone: 'Euskadi'
+  },
+  ast: {
+    name: 'Bable',
+    zone: 'Asturias'
   }
 }
 

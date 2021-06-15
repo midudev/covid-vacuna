@@ -11,17 +11,18 @@
     "start": "next start",
     "export": "next export",
     "download-today-status": "node scripts/download-covid-vaccine-today-status.js",
-    "lint": "standard",
+    "lint": "eslint components/**/*.js pages/**/*.js",
     "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "dependencies": {
+    "d3-array": "2.12.1",
     "d3-composite-projections": "1.4.0",
     "d3-geo": "2.0.1",
     "download": "8.0.0",
     "fathom-client": "3.0.0",
-    "next": "10.2.3",
+    "next": "11.0.0",
     "next-compose-plugins": "2.2.1",
-    "next-images": "1.7.0",
+    "next-images": "1.8.1",
     "next-pwa": "5.2.21",
     "next-seo": "4.24.0",
     "react": "17.0.2",
@@ -33,9 +34,13 @@
     "xlsx": "0.16.9"
   },
   "devDependencies": {
+    "eslint": "7.28.0",
+    "eslint-config-next": "11.0.0",
     "standard": "16.0.3"
   },
   "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
