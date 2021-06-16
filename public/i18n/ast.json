@@ -54,7 +54,7 @@
         }
     },
     "progress": {
-        "verPoblacionVacunada": "Población vacunada",
+        "verPoblacionVacunada": "Población con al menos una dosis",
         "verPoblacionConPauta": "Población con vacunada dafechu",
         "estimacionPoblacionVacunada": "Estimación población vacunada",
         "noDatos": "Nun hai datos pa esa fecha."
