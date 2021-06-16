@@ -1,5 +1,6 @@
 import { useLocale } from 'hooks/useLocale'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useState, useEffect, useRef } from 'react'
 import styles from 'styles/I18nWidget.module.css'
@@ -34,6 +35,9 @@ const I18nWidget = () => {
   const buttonLangRef = useRef(null)
   const languagesRef = useRef(null)
 
+  const options = locales?.filter(val => val !== locale)
+  const { name, zone } = LOCALES[locale]
+
   useEffect(() => {
     function handleClickOutside (event) {
       if (languagesRef.current && !languagesRef.current.contains(event.target) &&
@@ -48,10 +52,6 @@ const I18nWidget = () => {
     }
   }, [languagesRef])
 
-  const options = locales?.filter(val => val !== locale)
-
-  const { name, zone } = LOCALES[locale]
-
   return (
     <>
       <div className={styles.i18nWidget}>
@@ -61,8 +61,8 @@ const I18nWidget = () => {
           onClick={() => setDisplay(!display)}
           ref={buttonLangRef}
         >
-          <img src={`flag-${locale}.svg`} alt={`Bandera de ${zone}`} />
-          <span>{name}</span>
+          <Image src={require(`public/flag-${locale}.svg`)} alt={`Bandera de ${zone}`} />
+          <span className={styles.i18nWidgetName}>{name}</span>
         </button>
         {options?.length && display
           ? (
