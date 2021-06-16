@@ -38,6 +38,8 @@
     "standard": "16.0.3"
   },
   "eslintConfig": {
-    "extends": ["./node_modules/standard/eslintrc.json"]
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
   }
 }
