@@ -1,10 +1,12 @@
 // next.config.js
 const withPWA = require('next-pwa')
-const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 
 const nextConfig = {
   webpack5: true,
+  images: {
+    domains: ['avatars.githubusercontent.com', 'midu.dev']
+  },
   future: {
     strictPostcssConfiguration: true
   },
@@ -16,14 +18,6 @@ const nextConfig = {
 }
 
 module.exports = withPlugins([
-  [
-    withImages,
-    {
-      images: {
-        domains: ['avatars.githubusercontent.com']
-      }
-    }
-  ],
   [
     withPWA,
     {
