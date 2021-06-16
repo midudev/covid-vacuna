@@ -266,7 +266,18 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               rel='noreferrer'
               href='https://www.genbeta.com/web/esta-web-codigo-abierto-te-muestra-estado-proceso-vacunacion-covid-19-espana'
             >
-              Esta web de código abierto te muestra el estado del proceso de vacunación contra la COVID-19 en España
+              Esta web de código abierto te muestra el estado del proceso de vacunación contra la COVID-19 en España (Genbeta)
+            </a>
+          </li>
+          <li>
+            <a
+              className={styles.link}
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.tekcrispy.com/2021/06/12/covid-vacuna-app/'
+            >
+              ¿Cómo marcha el proceso de vacunación en España? Descúbrelo en un vistazo
+              (Tekcripsy)
             </a>
           </li>
         </ul>
