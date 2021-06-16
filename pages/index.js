@@ -259,6 +259,16 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
               {translate.home.medio3}
             </a>
           </li>
+          <li>
+            <a
+              className={styles.link}
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.genbeta.com/web/esta-web-codigo-abierto-te-muestra-estado-proceso-vacunacion-covid-19-espana'
+            >
+              Esta web de código abierto te muestra el estado del proceso de vacunación contra la COVID-19 en España
+            </a>
+          </li>
         </ul>
 
         <h2 className={styles.subtitle}>{translate.home.contribuidores}</h2>
