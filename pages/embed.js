@@ -4,6 +4,7 @@ import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import TimeAgo from 'components/TimeAgo'
 import { getPartialVacunationPopulation, getCompleteVacunationPopulation } from 'services/getProgressCalculations'
+import Image from 'next/image'
 
 export default function Embed ({ data, info, totalPopulation }) {
   const totals = data.find(({ ccaa }) => ccaa === 'Totales')
@@ -13,9 +14,9 @@ export default function Embed ({ data, info, totalPopulation }) {
       <div className={styles.embedContainer}>
 
         <div className={styles.card}>
-          <img
+          <Image
             className={styles.cardImage}
-            src='/mapa.png'
+            src={require('public/mapa.png')}
             alt='Vacunas distribuidas en España'
             width={150}
             height={150}
@@ -27,13 +28,12 @@ export default function Embed ({ data, info, totalPopulation }) {
                 <NumberDigits>{totals.dosisEntregadas}</NumberDigits>
               </p>
             </div>
-            <p>Es el <strong><NumberPercentage>{totals.dosisEntregadas / totalPopulation}</NumberPercentage></strong> del total de España</p>
           </section>
         </div>
 
         <div className={styles.card}>
-          <img
-            src='/vacuna.png'
+          <Image
+            src={require('public/vacuna.png')}
             alt='Vacunas administradas en España'
             width={150}
             height={150}
@@ -46,14 +46,14 @@ export default function Embed ({ data, info, totalPopulation }) {
               </p>
             </div>
             <p>
-              Supone que el <strong><NumberPercentage>{getPartialVacunationPopulation(totals)}</NumberPercentage></strong> del total de España ha recibido al menos una dosis<br />Es el <strong><NumberPercentage>{totals.porcentajeEntregadas}</NumberPercentage></strong> sobre las vacunas distribuidas
+              Supone que el <strong><NumberPercentage>{getPartialVacunationPopulation(totals)}</NumberPercentage></strong> del total de España ha recibido al menos una dosis
             </p>
           </section>
         </div>
 
         <div className={styles.card}>
-          <img
-            src='/vacunas-completas.png'
+          <Image
+            src={require('public/vacunas-completas.png')}
             alt='Dosis completas subministradas'
             width={150}
             height={150}
@@ -66,8 +66,8 @@ export default function Embed ({ data, info, totalPopulation }) {
               </p>
             </div>
             <p>
-              Personas que están totalmente vacunadas<br />
-              Supone el <strong><NumberPercentage>{getCompleteVacunationPopulation(totals)}</NumberPercentage></strong> del total de España<br />Suponen un <strong><NumberPercentage>{totals.dosisPautaCompletada / totals.dosisAdministradas}</NumberPercentage></strong> de las dosis administradas
+              Supone que el <strong><NumberPercentage>{getCompleteVacunationPopulation(totals)}</NumberPercentage></strong> del total de España ha sido vacunado con<br />
+              todas las dosis necesarias.
             </p>
           </section>
         </div>

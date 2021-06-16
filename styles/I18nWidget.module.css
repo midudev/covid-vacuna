@@ -10,19 +10,23 @@
 
 .i18nWidget button {
   align-items: center;
-  border: 1px solid var(--app-border-color);
-  color: var(--text-base-color);
   background: var(--app-background-color);
+  border-radius: 99999px;
+  border: 1px solid var(--app-border-color);
   box-shadow: var(--app-shadow-color) 4px 4px;
+  color: var(--text-base-color);
+  cursor: pointer;
+  display: flex;
   font-size: 0.7rem;
   font-weight: 500;
-  display: flex;
-  border-radius: 99999px;
   justify-content: center;
   line-height: 110%;
   padding: 4px 16px;
-  cursor: pointer;
   width: 110px;
+}
+
+.i18nWidget span {
+  padding-left: 4px;
 }
 
 .i18nWidget button:hover,
@@ -70,7 +74,6 @@
 
 
 @media (max-width: 600px) {
-
   .i18nWidget button{
     width: fit-content;
   }
