@@ -1,5 +1,6 @@
 import { useTranslate } from 'hooks/useTranslate'
 import styles from 'styles/Footer.module.css'
+import Image from 'next/image'
 
 export default function Footer () {
   const translate = useTranslate()
@@ -12,7 +13,14 @@ export default function Footer () {
           rel='noreferrer'
         >
           {translate.footer.desarrolladoPor}{' '}
-          <img width='92' height='24' loading='lazy' src='https://midu.dev/logo.png' alt='midudev' />
+          <picture>
+            <Image
+              width='92'
+              height='28'
+              loading='lazy'
+              src='https://midu.dev/logo.png' alt='midudev logo'
+            />
+          </picture>
         </a>
         <span>&bull;</span>
         <a href='https://github.com/midudev/covid-vacuna' rel='nofollow noreferrer' target='_blank'>GitHub</a>
