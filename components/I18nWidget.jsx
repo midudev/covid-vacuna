@@ -23,8 +23,8 @@ const LOCALES = {
     zone: 'Euskadi'
   },
   ast: {
-    name: 'Bable',
-    zone: 'Asturias'
+    name: 'Asturianu',
+    zone: 'Asturies'
   }
 }
 
