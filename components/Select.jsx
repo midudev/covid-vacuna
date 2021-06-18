@@ -19,7 +19,7 @@ export default function Select ({ data, onChange }) {
             onChange={(e) => onChange(e.target.value)}
           >
             {data &&
-              data.map((date) => (
+              data.map(date => (
                 <option key={date} value={date}>
                   {formatDate({ locale, value: date })}
                 </option>

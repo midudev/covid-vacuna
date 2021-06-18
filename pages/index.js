@@ -63,8 +63,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <link rel='alternate' href='https://covid-vacuna.app/es-AST' hrefLang='ast-es' />
         <link rel='alternate' href='https://covid-vacuna.app/es-EU' hrefLang='eu-es' />
         <link rel='alternate' href='https://covid-vacuna.app/es-ES' hrefLang='es-es' />
-
       </Head>
+
       <div id='container' className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>
@@ -312,7 +312,7 @@ export async function getStaticProps () {
   const reports = (context => {
     const keys = context.keys()
 
-    const data = keys.map((key, index) => {
+    const data = keys.map(key => {
       return key
         .replace(/^.*[\\/]/, '')
         .split('.')
@@ -320,7 +320,7 @@ export async function getStaticProps () {
         .join('.')
     })
 
-    return data
+    return [...new Set(data)]
   })(require.context('../public/data/', true, /2021[0-9]{4}.json$/))
 
   const contributors = await getGitHubContributors()
