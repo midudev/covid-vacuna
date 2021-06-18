@@ -23,7 +23,9 @@ module.exports = withPlugins([
     {
       pwa: {
         disable: process.env.NODE_ENV === 'development',
-        dest: 'public'
+        dest: 'public',
+        buildExcludes: ['/data/*.json', '/data/*.obs'],
+        publicExcludes: ['/data/*.json', '/data/*.obs']
       }
     }
   ]
