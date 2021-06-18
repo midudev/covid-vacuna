@@ -12,7 +12,7 @@
         "datosActualizados": "Datos anovaos",
         "fuente": "Fonte:",
         "ministerioDeSanidad": "Ministeriu de Sanidá",
-        "mostrarReporteFecha": "Amosar datos a la fecha",
+        "mostrarReporteFecha": "Amosar datos de la fecha",
         "seleccionarFecha": "Escoyer fecha",
         "descargarDatosJSON": "Baxar datos en formatu JSON",
         "incrustarDatos": "Quiero poner los datos de vacunación n'otra páxina web",
@@ -33,7 +33,9 @@
         "medio1": "Espublicen una web con datos del Gobiernu pa ver cómo espoxiga n'España la vacunación escontra'l coronavirus (20 Minutos)",
         "medio2": "Web pa revisar l'estáu y progresu de la vacunación del COVID-19 n'España (Menéame)",
         "medio3": "1.000 voluntarios pa una sola web: asina evoluciona la vacunación na to comunidá (El Confidencial)",
-        "contribuidores": "Andechen",
+        "medio4": "Esta web de códigu abiertu infórmate l'estáu del procesu de vacunación escontra la COVID-19 n'España (Genbeta)",
+        "medio5": "¿Cómo marcha'l procesu de vacunación n'España? Descúbrilu nuna güeyada (Tekcripsy)",
+        "contribuidores": "Echaron un gabitu",
         "alt": {
             "vacunasDistribuidas": "Vacunes distribuyíes n'España",
             "pfizerLogo": "Pfizer Logo",
@@ -70,7 +72,7 @@
     "share": {
         "textParamUrl": "¡Siguí'l progresu de la vacunación escontra'l COVID19 n'esta web creada por @midudev!\n\n",
         "titleAnchor": "Comparti esti enllaz en Twitter",
-        "textoButton": "¡Compártelu!"
+        "textoButton": "¡Compártilu!"
     },
     "footer": {
         "desarrolladoPor": "Desendolcáu por",
@@ -83,16 +85,16 @@
         "poblacionTotalmenteVacunada": "población totalmente vacunada"
     },
     "chart": {
-        "aDia": "A día ",
+        "aDia": "El día ",
         "seHanEntregado": " apurriéronse ",
         "dosisYSeHanAdministrado": " dosis y alministráronse "
     },
     "etariosBarChart": {
-        "titulo": "Población vacunada por edaes en",
+        "titulo": "Población vacunada per edaes n'",
         "paraLasPersonas": "Pa les persones de ",
         "conUnaPoblacion": "años con una población de",
         "unaDosis": " persones, púsose una dosis a",
-        "pautaCompleta": "y recibieron la vacunación dafechu completa ",
+        "pautaCompleta": "y recibieron la vacunación completa dafechu ",
         "keyPoblacionINE": "Población INE",
         "keyUnaDosis": "Una Dosis",
         "keyPautaCompleta": "Vacunaos dafechu"
