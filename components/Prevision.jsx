@@ -110,7 +110,6 @@ export default function Prevision ({ totals }) {
           padding: 1rem 1.5rem 1.5rem;
           text-align: center;
           box-shadow: var(--app-shadow-color) 14px 14px;
-          }
         }
     `}
       </style>

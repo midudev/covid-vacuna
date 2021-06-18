@@ -6,6 +6,7 @@
     "node": "14.x"
   },
   "scripts": {
+    "analyze": "NODE_ICU_DATA=node_modules/full-icu ANALYZE=true next build",
     "build": "NODE_ICU_DATA=node_modules/full-icu next build",
     "dev": "NODE_ICU_DATA=node_modules/full-icu next dev",
     "start": "next start",
@@ -34,6 +35,7 @@
     "xlsx": "0.16.9"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^11.0.0",
     "eslint": "7.28.0",
     "eslint-config-next": "11.0.0",
     "standard": "16.0.3"

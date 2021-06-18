@@ -1,6 +1,9 @@
 // next.config.js
 const withPWA = require('next-pwa')
 const withPlugins = require('next-compose-plugins')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
 
 const nextConfig = {
   webpack5: true,
@@ -18,6 +21,7 @@ const nextConfig = {
 }
 
 module.exports = withPlugins([
+  [withBundleAnalyzer],
   [
     withPWA,
     {

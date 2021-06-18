@@ -115,7 +115,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
             <div className={styles.card}>
               <header>
                 <Image
-                  src='/vacuna.png'
+                  src={require('public/vacuna.png')}
                   alt={translate.home.alt.vacunasAdministradas}
                   width={150}
                   height={150}
