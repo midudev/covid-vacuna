@@ -119,8 +119,8 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
                   <span>
                     {column.isSorted
                       ? column.isSortedDesc
-                          ? ' ▼'
-                          : ' ▲'
+                        ? ' ▼'
+                        : ' ▲'
                       : ''}
                   </span>
                 </th>
