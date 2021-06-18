@@ -8,34 +8,34 @@
         "darkAriaLabel": "Una lluna colos güeyos sospechosos que parez que ta tramando daqué raro"
     },
     "home": {
-        "tituloPrincipal": "Vacunación COVID-19 en",
+        "tituloPrincipal": "Vacunación COVID-19 n'",
         "datosActualizados": "Datos anovaos",
         "fuente": "Fonte:",
         "ministerioDeSanidad": "Ministeriu de Sanidá",
-        "mostrarReporteFecha": "Mostrar datos a la fecha",
+        "mostrarReporteFecha": "Amosar datos a la fecha",
         "seleccionarFecha": "Escoyer fecha",
         "descargarDatosJSON": "Baxar datos en formatu JSON",
         "incrustarDatos": "Quiero poner los datos de vacunación n'otra páxina web",
         "porComunidadesAutonomas": "Per comunidaes autónomes",
-        "dosisEntregadas": "Dosis entregaes",
+        "dosisEntregadas": "Dosis apurríes",
         "dosisAdministradas": "Dosis alministraes",
-        "sobreEntregadas": "% so entregaes",
+        "sobreEntregadas": "% so apurríes",
         "poblacionVacunada": "% población vacunada",
         "pautaCompleta": "Completa dafechu",
-        "poblacionTotalmenteVacunada": "% población dafechu vacunada",
-        "evolucionDosisEntregadas": "Evolución de dosis entregaes",
+        "poblacionTotalmenteVacunada": "% población vacunada dafechu",
+        "evolucionDosisEntregadas": "Evolución de dosis apurríes",
         "evolucionDosisAdministradas": "Evolución de dosis alministraes",
-        "evolucionDosisEntregadasVSAdministradas": "Evolución de dosis entregaes respeuto a les administraes",
+        "evolucionDosisEntregadasVSAdministradas": "Evolución de dosis apurríes respeuto a les administraes",
         "fuenteDatosEnlacesInteres": "Fontes de datos y enllaces d'interés",
         "fuente1": "Estratexia de Vacunación COVID-19 n'España",
         "fuente2": "Información oficial so la vacunación escontra'l nuevu coronavirus",
         "enLosMedios": "Nos medios",
-        "medio1": "Llanzan una web con datos del Gobiernu que permite ver cómo espoxiga en España la vacunación escontra'l coronavirus (20 Minutos)",
+        "medio1": "Espublicen una web con datos del Gobiernu pa ver cómo espoxiga n'España la vacunación escontra'l coronavirus (20 Minutos)",
         "medio2": "Web pa revisar l'estáu y progresu de la vacunación del COVID-19 n'España (Menéame)",
         "medio3": "1.000 voluntarios pa una sola web: asina evoluciona la vacunación na to comunidá (El Confidencial)",
         "contribuidores": "Andechen",
         "alt": {
-            "vacunasDistribuidas": "Vacunes distribuides n'España",
+            "vacunasDistribuidas": "Vacunes distribuyíes n'España",
             "pfizerLogo": "Pfizer Logo",
             "modernaLogo": "Moderna Logo",
             "astrazenecaLogo": "Astrazeneca Logo",
@@ -55,14 +55,14 @@
     },
     "progress": {
         "verPoblacionVacunada": "Población con al menos una dosis",
-        "verPoblacionConPauta": "Población con vacunada dafechu",
+        "verPoblacionConPauta": "Población vacunada dafechu",
         "estimacionPoblacionVacunada": "Estimación población vacunada",
         "noDatos": "Nun hai datos pa esa fecha."
     },
     "terminos": {
-        "dosisDistribuidas": "Dosis distribuides",
+        "dosisDistribuidas": "Dosis distribuyíes",
         "dosisAdministradas": "Dosis alministraes",
-        "sobreDistribuidas": "% so distribuides",
+        "sobreDistribuidas": "% so distribuyíes",
         "personasConUnaDosis": "Persones con al menos una dosis",
         "personasConPautaCompleta": "Persones vacunaes dafechu",
         "sobreAdministradas": "% so alministraes"
@@ -78,13 +78,13 @@
         "enviarSugerencia": "Unviar suxerencia"
     },
     "mapa": {
-        "sobreEntregadas": "so'l total d'entregaes",
+        "sobreEntregadas": "so'l total d'apurríes",
         "poblacionVacunada": "población vacunada",
         "poblacionTotalmenteVacunada": "población totalmente vacunada"
     },
     "chart": {
         "aDia": "A día ",
-        "seHanEntregado": " entregáronse ",
+        "seHanEntregado": " apurriéronse ",
         "dosisYSeHanAdministrado": " dosis y alministráronse "
     },
     "etariosBarChart": {
@@ -95,6 +95,6 @@
         "pautaCompleta": "y recibieron la vacunación dafechu completa ",
         "keyPoblacionINE": "Población INE",
         "keyUnaDosis": "Una Dosis",
-        "keyPautaCompleta": "Vacunación dafechu"
+        "keyPautaCompleta": "Vacunaos dafechu"
     }
 }
