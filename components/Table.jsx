@@ -10,7 +10,7 @@ import { useTranslate } from 'hooks/useTranslate'
 import { getPartialVacunationPopulation } from 'services/getProgressCalculations'
 
 export default function Table ({ data, filter, setFilter, reportFound }) {
-  const { locale } = useLocale
+  const { locale } = useLocale()
   const translate = useTranslate()
 
   const handleRowClick = useCallback(
@@ -88,7 +88,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
         format: formatPercentage
       }
     ],
-    [translate]
+    [locale]
   )
 
   let {
