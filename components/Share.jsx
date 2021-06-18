@@ -4,7 +4,7 @@ import styles from 'styles/Share.module.css'
 export default function Share () {
   const translate = useTranslate()
   const params = new URLSearchParams({
-    url: 'https://covid-vacuna.app',
+    url: window.location.href,
     text: translate.share.textParamUrl
   })
 
