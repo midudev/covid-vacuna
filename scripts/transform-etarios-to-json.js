@@ -89,51 +89,51 @@ const readEtariosVacunados = (row, complete = false) => {
   const etarioKey = complete ? 'Personas pauta completa' : 'Personas con al menos 1 dosis'
   return [
     {
-      rango: { min: 16, max: 17 },
-      vacunados: row['16-17 años'],
-      personasINE: row['Población INE16-17 años'] || row['16-17 años'] / row['%_7'],
+      rango: { min: 12, max: 19 },
+      vacunados: row[`${etarioKey} 12-19 años`],
+      personasINE: row[`${etarioKey} 12-19 años`] / row['%_7'],
       porcentaje: row['%_6']
     },
     {
-      rango: { min: 18, max: 24 },
-      vacunados: row['18-24 años'],
-      personasINE: row['Población INE18-24 años'] || row['18-24 años'] / row['%_6'],
-      porcentaje: row['%_5']
+      rango: { min: 20, max: 29 },
+      vacunados: row[`${etarioKey} 20-29 años`],
+      personasINE: row[`${etarioKey} 20-29 años`] / row['%_6'],
+      porcentaje: row['%_4']
     },
     {
-      rango: { min: 25, max: 39 },
-      vacunados: row[`${etarioKey} 25-39 años`] || row[`${etarioKey} 25-49 años`],
-      personasINE: row['Población INE25-49 años'] || (row[`${etarioKey} 25-39 años`] || row[`${etarioKey} 25-49 años`]) / row['%_5'],
+      rango: { min: 30, max: 39 },
+      vacunados: row[`${etarioKey} 30-39 años`],
+      personasINE: row[`${etarioKey} 30-39 años`] / row['%_5'],
       porcentaje: row['%_4']
     },
     {
       rango: { min: 40, max: 49 },
       vacunados: row[`${etarioKey} 40-49 años`],
-      personasINE: row['Población INE25-49 años'] || row[`${etarioKey} 40-49 años`] / row['%_4'],
+      personasINE: row[`${etarioKey} 40-49 años`] / row['%_4'],
       porcentaje: row['%_4']
     },
     {
       rango: { min: 50, max: 59 },
       vacunados: row[`${etarioKey} 50-59 años`],
-      personasINE: row['Población INE50-59 años'] || row[`${etarioKey} 50-59 años`] / row['%_3'],
+      personasINE: row[`${etarioKey} 50-59 años`] / row['%_3'],
       porcentaje: row['%_3']
     },
     {
       rango: { min: 60, max: 69 },
       vacunados: row[`${etarioKey} 60-69 años`],
-      personasINE: row['Población INE60-69 años'] || row[`${etarioKey} 60-69 años`] / row['%_2'],
+      personasINE: row[`${etarioKey} 60-69 años`] / row['%_2'],
       porcentaje: row['%_2']
     },
     {
       rango: { min: 70, max: 79 },
       vacunados: row[`${etarioKey} 70-79 años`],
-      personasINE: row['Población INE70-79 años'] || row[`${etarioKey} 70-79 años`] / row['%_1'],
+      personasINE: row[`${etarioKey} 70-79 años`] / row['%_1'],
       porcentaje: row['%_1']
     },
     {
       rango: { min: 80, max: null },
       vacunados: row[`${etarioKey} ≥80 años`],
-      personasINE: row['Población INE≥80 años'] || row[`${etarioKey} ≥80 años`] / row['%'],
+      personasINE: row[`${etarioKey} ≥80 años`] / row['%'],
       porcentaje: row['%']
     }
   ]
