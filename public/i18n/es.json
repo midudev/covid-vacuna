@@ -7,6 +7,10 @@
         "darkTitleLabel": "Usa el tema oscuro",
         "darkAriaLabel": "Una luna con ojos sospechosos que parece que está tramando algo jodido"
     },
+    "seo": {
+        "title": "Estado y progreso vacunación COVID-19 España 2021",
+        "description": "Consulta el estado y progreso de la vacunación del COVID-19 de forma diaria según datos del gobierno."
+    },
     "home": {
         "tituloPrincipal": "Vacunación COVID-19 en",
         "datosActualizados": "Datos actualizados",

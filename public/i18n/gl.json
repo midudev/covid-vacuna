@@ -7,6 +7,10 @@
     "darkTitleLabel": "Usa o tema escuro",
     "darkAriaLabel": "Unha lúa con ollos sospeitosos que parece que está a tramar algo fodido"
   },
+  "seo": {
+    "title": "Estado e progreso da vacinación contra o COVID-19 España 2021",
+    "description": "Comprobe o estado e o progreso da vacinación contra o COVID-19 diariamente segundo os datos do goberno."
+  },
   "home": {
     "tituloPrincipal": "Vacinación COVID-19 en",
     "datosActualizados": "Datos actualizados",

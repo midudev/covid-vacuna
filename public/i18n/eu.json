@@ -7,6 +7,10 @@
     "darkTitleLabel": "Erabili gai iluna",
     "darkAriaLabel": "Begi susmagarriak dituen ilargia, izorratuta dagoen zerbait dela dirudi"
   },
+  "seo": {
+    "title": "COVID-19 txertoaren egoera eta aurrerapena Espainia 2021",
+    "description": "Egiaztatu COVID-19 txertoaren egoera eta aurrerapena egunero, gobernuaren datuen arabera."
+  },
   "home": {
     "tituloPrincipal": "COVID-19 txertoa",
     "datosActualizados": "Eguneratutako datuak",
