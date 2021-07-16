@@ -23,9 +23,6 @@ const addDaysToInitialData = (days) => {
 }
 
 const points = [{
-  color: '#dd8f01',
-  percentage: 50
-}, {
   color: '#a3dd01',
   percentage: 75
 }, {
