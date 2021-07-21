@@ -1,0 +1,100 @@
+{
+    "colorSwitcher": {
+        "lightTitleLabel": "Usa el tema clar",
+        "lightAriaLabel": "Un sol que invertit pareix el roín de Doom",
+        "standardTitleLabel": "Usa el tema depenent la teua configuració de sistema",
+        "standardAriaLabel": "Les teues preferències molasses del teu sistema",
+        "darkTitleLabel": "Usa el tema fosc",
+        "darkAriaLabel": "Una lluna amb ulls sospitosos que pareix que està tramant quelcom fotut"
+    },
+    "home": {
+        "tituloPrincipal": "Vacunació COVID-19 en",
+        "datosActualizados": "Dades actualitzats",
+        "fuente": "Font:",
+        "ministerioDeSanidad": "Ministeri de Sanitat",
+        "mostrarReporteFecha": "Mostrar report a la data",
+        "seleccionarFecha": "Seleccionar data",
+        "descargarDatosJSON": "Descarregar dades en format JSON",
+        "incrustarDatos": "Vull incrustar les dades de vacunació en una altra pàgina web",
+        "porComunidadesAutonomas": "Per comunitats autònomes",
+        "dosisEntregadas": "Dosis entregades",
+        "dosisAdministradas": "Dosis administrades",
+        "sobreEntregadas": "% sobre entregades",
+        "poblacionVacunada": "% població vacunada",
+        "pautaCompleta": "Pauta completa",
+        "poblacionTotalmenteVacunada": "% població totalment vacunada",
+        "evolucionDosisEntregadas": "Evolució de dosis entregades",
+        "evolucionDosisAdministradas": "Evolució de dosis administrades",
+        "evolucionDosisEntregadasVSAdministradas": "Evolució de dosi entregades respecte a les administrades",
+        "fuenteDatosEnlacesInteres": "Fonts de dades i enllaços d'interés",
+        "fuente1": "Estratègia de Vacunació COVID-19 a Espanya",
+        "fuente2": "Informació oficial sobre la vacunació contra el nou coronavirus",
+        "enLosMedios": "En els mitjans de comunicació",
+        "medio1": "Llancen una web amb dades del Govern que permet veure com avança a Espanya la vacunació contra el coronavirus (20 Minutos)",
+        "medio2": "Web per a revisar l'estat i progrés de la vacunació del COVID-19 a Espanya (Menéame)",
+        "medio3": "1.000 voluntaris per a una sola web: així evoluciona la vacunació en la teua comunitat (El Confidencial)",
+        "contribuidores": "Contribuïdors",
+        "alt": {
+            "vacunasDistribuidas": "Vacunes distribuïdes a Espanya",
+            "pfizerLogo": "Pfizer Logo",
+            "modernaLogo": "Moderna Logo",
+            "astrazenecaLogo": "Astrazeneca Logo",
+            "janssenLogo": "Janssen Logo",
+            "vacunasAdministradas": "Vacunes administrades a Espanya",
+            "dosisCompletas": "Dosis completes subministradas",
+            "descargarDatos": "Descarregar dades",
+            "incrustarDatos": "Incrustar dades en una pàgina web",
+            "graficaSubiendo": "Gràfica pujant",
+            "emojiCiclista": "Emoji de ciclista",
+            "globoMundo": "Globus del món amb meridians",
+            "luna": "Lluna",
+            "globoTerricola": "Globus del mon amb vista a Amèrica",
+            "jeringuilla": "Xeringa",
+            "fuego": "Foc"
+        }
+    },
+    "progress": {
+        "verPoblacionVacunada": "Població amb almenys una dosi",
+        "verPoblacionConPauta": "Població amb pauta completa",
+        "estimacionPoblacionVacunada": "Estimació població vacunada",
+        "noDatos": "No disposem de dades per a eixa data."
+    },
+    "terminos": {
+        "dosisDistribuidas": "Dosis distribuïdes",
+        "dosisAdministradas": "Dosis administrades",
+        "sobreDistribuidas": "% sobre distribuïdes",
+        "personasConUnaDosis": "Persones amb almenys una dosi",
+        "personasConPautaCompleta": "Persones amb pauta completa",
+        "sobreAdministradas": "% sobre administrades"
+    },
+    "share": {
+        "textParamUrl": "Seguix el progrés de la vacunació contra el COVID19 en esta web creada per @midudev!\n\n",
+        "titleAnchor": "Compartix este enllaç en Twitter",
+        "textoButton": "Compartix-ho!"
+    },
+    "footer": {
+        "desarrolladoPor": "Desenrotllat per",
+        "estadisticas": "Estadístiques",
+        "enviarSugerencia": "Enviar suggeriment"
+    },
+    "mapa": {
+        "sobreEntregadas": "sobre el total d'entregades",
+        "poblacionVacunada": "població vacunada",
+        "poblacionTotalmenteVacunada": "població totalment vacunada"
+    },
+    "chart": {
+        "aDia": "A dia ",
+        "seHanEntregado": " s'han entregat ",
+        "dosisYSeHanAdministrado": " dosi i s'han administrat "
+    },
+    "etariosBarChart": {
+        "titulo": "Població vacunada per edats en",
+        "paraLasPersonas": "Per a les persones de ",
+        "conUnaPoblacion": "anys amb una població de",
+        "unaDosis": " persones, s'ha posat una dosi a",
+        "pautaCompleta": "i han rebut la pauta completa ",
+        "keyPoblacionINE": "Població INE",
+        "keyUnaDosis": "Una Dosi",
+        "keyPautaCompleta": "Pauta Completa"
+    }
+}
