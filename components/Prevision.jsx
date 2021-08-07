@@ -22,14 +22,6 @@ const addDaysToInitialData = (days) => {
   return new Date(initialData)
 }
 
-const points = [{
-  color: '#a3dd01',
-  percentage: 75
-}, {
-  color: '#41ca0d',
-  percentage: 100
-}]
-
 export default function Prevision ({ totals }) {
   const { locale } = useLocale()
   const translate = useTranslate()
@@ -40,26 +32,50 @@ export default function Prevision ({ totals }) {
       days,
       totals.porcentajePoblacionAdministradas - totals.porcentajePoblacionCompletas
     )
-
+  const points = [
+    {
+      color: '#dd8f01',
+      percentage: 50,
+      show: !((totals.porcentajePoblacionCompletas >= 0.50))
+    },
+    {
+      color: '#a3dd01',
+      percentage: 75,
+      show: !((totals.porcentajePoblacionCompletas >= 0.75))
+    },
+    {
+      color: '#41ca0d',
+      percentage: 100,
+      show: !((totals.porcentajePoblacionCompletas >= 1))
+    }]
   return (
     <>
       <h2>{translate.progress.estimacionPoblacionVacunada}</h2>
-      {totals.porcentajePoblacionCompletas
+      {totals.porcentajePoblacionCompletas && totals.porcentajePoblacionCompletas < 1
         ? (
           <section>
             {
-          points.map(({ color, percentage }) => (
-            <div className='card' key={percentage}>
-              <span style={{ '--color': color }}>{percentage}%</span>
-              <time>{intl.format(addDaysToInitialData(getDays(percentage)))}</time>
-            </div>
+          points.map(({ color, percentage, show }) => (
+            show &&
+              <div className='card' key={percentage}>
+                <span style={{ '--color': color }}>{percentage}%</span>
+                <time>{intl.format(addDaysToInitialData(getDays(percentage)))}</time>
+              </div>
           ))
         }
           </section>)
         : (
-          <p>
-            <b>{translate.progress.noDatos}</b>
-          </p>
+            totals.porcentajePoblacionCompletas >= 1
+              ? (
+                <h1>
+                  TODOS VACUNADOS
+                </h1>
+                )
+              : (
+                <p>
+                  <b>{translate.progress.noDatos}</b>
+                </p>
+                )
           )}
 
       <style jsx>{`
