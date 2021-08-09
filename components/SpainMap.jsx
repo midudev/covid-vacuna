@@ -61,7 +61,8 @@ const SpainMap = ({ data, reportFound }) => {
     dosisPautaCompletada,
     porcentajeEntregadas,
     porcentajePoblacionAdministradas,
-    porcentajePoblacionCompletas
+    porcentajePoblacionCompletas,
+    porcentajePoblacionPrimeraDosis
   }) => {
     return (
       <div className={styles.tooltip}>
@@ -80,7 +81,7 @@ const SpainMap = ({ data, reportFound }) => {
         </p>
         <p className={styles.tooltipSubText}>
           <NumberPercentage>
-            {getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas })}
+            {getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas, porcentajePoblacionPrimeraDosis })}
           </NumberPercentage>{' '}
           {translate.mapa.poblacionVacunada}
         </p>
