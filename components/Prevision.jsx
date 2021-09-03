@@ -30,7 +30,7 @@ export default function Prevision ({ totals }) {
   const getDays = (days) =>
     getDaysToAchievePercentage(
       days,
-      totals.porcentajePoblacionAdministradas - totals.porcentajePoblacionCompletas
+      totals.porcentajePoblacionPrimeraDosis || (totals.porcentajePoblacionAdministradas - totals.porcentajePoblacionCompletas)
     )
   const points = [
     {
