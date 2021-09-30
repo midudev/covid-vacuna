@@ -53,7 +53,7 @@ export default function EjemploEmbed () {
       </section>
       <style jsx>{`
         a {
-          color: #444;
+          color: var(--text-small-color);
           margin-bottom: 3rem;
           display: inline-block;
           width: auto;
@@ -64,7 +64,7 @@ export default function EjemploEmbed () {
         }
 
         p {
-          color: #444;
+          color: var(--text-small-color);
           max-width: 800px;
           margin-top: 4px;
         }
