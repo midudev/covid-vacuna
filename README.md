@@ -9,7 +9,7 @@ Aplicaci贸n web que muestra el estado y progreso de la vacunaci贸n en Espa帽a 馃
 
 ## 驴C贸mo lo ejecuto en local?
 
-Necesitar谩s tener instalado `Node.js` a partir de la versi贸n 12 y tener acceso a una terminal para seguir los siguientes pasos:
+Necesitar谩s tener instalado `Node.js` a partir de la versi贸n 14 y tener acceso a una terminal para seguir los siguientes pasos:
 
 ```
 npm install # instalar las dependencias
