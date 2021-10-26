@@ -41,6 +41,8 @@
     "standard": "16.0.4"
   },
   "eslintConfig": {
-    "extends": ["standard"]
+    "extends": [
+      "standard"
+    ]
   }
 }
