@@ -61,7 +61,7 @@ const I18nWidget = () => {
           onClick={() => setDisplay(!display)}
           ref={buttonLangRef}
         >
-          <Image src={require(`public/flag-${locale}.svg`)} alt={`Bandera de ${zone}`} />
+          <Image width={16} height={16} src={require(`public/flag-${locale}.svg`)} alt={`Bandera de ${zone}`} />
           <span className={styles.i18nWidgetName}>{name}</span>
         </button>
         {options?.length && display
