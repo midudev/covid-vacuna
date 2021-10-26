@@ -6,7 +6,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfig = {
-  webpack5: true,
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  swcMinify: true,
   images: {
     domains: ['avatars.githubusercontent.com', 'midu.dev']
   },
