@@ -9,7 +9,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  swcMinify: true,
   images: {
     domains: ['avatars.githubusercontent.com', 'midu.dev']
   },
