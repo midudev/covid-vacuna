@@ -321,7 +321,7 @@ export async function getStaticProps () {
     })
 
     return [...new Set(data)]
-  })(require.context('../public/data/', true, /2021[0-9]{4}.json$/))
+  })(require.context('../public/data/', true, /202[1-2][0-9]{4}.json$/))
 
   const contributors = await getGitHubContributors()
   const chartDatasets = normalizeChartData()
