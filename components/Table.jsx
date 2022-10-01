@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 
-import { useCallback, useMemo } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { useTable, useSortBy } from 'react-table'
 import { toDigit } from './NumberDigits'
 import { toPercentage } from './NumberPercentage'
@@ -14,20 +14,23 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
   const translate = useTranslate()
 
   const handleRowClick = useCallback(
-    ({ original: { ccaa } }) => () => {
-      setFilter(ccaa === filter ? 'Totales' : ccaa)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    },
+    ({ original: { ccaa } }) =>
+      () => {
+        setFilter(ccaa === filter ? 'Totales' : ccaa)
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      },
     [filter, setFilter]
   )
 
-  const formatDigit = number => toDigit({ locale, number })
-  const formatPercentage = number => toPercentage({ locale, number })
+  const [Search, setSearch] = useState('')
 
-  const tableData = useMemo(
-    () => {
-      const report = reportFound || data
-      return report.map(row => {
+  const formatDigit = (number) => toDigit({ locale, number })
+  const formatPercentage = (number) => toPercentage({ locale, number })
+
+  const tableData = useMemo(() => {
+    const report = reportFound || data
+    return report
+      .map((row) => {
         const {
           dosisPautaCompletada,
           porcentajeEntregadas,
@@ -40,22 +43,34 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
         if (row.dosisAdministradas === undefined) return false
 
         return {
-          dosisPautaCompletada: !isNaN(dosisPautaCompletada) ? dosisPautaCompletada.toFixed(4) : 0,
-          porcentajeEntregadas: !isNaN(porcentajeEntregadas) ? porcentajeEntregadas.toFixed(4) : 0,
-          porcentajePoblacionAdministradas: getPartialVacunationPopulation({ porcentajePoblacionAdministradas, porcentajePoblacionCompletas, porcentajePoblacionPrimeraDosis }).toFixed(4),
-          porcentajePoblacionCompletas: porcentajePoblacionCompletas !== null ? porcentajePoblacionCompletas.toFixed(4) : 0,
+          dosisPautaCompletada: !isNaN(dosisPautaCompletada)
+            ? dosisPautaCompletada.toFixed(4)
+            : 0,
+          porcentajeEntregadas: !isNaN(porcentajeEntregadas)
+            ? porcentajeEntregadas.toFixed(4)
+            : 0,
+          porcentajePoblacionAdministradas: getPartialVacunationPopulation({
+            porcentajePoblacionAdministradas,
+            porcentajePoblacionCompletas,
+            porcentajePoblacionPrimeraDosis
+          }).toFixed(4),
+          porcentajePoblacionCompletas:
+            porcentajePoblacionCompletas !== null
+              ? porcentajePoblacionCompletas.toFixed(4)
+              : 0,
           ...rest
         }
-      }).filter(Boolean)
-    }, [reportFound]
-  )
+      })
+      .filter(Boolean)
+  }, [reportFound])
 
   const columns = useMemo(
     () => [
       {
         Header: '',
+        Search: true,
         accessor: 'ccaa',
-        format: ccaa => ccaa
+        format: (ccaa) => ccaa
       },
       {
         Header: translate.home.dosisEntregadas,
@@ -91,37 +106,43 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
     [locale]
   )
 
-  let {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow
-  } = useTable({ columns, data: tableData }, useSortBy)
+  let { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data: tableData }, useSortBy)
 
   // totales siempre en la ultima fila
   rows = [
-    ...rows.filter(row => row.id !== '19'),
-    rows.find(row => row.id === '19')
+    ...rows.filter((row) => row.id !== '19'),
+    rows.find((row) => row.id === '19')
   ]
 
   return (
     <div className={styles.container}>
-      <table className={styles.table} {...getTableProps()} border='0' cellSpacing='0' cellPadding='0'>
+      <table
+        className={styles.table}
+        {...getTableProps()}
+        border='0'
+        cellSpacing='0'
+        cellPadding='0'
+      >
         <thead>
-          {headerGroups.map(headerGroup => (
+          {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map(column => (
-                <th
-                  {...column.getHeaderProps(column.getSortByToggleProps())}
-                >
-                  {column.render('Header')}
+              {headerGroup.headers.map((column) => (
+                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  {column.Search
+                    ? (
+                      <input
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder='Busca ciudad'
+                        type='search'
+                        className={styles.input}
+                      />
+                      )
+                    : (
+                        column.render('Header')
+                      )}
                   <span>
-                    {column.isSorted
-                      ? column.isSortedDesc
-                        ? ' ▼'
-                        : ' ▲'
-                      : ''}
+                    {column.isSorted ? (column.isSortedDesc ? ' ▼' : ' ▲') : ''}
                   </span>
                 </th>
               ))}
@@ -129,37 +150,48 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map(row => {
-            prepareRow(row)
-            const className = row.id === '19'
-              ? styles.totales
-              : row.original.ccaa === filter
-                ? styles.selected
-                : ''
+          {rows
+            .filter((r, i) =>
+              r.values.ccaa.toLowerCase().includes(Search?.toLowerCase())
+            )
+            .map((row) => {
+              prepareRow(row)
+              const className =
+                row.id === '19'
+                  ? styles.totales
+                  : row.original.ccaa === filter
+                    ? styles.selected
+                    : ''
 
-            return (
-              <tr {...row.getRowProps()} className={className} onClick={handleRowClick(row)}>
-                {row.cells.map(cell => {
-                  return (
-                    <td {...cell.getCellProps()}>
-                      {cell.column.format(cell.value)}
-                    </td>
-                  )
-                })}
-                <td className={styles.mobileData}>
-                  {row.cells.map((cell, index) => {
+              return (
+                <tr
+                  {...row.getRowProps()}
+                  className={className}
+                  onClick={handleRowClick(row)}
+                >
+                  {row.cells.map((cell) => {
                     return (
-                      <span key={index}>
-                        {index === 0
-                          ? ''
-                          : `${headerGroups[0].headers[index].Header} - ${cell.column.format(cell.value)}`}
-                      </span>
+                      <td {...cell.getCellProps()}>
+                        {cell.column.format(cell.value)}
+                      </td>
                     )
                   })}
-                </td>
-              </tr>
-            )
-          })}
+                  <td className={styles.mobileData}>
+                    {row.cells.map((cell, index) => {
+                      return (
+                        <span key={index}>
+                          {index === 0
+                            ? ''
+                            : `${
+                                headerGroups[0].headers[index].Header
+                              } - ${cell.column.format(cell.value)}`}
+                        </span>
+                      )
+                    })}
+                  </td>
+                </tr>
+              )
+            })}
         </tbody>
       </table>
     </div>

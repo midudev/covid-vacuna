@@ -7,9 +7,20 @@
   margin-bottom: 4rem;
 }
 
+.input {
+  appearance: none;
+  position: relative;
+  border: 1px solid var(--app-border-color);
+  z-index: 10;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background: transparent;
+  color: var(--app-text-color);
+}
+
 .table {
   background: var(--app-background-color);
-  font-size: .8rem;
+  font-size: 0.8rem;
   max-width: 1000px;
   width: 100%;
 }
@@ -46,7 +57,7 @@
   border-bottom: 1px solid var(--text-secondary-color);
 }
 
-.table tr.totales{
+.table tr.totales {
   background-color: var(--app-shadow-color);
 }
 
@@ -82,7 +93,7 @@
   .table tr td:first-child {
     text-align: center;
   }
-  
+
   .table tr th {
     display: none;
   }
