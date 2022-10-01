@@ -68,7 +68,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
     () => [
       {
         Header: '',
-        Search: true,
+        search: true,
         accessor: 'ccaa',
         format: (ccaa) => ccaa
       },
@@ -129,7 +129,7 @@ export default function Table ({ data, filter, setFilter, reportFound }) {
             <tr {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                  {column.Search
+                  {column.search
                     ? (
                       <input
                         onChange={(e) => setSearch(e.target.value)}
